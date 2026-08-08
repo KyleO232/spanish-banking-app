@@ -15,6 +15,10 @@
   --success-bg: rgba(21, 128, 61, 0.1);
   --shadow: rgba(17, 24, 39, 0.06) 0 1px 2px, rgba(17, 24, 39, 0.06) 0 4px 12px;
 
+  --accent-shadow: #0d5449;
+  --node-locked-face: #e2e5ea;
+  --node-locked-shadow: #c3c8cf;
+
   --beach-sky-top: #bfe6f5;
   --beach-sky-bottom: #eaf6f0;
   --beach-wave: #3f9fb0;
@@ -53,6 +57,10 @@
     --success: #4ade80;
     --success-bg: rgba(74, 222, 128, 0.12);
     --shadow: rgba(0, 0, 0, 0.4) 0 1px 2px, rgba(0, 0, 0, 0.3) 0 4px 12px;
+
+    --accent-shadow: #1f8f74;
+    --node-locked-face: #232631;
+    --node-locked-shadow: #121319;
 
     --beach-sky-top: #241b3a;
     --beach-sky-bottom: #4d3a5c;
