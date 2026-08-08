@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import BeachBackground from './BeachBackground.jsx';
 
 const POSITION_CYCLE = ['left', 'center', 'right', 'center'];
 
@@ -63,6 +64,7 @@ export default function LessonPath({ lessons }) {
 
   return (
     <div className="lesson-path" ref={containerRef}>
+      <BeachBackground />
       <svg className="lesson-path-svg" width="100%" height={svgHeight} preserveAspectRatio="none" aria-hidden="true">
         <path d={pathD} className="lesson-path-line" fill="none" />
       </svg>

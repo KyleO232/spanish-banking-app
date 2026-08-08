@@ -15,6 +15,17 @@
   --success-bg: rgba(21, 128, 61, 0.1);
   --shadow: rgba(17, 24, 39, 0.06) 0 1px 2px, rgba(17, 24, 39, 0.06) 0 4px 12px;
 
+  --beach-sky-top: #bfe6f5;
+  --beach-sky-bottom: #eaf6f0;
+  --beach-wave: #3f9fb0;
+  --beach-wave-light: #7fd0d9;
+  --beach-sand-top: #f4dfae;
+  --beach-sand-bottom: #e6c68a;
+  --beach-sand-fleck: rgba(140, 105, 60, 0.35);
+  --beach-palm-trunk: #8a5a34;
+  --beach-palm-leaf: #2f8f5b;
+  --beach-crab: #e2683b;
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
   font: 16px/1.5 var(--sans);
@@ -42,6 +53,17 @@
     --success: #4ade80;
     --success-bg: rgba(74, 222, 128, 0.12);
     --shadow: rgba(0, 0, 0, 0.4) 0 1px 2px, rgba(0, 0, 0, 0.3) 0 4px 12px;
+
+    --beach-sky-top: #241b3a;
+    --beach-sky-bottom: #4d3a5c;
+    --beach-wave: #1f5c66;
+    --beach-wave-light: #2f7f88;
+    --beach-sand-top: #5c4630;
+    --beach-sand-bottom: #3c2e20;
+    --beach-sand-fleck: rgba(0, 0, 0, 0.35);
+    --beach-palm-trunk: #2c1f14;
+    --beach-palm-leaf: #1f3d2c;
+    --beach-crab: #ff8f66;
   }
 }
 
