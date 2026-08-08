@@ -51,8 +51,48 @@
 /* ---------- main content ---------- */
 .main {
   flex: 1;
-  padding: 16px;
+  padding: 16px 16px calc(88px + env(safe-area-inset-bottom));
   text-align: left;
+}
+
+/* ---------- bottom nav ---------- */
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  z-index: 20;
+}
+
+.bottom-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 44px;
+  border-radius: 14px;
+  font-size: 22px;
+}
+
+.bottom-nav-item.active {
+  background: var(--accent-bg);
+}
+
+.bottom-nav-icon {
+  filter: grayscale(1) opacity(0.55);
+  transition: filter 0.15s ease;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  filter: none;
 }
 
 .page-intro {
@@ -487,6 +527,66 @@
   text-align: center;
   color: var(--text-dim);
   padding: 40px 16px;
+}
+
+/* ---------- vocabulary list ---------- */
+.vocab-block {
+  margin-bottom: 22px;
+}
+
+.vocab-block-title {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.vocab-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.vocab-row:last-child {
+  border-bottom: none;
+}
+
+.vocab-es-col {
+  min-width: 0;
+}
+
+.vocab-es {
+  color: var(--text-h);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.vocab-note {
+  color: var(--text-dim);
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.vocab-en {
+  color: var(--text);
+  font-size: 14px;
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 45%;
 }
 
 /* ---------- lesson path (game-board style module select) ---------- */
