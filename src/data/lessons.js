@@ -20,9 +20,10 @@ export function getLessons() {
 
 // Returns lessons in order with a `state` of 'locked' | 'current' | 'completed'.
 // A lesson unlocks once every lesson before it in the global sequence is completed.
+// `moduleComplete` is true on every lesson of a module once that whole module is finished.
 export function getLessonsWithState() {
   let allPreviousCompleted = true;
-  return getLessons().map((lesson) => {
+  const withState = getLessons().map((lesson) => {
     const completed = isCompleted(lesson.moduleId, lesson.block);
     let state;
     if (completed) {
@@ -35,4 +36,15 @@ export function getLessonsWithState() {
     if (!completed) allPreviousCompleted = false;
     return { ...lesson, state };
   });
+
+  const completeModules = new Set(
+    [...new Set(withState.map((l) => l.moduleId))].filter((moduleId) =>
+      withState.filter((l) => l.moduleId === moduleId).every((l) => l.state === 'completed')
+    )
+  );
+
+  return withState.map((lesson) => ({
+    ...lesson,
+    moduleComplete: completeModules.has(lesson.moduleId),
+  }));
 }

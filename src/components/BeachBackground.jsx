@@ -15,9 +15,49 @@ function Crab({ className }) {
   );
 }
 
+function Cloud({ className }) {
+  return (
+    <svg className={`beach-cloud ${className}`} viewBox="0 0 80 34" aria-hidden="true">
+      <ellipse cx="20" cy="22" rx="18" ry="11" />
+      <ellipse cx="40" cy="14" rx="20" ry="14" />
+      <ellipse cx="60" cy="22" rx="16" ry="10" />
+    </svg>
+  );
+}
+
+function Bird({ className }) {
+  return (
+    <svg className={`beach-bird ${className}`} viewBox="0 0 30 12" aria-hidden="true">
+      <path d="M0,10 C6,0 9,0 15,8 C21,0 24,0 30,10" fill="none" />
+    </svg>
+  );
+}
+
+function Shell({ className }) {
+  return (
+    <svg className={`beach-shell ${className}`} viewBox="0 0 30 26" aria-hidden="true">
+      <path d="M15,2 C24,6 27,16 15,24 C3,16 6,6 15,2 Z" />
+      <path
+        className="beach-shell-lines"
+        d="M15,4 L15,22 M15,8 L8,18 M15,8 L22,18 M15,14 L10,21 M15,14 L20,21"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
 export default function BeachBackground() {
   return (
     <div className="beach-bg" aria-hidden="true">
+      <svg className="beach-sun" viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="14" />
+      </svg>
+
+      <Cloud className="beach-cloud-1" />
+      <Cloud className="beach-cloud-2" />
+      <Bird className="beach-bird-1" />
+      <Bird className="beach-bird-2" />
+
       <svg className="beach-waves" viewBox="0 0 400 60" preserveAspectRatio="none">
         <path
           className="beach-wave beach-wave-back"
@@ -27,6 +67,12 @@ export default function BeachBackground() {
           className="beach-wave beach-wave-front"
           d="M0,40 C60,55 120,25 180,40 C240,55 300,25 360,40 C380,45 400,42 400,40 L400,60 L0,60 Z"
         />
+      </svg>
+
+      <svg className="beach-boat" viewBox="0 0 50 40" aria-hidden="true">
+        <path className="beach-boat-hull" d="M4,30 L46,30 L38,38 L12,38 Z" />
+        <path className="beach-boat-mast" d="M25,30 L25,4" fill="none" />
+        <path className="beach-boat-sail" d="M25,6 L25,28 L8,28 Z" />
       </svg>
 
       <svg className="beach-palm" viewBox="0 0 100 140">
@@ -43,6 +89,9 @@ export default function BeachBackground() {
       <Crab className="beach-crab-1" />
       <Crab className="beach-crab-2" />
       <Crab className="beach-crab-3" />
+
+      <Shell className="beach-shell-1" />
+      <Shell className="beach-shell-2" />
     </div>
   );
 }

@@ -139,8 +139,9 @@ export default function LessonPath({ lessons }) {
 }
 
 function LessonNode({ lesson, pos, registerRef }) {
-  const { moduleId, block, state } = lesson;
+  const { moduleId, block, state, moduleComplete } = lesson;
   const icon = state === 'locked' ? '🔒' : state === 'completed' ? '✓' : '★';
+  const nodeClass = `lesson-node state-${state}${moduleComplete ? ' module-complete' : ''}`;
 
   const inner = (
     <>
@@ -149,7 +150,7 @@ function LessonNode({ lesson, pos, registerRef }) {
           📍
         </span>
       )}
-      <span ref={registerRef} className={`lesson-node state-${state}`}>
+      <span ref={registerRef} className={nodeClass}>
         <span aria-hidden="true">{icon}</span>
       </span>
       <span className="lesson-node-label">{block}</span>
