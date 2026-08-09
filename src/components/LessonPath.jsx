@@ -1,14 +1,22 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BeachBackground from './BeachBackground.jsx';
+import AutumnBackground from './AutumnBackground.jsx';
 
 const POSITION_CYCLE = ['left', 'center', 'right', 'center'];
+
+const THEME_COMPONENTS = {
+  beach: BeachBackground,
+  autumn: AutumnBackground,
+};
 
 export default function LessonPath({ lessons }) {
   const containerRef = useRef(null);
   const nodeRefs = useRef(new Map());
+  const sectionRefs = useRef(new Map());
   const [pathD, setPathD] = useState('');
   const [svgHeight, setSvgHeight] = useState(0);
+  const [segments, setSegments] = useState([]);
 
   let pathIndex = 0;
   let lastModuleId = null;
@@ -38,6 +46,7 @@ export default function LessonPath({ lessons }) {
       const container = containerRef.current;
       if (!container) return;
       const containerRect = container.getBoundingClientRect();
+
       const points = lessons
         .map((lesson) => nodeRefs.current.get(lesson.key))
         .filter(Boolean)
@@ -55,6 +64,26 @@ export default function LessonPath({ lessons }) {
           : points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ')
       );
       setSvgHeight(container.scrollHeight);
+
+      const moduleStarts = [];
+      const seen = new Set();
+      lessons.forEach((lesson) => {
+        if (seen.has(lesson.moduleId)) return;
+        seen.add(lesson.moduleId);
+        const bannerEl = sectionRefs.current.get(lesson.moduleId);
+        if (!bannerEl) return;
+        moduleStarts.push({
+          moduleId: lesson.moduleId,
+          theme: lesson.moduleTheme,
+          top: bannerEl.getBoundingClientRect().top - containerRect.top,
+        });
+      });
+
+      const withHeights = moduleStarts.map((seg, i) => {
+        const nextTop = i + 1 < moduleStarts.length ? moduleStarts[i + 1].top : container.scrollHeight;
+        return { ...seg, height: nextTop - seg.top };
+      });
+      setSegments(withHeights);
     }
 
     measure();
@@ -64,13 +93,32 @@ export default function LessonPath({ lessons }) {
 
   return (
     <div className="lesson-path" ref={containerRef}>
-      <BeachBackground />
+      {segments.map((seg) => {
+        const ThemeBg = THEME_COMPONENTS[seg.theme] || BeachBackground;
+        return (
+          <div
+            key={seg.moduleId}
+            className="lesson-theme-layer"
+            style={{ top: seg.top, height: seg.height }}
+          >
+            <ThemeBg />
+          </div>
+        );
+      })}
       <svg className="lesson-path-svg" width="100%" height={svgHeight} preserveAspectRatio="none" aria-hidden="true">
         <path d={pathD} className="lesson-path-line" fill="none" />
       </svg>
       {items.map((item) =>
         item.type === 'banner' ? (
-          <Link key={item.key} to={`/module/${item.moduleId}`} className="module-banner">
+          <Link
+            key={item.key}
+            to={`/module/${item.moduleId}`}
+            className="module-banner"
+            ref={(el) => {
+              if (el) sectionRefs.current.set(item.moduleId, el);
+              else sectionRefs.current.delete(item.moduleId);
+            }}
+          >
             <span>{item.title}</span>
             <span className="module-banner-chev">›</span>
           </Link>

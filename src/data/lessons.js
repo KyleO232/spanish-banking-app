@@ -9,6 +9,7 @@ export function getLessons() {
         key: lessonKey(module.id, block),
         moduleId: module.id,
         moduleTitle: module.title,
+        moduleTheme: module.theme || 'beach',
         block,
         termCount: getTermsByBlock(module, block).length,
       });

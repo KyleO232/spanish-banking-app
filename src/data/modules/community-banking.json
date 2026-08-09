@@ -2,6 +2,7 @@
   "id": "community-banking",
   "title": "Community Banking",
   "description": "Core vocabulary and phrases for teller and personal banker roles: account services, deposits & transactions, and consumer lending.",
+  "theme": "beach",
   "terms": [
     { "spanish": "la cuenta corriente", "english": "checking account", "note": "", "block": "Account Services", "example": { "es": "Me gustaría abrir una cuenta corriente para mis gastos diarios.", "en": "I would like to open a checking account for my daily expenses." } },
     { "spanish": "la cuenta de ahorros", "english": "savings account", "note": "", "block": "Account Services", "example": { "es": "Es importante tener una cuenta de ahorros para emergencias.", "en": "It's important to have a savings account for emergencies." } },

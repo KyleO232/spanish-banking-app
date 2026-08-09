@@ -599,6 +599,16 @@
   overflow: hidden;
 }
 
+/* ---------- themed background segments (one per module) ---------- */
+.lesson-theme-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 /* ---------- beach background scene ---------- */
 .beach-bg {
   position: absolute;
@@ -733,6 +743,160 @@
   }
   50% {
     transform: translateX(5px) rotate(-4deg);
+  }
+}
+
+/* ---------- autumn background scene ---------- */
+.autumn-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--autumn-sky-top) 0%,
+    var(--autumn-sky-bottom) 22%,
+    var(--autumn-ground-top) 26%,
+    var(--autumn-ground-bottom) 100%
+  );
+}
+
+.autumn-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--autumn-ground-fleck) 1px, transparent 1.5px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+}
+
+.autumn-leaf {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.autumn-leaf-vein {
+  stroke: var(--autumn-leaf-vein);
+  stroke-width: 1;
+}
+
+.autumn-leaf-a {
+  top: 8%;
+  left: 10%;
+  fill: var(--autumn-leaf-1);
+  animation: leaf-sway 4.2s ease-in-out infinite;
+}
+
+.autumn-leaf-b {
+  top: 24%;
+  right: 10%;
+  fill: var(--autumn-leaf-2);
+  animation: leaf-sway 5s ease-in-out infinite 0.6s;
+}
+
+.autumn-leaf-c {
+  top: 50%;
+  left: 7%;
+  fill: var(--autumn-leaf-3);
+  animation: leaf-sway 4.6s ease-in-out infinite 1.1s;
+}
+
+.autumn-leaf-d {
+  top: 72%;
+  right: 16%;
+  fill: var(--autumn-leaf-1);
+  animation: leaf-sway 5.4s ease-in-out infinite 0.3s;
+}
+
+@keyframes leaf-sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(18deg);
+  }
+}
+
+.autumn-pumpkin {
+  position: absolute;
+  width: 48px;
+  height: 40px;
+}
+
+.autumn-pumpkin-body {
+  fill: var(--autumn-pumpkin);
+}
+
+.autumn-pumpkin-front {
+  fill: var(--autumn-pumpkin-dark);
+  opacity: 0.5;
+}
+
+.autumn-pumpkin-stem {
+  stroke: var(--autumn-pumpkin-stem);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.autumn-pumpkin-1 {
+  top: 38%;
+  left: 5%;
+}
+
+.autumn-pumpkin-2 {
+  top: 88%;
+  right: 8%;
+}
+
+.autumn-lantern {
+  position: absolute;
+  top: 2px;
+  right: 6%;
+  width: 34px;
+  height: 52px;
+  transform-origin: 50% 0%;
+  animation: lantern-sway 4.5s ease-in-out infinite;
+}
+
+.autumn-lantern-hook {
+  stroke: var(--autumn-lantern-frame);
+  stroke-width: 2;
+}
+
+.autumn-lantern-frame {
+  fill: var(--autumn-lantern-frame);
+}
+
+.autumn-lantern-body {
+  fill: var(--autumn-lantern-glow);
+  animation: lantern-flicker 2.4s ease-in-out infinite;
+}
+
+.autumn-lantern-glow {
+  fill: var(--autumn-lantern-glow-soft);
+  animation: lantern-flicker 2.4s ease-in-out infinite;
+}
+
+@keyframes lantern-sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes lantern-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
   }
 }
 

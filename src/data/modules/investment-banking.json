@@ -2,6 +2,7 @@
   "id": "investment-banking",
   "title": "Investment Banking",
   "description": "Vocabulary and phrases for capital markets, M&A, and valuation work: securities, deal-making, financial analysis, and client communication.",
+  "theme": "autumn",
   "terms": [
     { "spanish": "la acción", "english": "stock / share", "note": "", "block": "Capital Markets & Securities", "example": { "es": "El precio de la acción subió un diez por ciento esta semana.", "en": "The stock price rose ten percent this week." } },
     { "spanish": "el bono", "english": "bond", "note": "", "block": "Capital Markets & Securities", "example": { "es": "La empresa emitió un bono a diez años con una tasa fija.", "en": "The company issued a ten-year bond with a fixed rate." } },

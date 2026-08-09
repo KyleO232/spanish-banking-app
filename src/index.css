@@ -30,6 +30,22 @@
   --beach-palm-leaf: #2f8f5b;
   --beach-crab: #e2683b;
 
+  --autumn-sky-top: #e9d9bd;
+  --autumn-sky-bottom: #f2c98f;
+  --autumn-ground-top: #d9a05b;
+  --autumn-ground-bottom: #b97b3f;
+  --autumn-ground-fleck: rgba(122, 66, 20, 0.35);
+  --autumn-leaf-1: #d9531e;
+  --autumn-leaf-2: #e0a72e;
+  --autumn-leaf-3: #a83232;
+  --autumn-leaf-vein: rgba(0, 0, 0, 0.25);
+  --autumn-pumpkin: #e2701a;
+  --autumn-pumpkin-dark: #b85813;
+  --autumn-pumpkin-stem: #5b7038;
+  --autumn-lantern-frame: #4a3c2a;
+  --autumn-lantern-glow: #ffcf5c;
+  --autumn-lantern-glow-soft: rgba(255, 183, 3, 0.45);
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
   font: 16px/1.5 var(--sans);
@@ -72,6 +88,22 @@
     --beach-palm-trunk: #2c1f14;
     --beach-palm-leaf: #1f3d2c;
     --beach-crab: #ff8f66;
+
+    --autumn-sky-top: #1f1b2e;
+    --autumn-sky-bottom: #4a3350;
+    --autumn-ground-top: #4a3018;
+    --autumn-ground-bottom: #2b1c0e;
+    --autumn-ground-fleck: rgba(0, 0, 0, 0.4);
+    --autumn-leaf-1: #b34a1e;
+    --autumn-leaf-2: #c99a2e;
+    --autumn-leaf-3: #7a2a2a;
+    --autumn-leaf-vein: rgba(0, 0, 0, 0.35);
+    --autumn-pumpkin: #c9600f;
+    --autumn-pumpkin-dark: #8f4109;
+    --autumn-pumpkin-stem: #3d4a26;
+    --autumn-lantern-frame: #2b2118;
+    --autumn-lantern-glow: #ffb703;
+    --autumn-lantern-glow-soft: rgba(255, 183, 3, 0.55);
   }
 }
 
