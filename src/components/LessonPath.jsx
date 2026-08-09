@@ -1,14 +1,8 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import BeachBackground from './BeachBackground.jsx';
-import AutumnBackground from './AutumnBackground.jsx';
+import ThemedBackground from './ThemedBackground.jsx';
 
 const POSITION_CYCLE = ['left', 'center', 'right', 'center'];
-
-const THEME_COMPONENTS = {
-  beach: BeachBackground,
-  autumn: AutumnBackground,
-};
 
 export default function LessonPath({ lessons }) {
   const containerRef = useRef(null);
@@ -93,18 +87,15 @@ export default function LessonPath({ lessons }) {
 
   return (
     <div className="lesson-path" ref={containerRef}>
-      {segments.map((seg) => {
-        const ThemeBg = THEME_COMPONENTS[seg.theme] || BeachBackground;
-        return (
-          <div
-            key={seg.moduleId}
-            className="lesson-theme-layer"
-            style={{ top: seg.top, height: seg.height }}
-          >
-            <ThemeBg />
-          </div>
-        );
-      })}
+      {segments.map((seg) => (
+        <div
+          key={seg.moduleId}
+          className="lesson-theme-layer"
+          style={{ top: seg.top, height: seg.height }}
+        >
+          <ThemedBackground theme={seg.theme} />
+        </div>
+      ))}
       <svg className="lesson-path-svg" width="100%" height={svgHeight} preserveAspectRatio="none" aria-hidden="true">
         <path d={pathD} className="lesson-path-line" fill="none" />
       </svg>
