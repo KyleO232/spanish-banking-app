@@ -9,6 +9,7 @@ import RoleplayViewer from './pages/RoleplayViewer.jsx';
 import VocabularyHome from './pages/VocabularyHome.jsx';
 import VocabularyList from './pages/VocabularyList.jsx';
 import Account from './pages/Account.jsx';
+import Shop from './pages/Shop.jsx';
 import BottomNav from './components/BottomNav.jsx';
 import { useAuth } from './auth/AuthContext.jsx';
 import './App.css';
@@ -35,6 +36,7 @@ export default function App() {
           path="/module/:moduleId/lesson/:block/roleplay/:roleplayId"
           element={<RoleplayViewer />}
         />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/account" element={<Account />} />
         <Route path="/vocabulary" element={<VocabularyHome />} />
         <Route path="/vocabulary/:moduleId" element={<VocabularyList />} />

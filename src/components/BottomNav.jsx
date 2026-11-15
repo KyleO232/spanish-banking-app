@@ -1,13 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Route, BookOpen, User } from 'lucide-react';
+import { Route, BookOpen, ShoppingBag, User } from 'lucide-react';
 
 export default function BottomNav() {
   const { pathname } = useLocation();
   const section = pathname.startsWith('/vocabulary')
     ? 'vocab'
-    : pathname.startsWith('/account')
-      ? 'account'
-      : 'path';
+    : pathname.startsWith('/shop')
+      ? 'shop'
+      : pathname.startsWith('/account')
+        ? 'account'
+        : 'path';
 
   return (
     <nav className="bottom-nav" aria-label="Main navigation">
@@ -20,6 +22,9 @@ export default function BottomNav() {
         aria-label="Vocabulary"
       >
         <BookOpen size={26} strokeWidth={2.4} />
+      </Link>
+      <Link to="/shop" className={`bottom-nav-item ${section === 'shop' ? 'active' : ''}`} aria-label="Shop">
+        <ShoppingBag size={26} strokeWidth={2.4} />
       </Link>
       <Link
         to="/account"

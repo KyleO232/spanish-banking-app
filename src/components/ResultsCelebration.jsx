@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Flame, Target, Trophy, Zap, Star, RotateCcw, Route as RouteIcon, Shuffle } from 'lucide-react';
+import CoinIcon from './CoinIcon.jsx';
+import { Flame, Target, Trophy, Zap, Star, RotateCcw, Route as RouteIcon, Shuffle, ShoppingBag } from 'lucide-react';
 import Confetti from './Confetti.jsx';
 import Doodle from './Doodle.jsx';
 import WeekStreak from './WeekStreak.jsx';
@@ -72,6 +73,7 @@ export default function ResultsCelebration({
   const gold = reward?.moduleJustFinished;
   const offset = CIRCUMFERENCE * (1 - pct / 100);
   const xpShown = useCountUp(reward?.xpEarned ?? 0, 700);
+  const coinsShown = useCountUp(reward?.coinsEarned ?? 0, 760);
   const pctShown = useCountUp(pct, 800);
 
   return (
@@ -103,11 +105,25 @@ export default function ResultsCelebration({
       <h2 className="results-title">{headline(pct, reward)}</h2>
       <p className="results-sub">{subline(scoped, reward, kind)}</p>
 
+      {reward?.leveledUp && reward.title && (
+        <div className="title-up">
+          <div className="title-up-kicker">¡Nuevo título!</div>
+          <div className="title-up-name">
+            {reward.title.es} <small>{reward.title.en}</small>
+          </div>
+        </div>
+      )}
+
       <div className="results-stats">
         <div className="results-stat xp">
           <Zap size={22} strokeWidth={2.6} fill="currentColor" />
           <div className="results-stat-value">+{xpShown}</div>
-          <div className="results-stat-label">XP earned</div>
+          <div className="results-stat-label">XP</div>
+        </div>
+        <div className="results-stat coins">
+          <CoinIcon size={22} />
+          <div className="results-stat-value">+{coinsShown}</div>
+          <div className="results-stat-label">Coins</div>
         </div>
         <div className="results-stat streak">
           <Flame size={22} strokeWidth={2.6} fill="currentColor" />
@@ -140,6 +156,11 @@ export default function ResultsCelebration({
         <button className="btn btn-block btn-lg" onClick={onRetry}>
           <RotateCcw size={20} strokeWidth={2.6} /> Try again
         </button>
+        {reward && !reward.preview && (
+          <Link className="btn btn-block btn-lg" to="/shop">
+            <ShoppingBag size={20} strokeWidth={2.6} /> Spend coins in the shop
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { WardrobeBack, WardrobeFront } from './WardrobeArt.jsx';
+import { getEquipped } from '../utils/progress.js';
 
 // "Monedita" (little coin): the app's original mascot, drawn as layered SVG so each
 // part (eyes, arms, body) can move on its own.
@@ -28,13 +30,24 @@ function prefersReducedMotion() {
 }
 
 // `forceAct` pins one behavior (for demos/tests) instead of picking randomly.
-export default function Monedita({ mood = 'idle', size = 96, className = '', forceAct = null }) {
+// `outfit` ({ hat, eyewear, outfit } item ids) overrides what she wears; by default she
+// wears whatever the learner has equipped. `still` freezes her (used for shop thumbnails).
+export default function Monedita({
+  mood = 'idle',
+  size = 96,
+  className = '',
+  forceAct = null,
+  outfit,
+  still = false,
+}) {
   const [randomAct, setAct] = useState(null);
+  const [equipped] = useState(() => getEquipped());
+  const worn = outfit ?? equipped;
   const act = forceAct ?? randomAct;
 
   // Pick a random behavior every few seconds (never the same one twice in a row).
   useEffect(() => {
-    if (mood !== 'idle' || forceAct || prefersReducedMotion()) {
+    if (mood !== 'idle' || forceAct || still || prefersReducedMotion()) {
       setAct(null);
       return undefined;
     }
@@ -59,7 +72,7 @@ export default function Monedita({ mood = 'idle', size = 96, className = '', for
 
     timer = setTimeout(perform, 1200 + Math.random() * 2000);
     return () => clearTimeout(timer);
-  }, [mood, forceAct]);
+  }, [mood, forceAct, still]);
 
   const open = mood === 'cheer';
   const worried = mood === 'oops';
@@ -75,7 +88,7 @@ export default function Monedita({ mood = 'idle', size = 96, className = '', for
 
   return (
     <div
-      className={`monedita mood-${mood} ${act ? `act-${act}` : ''} ${className}`}
+      className={`monedita mood-${mood} ${act ? `act-${act}` : ''} ${still ? 'still' : ''} ${className}`}
       style={{ width: size, height: size * 1.04 }}
       aria-hidden="true"
     >
@@ -95,6 +108,7 @@ export default function Monedita({ mood = 'idle', size = 96, className = '', for
         <ellipse className="mon-shadow" cx="60" cy="117" rx="30" ry="5" />
 
         <g className="mon-all">
+          <WardrobeBack worn={worn} />
           <g className="mon-feet">
             <ellipse cx="45" cy="108" rx="11" ry="6" />
             <ellipse cx="75" cy="108" rx="11" ry="6" />
@@ -154,6 +168,8 @@ export default function Monedita({ mood = 'idle', size = 96, className = '', for
           )}
 
           {worried && <path className="mon-sweat" d="M96 36 q-6 9 0 13 q6 -4 0 -13 z" fill="#5ec3ff" />}
+
+          <WardrobeFront worn={worn} />
         </g>
 
         {act === 'whistle' && (

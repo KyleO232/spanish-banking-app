@@ -2673,3 +2673,369 @@
   text-decoration: underline;
   padding: 8px;
 }
+
+/* ---------- coins, titles and the shop ---------- */
+a.stat-chip {
+  text-decoration: none;
+}
+
+.stat-chip.coins {
+  color: var(--coin);
+}
+
+.stat-chip.coins svg,
+.results-stat.coins svg {
+  animation: coin-spin 4.2s ease-in-out infinite;
+}
+
+@keyframes coin-spin {
+  0%,
+  70%,
+  100% {
+    transform: scaleX(1);
+  }
+  80% {
+    transform: scaleX(0.15);
+  }
+  90% {
+    transform: scaleX(1);
+  }
+}
+
+.rank-name {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.results-stats {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.results-stat:nth-child(4) {
+  animation-delay: 0.86s;
+}
+
+.results-stat.coins {
+  color: var(--coin);
+}
+
+.results-stat-label {
+  font-size: 10.5px;
+}
+
+.title-up {
+  margin-top: 14px;
+  padding: 12px 22px;
+  border-radius: 16px;
+  border: 2px solid var(--gold);
+  background: color-mix(in srgb, var(--gold) 14%, var(--surface));
+  box-shadow: 0 4px 0 var(--gold-shadow);
+  animation: title-pop 0.6s 0.4s cubic-bezier(0.3, 1.5, 0.5, 1) backwards;
+}
+
+.title-up-kicker {
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-shadow);
+  font-weight: 700;
+}
+
+.title-up-name {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1.15;
+}
+
+.title-up-name small {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+@keyframes title-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.monedita.still,
+.monedita.still * {
+  animation: none !important;
+}
+
+.shop-admin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shop-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 34px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, var(--surface)), var(--surface) 70%);
+}
+
+.shop-stage {
+  height: 170px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.shop-message {
+  min-height: 22px;
+  margin-top: 6px;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.shop-rank {
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--border);
+}
+
+.shop-title {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.shop-title small {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.shop-xp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-shadow);
+}
+
+.shop-xp-bar {
+  height: 10px;
+  margin: 8px auto 0;
+  max-width: 280px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.shop-xp-bar div {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gold);
+  transition: width 0.5s ease-out;
+}
+
+.shop-tabs {
+  margin-top: 16px;
+}
+
+.shop-tabs .chip small {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 10px 12px;
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 3px 0 var(--border);
+  text-align: center;
+}
+
+.shop-card.trial {
+  border-color: var(--accent);
+}
+
+.shop-card.wearing {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.shop-thumb {
+  width: 100%;
+  padding: 26px 0 6px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.shop-name {
+  font-family: var(--display);
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text-h);
+  line-height: 1.2;
+}
+
+.shop-name-en {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.shop-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 108px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  box-shadow: 0 3px 0 var(--border);
+  background: var(--surface);
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 800;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.shop-action:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.shop-action.buy {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent-shadow);
+  color: var(--accent-contrast);
+}
+
+.shop-action.buy.poor {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 3px 0 var(--border);
+  color: var(--text-dim);
+}
+
+.shop-action.on {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent);
+  color: var(--accent);
+}
+
+.shop-action:disabled {
+  cursor: not-allowed;
+}
+
+.shop-need {
+  margin-top: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.shop-hint {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+/* shop polish: even tabs and aligned buy buttons */
+.shop-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  overflow: visible;
+}
+
+.shop-tabs .chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 8px 6px;
+  border-radius: 14px;
+  line-height: 1.25;
+}
+
+.shop-tabs .chip small {
+  margin-left: 0;
+}
+
+.shop-action {
+  margin-top: auto;
+}
+
+/* keep the three Home chips and the title on one line on narrow phones */
+.topbar-home .stat-chips {
+  gap: 5px;
+}
+
+.topbar-home .stat-chip {
+  padding: 5px 8px;
+  gap: 4px;
+  font-size: 14px;
+  border-radius: 11px;
+}
+
+.topbar-home .stat-chip svg {
+  width: 16px;
+  height: 16px;
+}
+
+.topbar-home .topbar-titles .subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 400px) {
+  .topbar-home .topbar-titles h1 {
+    font-size: 16px;
+  }
+}
