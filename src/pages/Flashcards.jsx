@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link, useParams } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, LockOpen } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import LockedStep from '../components/LockedStep.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
+import { getLessonSteps } from '../data/lessons.js';
+import { markFlashcardsDone } from '../utils/progress.js';
 
 export default function Flashcards() {
   const { moduleId, block: blockParam } = useParams();
@@ -13,6 +16,7 @@ export default function Flashcards() {
   const [activeBlock, setActiveBlock] = useState(lockedBlock ?? 'All');
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [visited, setVisited] = useState([]);
 
   const terms = useMemo(
     () => (module ? getTermsByBlock(module, activeBlock) : []),
@@ -23,6 +27,20 @@ export default function Flashcards() {
     setIndex(0);
     setFlipped(false);
   }, [activeBlock]);
+
+  // In a lesson, remember which cards have been seen; seeing them all unlocks the quiz.
+  useEffect(() => {
+    if (!lockedBlock) return;
+    setVisited((prev) => (prev.includes(index) ? prev : [...prev, index]));
+  }, [index, lockedBlock]);
+
+  const allViewed = Boolean(lockedBlock) && terms.length > 0 && visited.length >= terms.length;
+
+  useEffect(() => {
+    if (allViewed) markFlashcardsDone(moduleId, lockedBlock);
+  }, [allViewed, moduleId, lockedBlock]);
+
+  const steps = lockedBlock ? getLessonSteps(moduleId, lockedBlock) : null;
 
   if (!module) {
     return (
@@ -35,7 +53,20 @@ export default function Flashcards() {
     );
   }
 
+  if (steps && !steps.unlocked.flashcards) {
+    return (
+      <LockedStep
+        title="Flashcards"
+        subtitle={`${module.title} · ${lockedBlock}`}
+        message="Complete the previous lesson to unlock this one."
+        actionTo="/"
+        actionLabel="Back to Path"
+      />
+    );
+  }
+
   const term = terms[index];
+  const quizUnlocked = Boolean(steps?.flashcardsDone) || allViewed;
 
   function goNext() {
     setFlipped(false);
@@ -104,7 +135,11 @@ export default function Flashcards() {
                 </div>
               </div>
             </div>
-            <div className="flashcard-hint">Tap the card to flip</div>
+            <div className="flashcard-hint">
+              {lockedBlock && !quizUnlocked
+                ? `Tap the card to flip · viewed ${visited.length} of ${terms.length}`
+                : 'Tap the card to flip'}
+            </div>
             <div className="flashcard-nav">
               <button className="btn" style={{ flex: 1 }} onClick={goPrev}>
                 <ChevronLeft size={20} strokeWidth={2.6} /> Prev
@@ -113,6 +148,21 @@ export default function Flashcards() {
                 Next <ChevronRight size={20} strokeWidth={2.6} />
               </button>
             </div>
+            {lockedBlock && quizUnlocked && (
+              <div className="card unlock-card">
+                <LockOpen size={26} strokeWidth={2.4} />
+                <div>
+                  <h3>Quiz unlocked!</h3>
+                  <div className="meta">You've gone through every card.</div>
+                </div>
+                <Link
+                  className="btn btn-primary"
+                  to={`/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/quiz`}
+                >
+                  Start quiz
+                </Link>
+              </div>
+            )}
           </>
         ) : (
           <div className="empty-state">No terms in this block.</div>

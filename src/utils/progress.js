@@ -32,6 +32,34 @@ export function markCompleted(moduleId, block) {
   writeCompleted(set);
 }
 
+// ---------- flashcard step ----------
+// A lesson's quiz unlocks once every flashcard in it has been viewed.
+
+const FLASH_KEY = 'spanish-banking-flashcards';
+
+function readFlashcardsDone() {
+  try {
+    const raw = localStorage.getItem(FLASH_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+export function isFlashcardsDone(moduleId, block) {
+  return readFlashcardsDone().has(lessonKey(moduleId, block));
+}
+
+export function markFlashcardsDone(moduleId, block) {
+  const set = readFlashcardsDone();
+  set.add(lessonKey(moduleId, block));
+  try {
+    localStorage.setItem(FLASH_KEY, JSON.stringify([...set]));
+  } catch {
+    // ignore
+  }
+}
+
 // ---------- XP + streak ----------
 
 const EMPTY_STATS = { xp: 0, streak: 0, lastActive: null };
@@ -91,6 +119,7 @@ export function resetProgress() {
   try {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STATS_KEY);
+    localStorage.removeItem(FLASH_KEY);
   } catch {
     // ignore
   }

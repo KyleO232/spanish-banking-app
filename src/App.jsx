@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import ModuleHome from './pages/ModuleHome.jsx';
 import Lesson from './pages/Lesson.jsx';
@@ -12,9 +12,12 @@ import BottomNav from './components/BottomNav.jsx';
 import './App.css';
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <div className="app">
-      <Routes>
+      {/* Keyed by path so moving between e.g. two lessons never reuses the old page's state. */}
+      <Routes key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/module/:moduleId" element={<ModuleHome />} />
         <Route path="/module/:moduleId/flashcards" element={<Flashcards />} />
@@ -25,6 +28,10 @@ export default function App() {
         <Route path="/module/:moduleId/lesson/:block/flashcards" element={<Flashcards />} />
         <Route path="/module/:moduleId/lesson/:block/quiz" element={<Quiz />} />
         <Route path="/module/:moduleId/lesson/:block/roleplay" element={<RoleplayList />} />
+        <Route
+          path="/module/:moduleId/lesson/:block/roleplay/:roleplayId"
+          element={<RoleplayViewer />}
+        />
         <Route path="/vocabulary" element={<VocabularyHome />} />
         <Route path="/vocabulary/:moduleId" element={<VocabularyList />} />
       </Routes>

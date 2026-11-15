@@ -950,6 +950,66 @@
   scroll-margin-bottom: 340px;
 }
 
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 900;
+  vertical-align: 2px;
+}
+
+.step-check {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.link-card.step-locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.link-card.step-locked:hover {
+  border-color: var(--border);
+}
+
+.link-card.step-locked:active {
+  transform: none;
+  box-shadow: 0 3px 0 var(--border);
+}
+
+.link-card.step-locked .link-card-icon {
+  background: var(--border);
+  color: var(--text-dim);
+}
+
+.unlock-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent);
+  color: var(--accent);
+  animation: feedback-in 0.3s ease-out;
+}
+
+.unlock-card > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.unlock-card .meta {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
 .chat-wait {
   display: flex;
   align-items: center;

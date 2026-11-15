@@ -1,5 +1,5 @@
 import { getModules, getBlocks, getTermsByBlock } from './modules.js';
-import { lessonKey, isCompleted } from '../utils/progress.js';
+import { lessonKey, isCompleted, isFlashcardsDone } from '../utils/progress.js';
 
 export function getLessons() {
   const lessons = [];
@@ -16,6 +16,29 @@ export function getLessons() {
     });
   });
   return lessons;
+}
+
+// Which of a lesson's three activities the learner may open:
+//   flashcards -> quiz (after viewing every card) -> roleplay (after finishing the quiz).
+// Lessons finished before this rule existed count as having done every step.
+export function getLessonSteps(moduleId, block) {
+  const lesson = getLessonsWithState().find((l) => l.moduleId === moduleId && l.block === block);
+  const state = lesson?.state ?? 'locked';
+  const quizDone = state === 'completed';
+  const flashcardsDone = quizDone || isFlashcardsDone(moduleId, block);
+  const open = state !== 'locked';
+
+  return {
+    lesson,
+    state,
+    flashcardsDone,
+    quizDone,
+    unlocked: {
+      flashcards: open,
+      quiz: open && flashcardsDone,
+      roleplay: open && quizDone,
+    },
+  };
 }
 
 // Returns lessons in order with a `state` of 'locked' | 'current' | 'completed'.

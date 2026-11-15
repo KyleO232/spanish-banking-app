@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
-import { getLessonsWithState } from '../data/lessons.js';
+import LockedStep from '../components/LockedStep.jsx';
+import { getLessonsWithState, getLessonSteps } from '../data/lessons.js';
 import { generateQuizQuestions, normalizeAnswer } from '../utils/quiz.js';
 import { recordQuizResult } from '../utils/progress.js';
 
@@ -42,6 +43,30 @@ export default function Quiz() {
         </div>
       </>
     );
+  }
+
+  if (lockedBlock) {
+    const steps = getLessonSteps(moduleId, lockedBlock);
+    if (!steps.unlocked.quiz) {
+      const lessonLocked = steps.state === 'locked';
+      return (
+        <LockedStep
+          title="Quiz"
+          subtitle={`${module.title} · ${lockedBlock}`}
+          message={
+            lessonLocked
+              ? 'Complete the previous lesson to unlock this one.'
+              : 'Go through every flashcard in this lesson to unlock the quiz.'
+          }
+          actionTo={
+            lessonLocked
+              ? '/'
+              : `/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/flashcards`
+          }
+          actionLabel={lessonLocked ? 'Back to Path' : 'Go to flashcards'}
+        />
+      );
+    }
   }
 
   function startQuiz() {

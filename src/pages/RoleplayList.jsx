@@ -1,7 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import LockedStep from '../components/LockedStep.jsx';
 import { getModule } from '../data/modules.js';
+import { getLessonSteps } from '../data/lessons.js';
 
 export default function RoleplayList() {
   const { moduleId, block: blockParam } = useParams();
@@ -19,6 +21,32 @@ export default function RoleplayList() {
     );
   }
 
+  if (lockedBlock) {
+    const steps = getLessonSteps(moduleId, lockedBlock);
+    if (!steps.unlocked.roleplay) {
+      const lessonLocked = steps.state === 'locked';
+      return (
+        <LockedStep
+          title="Roleplay"
+          subtitle={`${module.title} · ${lockedBlock}`}
+          message={
+            lessonLocked
+              ? 'Complete the previous lesson to unlock this one.'
+              : 'Finish the quiz in this lesson to unlock roleplay.'
+          }
+          actionTo={
+            lessonLocked
+              ? '/'
+              : `/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/${
+                  steps.unlocked.quiz ? 'quiz' : 'flashcards'
+                }`
+          }
+          actionLabel={lessonLocked ? 'Back to Path' : steps.unlocked.quiz ? 'Go to quiz' : 'Go to flashcards'}
+        />
+      );
+    }
+  }
+
   const roleplays = (module.roleplays ?? []).filter((rp) => !lockedBlock || rp.block === lockedBlock);
 
   return (
@@ -33,7 +61,15 @@ export default function RoleplayList() {
         </div>
         <div className="card-list">
           {roleplays.map((rp) => (
-            <Link key={rp.id} to={`/module/${module.id}/roleplay/${rp.id}`} className="card link-card">
+            <Link
+              key={rp.id}
+              to={
+                lockedBlock
+                  ? `/module/${module.id}/lesson/${encodeURIComponent(lockedBlock)}/roleplay/${rp.id}`
+                  : `/module/${module.id}/roleplay/${rp.id}`
+              }
+              className="card link-card"
+            >
               <div>
                 <h3>{rp.title}</h3>
                 <div className="meta">

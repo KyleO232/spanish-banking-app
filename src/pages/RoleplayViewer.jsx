@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import TopBar from '../components/TopBar.jsx';
 import RoleplayPractice from '../components/RoleplayPractice.jsx';
+import LockedStep from '../components/LockedStep.jsx';
 import { getModule } from '../data/modules.js';
+import { getLessonSteps } from '../data/lessons.js';
 
 export default function RoleplayViewer() {
-  const { moduleId, roleplayId } = useParams();
+  const { moduleId, roleplayId, block: blockParam } = useParams();
+  const lessonBlock = blockParam ? decodeURIComponent(blockParam) : null;
   const navigate = useNavigate();
   const module = getModule(moduleId);
   const [mode, setMode] = useState('practice'); // 'practice' | 'read'
@@ -33,6 +36,18 @@ export default function RoleplayViewer() {
           <div className="empty-state">We couldn't find that scenario.</div>
         </div>
       </>
+    );
+  }
+
+  if (lessonBlock && !getLessonSteps(moduleId, lessonBlock).unlocked.roleplay) {
+    return (
+      <LockedStep
+        title={roleplay.title}
+        subtitle={roleplay.block}
+        message="Finish this lesson's quiz to unlock roleplay."
+        actionTo={`/module/${moduleId}/lesson/${encodeURIComponent(lessonBlock)}`}
+        actionLabel="Back to lesson"
+      />
     );
   }
 
