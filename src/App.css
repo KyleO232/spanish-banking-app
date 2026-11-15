@@ -950,6 +950,20 @@
   scroll-margin-bottom: 340px;
 }
 
+.chat-wait {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px dashed var(--border);
+  color: var(--text-dim);
+  font-size: 13.5px;
+  animation: feedback-in 0.3s ease-out;
+}
+
 .chat-results {
   margin-top: 28px;
   scroll-margin-top: 80px;

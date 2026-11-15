@@ -6,7 +6,15 @@ import { recordQuizResult } from '../utils/progress.js';
 
 const ResultsCelebration = lazy(() => import('./ResultsCelebration.jsx'));
 
-const TYPING_MS = 750;
+// Pacing, so the exchange feels like texting rather than a form:
+// the client reads your message, "types" for a while, then you get time to
+// read their reply before the app asks for yours.
+const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+const thinkMs = (text) => clamp(1100 + text.length * 22, 1500, 3400); // client typing
+const readMs = (text) => clamp(1200 + text.length * 32, 2200, 4800); // learner reading
+const LEAD_AFTER_YOU_MS = 700; // client "reads" your message before typing
+const LEAD_FIRST_MS = 400;
+const FIRST_PROMPT_MS = 600; // when the learner speaks first
 
 function Bubble({ entry, line, blank, showEnglish }) {
   const isYou = line.speaker === 'Banker';
@@ -58,6 +66,7 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   const [answer, setAnswer] = useState('');
   const [hintOn, setHintOn] = useState(false);
   const [checked, setChecked] = useState(null);
+  const [promptReady, setPromptReady] = useState(false);
   const [score, setScore] = useState(0);
   const [reward, setReward] = useState(null);
 
@@ -69,18 +78,35 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   const done = cursor >= lines.length;
   const blank = !done ? blanks[cursor] : null;
   const line = !done ? lines[cursor] : null;
+  const showCompose = Boolean(blank) && promptReady;
+  const waitingToReply = Boolean(blank) && !promptReady;
 
-  // Client lines (and any banker line without a blank) play automatically.
+  // Client lines (and any banker line without a blank) play automatically:
+  // a short pause, then a typing indicator sized to the message, then the bubble.
   useEffect(() => {
     if (done || blanks[cursor]) return undefined;
-    setTyping(true);
-    const timer = setTimeout(() => {
+    const lead = cursor > 0 && lines[cursor - 1].speaker === 'Banker' ? LEAD_AFTER_YOU_MS : LEAD_FIRST_MS;
+    const think = thinkMs(lines[cursor].spanish);
+    const showTyping = setTimeout(() => setTyping(true), lead);
+    const showMessage = setTimeout(() => {
       setShown((s) => [...s, { index: cursor }]);
       setTyping(false);
       setCursor((c) => c + 1);
-    }, TYPING_MS);
+    }, lead + think);
+    return () => {
+      clearTimeout(showTyping);
+      clearTimeout(showMessage);
+    };
+  }, [cursor, done, blanks, lines]);
+
+  // On the learner's turn, give them time to read the client's message first.
+  useEffect(() => {
+    setPromptReady(false);
+    if (done || !blanks[cursor]) return undefined;
+    const previous = lines[cursor - 1];
+    const timer = setTimeout(() => setPromptReady(true), previous ? readMs(previous.spanish) : FIRST_PROMPT_MS);
     return () => clearTimeout(timer);
-  }, [cursor, done, blanks]);
+  }, [cursor, done, blanks, lines]);
 
   // Award XP once, when the conversation ends.
   useEffect(() => {
@@ -93,7 +119,7 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   useEffect(() => {
     if (done) return;
     endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
-  }, [shown.length, typing, checked, done]);
+  }, [shown.length, typing, checked, done, promptReady]);
 
   // When the conversation ends, bring the results into view.
   useEffect(() => {
@@ -101,8 +127,8 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   }, [reward]);
 
   useEffect(() => {
-    if (blank && !checked) inputRef.current?.focus({ preventScroll: true });
-  }, [blank, checked]);
+    if (showCompose && !checked) inputRef.current?.focus({ preventScroll: true });
+  }, [showCompose, checked, cursor]);
 
   function finishTurn(result) {
     if (result.correct) setScore((s) => s + 1);
@@ -175,7 +201,16 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
         </div>
       )}
 
-      {blank && (
+      {waitingToReply && (
+        <div className="chat-wait">
+          <span>Take a moment to read — your reply is next.</span>
+          <button type="button" className="link-btn" onClick={() => setPromptReady(true)}>
+            Reply now
+          </button>
+        </div>
+      )}
+
+      {showCompose && (
         <form className="compose" onSubmit={check}>
           <div className="compose-label">Your reply — say it in Spanish</div>
           <div className="compose-english">“{line.english}”</div>
