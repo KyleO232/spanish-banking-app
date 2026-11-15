@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Flame, Target, Trophy, Zap, Star, RotateCcw, Route as RouteIcon, Shuffle } from 'lucide-react';
 import Confetti from './Confetti.jsx';
+import Doodle from './Doodle.jsx';
 
 const RADIUS = 56;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+function doodleFor(pct, reward) {
+  if (reward?.moduleJustFinished || pct >= 90) return 'jumping';
+  if (pct >= 50) return 'running';
+  return 'reading';
+}
 
 function headline(pct, reward) {
   if (reward?.moduleJustFinished) return 'Module complete!';
@@ -30,8 +37,10 @@ export default function ResultsCelebration({ score, total, reward, scoped, onRet
     <div className="results">
       {celebrate && <Confetti count={gold ? 80 : 48} />}
 
+      <Doodle name={doodleFor(pct, reward)} className={gold ? 'gold' : ''} />
+
       <div className={`results-ring ${gold ? 'gold' : ''}`}>
-        <svg viewBox="0 0 140 140" width="168" height="168" aria-hidden="true">
+        <svg viewBox="0 0 140 140" width="120" height="120" aria-hidden="true">
           <circle className="results-ring-track" cx="70" cy="70" r={RADIUS} />
           <circle
             className="results-ring-fill"
@@ -43,7 +52,7 @@ export default function ResultsCelebration({ score, total, reward, scoped, onRet
           />
         </svg>
         <div className="results-ring-center">
-          {gold ? <Trophy size={34} strokeWidth={2.4} /> : <Star size={34} strokeWidth={2.4} fill="currentColor" />}
+          {gold ? <Trophy size={24} strokeWidth={2.4} /> : <Star size={24} strokeWidth={2.4} fill="currentColor" />}
           <div className="results-score">
             {score}/{total}
           </div>

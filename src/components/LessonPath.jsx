@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ChevronRight, Lock, MapPin, Star } from 'lucide-react';
 import ThemedBackground from './ThemedBackground.jsx';
@@ -13,27 +13,30 @@ export default function LessonPath({ lessons }) {
   const [svgHeight, setSvgHeight] = useState(0);
   const [segments, setSegments] = useState([]);
 
-  let pathIndex = 0;
-  let lastModuleId = null;
-  const items = [];
-
-  lessons.forEach((lesson) => {
-    if (lesson.moduleId !== lastModuleId) {
-      items.push({
-        type: 'banner',
-        key: `banner-${lesson.moduleId}`,
-        title: lesson.moduleTitle,
-        moduleId: lesson.moduleId,
-      });
-      lastModuleId = lesson.moduleId;
+  // Group lessons by module (in order), keeping each lesson's zigzag position.
+  const groups = [];
+  lessons.forEach((lesson, index) => {
+    let group = groups[groups.length - 1];
+    if (!group || group.moduleId !== lesson.moduleId) {
+      group = { moduleId: lesson.moduleId, title: lesson.moduleTitle, nodes: [] };
+      groups.push(group);
     }
+    group.nodes.push({ lesson, pos: POSITION_CYCLE[index % POSITION_CYCLE.length] });
+  });
+
+  // The path runs bottom-to-top: lesson 1 sits at the bottom of the screen and
+  // later lessons/modules stack above it. Each module's banner heads its section.
+  const items = [];
+  [...groups].reverse().forEach((group) => {
     items.push({
-      type: 'node',
-      key: lesson.key,
-      lesson,
-      pos: POSITION_CYCLE[pathIndex % POSITION_CYCLE.length],
+      type: 'banner',
+      key: `banner-${group.moduleId}`,
+      title: group.title,
+      moduleId: group.moduleId,
     });
-    pathIndex += 1;
+    [...group.nodes].reverse().forEach(({ lesson, pos }) => {
+      items.push({ type: 'node', key: lesson.key, lesson, pos });
+    });
   });
 
   useLayoutEffect(() => {
@@ -74,7 +77,9 @@ export default function LessonPath({ lessons }) {
         });
       });
 
-      // the first module's photo should reach the top edge of the card
+      // sections are stacked in reverse order, so sort top-to-bottom, and let the
+      // top section's photo reach the top edge of the card
+      moduleStarts.sort((a, b) => a.top - b.top);
       if (moduleStarts.length > 0) moduleStarts[0].top = 0;
 
       const withHeights = moduleStarts.map((seg, i) => {
@@ -87,6 +92,14 @@ export default function LessonPath({ lessons }) {
     measure();
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
+  }, [lessons]);
+
+  // With the path growing upward, bring the learner's current lesson into view
+  // (or the top of the path once everything is complete).
+  useEffect(() => {
+    const target = lessons.find((l) => l.state === 'current') ?? lessons[lessons.length - 1];
+    const el = target ? nodeRefs.current.get(target.key) : null;
+    if (el) el.scrollIntoView({ block: 'center' });
   }, [lessons]);
 
   return (

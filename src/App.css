@@ -605,10 +605,46 @@
   padding-top: 8px;
 }
 
+.doodle {
+  width: 100%;
+  max-width: 280px;
+  height: 150px;
+  animation: doodle-in 0.55s cubic-bezier(0.3, 1.3, 0.5, 1);
+}
+
+.doodle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.doodle-accent {
+  fill: var(--accent);
+}
+
+.doodle-ink {
+  fill: var(--text-h);
+}
+
+.doodle.gold .doodle-accent {
+  fill: var(--gold);
+}
+
+@keyframes doodle-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .results-ring {
   position: relative;
-  width: 168px;
-  height: 168px;
+  width: 120px;
+  height: 120px;
+  margin-top: 6px;
   color: var(--accent);
   animation: ring-pop 0.5s cubic-bezier(0.3, 1.4, 0.5, 1);
 }
@@ -649,7 +685,7 @@
 }
 
 .results-score {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 900;
   color: var(--text-h);
   line-height: 1;

@@ -1,12 +1,13 @@
-import { useMemo, useState } from 'react';
+import { lazy, Suspense, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
-import ResultsCelebration from '../components/ResultsCelebration.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
 import { getLessonsWithState } from '../data/lessons.js';
 import { generateQuizQuestions, normalizeAnswer } from '../utils/quiz.js';
 import { recordQuizResult } from '../utils/progress.js';
+
+const ResultsCelebration = lazy(() => import('../components/ResultsCelebration.jsx'));
 
 function isModuleFinished(moduleId) {
   return getLessonsWithState()
@@ -134,14 +135,16 @@ export default function Quiz() {
       <>
         <TopBar title="Quiz Results" subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title} />
         <div className="main">
-          <ResultsCelebration
-            score={score}
-            total={questions.length}
-            reward={reward}
-            scoped={Boolean(lockedBlock)}
-            onRetry={startQuiz}
-            onChangeTopic={() => setPhase('setup')}
-          />
+          <Suspense fallback={null}>
+            <ResultsCelebration
+              score={score}
+              total={questions.length}
+              reward={reward}
+              scoped={Boolean(lockedBlock)}
+              onRetry={startQuiz}
+              onChangeTopic={() => setPhase('setup')}
+            />
+          </Suspense>
         </div>
       </>
     );
