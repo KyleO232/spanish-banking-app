@@ -1029,6 +1029,13 @@
   padding: 12px 14px;
 }
 
+.account-sent-note {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
 .account-link {
   align-self: center;
 }

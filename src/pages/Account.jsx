@@ -72,6 +72,9 @@ function SignIn() {
           <div className="account-sent">
             We sent a link to <strong>{email}</strong>. Open it on this device to sign in, or enter the
             code from the email below.
+            <div className="account-sent-note">
+              Don't see it? Check your spam or junk folder. It can take a minute to arrive.
+            </div>
           </div>
           <input
             className="quiz-fill-input"
