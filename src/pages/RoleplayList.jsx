@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import { getModule } from '../data/modules.js';
 
@@ -39,7 +40,7 @@ export default function RoleplayList() {
                   {rp.block} · {rp.lines.length} lines
                 </div>
               </div>
-              <span className="chev">›</span>
+              <ChevronRight className="chev" size={22} />
             </Link>
           ))}
         </div>

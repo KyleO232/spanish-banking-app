@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Check, ChevronRight, Lock, MapPin, Star } from 'lucide-react';
 import ThemedBackground from './ThemedBackground.jsx';
 
 const POSITION_CYCLE = ['left', 'center', 'right', 'center'];
@@ -73,6 +74,9 @@ export default function LessonPath({ lessons }) {
         });
       });
 
+      // the first module's photo should reach the top edge of the card
+      if (moduleStarts.length > 0) moduleStarts[0].top = 0;
+
       const withHeights = moduleStarts.map((seg, i) => {
         const nextTop = i + 1 < moduleStarts.length ? moduleStarts[i + 1].top : container.scrollHeight;
         return { ...seg, height: nextTop - seg.top };
@@ -111,7 +115,7 @@ export default function LessonPath({ lessons }) {
             }}
           >
             <span>{item.title}</span>
-            <span className="module-banner-chev">›</span>
+            <ChevronRight className="module-banner-chev" size={20} strokeWidth={2.6} />
           </Link>
         ) : (
           <LessonNode
@@ -131,18 +135,23 @@ export default function LessonPath({ lessons }) {
 
 function LessonNode({ lesson, pos, registerRef }) {
   const { moduleId, block, state, moduleComplete } = lesson;
-  const icon = state === 'locked' ? '🔒' : state === 'completed' ? '✓' : '★';
+  const NodeIcon = state === 'locked' ? Lock : state === 'completed' ? Check : Star;
   const nodeClass = `lesson-node state-${state}${moduleComplete ? ' module-complete' : ''}`;
 
   const inner = (
     <>
       {state === 'current' && (
         <span className="lesson-pin" aria-hidden="true">
-          📍
+          <MapPin size={26} strokeWidth={2.4} fill="currentColor" />
         </span>
       )}
       <span ref={registerRef} className={nodeClass}>
-        <span aria-hidden="true">{icon}</span>
+        <NodeIcon
+          size={state === 'completed' ? 32 : 28}
+          strokeWidth={state === 'completed' ? 3.4 : 2.6}
+          fill={state === 'current' ? 'currentColor' : 'none'}
+          aria-hidden="true"
+        />
       </span>
       <span className="lesson-node-label">{block}</span>
     </>

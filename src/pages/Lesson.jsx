@@ -1,13 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
+import { ChevronRight, Lock } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import { getModule } from '../data/modules.js';
 import { getLessonsWithState } from '../data/lessons.js';
-
-const MODES = [
-  { key: 'flashcards', icon: '🗂️', title: 'Flashcards', desc: 'Flip through terms with example sentences.' },
-  { key: 'quiz', icon: '📝', title: 'Quiz', desc: 'Multiple choice and fill-in-the-blank, scored.' },
-  { key: 'roleplay', icon: '💬', title: 'Roleplay', desc: 'Read scripted client/banker dialogues.' },
-];
+import { MODES } from '../data/modes.js';
 
 export default function Lesson() {
   const { moduleId, block: blockParam } = useParams();
@@ -44,7 +40,8 @@ export default function Lesson() {
         <TopBar title={block} subtitle={module.title} />
         <div className="main">
           <div className="empty-state">
-            <p>🔒 Complete the previous lesson to unlock this one.</p>
+            <Lock size={36} strokeWidth={2.2} style={{ marginBottom: 10 }} />
+            <p>Complete the previous lesson to unlock this one.</p>
             <Link to="/" className="btn btn-primary" style={{ marginTop: 16, display: 'inline-flex' }}>
               Back to Path
             </Link>
@@ -71,14 +68,16 @@ export default function Lesson() {
               to={`/module/${moduleId}/lesson/${encodeURIComponent(block)}/${mode.key}`}
               className="card link-card"
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <span className="link-card-icon">{mode.icon}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                <span className="link-card-icon">
+                  <mode.Icon size={24} strokeWidth={2.4} />
+                </span>
                 <div>
                   <h3>{mode.title}</h3>
                   <div className="meta">{mode.desc}</div>
                 </div>
               </div>
-              <span className="chev">›</span>
+              <ChevronRight className="chev" size={22} />
             </Link>
           ))}
         </div>

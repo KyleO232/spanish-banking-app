@@ -1,27 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import { getModule } from '../data/modules.js';
-
-const MODES = [
-  {
-    key: 'flashcards',
-    icon: '🗂️',
-    title: 'Flashcards',
-    desc: 'Flip through terms with example sentences.',
-  },
-  {
-    key: 'quiz',
-    icon: '📝',
-    title: 'Quiz',
-    desc: 'Multiple choice and fill-in-the-blank, scored.',
-  },
-  {
-    key: 'roleplay',
-    icon: '💬',
-    title: 'Roleplay',
-    desc: 'Read scripted client/banker dialogues.',
-  },
-];
+import { MODES } from '../data/modes.js';
 
 export default function ModuleHome() {
   const { moduleId } = useParams();
@@ -50,14 +31,16 @@ export default function ModuleHome() {
         <div className="card-list">
           {MODES.map((mode) => (
             <Link key={mode.key} to={`/module/${module.id}/${mode.key}`} className="card link-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <span className="link-card-icon">{mode.icon}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                <span className="link-card-icon">
+                  <mode.Icon size={24} strokeWidth={2.4} />
+                </span>
                 <div>
                   <h3>{mode.title}</h3>
                   <div className="meta">{mode.desc}</div>
                 </div>
               </div>
-              <span className="chev">›</span>
+              <ChevronRight className="chev" size={22} />
             </Link>
           ))}
         </div>

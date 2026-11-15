@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import { getModules } from '../data/modules.js';
 
 export default function VocabularyHome() {
@@ -20,7 +21,7 @@ export default function VocabularyHome() {
                 <h3>{m.title}</h3>
                 <div className="meta">{m.terms.length} terms</div>
               </div>
-              <span className="chev">›</span>
+              <ChevronRight className="chev" size={22} />
             </Link>
           ))}
         </div>

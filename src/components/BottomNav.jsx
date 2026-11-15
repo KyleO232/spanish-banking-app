@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { Route, BookOpen } from 'lucide-react';
 
 export default function BottomNav() {
   const { pathname } = useLocation();
@@ -7,14 +8,14 @@ export default function BottomNav() {
   return (
     <nav className="bottom-nav" aria-label="Main navigation">
       <Link to="/" className={`bottom-nav-item ${!isVocab ? 'active' : ''}`} aria-label="Path">
-        <span className="bottom-nav-icon">🏠</span>
+        <Route size={26} strokeWidth={2.4} />
       </Link>
       <Link
         to="/vocabulary"
         className={`bottom-nav-item ${isVocab ? 'active' : ''}`}
         aria-label="Vocabulary"
       >
-        <span className="bottom-nav-icon">📖</span>
+        <BookOpen size={26} strokeWidth={2.4} />
       </Link>
     </nav>
   );

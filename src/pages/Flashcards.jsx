@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
 
@@ -106,10 +107,10 @@ export default function Flashcards() {
             <div className="flashcard-hint">Tap the card to flip</div>
             <div className="flashcard-nav">
               <button className="btn" style={{ flex: 1 }} onClick={goPrev}>
-                ← Prev
+                <ChevronLeft size={20} strokeWidth={2.6} /> Prev
               </button>
               <button className="btn btn-primary" style={{ flex: 1 }} onClick={goNext}>
-                Next →
+                Next <ChevronRight size={20} strokeWidth={2.6} />
               </button>
             </div>
           </>

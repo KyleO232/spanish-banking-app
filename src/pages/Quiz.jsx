@@ -1,9 +1,18 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useMemo, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { CheckCircle2, XCircle } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import ResultsCelebration from '../components/ResultsCelebration.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
+import { getLessonsWithState } from '../data/lessons.js';
 import { generateQuizQuestions, normalizeAnswer } from '../utils/quiz.js';
-import { markCompleted } from '../utils/progress.js';
+import { recordQuizResult } from '../utils/progress.js';
+
+function isModuleFinished(moduleId) {
+  return getLessonsWithState()
+    .filter((l) => l.moduleId === moduleId)
+    .every((l) => l.state === 'completed');
+}
 
 export default function Quiz() {
   const { moduleId, block: blockParam } = useParams();
@@ -21,13 +30,7 @@ export default function Quiz() {
   const [selected, setSelected] = useState(null);
   const [fillValue, setFillValue] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    if (phase === 'done' && lockedBlock) {
-      markCompleted(moduleId, lockedBlock);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase]);
+  const [reward, setReward] = useState(null);
 
   if (!module) {
     return (
@@ -48,6 +51,7 @@ export default function Quiz() {
     setSelected(null);
     setFillValue('');
     setSubmitted(false);
+    setReward(null);
     setPhase('active');
   }
 
@@ -71,6 +75,17 @@ export default function Quiz() {
 
   function nextQuestion() {
     if (current + 1 >= questions.length) {
+      const wasModuleFinished = lockedBlock ? isModuleFinished(moduleId) : false;
+      const result = recordQuizResult({
+        moduleId,
+        block: lockedBlock,
+        score,
+        total: questions.length,
+      });
+      setReward({
+        ...result,
+        moduleJustFinished: lockedBlock ? !wasModuleFinished && isModuleFinished(moduleId) : false,
+      });
       setPhase('done');
       return;
     }
@@ -115,37 +130,28 @@ export default function Quiz() {
   }
 
   if (phase === 'done') {
-    const pct = Math.round((score / questions.length) * 100);
     return (
       <>
         <TopBar title="Quiz Results" subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title} />
         <div className="main">
-          <div className="card quiz-summary">
-            <p>You scored</p>
-            <div className="score-big">
-              {score} / {questions.length}
-            </div>
-            <p>{pct}% correct</p>
-            {lockedBlock && <p style={{ marginTop: 10, color: 'var(--success)' }}>Lesson complete!</p>}
-          </div>
-          <div className="btn-row">
-            {lockedBlock ? (
-              <Link className="btn" style={{ flex: 1 }} to="/">
-                Back to Path
-              </Link>
-            ) : (
-              <button className="btn" style={{ flex: 1 }} onClick={() => setPhase('setup')}>
-                Change Topic
-              </button>
-            )}
-            <button className="btn btn-primary" style={{ flex: 1 }} onClick={startQuiz}>
-              Try Again
-            </button>
-          </div>
+          <ResultsCelebration
+            score={score}
+            total={questions.length}
+            reward={reward}
+            scoped={Boolean(lockedBlock)}
+            onRetry={startQuiz}
+            onChangeTopic={() => setPhase('setup')}
+          />
         </div>
       </>
     );
   }
+
+  const answeredCorrectly =
+    submitted &&
+    (q.type === 'multiple-choice'
+      ? selected === q.answer
+      : normalizeAnswer(fillValue) === normalizeAnswer(q.answer));
 
   return (
     <>
@@ -164,7 +170,7 @@ export default function Quiz() {
           />
         </div>
 
-        <div className="card quiz-question-card">
+        <div className="card quiz-question-card" key={`q-${current}`}>
           {q.type === 'multiple-choice' ? (
             <div className="quiz-direction">
               {q.direction === 'es-en' ? 'Translate to English' : 'Translate to Spanish'}
@@ -216,16 +222,15 @@ export default function Quiz() {
         )}
 
         {submitted && (
-          <div
-            className={`quiz-feedback ${
-              (q.type === 'multiple-choice' ? selected === q.answer : normalizeAnswer(fillValue) === normalizeAnswer(q.answer))
-                ? 'correct'
-                : 'incorrect'
-            }`}
-          >
-            {(q.type === 'multiple-choice' ? selected === q.answer : normalizeAnswer(fillValue) === normalizeAnswer(q.answer))
-              ? 'Correct!'
-              : 'Not quite.'}
+          <div className={`quiz-feedback ${answeredCorrectly ? 'correct' : 'incorrect'}`}>
+            <div className="quiz-feedback-head">
+              {answeredCorrectly ? (
+                <CheckCircle2 size={24} strokeWidth={2.4} />
+              ) : (
+                <XCircle size={24} strokeWidth={2.4} />
+              )}
+              {answeredCorrectly ? 'Correct!' : 'Not quite'}
+            </div>
             <div className="answer-line">
               Answer: <strong>{q.answer}</strong>
               {q.type === 'fill-blank' && ` — ${q.promptEnglish}`}
