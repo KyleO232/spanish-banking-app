@@ -177,7 +177,7 @@ function LessonNode({ lesson, pos, registerRef }) {
             ¡Vamos!
             <small>Let's go!</small>
           </div>
-          <Monedita mood="wave" size={62} />
+          <Monedita mood="idle" size={62} />
         </div>
       )}
     </>

@@ -1622,6 +1622,222 @@
   }
 }
 
+/* ---------- Monedita's random idle behaviors ---------- */
+.mon-lid {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  transform: scaleY(0);
+}
+
+.mon-line {
+  opacity: 0;
+}
+
+.mon-pupils {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mon-heart,
+.mon-note {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.monedita.act-look .mon-pupils {
+  animation: mon-look 2.4s ease-in-out 1;
+}
+
+.monedita.act-hop .mon-all {
+  animation: mon-hop 0.75s cubic-bezier(0.3, 0.7, 0.4, 1) 2;
+}
+
+.monedita.act-flip {
+  animation: mon-flip 1.25s ease-in-out 1;
+}
+
+.monedita.act-wave .mon-arm-r {
+  animation: mon-wave 0.65s ease-in-out 3;
+}
+
+.monedita.act-shimmy .mon-all {
+  animation: mon-shimmy 0.52s ease-in-out 3;
+}
+
+.monedita.act-wink .mon-lid-r {
+  animation: mon-lid 0.9s ease-in-out 1;
+}
+
+.monedita.act-wink .mon-line-r {
+  animation: mon-line 0.9s ease-in-out 1;
+}
+
+.monedita.act-yawn .mon-lid,
+.monedita.act-yawn .mon-line {
+  animation: mon-lid 2.3s ease-in-out 1;
+}
+
+.monedita.act-yawn .mon-line {
+  animation-name: mon-line;
+}
+
+.monedita.act-yawn .mon-yawn {
+  transform-box: fill-box;
+  transform-origin: 50% 20%;
+  animation: mon-yawn 2.3s ease-in-out 1;
+}
+
+.monedita.act-yawn .mon-all {
+  animation: mon-stretch 2.3s ease-in-out 1;
+}
+
+.monedita.act-kiss .mon-lid-r {
+  animation: mon-lid 0.9s ease-in-out 1 0.2s;
+}
+
+.monedita.act-kiss .mon-line-r {
+  animation: mon-line 0.9s ease-in-out 1 0.2s;
+}
+
+.mon-note {
+  opacity: 0;
+  animation: mon-note 1.6s ease-out infinite;
+}
+
+.mon-heart {
+  opacity: 0;
+  animation: mon-heart 1.6s ease-out 1;
+}
+
+@keyframes mon-look {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  18% {
+    transform: translateX(-3.5px);
+  }
+  45% {
+    transform: translateX(-3.5px);
+  }
+  62% {
+    transform: translateX(3.5px) translateY(-1px);
+  }
+  85% {
+    transform: translateX(3.5px) translateY(-1px);
+  }
+}
+
+@keyframes mon-hop {
+  0% {
+    transform: translateY(0) scale(1.05, 0.93);
+  }
+  45% {
+    transform: translateY(-15px) scale(0.96, 1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+@keyframes mon-flip {
+  0% {
+    transform: perspective(500px) translateY(0) rotateY(0deg);
+  }
+  45% {
+    transform: perspective(500px) translateY(-14px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(500px) translateY(0) rotateY(360deg);
+  }
+}
+
+@keyframes mon-shimmy {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-7deg) translateY(-2px);
+  }
+  75% {
+    transform: rotate(7deg) translateY(-2px);
+  }
+}
+
+@keyframes mon-lid {
+  0%,
+  100% {
+    transform: scaleY(0);
+  }
+  18%,
+  80% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes mon-line {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  18%,
+  80% {
+    opacity: 1;
+  }
+}
+
+@keyframes mon-yawn {
+  0%,
+  100% {
+    transform: scaleY(0.15);
+  }
+  30%,
+  65% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes mon-stretch {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  35%,
+  65% {
+    transform: scale(0.94, 1.08);
+  }
+}
+
+@keyframes mon-note {
+  0% {
+    transform: translate(0, 4px) rotate(-8deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(8px, -26px) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+@keyframes mon-heart {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    transform: translate(4px, -6px) scale(1);
+  }
+  100% {
+    transform: translate(16px, -34px) scale(1.15) rotate(12deg);
+    opacity: 0;
+  }
+}
+
 /* ---------- speech bubbles ---------- */
 .speech {
   position: relative;
