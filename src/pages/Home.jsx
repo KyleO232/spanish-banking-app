@@ -4,9 +4,10 @@ import { Flame, Zap } from 'lucide-react';
 import CoinIcon from '../components/CoinIcon.jsx';
 import { getLessonsWithState } from '../data/lessons.js';
 import { titleFor } from '../data/titles.js';
-import { getStats, getWallet, resetProgress } from '../utils/progress.js';
+import { getStats, getWallet } from '../utils/progress.js';
 import { useAuth } from '../auth/AuthContext.jsx';
 import LessonPath from '../components/LessonPath.jsx';
+import AdminTools from '../components/AdminTools.jsx';
 
 export default function Home() {
   const [lessons, setLessons] = useState(() => getLessonsWithState());
@@ -16,8 +17,8 @@ export default function Home() {
   const completedCount = lessons.filter((l) => l.state === 'completed').length;
   const title = titleFor(stats.xp);
 
-  function handleReset() {
-    resetProgress();
+  // after an admin edits or resets progress, re-read everything shown on this screen
+  function refresh() {
     setLessons(getLessonsWithState());
     setStats(getStats());
     setWallet(getWallet());
@@ -30,7 +31,7 @@ export default function Home() {
           <h1>Spanish for Banking</h1>
           <div className="subtitle">
             {adminOn ? (
-              <span className="admin-badge">Admin mode · everything unlocked</span>
+              <span className="admin-badge">Admin mode · all unlocked</span>
             ) : (
               <>
                 <strong className="rank-name">{title.es}</strong> · {completedCount} / {lessons.length} lessons
@@ -54,15 +55,11 @@ export default function Home() {
         </div>
       </div>
       <div className="main">
+        {adminOn && <AdminTools onChange={refresh} />}
         {lessons.length > 0 ? (
           <LessonPath lessons={lessons} />
         ) : (
           <div className="empty-state">No modules found. Add a JSON file to src/data/modules.</div>
-        )}
-        {lessons.length > 0 && (
-          <button className="reset-progress-btn" onClick={handleReset}>
-            Reset progress
-          </button>
         )}
       </div>
     </>

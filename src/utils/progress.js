@@ -314,8 +314,45 @@ export function clearLocalProgress() {
   }
 }
 
-// Wipes progress everywhere (the account too, when signed in).
+// ---------- admin tools ----------
+// These edit real progress (unlike admin preview, which never writes), so they refuse to
+// run unless a verified admin has admin mode on. The screens only show them to admins too.
+
+// Wipes progress everywhere (the account too, when signed in). Admins only.
 export function resetProgress() {
+  if (!isAdminMode()) return false;
   clearLocalProgress();
   notifyChanged(true);
+  return true;
+}
+
+// Nudges XP, coins or the streak up or down by `delta`. Nothing goes below zero, and coins
+// never drop below what the owned items already cost (so the balance stays valid).
+export function adminAdjust(kind, delta) {
+  if (!isAdminMode()) return null;
+
+  const stats = readRawStats();
+  const streakNow = getStats().streak;
+  const next = { xp: stats.xp, streak: stats.streak, lastActive: stats.lastActive, coins: stats.coins };
+
+  if (kind === 'xp') {
+    next.xp = Math.max(0, stats.xp + delta);
+  } else if (kind === 'coins') {
+    const spent = getWallet().spent;
+    next.coins = Math.max(spent, stats.coins + delta);
+  } else if (kind === 'streak') {
+    next.streak = Math.max(0, streakNow + delta);
+    // a streak only counts when you were active today or yesterday, so mark today
+    if (next.streak > 0) next.lastActive = dayString();
+  } else {
+    return null;
+  }
+
+  try {
+    localStorage.setItem(STATS_KEY, JSON.stringify(next));
+  } catch {
+    // ignore
+  }
+  notifyChanged();
+  return getStats();
 }

@@ -3039,3 +3039,138 @@ a.stat-chip {
     font-size: 16px;
   }
 }
+
+/* ---------- admin tools (verified admins only) ---------- */
+.admin-tools {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 2px dashed var(--accent);
+  background: var(--accent-bg);
+}
+
+.admin-tools-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.admin-tools-head span {
+  margin-left: auto;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.admin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.admin-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 6px 8px;
+  border-radius: 14px;
+  border: 2px solid currentColor;
+  background: var(--surface);
+}
+
+.admin-stat.streak {
+  color: #ff8a1f;
+}
+
+.admin-stat.xp {
+  color: var(--gold);
+}
+
+.admin-stat.coins {
+  color: var(--coin);
+}
+
+.admin-stat-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-stat-value {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text-h);
+  line-height: 1.2;
+}
+
+.admin-stat-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.admin-stat-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.admin-stat-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  border-radius: 9px;
+  border: 2px solid currentColor;
+  background: var(--surface);
+  color: inherit;
+  box-shadow: 0 2px 0 currentColor;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.admin-stat-buttons button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 currentColor;
+}
+
+.admin-stat-buttons button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.admin-stat-step {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.admin-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-reset.confirming {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+  color: var(--danger);
+}
