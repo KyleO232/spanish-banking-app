@@ -1,8 +1,13 @@
 import { useMemo } from 'react';
 import beachImg from '../assets/backgrounds/beach.jpg';
 import autumnImg from '../assets/backgrounds/autumn.jpg';
+import alpineImg from '../assets/backgrounds/alpine.jpg';
 
 const THEMES = {
+  alpine: {
+    image: alpineImg,
+    fill: 'var(--alpine-fill)',
+  },
   beach: {
     image: beachImg,
     fill: 'var(--beach-sand-bottom)',
@@ -53,6 +58,43 @@ function Leaves() {
           <path d="M12 2C19 7 21 15 12 22C3 15 5 7 12 2Z" />
           <path d="M12 6V20" stroke="rgba(0,0,0,0.25)" strokeWidth="1" fill="none" />
         </svg>
+      ))}
+    </div>
+  );
+}
+
+// Snow drifting down over the alpine photo.
+function Snow() {
+  const flakes = useMemo(
+    () =>
+      Array.from({ length: 28 }, (_, i) => ({
+        id: i,
+        left: rand(1, 98),
+        size: rand(3, 8),
+        delay: -rand(0, 16),
+        duration: rand(10, 20),
+        sway: rand(10, 30),
+        opacity: rand(0.55, 0.95),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {flakes.map((f) => (
+        <span
+          key={f.id}
+          className="snowflake"
+          style={{
+            left: `${f.left}%`,
+            width: f.size,
+            height: f.size,
+            animationDelay: `${f.delay}s`,
+            animationDuration: `${f.duration}s`,
+            '--sway': `${f.sway}px`,
+            opacity: f.opacity,
+          }}
+        />
       ))}
     </div>
   );
@@ -128,7 +170,7 @@ export default function ThemedBackground({ theme }) {
   return (
     <div className="theme-bg" style={{ '--theme-fill': cfg.fill }} aria-hidden="true">
       <div className="theme-bg-hero" style={{ backgroundImage: `url(${cfg.image})` }} />
-      {theme === 'autumn' ? <Leaves /> : <Seaside />}
+      {theme === 'autumn' ? <Leaves /> : theme === 'alpine' ? <Snow /> : <Seaside />}
     </div>
   );
 }

@@ -41,6 +41,7 @@
 
   --beach-sand-bottom: #e6c68a;
   --autumn-ground-bottom: #b97b3f;
+  --alpine-fill: #2b3d63;
 
   --sans: 'Nunito Variable', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
   --display: 'Fredoka Variable', 'Fredoka', 'Nunito Variable', system-ui, sans-serif;
@@ -95,6 +96,7 @@
 
     --beach-sand-bottom: #3c2e20;
     --autumn-ground-bottom: #2b1c0e;
+    --alpine-fill: #161f33;
   }
 }
 
