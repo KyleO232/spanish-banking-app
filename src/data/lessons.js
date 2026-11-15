@@ -1,5 +1,6 @@
 import { getModules, getBlocks, getTermsByBlock } from './modules.js';
 import { lessonKey, isCompleted, isFlashcardsDone } from '../utils/progress.js';
+import { isAdminMode } from '../utils/adminMode.js';
 
 export function getLessons() {
   const lessons = [];
@@ -26,7 +27,8 @@ export function getLessonSteps(moduleId, block) {
   const state = lesson?.state ?? 'locked';
   const quizDone = state === 'completed';
   const flashcardsDone = quizDone || isFlashcardsDone(moduleId, block);
-  const open = state !== 'locked';
+  const admin = isAdminMode() && Boolean(lesson); // admins can open every real lesson and step
+  const open = state !== 'locked' || admin;
 
   return {
     lesson,
@@ -35,8 +37,8 @@ export function getLessonSteps(moduleId, block) {
     quizDone,
     unlocked: {
       flashcards: open,
-      quiz: open && flashcardsDone,
-      roleplay: open && quizDone,
+      quiz: open && (flashcardsDone || admin),
+      roleplay: open && (quizDone || admin),
     },
   };
 }
@@ -66,8 +68,10 @@ export function getLessonsWithState() {
     )
   );
 
+  const admin = isAdminMode();
   return withState.map((lesson) => ({
     ...lesson,
     moduleComplete: completeModules.has(lesson.moduleId),
+    adminOpen: admin && lesson.state === 'locked', // still shown as locked, but an admin can enter
   }));
 }

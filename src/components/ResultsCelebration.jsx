@@ -22,6 +22,7 @@ function headline(pct, reward) {
 }
 
 function subline(scoped, reward, kind) {
+  if (reward?.preview) return 'Admin preview — your saved progress was not changed.';
   if (reward?.moduleJustFinished) return 'Every lesson in this module is now gold.';
   if (kind === 'roleplay') return 'Conversation complete.';
   if (!scoped) return 'Quiz finished.';

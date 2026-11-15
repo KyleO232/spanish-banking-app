@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Flame, Zap } from 'lucide-react';
 import { getLessonsWithState } from '../data/lessons.js';
 import { getStats, resetProgress } from '../utils/progress.js';
+import { useAuth } from '../auth/AuthContext.jsx';
 import LessonPath from '../components/LessonPath.jsx';
 
 export default function Home() {
   const [lessons, setLessons] = useState(() => getLessonsWithState());
   const [stats, setStats] = useState(() => getStats());
+  const { adminOn } = useAuth();
   const completedCount = lessons.filter((l) => l.state === 'completed').length;
 
   function handleReset() {
@@ -21,7 +23,13 @@ export default function Home() {
         <div className="topbar-titles">
           <h1>Spanish for Banking</h1>
           <div className="subtitle">
-            {completedCount} / {lessons.length} lessons complete
+            {adminOn ? (
+              <span className="admin-badge">Admin mode · everything unlocked</span>
+            ) : (
+              <>
+                {completedCount} / {lessons.length} lessons complete
+              </>
+            )}
           </div>
         </div>
         <div className="stat-chips">

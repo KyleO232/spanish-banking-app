@@ -147,9 +147,12 @@ export default function LessonPath({ lessons }) {
 }
 
 function LessonNode({ lesson, pos, registerRef }) {
-  const { moduleId, block, state, moduleComplete } = lesson;
+  const { moduleId, block, state, moduleComplete, adminOpen } = lesson;
   const NodeIcon = state === 'locked' ? Lock : state === 'completed' ? Check : Star;
-  const nodeClass = `lesson-node state-${state}${moduleComplete ? ' module-complete' : ''}`;
+  const nodeClass = `lesson-node state-${state}${moduleComplete ? ' module-complete' : ''}${
+    adminOpen ? ' admin-open' : ''
+  }`;
+  const enterable = state !== 'locked' || adminOpen;
 
   const inner = (
     <>
@@ -172,7 +175,7 @@ function LessonNode({ lesson, pos, registerRef }) {
 
   return (
     <div className={`lesson-row pos-${pos}`}>
-      {state === 'locked' ? (
+      {!enterable ? (
         <div className="lesson-node-wrap" aria-disabled="true">
           {inner}
         </div>
@@ -180,7 +183,9 @@ function LessonNode({ lesson, pos, registerRef }) {
         <Link
           to={`/module/${moduleId}/lesson/${encodeURIComponent(block)}`}
           className="lesson-node-wrap"
-          aria-label={`${block} — ${state === 'completed' ? 'completed' : 'current lesson'}`}
+          aria-label={`${block} — ${
+            state === 'completed' ? 'completed' : state === 'locked' ? 'locked (admin access)' : 'current lesson'
+          }`}
         >
           {inner}
         </Link>

@@ -40,7 +40,7 @@ export default function Lesson() {
     );
   }
 
-  if (lesson.state === 'locked') {
+  if (!steps.unlocked.flashcards) {
     return (
       <>
         <TopBar title={block} subtitle={module.title} />

@@ -8,16 +8,19 @@ import RoleplayList from './pages/RoleplayList.jsx';
 import RoleplayViewer from './pages/RoleplayViewer.jsx';
 import VocabularyHome from './pages/VocabularyHome.jsx';
 import VocabularyList from './pages/VocabularyList.jsx';
+import Account from './pages/Account.jsx';
 import BottomNav from './components/BottomNav.jsx';
+import { useAuth } from './auth/AuthContext.jsx';
 import './App.css';
 
 export default function App() {
   const location = useLocation();
+  const { syncVersion, adminOn } = useAuth();
 
   return (
     <div className="app">
-      {/* Keyed by path so moving between e.g. two lessons never reuses the old page's state. */}
-      <Routes key={location.pathname}>
+      {/* Keyed by path (and by account sync / admin changes) so a screen never reuses stale state. */}
+      <Routes key={`${location.pathname}|${syncVersion}|${adminOn}`}>
         <Route path="/" element={<Home />} />
         <Route path="/module/:moduleId" element={<ModuleHome />} />
         <Route path="/module/:moduleId/flashcards" element={<Flashcards />} />
@@ -32,6 +35,7 @@ export default function App() {
           path="/module/:moduleId/lesson/:block/roleplay/:roleplayId"
           element={<RoleplayViewer />}
         />
+        <Route path="/account" element={<Account />} />
         <Route path="/vocabulary" element={<VocabularyHome />} />
         <Route path="/vocabulary/:moduleId" element={<VocabularyList />} />
       </Routes>

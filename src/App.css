@@ -989,6 +989,189 @@
   color: var(--text-dim);
 }
 
+/* ---------- account / profile ---------- */
+.account-card {
+  text-align: center;
+  padding: 24px 18px;
+}
+
+.account-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.account-lead {
+  color: var(--text);
+  font-size: 14.5px;
+  margin: 4px auto 18px;
+  max-width: 300px;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.account-sent {
+  font-size: 14px;
+  color: var(--text);
+  background: var(--accent-bg);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.account-link {
+  align-self: center;
+}
+
+.account-error {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 13.5px;
+  text-align: left;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 22px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  min-width: 0;
+}
+
+.profile-email {
+  font-weight: 800;
+  color: var(--text-h);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.sync-status.ok {
+  color: var(--success);
+}
+
+.sync-status.error {
+  color: var(--danger);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.admin-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+  border-color: var(--gold);
+  box-shadow: 0 3px 0 var(--gold-shadow);
+}
+
+.admin-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+}
+
+.admin-card .meta {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--border);
+  transition: background 0.15s ease;
+}
+
+.switch span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.switch.on {
+  background: var(--gold);
+}
+
+.switch.on span {
+  transform: translateX(22px);
+}
+
+.account-signout {
+  margin-top: 6px;
+}
+
+.admin-badge {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.lesson-node.admin-open {
+  outline: 3px dashed var(--gold);
+  outline-offset: 4px;
+}
+
 .unlock-card {
   display: flex;
   align-items: center;
