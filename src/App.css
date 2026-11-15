@@ -2559,7 +2559,7 @@
 }
 
 .lesson-node.state-locked {
-  color: var(--text-dim);
+  color: var(--node-locked-icon);
 }
 
 .lesson-node.state-completed {
@@ -2631,7 +2631,7 @@
 }
 
 .lesson-node-wrap[aria-disabled='true'] .lesson-node-label {
-  color: var(--text-dim);
+  color: var(--text);
 }
 
 .reset-progress-btn {
