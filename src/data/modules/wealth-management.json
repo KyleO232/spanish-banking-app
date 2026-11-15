@@ -1,7 +1,7 @@
 {
   "id": "wealth-management",
   "title": "Wealth Management",
-  "description": "Everyday vocabulary and phrases for private banking and wealth management conversations: client needs, investing basics, retirement and family planning, and fees and paperwork.",
+  "description": "Everyday Spanish for wealth management conversations with US clients: client needs, investing basics, retirement and family planning (401(k), IRA, Social Security), and fees and paperwork.",
   "theme": "alpine",
   "terms": [
     {
@@ -35,19 +35,19 @@
       }
     },
     {
-      "spanish": "el gestor patrimonial / la gestora patrimonial",
+      "spanish": "el administrador de patrimonio / la administradora de patrimonio",
       "english": "wealth manager",
-      "note": "on its own, \"gestor\" can mean an administrative agent in Spain",
+      "note": "also: asesor patrimonial",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "El gestor patrimonial coordina todas las decisiones de inversión.",
+        "es": "El administrador de patrimonio coordina todas las decisiones de inversión.",
         "en": "The wealth manager coordinates all investment decisions."
       }
     },
     {
       "spanish": "el perfil de riesgo",
       "english": "risk profile",
-      "note": "also: perfil inversor",
+      "note": "",
       "block": "Client Needs & Planning",
       "example": {
         "es": "Según su perfil de riesgo, le propongo una cartera moderada.",
@@ -70,18 +70,18 @@
       "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "¿Cuál es su principal objetivo de inversión: ahorrar, generar rentas o crecer?",
+        "es": "¿Cuál es su principal objetivo de inversión: ahorrar, generar ingresos o crecer?",
         "en": "What is your main investment objective: saving, generating income or growing?"
       }
     },
     {
-      "spanish": "el horizonte temporal",
-      "english": "time horizon",
+      "spanish": "el horizonte de inversión",
+      "english": "investment time horizon",
       "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "Con un horizonte temporal de quince años, puede asumir más volatilidad.",
-        "en": "With a fifteen-year time horizon, you can accept more volatility."
+        "es": "Con un horizonte de inversión de quince años, puede asumir más volatilidad.",
+        "en": "With a fifteen-year investment horizon, you can accept more volatility."
       }
     },
     {
@@ -107,10 +107,10 @@
     {
       "spanish": "los ingresos",
       "english": "income / earnings",
-      "note": "\"ingresar\" also means to deposit money in Spain",
+      "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "Sus ingresos anuales determinan cuánto puede aportar cada mes.",
+        "es": "Sus ingresos anuales determinan cuánto puede contribuir cada mes.",
         "en": "Your annual income determines how much you can contribute each month."
       }
     },
@@ -155,13 +155,13 @@
       }
     },
     {
-      "spanish": "el inmueble",
-      "english": "real estate property",
+      "spanish": "los bienes raíces",
+      "english": "real estate",
       "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "Gran parte de su patrimonio está concentrada en un inmueble.",
-        "en": "A large part of your wealth is concentrated in one property."
+        "es": "Gran parte de su patrimonio está en bienes raíces.",
+        "en": "A large part of your wealth is in real estate."
       }
     },
     {
@@ -170,7 +170,7 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Su cartera está formada por fondos de inversión y renta fija.",
+        "es": "Su cartera está formada por fondos mutuos y renta fija.",
         "en": "Your portfolio is made up of mutual funds and fixed income."
       }
     },
@@ -205,12 +205,12 @@
       }
     },
     {
-      "spanish": "el fondo de inversión",
-      "english": "mutual fund / investment fund",
+      "spanish": "el fondo mutuo / el fondo de inversión",
+      "english": "mutual fund",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Un fondo de inversión reúne el dinero de muchos inversores.",
+        "es": "Un fondo mutuo reúne el dinero de muchos inversionistas.",
         "en": "A mutual fund pools the money of many investors."
       }
     },
@@ -230,27 +230,27 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Un bono es un préstamo que usted concede a una empresa o a un Estado.",
+        "es": "Un bono es un préstamo que usted concede a una empresa o a un gobierno.",
         "en": "A bond is a loan that you give to a company or a government."
       }
     },
     {
-      "spanish": "la bolsa",
+      "spanish": "el mercado de valores",
       "english": "stock market",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "La bolsa sube y baja cada día, así que conviene tener paciencia.",
+        "es": "El mercado de valores sube y baja cada día, así que conviene tener paciencia.",
         "en": "The stock market goes up and down every day, so it pays to be patient."
       }
     },
     {
-      "spanish": "el inversor / la inversora",
+      "spanish": "el inversionista / la inversionista",
       "english": "investor",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Es un inversor prudente y a largo plazo.",
+        "es": "Es un inversionista prudente y a largo plazo.",
         "en": "He is a cautious, long-term investor."
       }
     },
@@ -265,12 +265,12 @@
       }
     },
     {
-      "spanish": "la rentabilidad",
+      "spanish": "el rendimiento",
       "english": "return / yield",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "La rentabilidad anual de la cartera fue del cuatro por ciento.",
+        "es": "El rendimiento anual de la cartera fue del cuatro por ciento.",
         "en": "The portfolio's annual return was four percent."
       }
     },
@@ -280,7 +280,7 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "A mayor rentabilidad esperada, mayor riesgo.",
+        "es": "A mayor rendimiento esperado, mayor riesgo.",
         "en": "The higher the expected return, the higher the risk."
       }
     },
@@ -290,8 +290,8 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Vender ahora le dejaría una ganancia de dos mil euros.",
-        "en": "Selling now would leave you with a gain of two thousand euros."
+        "es": "Vender ahora le dejaría una ganancia de dos mil dólares.",
+        "en": "Selling now would leave you with a gain of two thousand dollars."
       }
     },
     {
@@ -310,18 +310,18 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "La empresa reparte un dividendo cada trimestre.",
+        "es": "La empresa paga un dividendo cada trimestre.",
         "en": "The company pays a dividend every quarter."
       }
     },
     {
-      "spanish": "el tipo de interés",
+      "spanish": "la tasa de interés",
       "english": "interest rate",
-      "note": "Spain says \"tipo\"; Latin America says \"tasa\"",
+      "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Con la subida del tipo de interés, los depósitos son más atractivos.",
-        "en": "With the rise in the interest rate, deposits are more attractive."
+        "es": "Con la subida de la tasa de interés, los certificados de depósito son más atractivos.",
+        "en": "With the rise in the interest rate, certificates of deposit are more attractive."
       }
     },
     {
@@ -335,19 +335,29 @@
       }
     },
     {
-      "spanish": "el depósito a plazo",
-      "english": "term deposit",
+      "spanish": "el certificado de depósito (CD)",
+      "english": "certificate of deposit (CD)",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Un depósito a plazo garantiza un interés fijo durante doce meses.",
-        "en": "A term deposit guarantees a fixed interest rate for twelve months."
+        "es": "Un certificado de depósito garantiza una tasa fija durante doce meses.",
+        "en": "A certificate of deposit guarantees a fixed rate for twelve months."
+      }
+    },
+    {
+      "spanish": "la cuenta de corretaje",
+      "english": "brokerage account",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "Puede abrir una cuenta de corretaje para comprar acciones y bonos.",
+        "en": "You can open a brokerage account to buy stocks and bonds."
       }
     },
     {
       "spanish": "la jubilación",
       "english": "retirement",
-      "note": "",
+      "note": "\"el retiro\" is also common",
       "block": "Retirement & Family Planning",
       "example": {
         "es": "Cuanto antes empiece a ahorrar para la jubilación, mejor.",
@@ -365,33 +375,53 @@
       }
     },
     {
+      "spanish": "el Seguro Social",
+      "english": "Social Security",
+      "note": "the benefits program; the number is \"número de seguro social\"",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "El Seguro Social podría no bastar para mantener su nivel de vida.",
+        "en": "Social Security may not be enough to maintain your standard of living."
+      }
+    },
+    {
+      "spanish": "el plan 401(k)",
+      "english": "401(k) plan",
+      "note": "employer retirement plan; pronounced \"cuatro cero uno ka\"",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "Su empleador iguala sus contribuciones al plan 401(k) hasta cierto límite.",
+        "en": "Your employer matches your contributions to the 401(k) plan up to a limit."
+      }
+    },
+    {
+      "spanish": "la cuenta IRA",
+      "english": "IRA (Individual Retirement Account)",
+      "note": "also: cuenta de jubilación individual",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "Una cuenta IRA le permite ahorrar para la jubilación con ventajas fiscales.",
+        "en": "An IRA lets you save for retirement with tax advantages."
+      }
+    },
+    {
       "spanish": "la pensión",
       "english": "pension",
       "note": "",
       "block": "Retirement & Family Planning",
       "example": {
-        "es": "La pensión pública podría no bastar para mantener su nivel de vida.",
-        "en": "The public pension may not be enough to maintain your standard of living."
+        "es": "Algunas empresas ofrecen una pensión a sus empleados jubilados.",
+        "en": "Some companies offer a pension to their retired employees."
       }
     },
     {
-      "spanish": "el plan de pensiones",
-      "english": "private pension plan",
+      "spanish": "la contribución",
+      "english": "contribution",
       "note": "",
       "block": "Retirement & Family Planning",
       "example": {
-        "es": "Un plan de pensiones complementa la pensión pública.",
-        "en": "A private pension plan supplements the public pension."
-      }
-    },
-    {
-      "spanish": "la aportación",
-      "english": "contribution / deposit",
-      "note": "",
-      "block": "Retirement & Family Planning",
-      "example": {
-        "es": "Le recomiendo hacer una aportación mensual a su plan de pensiones.",
-        "en": "I recommend making a monthly contribution to your pension plan."
+        "es": "Le recomiendo hacer una contribución mensual a su cuenta IRA.",
+        "en": "I recommend making a monthly contribution to your IRA."
       }
     },
     {
@@ -410,18 +440,28 @@
       "note": "",
       "block": "Retirement & Family Planning",
       "example": {
-        "es": "Los impuestos reducen la rentabilidad de sus inversiones.",
+        "es": "Los impuestos reducen el rendimiento de sus inversiones.",
         "en": "Taxes reduce the return on your investments."
       }
     },
     {
-      "spanish": "el asesor fiscal / la asesora fiscal",
+      "spanish": "la declaración de impuestos",
+      "english": "tax return",
+      "note": "",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "Tiene que presentar su declaración de impuestos antes del quince de abril.",
+        "en": "You have to file your tax return before April fifteenth."
+      }
+    },
+    {
+      "spanish": "el asesor de impuestos / la asesora de impuestos",
       "english": "tax advisor",
       "note": "",
       "block": "Retirement & Family Planning",
       "example": {
-        "es": "Su asesor fiscal le explicará cuántos impuestos tendrá que pagar.",
-        "en": "Your tax advisor will explain how much tax you will have to pay."
+        "es": "Su asesor de impuestos le explicará cuánto debe pagar.",
+        "en": "Your tax advisor will explain how much you owe."
       }
     },
     {
@@ -455,13 +495,13 @@
       }
     },
     {
-      "spanish": "la donación",
-      "english": "gift / donation",
+      "spanish": "el fideicomiso",
+      "english": "trust",
       "note": "",
       "block": "Retirement & Family Planning",
       "example": {
-        "es": "Una donación en vida a sus hijos puede tener implicaciones fiscales.",
-        "en": "A gift to your children during your lifetime can have tax implications."
+        "es": "Un fideicomiso administra sus bienes para el beneficio de sus hijos.",
+        "en": "A trust manages your assets for the benefit of your children."
       }
     },
     {
@@ -495,16 +535,6 @@
       }
     },
     {
-      "spanish": "la deuda",
-      "english": "debt",
-      "note": "",
-      "block": "Retirement & Family Planning",
-      "example": {
-        "es": "Antes de invertir, le sugiero reducir la deuda de su tarjeta.",
-        "en": "Before investing, I suggest paying down your card debt."
-      }
-    },
-    {
       "spanish": "la comisión",
       "english": "fee / commission",
       "note": "",
@@ -535,32 +565,32 @@
       }
     },
     {
-      "spanish": "las condiciones",
-      "english": "terms and conditions",
+      "spanish": "los términos",
+      "english": "terms (of an agreement)",
       "note": "",
       "block": "Fees & Paperwork",
       "example": {
-        "es": "Le explico las condiciones del producto antes de que decida.",
+        "es": "Le explico los términos del producto antes de que decida.",
         "en": "I'll explain the product's terms before you decide."
       }
     },
     {
       "spanish": "el formulario",
       "english": "form",
-      "note": "Spain says \"rellenar\"; Latin America says \"llenar\"",
+      "note": "\"forma\" (from English) is also heard in the US; \"formulario\" is standard",
       "block": "Fees & Paperwork",
       "example": {
-        "es": "Rellene este formulario con sus datos personales.",
-        "en": "Fill in this form with your personal details."
+        "es": "Llene este formulario con sus datos personales.",
+        "en": "Fill out this form with your personal details."
       }
     },
     {
-      "spanish": "el justificante",
+      "spanish": "el comprobante",
       "english": "proof / supporting document",
-      "note": "Latin America often says \"comprobante\"",
+      "note": "",
       "block": "Fees & Paperwork",
       "example": {
-        "es": "Necesitamos un justificante de sus ingresos.",
+        "es": "Necesitamos un comprobante de sus ingresos.",
         "en": "We need proof of your income."
       }
     },
@@ -610,17 +640,17 @@
       "note": "",
       "block": "Fees & Paperwork",
       "example": {
-        "es": "Puede hacer la transferencia desde su banca en línea.",
-        "en": "You can make the transfer from your online banking."
+        "es": "Puede hacer la transferencia desde la banca en línea.",
+        "en": "You can make the transfer from online banking."
       }
     },
     {
-      "spanish": "ingresar",
-      "english": "to deposit (money)",
-      "note": "in Spain, \"ingresar\" is the everyday word for depositing money",
+      "spanish": "depositar",
+      "english": "to deposit",
+      "note": "",
       "block": "Fees & Paperwork",
       "example": {
-        "es": "Puede ingresar el dinero en su cuenta mañana mismo.",
+        "es": "Puede depositar el dinero en su cuenta mañana mismo.",
         "en": "You can deposit the money in your account tomorrow."
       }
     },
@@ -635,8 +665,8 @@
       }
     },
     {
-      "spanish": "Quedo a su entera disposición.",
-      "english": "I remain entirely at your disposal.",
+      "spanish": "Estoy a su disposición para cualquier pregunta.",
+      "english": "I'm at your disposal for any questions.",
       "note": "formal/register phrase",
       "block": "Fees & Paperwork",
       "example": null
@@ -663,31 +693,32 @@
       "example": null
     },
     {
-      "spanish": "Será un placer acompañarle en la gestión de su patrimonio.",
-      "english": "It will be a pleasure to accompany you in managing your wealth.",
+      "spanish": "Será un placer ayudarle a administrar su patrimonio.",
+      "english": "It will be a pleasure to help you manage your wealth.",
       "note": "formal/register phrase",
       "block": "Fees & Paperwork",
       "example": null
     },
     {
-      "spanish": "Antes de decidir, le recomiendo consultar con su asesor fiscal.",
+      "spanish": "Antes de decidir, le recomiendo consultar con su asesor de impuestos.",
       "english": "Before deciding, I recommend consulting your tax advisor.",
       "note": "formal/register phrase",
       "block": "Fees & Paperwork",
       "example": null
     },
     {
-      "spanish": "Si le parece bien, concertamos una cita la semana próxima.",
-      "english": "If that suits you, we'll arrange an appointment next week.",
+      "spanish": "Si le parece bien, programamos una cita para la próxima semana.",
+      "english": "If that suits you, we'll schedule an appointment for next week.",
       "note": "formal/register phrase",
       "block": "Fees & Paperwork",
       "example": null
     }
   ],
   "registerNotes": [
-    "In Spanish private banking, clients are addressed as \"usted\" and advisors use \"le\" and \"su\" throughout. Switch to \"tú\" only if the client invites it (\"puede tutearme\").",
-    "Spain uses \"tipo de interés\" (not \"tasa\"), \"coste\" (not \"costo\"), and \"ingresar\" for depositing money. Numbers use a period for thousands and a comma for decimals: 100.000 euros, 2,5 %.",
-    "Advisors avoid giving tax advice themselves. The standard phrase is \"le recomiendo consultar con su asesor fiscal\".",
+    "With Spanish-speaking clients, use \"usted\" and \"le\"/\"su\" throughout, especially with older clients. Switch to \"tú\" only if the client invites it (\"puede tutearme\").",
+    "US Spanish speakers come from many countries, so everyday words vary: \"comprobante\" or \"justificante\", \"llenar\" or \"rellenar\", \"formulario\" or \"forma\". This module uses the widely understood US banking terms.",
+    "In the US, amounts are usually written as in English: $100,000 and 2.5%. Say \"cien mil dólares\" and \"dos punto cinco por ciento\".",
+    "Advisors avoid giving tax advice themselves. The standard phrase is \"le recomiendo consultar con su asesor de impuestos\".",
     "Mention risk before promising anything: \"toda inversión conlleva riesgos\". Avoid words like \"seguro\" or \"garantizado\" unless they are literally true.",
     "Clients often come to a first meeting worried about losing their savings. Reassuring but honest phrases build trust better than guarantees."
   ],
@@ -699,8 +730,8 @@
       "lines": [
         {
           "speaker": "Banker",
-          "spanish": "Buenos días, señora Ortega. Será un placer acompañarle en la gestión de su patrimonio.",
-          "english": "Good morning, Mrs. Ortega. It will be a pleasure to accompany you in managing your wealth.",
+          "spanish": "Buenos días, señora Ortega. Será un placer ayudarle a administrar su patrimonio.",
+          "english": "Good morning, Mrs. Ortega. It will be a pleasure to help you manage your wealth.",
           "blank": "patrimonio"
         },
         {
@@ -716,8 +747,8 @@
         },
         {
           "speaker": "Client",
-          "spanish": "Quiero proteger mis ahorros y complementar mi pensión cuando me jubile.",
-          "english": "I want to protect my savings and supplement my pension when I retire."
+          "spanish": "Quiero proteger mis ahorros y complementar el Seguro Social cuando me jubile.",
+          "english": "I want to protect my savings and supplement Social Security when I retire."
         },
         {
           "speaker": "Banker",
@@ -732,9 +763,9 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Con un horizonte temporal de diez años, podemos diseñar una cartera moderada y con liquidez suficiente.",
-          "english": "With a ten-year time horizon, we can design a moderate portfolio with enough liquidity.",
-          "blank": "horizonte temporal"
+          "spanish": "Con un horizonte de inversión de diez años, podemos diseñar una cartera moderada y con liquidez suficiente.",
+          "english": "With a ten-year investment horizon, we can design a moderate portfolio with enough liquidity.",
+          "blank": "horizonte de inversión"
         },
         {
           "speaker": "Client",
@@ -743,8 +774,8 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Si le parece bien, concertamos una cita la semana próxima para revisar su perfil de riesgo.",
-          "english": "If that suits you, we'll arrange an appointment next week to review your risk profile.",
+          "spanish": "Si le parece bien, programamos una cita la próxima semana para revisar su perfil de riesgo.",
+          "english": "If that suits you, we'll schedule an appointment next week to review your risk profile.",
           "blank": "perfil de riesgo"
         }
       ]
@@ -762,14 +793,14 @@
         },
         {
           "speaker": "Client",
-          "spanish": "Buenas tardes. ¿Qué rentabilidad ha obtenido hasta ahora?",
+          "spanish": "Buenas tardes. ¿Qué rendimiento ha obtenido hasta ahora?",
           "english": "Good afternoon. What return has it achieved so far?"
         },
         {
           "speaker": "Banker",
-          "spanish": "La rentabilidad ha sido del cinco por ciento, algo superior a la de un depósito a plazo.",
-          "english": "The return has been five percent, somewhat higher than that of a term deposit.",
-          "blank": "rentabilidad"
+          "spanish": "El rendimiento ha sido del cinco por ciento, algo superior al de un certificado de depósito.",
+          "english": "The return has been five percent, somewhat higher than that of a certificate of deposit.",
+          "blank": "rendimiento"
         },
         {
           "speaker": "Client",
@@ -784,25 +815,25 @@
         },
         {
           "speaker": "Client",
-          "spanish": "¿Y qué ocurre si sube el tipo de interés?",
+          "spanish": "¿Y qué ocurre si sube la tasa de interés?",
           "english": "And what happens if the interest rate goes up?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Con un tipo de interés más alto, los depósitos y la renta fija resultan más atractivos.",
-          "english": "With a higher interest rate, deposits and fixed income become more attractive.",
-          "blank": "tipo de interés"
+          "spanish": "Con una tasa de interés más alta, los certificados de depósito y la renta fija resultan más atractivos.",
+          "english": "With a higher interest rate, certificates of deposit and fixed income become more attractive.",
+          "blank": "tasa de interés"
         },
         {
           "speaker": "Client",
-          "spanish": "De acuerdo. ¿Cada cuánto tiempo revisan la cartera?",
+          "spanish": "De acuerdo. ¿Con qué frecuencia revisan la cartera?",
           "english": "Okay. How often do you review the portfolio?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Revisamos la cartera una vez al año, o antes si la bolsa se mueve mucho.",
+          "spanish": "Revisamos la cartera una vez al año, o antes si el mercado de valores se mueve mucho.",
           "english": "We review the portfolio once a year, or sooner if the stock market moves a lot.",
-          "blank": "bolsa"
+          "blank": "mercado de valores"
         }
       ]
     },
@@ -813,20 +844,20 @@
       "lines": [
         {
           "speaker": "Banker",
-          "spanish": "Hablemos de su jubilación. ¿Ha hecho aportaciones a algún plan de pensiones?",
-          "english": "Let's talk about your retirement. Have you made contributions to any pension plan?",
-          "blank": "plan de pensiones"
+          "spanish": "Hablemos de su jubilación. ¿Tiene un plan 401(k) en su trabajo?",
+          "english": "Let's talk about your retirement. Do you have a 401(k) plan at work?",
+          "blank": "plan 401(k)"
         },
         {
           "speaker": "Client",
-          "spanish": "Sí, tengo un plan de pensiones en otro banco, pero las comisiones son altas.",
-          "english": "Yes, I have a pension plan at another bank, but the fees are high."
+          "spanish": "Sí, tengo un plan 401(k) en mi trabajo, pero no sé si es suficiente.",
+          "english": "Yes, I have a 401(k) plan at work, but I don't know if it's enough."
         },
         {
           "speaker": "Banker",
-          "spanish": "Podemos revisar las comisiones de ese plan y buscar una opción más económica.",
-          "english": "We can review that plan's fees and look for a cheaper option.",
-          "blank": "comisiones"
+          "spanish": "Podemos complementarlo con una cuenta IRA, que ofrece ventajas fiscales.",
+          "english": "We can supplement it with an IRA, which offers tax advantages.",
+          "blank": "cuenta IRA"
         },
         {
           "speaker": "Client",
@@ -835,9 +866,9 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Una buena opción es un seguro de vida a favor de sus hijos.",
-          "english": "A good option is a life insurance policy in favor of your children.",
-          "blank": "seguro de vida"
+          "spanish": "Una buena opción es crear un fideicomiso a favor de sus hijos.",
+          "english": "A good option is to set up a trust for your children.",
+          "blank": "fideicomiso"
         },
         {
           "speaker": "Client",
@@ -846,9 +877,9 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Depende de cada caso. Le recomiendo consultar con su asesor fiscal.",
+          "spanish": "Depende de cada caso. Le recomiendo consultar con su asesor de impuestos.",
           "english": "It depends on each case. I recommend consulting your tax advisor.",
-          "blank": "asesor fiscal"
+          "blank": "asesor de impuestos"
         },
         {
           "speaker": "Client",
@@ -870,9 +901,9 @@
       "lines": [
         {
           "speaker": "Banker",
-          "spanish": "Antes de empezar, le explico las condiciones y las comisiones del servicio.",
+          "spanish": "Antes de empezar, le explico los términos y las comisiones del servicio.",
           "english": "Before we begin, I'll explain the terms and the fees of the service.",
-          "blank": "condiciones"
+          "blank": "términos"
         },
         {
           "speaker": "Client",
@@ -903,9 +934,9 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Necesitamos un justificante de sus ingresos y una copia de su documento de identidad.",
-          "english": "We need proof of your income and a copy of your ID.",
-          "blank": "justificante"
+          "spanish": "Necesitamos un comprobante de sus ingresos y una copia de su identificación con foto.",
+          "english": "We need proof of your income and a copy of your photo ID.",
+          "blank": "comprobante"
         },
         {
           "speaker": "Client",
@@ -920,14 +951,14 @@
         },
         {
           "speaker": "Client",
-          "spanish": "Muy bien. ¿Cuándo puedo ingresar el dinero?",
+          "spanish": "Muy bien. ¿Cuándo puedo depositar el dinero?",
           "english": "Very good. When can I deposit the money?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Mañana mismo. Quedo a su entera disposición para cualquier duda.",
-          "english": "Tomorrow. I remain entirely at your disposal for any questions.",
-          "blank": "entera disposición"
+          "spanish": "Mañana mismo. Estoy a su disposición para cualquier pregunta.",
+          "english": "Tomorrow. I'm at your disposal for any questions.",
+          "blank": "disposición"
         }
       ]
     }

@@ -25,7 +25,9 @@ function stripArticle(s) {
 
 export function getFillBlank(term) {
   if (!term.example || !term.example.es) return null;
-  let base = term.spanish.replace(/\([^)]*\)/g, '').trim();
+  // drop gloss-style parentheticals like " (SSN)", but keep ones that are part of the
+  // word itself, like "401(k)"
+  let base = term.spanish.replace(/\s+\([^)]*\)/g, '').trim();
   base = stripArticle(base);
   const alts = base
     .split('/')

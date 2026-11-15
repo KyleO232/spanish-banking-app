@@ -14,7 +14,9 @@ function trimPunctuation(s) {
 // The spellings of a vocabulary term that could appear inside a sentence.
 function variantsFor(term) {
   const isPhrase = !term.example; // register phrases have no example sentence
-  let base = term.spanish.replace(/\([^)]*\)/g, '').trim();
+  // drop gloss-style parentheticals like " (SSN)", but keep ones that are part of the
+  // word itself, like "401(k)"
+  let base = term.spanish.replace(/\s+\([^)]*\)/g, '').trim();
   let variants;
 
   if (isPhrase) {
