@@ -162,11 +162,9 @@ export function buyItem(id) {
   const { balance } = getWallet();
   if (balance < item.price) return { ok: false, reason: 'coins', needed: item.price - balance };
 
-  writeWardrobe({
-    owned: [...wardrobe.owned, id],
-    equipped: { ...wardrobe.equipped, [item.slot]: id }, // new things get worn right away
-    equippedAt: Date.now(),
-  });
+  const equipped = { ...wardrobe.equipped, [item.slot]: id }; // new things get worn right away
+  if (item.slot !== 'costume') delete equipped.costume; // a costume would hide it
+  writeWardrobe({ owned: [...wardrobe.owned, id], equipped, equippedAt: Date.now() });
   notifyChanged();
   return { ok: true, item };
 }
@@ -181,6 +179,7 @@ export function equipItem(slot, id) {
     const item = getItem(id);
     if (!item || item.slot !== slot || !wardrobe.owned.includes(id)) return false;
     equipped[slot] = id;
+    if (slot !== 'costume') delete equipped.costume; // wearing a piece takes the costume off
   } else {
     delete equipped[slot];
   }

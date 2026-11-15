@@ -3174,3 +3174,27 @@ a.stat-chip {
   background: var(--danger-bg);
   color: var(--danger);
 }
+
+/* costumes that replace her face and limbs (ghost, pumpkin, skeleton, mummy, ...) */
+.monedita.cos-hide-face .mon-face {
+  display: none;
+}
+
+.monedita.cos-hide-limbs .mon-arm,
+.monedita.cos-hide-limbs .mon-feet {
+  display: none;
+}
+
+.shop-tabs {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.shop-tabs .chip {
+  padding: 8px 2px;
+  font-size: 12.5px;
+}
+
+.shop-tabs .chip small {
+  font-size: 10.5px;
+}

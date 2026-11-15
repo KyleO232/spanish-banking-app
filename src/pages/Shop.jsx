@@ -3,7 +3,7 @@ import { Check, Lock, ShieldCheck, Zap } from 'lucide-react';
 import CoinIcon from '../components/CoinIcon.jsx';
 import Monedita from '../components/Monedita.jsx';
 import Confetti from '../components/Confetti.jsx';
-import { SLOTS, SLOT_LABELS, getItem, itemsForSlot } from '../data/wardrobe.js';
+import { SLOTS, SLOT_LABELS, getItem, itemsForSlot, previewLook } from '../data/wardrobe.js';
 import { titleFor } from '../data/titles.js';
 import { buyItem, equipItem, getEquipped, getStats, getWallet, getWardrobe } from '../utils/progress.js';
 import { useAuth } from '../auth/AuthContext.jsx';
@@ -25,7 +25,7 @@ export default function Shop() {
 
   const { wardrobe, wallet, equipped, xp } = state;
   const title = titleFor(xp);
-  const worn = { ...equipped, ...preview };
+  const worn = previewLook(equipped, preview);
   const trying = Object.values(preview).map((id) => getItem(id)?.es);
 
   function refresh() {
@@ -52,8 +52,12 @@ export default function Shop() {
     refresh();
   }
 
+  // a worn costume covers the other items, so they only count as "worn" when no costume is on
+  const isWearing = (item) =>
+    equipped[item.slot] === item.id && (item.slot === 'costume' || !equipped.costume);
+
   function toggleEquip(item) {
-    const isOn = equipped[item.slot] === item.id;
+    const isOn = isWearing(item);
     equipItem(item.slot, isOn ? null : item.id);
     setPreview(withoutSlot(preview, item.slot));
     refresh();
@@ -127,7 +131,7 @@ export default function Shop() {
         <div className="shop-grid">
           {itemsForSlot(slot).map((item) => {
             const owned = wardrobe.owned.includes(item.id);
-            const wearing = equipped[item.slot] === item.id;
+            const wearing = isWearing(item);
             const affordable = wallet.balance >= item.price;
             const trial = preview[item.slot] === item.id;
 

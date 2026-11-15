@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { WardrobeBack, WardrobeFront } from './WardrobeArt.jsx';
+import { COSTUME_HIDES, resolveLook } from '../data/wardrobe.js';
 import { getEquipped } from '../utils/progress.js';
 
 // "Monedita" (little coin): the app's original mascot, drawn as layered SVG so each
@@ -42,7 +43,8 @@ export default function Monedita({
 }) {
   const [randomAct, setAct] = useState(null);
   const [equipped] = useState(() => getEquipped());
-  const worn = outfit ?? equipped;
+  const worn = resolveLook(outfit ?? equipped); // a costume replaces everything else
+  const hides = COSTUME_HIDES[worn.costume] ?? {};
   const act = forceAct ?? randomAct;
 
   // Pick a random behavior every few seconds (never the same one twice in a row).
@@ -88,7 +90,7 @@ export default function Monedita({
 
   return (
     <div
-      className={`monedita mood-${mood} ${act ? `act-${act}` : ''} ${still ? 'still' : ''} ${className}`}
+      className={`monedita mood-${mood} ${act ? `act-${act}` : ''} ${still ? 'still' : ''} ${hides.face ? 'cos-hide-face' : ''} ${hides.limbs ? 'cos-hide-limbs' : ''} ${className}`}
       style={{ width: size, height: size * 1.04 }}
       aria-hidden="true"
     >
@@ -127,6 +129,7 @@ export default function Monedita({
           <circle cx="60" cy="58" r="37" fill="none" stroke="#fff0a8" strokeWidth="2.5" opacity="0.7" />
           <path d="M30 40 Q36 26 52 22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity="0.55" />
 
+          <g className="mon-face">
           <g className="mon-eyes">
             <ellipse cx="46" cy="52" rx="9" ry="11" fill="#fff" />
             <ellipse cx="74" cy="52" rx="9" ry="11" fill="#fff" />
@@ -168,6 +171,7 @@ export default function Monedita({
           )}
 
           {worried && <path className="mon-sweat" d="M96 36 q-6 9 0 13 q6 -4 0 -13 z" fill="#5ec3ff" />}
+          </g>
 
           <WardrobeFront worn={worn} />
         </g>

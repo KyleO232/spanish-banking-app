@@ -1,12 +1,16 @@
 // Everything Monedita can wear. Each item lives in one slot (she wears at most one
 // per slot). Prices are in coins; the artwork for each id is in WardrobeArt.jsx.
+//
+// A costume is a complete head-to-toe look, so while one is worn it replaces the hat,
+// eyewear and outfit (they come back when the costume comes off).
 
-export const SLOTS = ['hat', 'eyewear', 'outfit'];
+export const SLOTS = ['hat', 'eyewear', 'outfit', 'costume'];
 
 export const SLOT_LABELS = {
   hat: { es: 'Sombreros', en: 'Hats' },
   eyewear: { es: 'Gafas', en: 'Eyewear' },
   outfit: { es: 'Atuendos', en: 'Outfits' },
+  costume: { es: 'Disfraces', en: 'Costumes' },
 };
 
 export const ITEMS = [
@@ -32,7 +36,31 @@ export const ITEMS = [
   { id: 'out-medal', slot: 'outfit', es: 'La medalla', en: 'Medal', price: 220 },
   { id: 'out-vest', slot: 'outfit', es: 'El chaleco', en: 'Vest', price: 300 },
   { id: 'out-cape', slot: 'outfit', es: 'La capa', en: 'Cape', price: 400 },
+
+  // costumes: full-body looks (winter sports, Halloween, and a few pop-culture look-alikes)
+  { id: 'cos-skier', slot: 'costume', es: 'El esquiador', en: 'Skier', price: 450 },
+  { id: 'cos-ghost', slot: 'costume', es: 'El fantasma', en: 'Ghost', price: 400 },
+  { id: 'cos-pumpkin', slot: 'costume', es: 'La calabaza', en: "Jack-o'-lantern", price: 450 },
+  { id: 'cos-mummy', slot: 'costume', es: 'La momia', en: 'Mummy', price: 500 },
+  { id: 'cos-skeleton', slot: 'costume', es: 'El esqueleto', en: 'Skeleton', price: 500 },
+  { id: 'cos-witch', slot: 'costume', es: 'La bruja', en: 'Witch', price: 600 },
+  { id: 'cos-vampire', slot: 'costume', es: 'El vampiro', en: 'Vampire', price: 650 },
+  { id: 'cos-monster', slot: 'costume', es: 'El monstruo verde', en: 'Green monster', price: 700 },
+  { id: 'cos-tycoon', slot: 'costume', es: 'El magnate', en: 'Top-hat tycoon', price: 800 },
+  { id: 'cos-wizard', slot: 'costume', es: 'El joven mago', en: 'Young wizard', price: 900 },
+  { id: 'cos-plumber', slot: 'costume', es: 'El fontanero', en: 'Plumber hero', price: 900 },
+  { id: 'cos-spider', slot: 'costume', es: 'El héroe arácnido', en: 'Web-slinging hero', price: 1000 },
 ];
+
+// Costumes that cover her own face and/or arms and feet draw replacements instead.
+export const COSTUME_HIDES = {
+  'cos-ghost': { face: true, limbs: true },
+  'cos-pumpkin': { face: true, limbs: true },
+  'cos-mummy': { face: true, limbs: true },
+  'cos-skeleton': { face: true, limbs: true },
+  'cos-monster': { face: true, limbs: true },
+  'cos-spider': { face: true, limbs: true },
+};
 
 const BY_ID = new Map(ITEMS.map((item) => [item.id, item]));
 
@@ -42,4 +70,20 @@ export function getItem(id) {
 
 export function itemsForSlot(slot) {
   return ITEMS.filter((item) => item.slot === slot);
+}
+
+// What is actually drawn for a set of worn items: a costume replaces everything else.
+export function resolveLook(worn = {}) {
+  if (worn.costume && getItem(worn.costume)?.slot === 'costume') return { costume: worn.costume };
+  const { costume, ...rest } = worn; // eslint-disable-line no-unused-vars
+  return rest;
+}
+
+// The shop's try-on: trying a costume shows only it; trying anything else takes the
+// current costume off so you can see the piece itself.
+export function previewLook(equipped = {}, preview = {}) {
+  if (preview.costume) return { costume: preview.costume };
+  if (Object.keys(preview).length === 0) return equipped;
+  const { costume, ...rest } = equipped; // eslint-disable-line no-unused-vars
+  return { ...rest, ...preview };
 }
