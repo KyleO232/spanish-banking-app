@@ -1,7 +1,7 @@
 {
   "id": "wealth-management",
   "title": "Wealth Management",
-  "description": "Vocabulary and phrases for private banking and wealth management in Spain: client planning, investments, retirement, tax and inheritance, and compliance.",
+  "description": "Everyday vocabulary and phrases for private banking and wealth management conversations: client needs, investing basics, retirement and family planning, and fees and paperwork.",
   "theme": "alpine",
   "terms": [
     {
@@ -164,7 +164,6 @@
         "en": "A large part of your wealth is concentrated in one property."
       }
     },
-
     {
       "spanish": "la cartera",
       "english": "portfolio",
@@ -211,48 +210,58 @@
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Un fondo de inversión reúne el dinero de muchos partícipes.",
-        "en": "A mutual fund pools the money of many unitholders."
+        "es": "Un fondo de inversión reúne el dinero de muchos inversores.",
+        "en": "A mutual fund pools the money of many investors."
       }
     },
     {
-      "spanish": "el partícipe",
-      "english": "fund / plan unitholder",
-      "note": "the holder of units in a fondo or plan",
-      "block": "Investments & Portfolios",
-      "example": {
-        "es": "Cada partícipe posee una parte proporcional del fondo.",
-        "en": "Each unitholder owns a proportional share of the fund."
-      }
-    },
-    {
-      "spanish": "el valor liquidativo",
-      "english": "net asset value (NAV)",
+      "spanish": "la acción",
+      "english": "share / stock",
       "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "El valor liquidativo del fondo se calcula cada día.",
-        "en": "The fund's net asset value is calculated every day."
+        "es": "Esta acción ha subido un diez por ciento este año.",
+        "en": "This share has gone up ten percent this year."
       }
     },
     {
-      "spanish": "el fondo cotizado (ETF)",
-      "english": "exchange-traded fund (ETF)",
-      "note": "usually just called \"un ETF\"",
+      "spanish": "el bono",
+      "english": "bond",
+      "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Un fondo cotizado se compra y se vende en bolsa como una acción.",
-        "en": "An exchange-traded fund is bought and sold on the market like a stock."
+        "es": "Un bono es un préstamo que usted concede a una empresa o a un Estado.",
+        "en": "A bond is a loan that you give to a company or a government."
       }
     },
     {
-      "spanish": "la gestión discrecional de carteras",
-      "english": "discretionary portfolio management",
-      "note": "the manager decides without asking for each trade",
+      "spanish": "la bolsa",
+      "english": "stock market",
+      "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Con la gestión discrecional de carteras, nosotros tomamos las decisiones por usted.",
-        "en": "With discretionary portfolio management, we make the decisions for you."
+        "es": "La bolsa sube y baja cada día, así que conviene tener paciencia.",
+        "en": "The stock market goes up and down every day, so it pays to be patient."
+      }
+    },
+    {
+      "spanish": "el inversor / la inversora",
+      "english": "investor",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "Es un inversor prudente y a largo plazo.",
+        "en": "He is a cautious, long-term investor."
+      }
+    },
+    {
+      "spanish": "invertir",
+      "english": "to invest",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "Le aconsejo invertir una parte de sus ahorros cada mes.",
+        "en": "I advise you to invest part of your savings every month."
       }
     },
     {
@@ -266,6 +275,46 @@
       }
     },
     {
+      "spanish": "el riesgo",
+      "english": "risk",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "A mayor rentabilidad esperada, mayor riesgo.",
+        "en": "The higher the expected return, the higher the risk."
+      }
+    },
+    {
+      "spanish": "la ganancia",
+      "english": "gain / profit",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "Vender ahora le dejaría una ganancia de dos mil euros.",
+        "en": "Selling now would leave you with a gain of two thousand euros."
+      }
+    },
+    {
+      "spanish": "la pérdida",
+      "english": "loss",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "Con este fondo, el riesgo de pérdida es bajo.",
+        "en": "With this fund, the risk of loss is low."
+      }
+    },
+    {
+      "spanish": "el dividendo",
+      "english": "dividend",
+      "note": "",
+      "block": "Investments & Portfolios",
+      "example": {
+        "es": "La empresa reparte un dividendo cada trimestre.",
+        "en": "The company pays a dividend every quarter."
+      }
+    },
+    {
       "spanish": "el tipo de interés",
       "english": "interest rate",
       "note": "Spain says \"tipo\"; Latin America says \"tasa\"",
@@ -276,13 +325,13 @@
       }
     },
     {
-      "spanish": "la Letra del Tesoro",
-      "english": "Treasury bill",
-      "note": "short-term Spanish government debt",
+      "spanish": "la inflación",
+      "english": "inflation",
+      "note": "",
       "block": "Investments & Portfolios",
       "example": {
-        "es": "Una Letra del Tesoro a doce meses es una opción segura y líquida.",
-        "en": "A twelve-month Treasury bill is a safe and liquid option."
+        "es": "La inflación reduce el poder adquisitivo de sus ahorros.",
+        "en": "Inflation reduces the purchasing power of your savings."
       }
     },
     {
@@ -296,61 +345,40 @@
       }
     },
     {
-      "spanish": "la bolsa",
-      "english": "stock market",
-      "note": "",
-      "block": "Investments & Portfolios",
-      "example": {
-        "es": "La bolsa española cerró la semana con ganancias.",
-        "en": "The Spanish stock market closed the week with gains."
-      }
-    },
-    {
-      "spanish": "el Ibex 35",
-      "english": "Spain's main stock index",
-      "note": "the 35 largest listed Spanish companies",
-      "block": "Investments & Portfolios",
-      "example": {
-        "es": "El Ibex 35 agrupa a las mayores empresas cotizadas de España.",
-        "en": "The Ibex 35 groups the largest listed companies in Spain."
-      }
-    },
-    {
-      "spanish": "el reequilibrio de la cartera",
-      "english": "portfolio rebalancing",
-      "note": "also: rebalanceo",
-      "block": "Investments & Portfolios",
-      "example": {
-        "es": "Hacemos un reequilibrio de la cartera una vez al año.",
-        "en": "We rebalance the portfolio once a year."
-      }
-    },
-    {
-      "spanish": "la SICAV",
-      "english": "SICAV (investment company)",
-      "note": "vehicle often used by wealthy families",
-      "block": "Investments & Portfolios",
-      "example": {
-        "es": "Algunas familias con mucho patrimonio invierten a través de una SICAV.",
-        "en": "Some very wealthy families invest through a SICAV."
-      }
-    },
-
-    {
       "spanish": "la jubilación",
       "english": "retirement",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
         "es": "Cuanto antes empiece a ahorrar para la jubilación, mejor.",
         "en": "The sooner you start saving for retirement, the better."
       }
     },
     {
+      "spanish": "jubilarse",
+      "english": "to retire",
+      "note": "",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "¿A qué edad piensa jubilarse?",
+        "en": "At what age do you plan to retire?"
+      }
+    },
+    {
+      "spanish": "la pensión",
+      "english": "pension",
+      "note": "",
+      "block": "Retirement & Family Planning",
+      "example": {
+        "es": "La pensión pública podría no bastar para mantener su nivel de vida.",
+        "en": "The public pension may not be enough to maintain your standard of living."
+      }
+    },
+    {
       "spanish": "el plan de pensiones",
       "english": "private pension plan",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
         "es": "Un plan de pensiones complementa la pensión pública.",
         "en": "A private pension plan supplements the public pension."
@@ -358,109 +386,49 @@
     },
     {
       "spanish": "la aportación",
-      "english": "contribution",
+      "english": "contribution / deposit",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "Puede reducir su base imponible con la aportación anual al plan.",
-        "en": "You can lower your taxable base with the annual contribution to the plan."
+        "es": "Le recomiendo hacer una aportación mensual a su plan de pensiones.",
+        "en": "I recommend making a monthly contribution to your pension plan."
       }
     },
     {
-      "spanish": "el PIAS (Plan Individual de Ahorro Sistemático)",
-      "english": "PIAS (systematic savings plan)",
-      "note": "tax-advantaged savings product",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "El PIAS ofrece ventajas fiscales si se cobra como renta vitalicia.",
-        "en": "The PIAS offers tax advantages if it is paid out as a lifetime annuity."
-      }
-    },
-    {
-      "spanish": "la renta vitalicia",
-      "english": "lifetime annuity",
+      "spanish": "ahorrar",
+      "english": "to save",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "La renta vitalicia le garantiza un ingreso mensual de por vida.",
-        "en": "A lifetime annuity guarantees you a monthly income for life."
+        "es": "Para ahorrar más, conviene reducir los gastos innecesarios.",
+        "en": "To save more, it is wise to cut unnecessary expenses."
       }
     },
     {
-      "spanish": "el traspaso",
-      "english": "transfer between funds or plans",
-      "note": "moving money between funds usually does not trigger tax at that moment",
-      "block": "Retirement, Tax & Inheritance",
+      "spanish": "los impuestos",
+      "english": "taxes",
+      "note": "",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "Un traspaso entre fondos de inversión no tributa en el momento.",
-        "en": "A transfer between mutual funds is not taxed at that moment."
+        "es": "Los impuestos reducen la rentabilidad de sus inversiones.",
+        "en": "Taxes reduce the return on your investments."
       }
     },
     {
-      "spanish": "el rescate",
-      "english": "redemption / withdrawal",
-      "note": "taking money out of a plan or fund",
-      "block": "Retirement, Tax & Inheritance",
+      "spanish": "el asesor fiscal / la asesora fiscal",
+      "english": "tax advisor",
+      "note": "",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "El rescate del plan de pensiones tributa como rendimiento del trabajo.",
-        "en": "A withdrawal from the pension plan is taxed as employment income."
-      }
-    },
-    {
-      "spanish": "la declaración de la renta",
-      "english": "annual income tax return",
-      "note": "filed in the spring campaign",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "Presentará la declaración de la renta entre abril y junio.",
-        "en": "You will file the income tax return between April and June."
-      }
-    },
-    {
-      "spanish": "el IRPF",
-      "english": "personal income tax",
-      "note": "Impuesto sobre la Renta de las Personas Físicas",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "El IRPF grava los rendimientos y las ganancias de sus inversiones.",
-        "en": "Personal income tax applies to the returns and gains on your investments."
-      }
-    },
-    {
-      "spanish": "la ganancia patrimonial",
-      "english": "capital gain (for tax purposes)",
-      "note": "not the same as \"plusvalía municipal\", a local property tax",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "La venta de acciones genera una ganancia patrimonial.",
-        "en": "Selling shares generates a capital gain."
-      }
-    },
-    {
-      "spanish": "el Impuesto sobre el Patrimonio",
-      "english": "Wealth Tax",
-      "note": "its rules and discounts depend on the region",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "El Impuesto sobre el Patrimonio varía según la región donde resida.",
-        "en": "The Wealth Tax varies depending on the region where you live."
-      }
-    },
-    {
-      "spanish": "la comunidad autónoma",
-      "english": "autonomous region",
-      "note": "Spain's regional governments, which set many tax rules",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "Cada comunidad autónoma puede fijar sus propias bonificaciones fiscales.",
-        "en": "Each autonomous region can set its own tax discounts."
+        "es": "Su asesor fiscal le explicará cuántos impuestos tendrá que pagar.",
+        "en": "Your tax advisor will explain how much tax you will have to pay."
       }
     },
     {
       "spanish": "la herencia",
       "english": "inheritance",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
         "es": "La herencia se reparte según el testamento y la ley.",
         "en": "The inheritance is divided according to the will and the law."
@@ -470,250 +438,258 @@
       "spanish": "el testamento",
       "english": "will (legal document)",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
         "es": "Le recomiendo actualizar el testamento después de cualquier cambio familiar.",
         "en": "I recommend updating your will after any family change."
       }
     },
     {
-      "spanish": "la legítima",
-      "english": "forced heirship share",
-      "note": "the part of an estate reserved by law for the children; rules vary by region",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "La legítima reserva una parte de la herencia para los hijos.",
-        "en": "The forced heirship share reserves part of the inheritance for the children."
-      }
-    },
-    {
-      "spanish": "el usufructo",
-      "english": "usufruct (right to use and enjoy)",
+      "spanish": "el heredero / la heredera",
+      "english": "heir",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "La viuda conserva el usufructo de la vivienda familiar.",
-        "en": "The widow keeps the usufruct of the family home."
-      }
-    },
-    {
-      "spanish": "la nuda propiedad",
-      "english": "bare ownership",
-      "note": "ownership without the right to use the property",
-      "block": "Retirement, Tax & Inheritance",
-      "example": {
-        "es": "Los hijos reciben la nuda propiedad y el padre mantiene el usufructo.",
-        "en": "The children receive bare ownership and the father keeps the usufruct."
+        "es": "Su hijo mayor es el heredero de la empresa familiar.",
+        "en": "Your eldest son is the heir to the family business."
       }
     },
     {
       "spanish": "la donación",
       "english": "gift / donation",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "Una donación en vida tiene implicaciones fiscales que dependen de la región.",
-        "en": "A gift made during your lifetime has tax implications that depend on the region."
+        "es": "Una donación en vida a sus hijos puede tener implicaciones fiscales.",
+        "en": "A gift to your children during your lifetime can have tax implications."
       }
     },
     {
-      "spanish": "el Impuesto sobre Sucesiones y Donaciones",
-      "english": "Inheritance and Gift Tax",
+      "spanish": "el seguro de vida",
+      "english": "life insurance",
       "note": "",
-      "block": "Retirement, Tax & Inheritance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "El Impuesto sobre Sucesiones y Donaciones lo gestiona cada comunidad autónoma.",
-        "en": "The Inheritance and Gift Tax is managed by each autonomous region."
-      }
-    },
-
-    {
-      "spanish": "MiFID II",
-      "english": "EU investment-services directive (MiFID II)",
-      "note": "sets investor-protection rules across the EU",
-      "block": "Fees & Compliance",
-      "example": {
-        "es": "La normativa MiFID II exige conocer bien al cliente antes de asesorarlo.",
-        "en": "The MiFID II rules require knowing the client well before advising them."
+        "es": "Un seguro de vida protege a su familia si a usted le ocurre algo.",
+        "en": "Life insurance protects your family if something happens to you."
       }
     },
     {
-      "spanish": "el test de idoneidad",
-      "english": "suitability test",
-      "note": "required before giving personal advice",
-      "block": "Fees & Compliance",
-      "example": {
-        "es": "El test de idoneidad determina qué productos le convienen.",
-        "en": "The suitability test determines which products suit you."
-      }
-    },
-    {
-      "spanish": "el test de conveniencia",
-      "english": "appropriateness test",
-      "note": "checks whether the client understands a product bought without advice",
-      "block": "Fees & Compliance",
-      "example": {
-        "es": "El test de conveniencia comprueba si comprende los riesgos del producto.",
-        "en": "The appropriateness test checks whether you understand the product's risks."
-      }
-    },
-    {
-      "spanish": "la CNMV",
-      "english": "Spain's securities market regulator",
-      "note": "Comisión Nacional del Mercado de Valores",
-      "block": "Fees & Compliance",
-      "example": {
-        "es": "La CNMV supervisa los mercados de valores y protege al inversor.",
-        "en": "The CNMV supervises the securities markets and protects investors."
-      }
-    },
-    {
-      "spanish": "el Fondo de Garantía de Depósitos",
-      "english": "Deposit Guarantee Fund",
+      "spanish": "el beneficiario / la beneficiaria",
+      "english": "beneficiary",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "El Fondo de Garantía de Depósitos protege hasta cien mil euros por titular.",
-        "en": "The Deposit Guarantee Fund protects up to one hundred thousand euros per account holder."
+        "es": "Debe indicar quién será el beneficiario del seguro.",
+        "en": "You must state who will be the beneficiary of the insurance."
       }
     },
     {
-      "spanish": "el folleto",
-      "english": "prospectus / brochure",
+      "spanish": "la hipoteca",
+      "english": "mortgage",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "Le entrego el folleto del fondo para que lo lea con calma.",
-        "en": "I'm handing you the fund's prospectus so you can read it calmly."
+        "es": "Todavía le quedan diez años para terminar de pagar la hipoteca.",
+        "en": "You still have ten years left to finish paying off the mortgage."
       }
     },
     {
-      "spanish": "el documento de datos fundamentales",
-      "english": "key information document (KID)",
+      "spanish": "la deuda",
+      "english": "debt",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Retirement & Family Planning",
       "example": {
-        "es": "Le adjunto el documento de datos fundamentales del producto.",
-        "en": "I'm attaching the product's key information document."
+        "es": "Antes de invertir, le sugiero reducir la deuda de su tarjeta.",
+        "en": "Before investing, I suggest paying down your card debt."
       }
     },
     {
-      "spanish": "la comisión de gestión",
-      "english": "management fee",
+      "spanish": "la comisión",
+      "english": "fee / commission",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "La comisión de gestión se descuenta del valor liquidativo.",
-        "en": "The management fee is deducted from the net asset value."
+        "es": "El banco cobra una comisión del uno por ciento al año.",
+        "en": "The bank charges a one percent fee per year."
       }
     },
     {
-      "spanish": "la comisión sobre resultados / la comisión de éxito",
-      "english": "performance fee",
+      "spanish": "los gastos",
+      "english": "expenses / costs",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "Este fondo cobra una comisión sobre resultados si supera a su índice.",
-        "en": "This fund charges a performance fee if it beats its index."
+        "es": "Además de la comisión, hay otros gastos que debe conocer.",
+        "en": "Besides the fee, there are other costs you should know about."
       }
     },
     {
-      "spanish": "la rentabilidad pasada",
-      "english": "past performance",
+      "spanish": "el contrato",
+      "english": "contract",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "La rentabilidad pasada no garantiza rentabilidades futuras.",
-        "en": "Past performance does not guarantee future returns."
+        "es": "Lea el contrato con calma antes de firmar.",
+        "en": "Read the contract calmly before signing."
       }
     },
     {
-      "spanish": "el conflicto de intereses",
-      "english": "conflict of interest",
+      "spanish": "las condiciones",
+      "english": "terms and conditions",
       "note": "",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "Debemos informarle de cualquier conflicto de intereses.",
-        "en": "We must inform you of any conflict of interest."
+        "es": "Le explico las condiciones del producto antes de que decida.",
+        "en": "I'll explain the product's terms before you decide."
       }
     },
     {
-      "spanish": "el origen de los fondos",
-      "english": "source of funds",
-      "note": "asked for in anti-money-laundering checks",
-      "block": "Fees & Compliance",
+      "spanish": "el formulario",
+      "english": "form",
+      "note": "Spain says \"rellenar\"; Latin America says \"llenar\"",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "Necesitamos documentación sobre el origen de los fondos.",
-        "en": "We need documentation about the source of the funds."
+        "es": "Rellene este formulario con sus datos personales.",
+        "en": "Fill in this form with your personal details."
       }
     },
     {
-      "spanish": "el cliente minorista",
-      "english": "retail client",
-      "note": "the MiFID category with the most protection",
-      "block": "Fees & Compliance",
+      "spanish": "el justificante",
+      "english": "proof / supporting document",
+      "note": "Latin America often says \"comprobante\"",
+      "block": "Fees & Paperwork",
       "example": {
-        "es": "Como cliente minorista, usted tiene la máxima protección.",
-        "en": "As a retail client, you have the highest level of protection."
+        "es": "Necesitamos un justificante de sus ingresos.",
+        "en": "We need proof of your income."
       }
     },
-
+    {
+      "spanish": "la firma",
+      "english": "signature",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "Falta su firma en la última página.",
+        "en": "Your signature is missing on the last page."
+      }
+    },
+    {
+      "spanish": "firmar",
+      "english": "to sign",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "¿Puede firmar aquí, por favor?",
+        "en": "Can you sign here, please?"
+      }
+    },
+    {
+      "spanish": "el informe",
+      "english": "report",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "Le enviaremos un informe con el estado de su cartera.",
+        "en": "We will send you a report on the status of your portfolio."
+      }
+    },
+    {
+      "spanish": "la cita",
+      "english": "appointment",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "¿Le viene bien una cita el martes por la mañana?",
+        "en": "Does an appointment on Tuesday morning suit you?"
+      }
+    },
+    {
+      "spanish": "la transferencia",
+      "english": "transfer",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "Puede hacer la transferencia desde su banca en línea.",
+        "en": "You can make the transfer from your online banking."
+      }
+    },
+    {
+      "spanish": "ingresar",
+      "english": "to deposit (money)",
+      "note": "in Spain, \"ingresar\" is the everyday word for depositing money",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "Puede ingresar el dinero en su cuenta mañana mismo.",
+        "en": "You can deposit the money in your account tomorrow."
+      }
+    },
+    {
+      "spanish": "retirar",
+      "english": "to withdraw",
+      "note": "",
+      "block": "Fees & Paperwork",
+      "example": {
+        "es": "¿Cuánto dinero desea retirar?",
+        "en": "How much money would you like to withdraw?"
+      }
+    },
     {
       "spanish": "Quedo a su entera disposición.",
       "english": "I remain entirely at your disposal.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Permítame explicarle las opciones.",
       "english": "Allow me to explain the options to you.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Le recomendaría diversificar su cartera.",
       "english": "I would recommend diversifying your portfolio.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Toda inversión conlleva riesgos, incluida la pérdida del capital.",
       "english": "Every investment carries risks, including loss of capital.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Será un placer acompañarle en la gestión de su patrimonio.",
       "english": "It will be a pleasure to accompany you in managing your wealth.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Antes de decidir, le recomiendo consultar con su asesor fiscal.",
       "english": "Before deciding, I recommend consulting your tax advisor.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     },
     {
       "spanish": "Si le parece bien, concertamos una cita la semana próxima.",
       "english": "If that suits you, we'll arrange an appointment next week.",
       "note": "formal/register phrase",
-      "block": "Fees & Compliance",
+      "block": "Fees & Paperwork",
       "example": null
     }
   ],
   "registerNotes": [
     "In Spanish private banking, clients are addressed as \"usted\" and advisors use \"le\" and \"su\" throughout. Switch to \"tú\" only if the client invites it (\"puede tutearme\").",
-    "Spain uses \"tipo de interés\" (not \"tasa\"), and \"ingresar\" means to deposit money. Numbers use a period for thousands and a comma for decimals: 100.000 euros, 2,5 %.",
-    "Tax and inheritance rules vary by comunidad autónoma, so advisors say \"depende de la comunidad autónoma\" and recommend confirming with an asesor fiscal before giving figures.",
-    "Under MiFID II, an advisor must assess suitability (test de idoneidad) before recommending a product, and must always mention costs and risks. Expect these steps in every client conversation.",
-    "Clients often come to a first meeting worried about losing their savings. Reassuring but honest phrases (\"toda inversión conlleva riesgos\") build trust better than guarantees."
+    "Spain uses \"tipo de interés\" (not \"tasa\"), \"coste\" (not \"costo\"), and \"ingresar\" for depositing money. Numbers use a period for thousands and a comma for decimals: 100.000 euros, 2,5 %.",
+    "Advisors avoid giving tax advice themselves. The standard phrase is \"le recomiendo consultar con su asesor fiscal\".",
+    "Mention risk before promising anything: \"toda inversión conlleva riesgos\". Avoid words like \"seguro\" or \"garantizado\" unless they are literally true.",
+    "Clients often come to a first meeting worried about losing their savings. Reassuring but honest phrases build trust better than guarantees."
   ],
   "roleplays": [
     {
@@ -802,8 +778,8 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Tiene razón. Le recomendaría diversificar su cartera con más renta fija y una Letra del Tesoro a doce meses.",
-          "english": "You're right. I would recommend diversifying your portfolio with more fixed income and a twelve-month Treasury bill.",
+          "spanish": "Tiene razón. Le recomendaría diversificar su cartera con más renta fija y algunos bonos.",
+          "english": "You're right. I would recommend diversifying your portfolio with more fixed income and some bonds.",
           "blank": "renta fija"
         },
         {
@@ -824,16 +800,16 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Hacemos un reequilibrio de la cartera una vez al año, o antes si el mercado se mueve mucho.",
-          "english": "We rebalance the portfolio once a year, or sooner if the market moves a lot.",
-          "blank": "reequilibrio"
+          "spanish": "Revisamos la cartera una vez al año, o antes si la bolsa se mueve mucho.",
+          "english": "We review the portfolio once a year, or sooner if the stock market moves a lot.",
+          "blank": "bolsa"
         }
       ]
     },
     {
       "id": "retirement-and-inheritance",
-      "title": "Planning for Retirement and Inheritance",
-      "block": "Retirement, Tax & Inheritance",
+      "title": "Planning for Retirement and Family",
+      "block": "Retirement & Family Planning",
       "lines": [
         {
           "speaker": "Banker",
@@ -848,109 +824,109 @@
         },
         {
           "speaker": "Banker",
-          "spanish": "Puede hacer un traspaso a un plan de nuestra entidad sin coste fiscal.",
-          "english": "You can make a transfer to a plan at our institution at no tax cost.",
-          "blank": "traspaso"
+          "spanish": "Podemos revisar las comisiones de ese plan y buscar una opción más económica.",
+          "english": "We can review that plan's fees and look for a cheaper option.",
+          "blank": "comisiones"
         },
         {
           "speaker": "Client",
-          "spanish": "Perfecto. Y sobre mi herencia: tengo dos hijos y quiero que mi casa quede bien repartida.",
-          "english": "Perfect. And about my inheritance: I have two children and I want my house to be divided fairly."
+          "spanish": "Perfecto. Y sobre mi herencia: tengo dos hijos y quiero dejarles mi casa.",
+          "english": "Perfect. And about my inheritance: I have two children and I want to leave them my house."
         },
         {
           "speaker": "Banker",
-          "spanish": "Una opción es dejarles la nuda propiedad de la vivienda y conservar usted el usufructo.",
-          "english": "One option is to leave them the bare ownership of the home and keep the usufruct yourself.",
-          "blank": "nuda propiedad"
+          "spanish": "Una buena opción es un seguro de vida a favor de sus hijos.",
+          "english": "A good option is a life insurance policy in favor of your children.",
+          "blank": "seguro de vida"
         },
         {
           "speaker": "Client",
-          "spanish": "¿Cuánto pagarían de impuestos mis hijos?",
-          "english": "How much tax would my children pay?"
+          "spanish": "¿Y tendrán que pagar muchos impuestos?",
+          "english": "And will they have to pay a lot of taxes?"
         },
         {
           "speaker": "Banker",
-          "spanish": "El Impuesto sobre Sucesiones y Donaciones depende de la comunidad autónoma, así que debe consultar con su asesor fiscal.",
-          "english": "The Inheritance and Gift Tax depends on the autonomous region, so you should consult your tax advisor.",
-          "blank": "Sucesiones y Donaciones"
+          "spanish": "Depende de cada caso. Le recomiendo consultar con su asesor fiscal.",
+          "english": "It depends on each case. I recommend consulting your tax advisor.",
+          "blank": "asesor fiscal"
         },
         {
           "speaker": "Client",
-          "spanish": "Entiendo. Entonces también debería actualizar mi testamento, ¿verdad?",
-          "english": "I understand. Then I should also update my will, right?"
+          "spanish": "Entiendo. ¿Y debería actualizar mi testamento?",
+          "english": "I understand. And should I update my will?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Así es. Le recomiendo revisar el testamento con un notario antes de tomar ninguna decisión.",
-          "english": "That's right. I recommend reviewing the will with a notary before making any decision.",
+          "spanish": "Sí, es muy importante tener un testamento actualizado.",
+          "english": "Yes, it is very important to have an up-to-date will.",
           "blank": "testamento"
         }
       ]
     },
     {
-      "id": "fees-and-compliance",
-      "title": "Explaining Fees and Compliance",
-      "block": "Fees & Compliance",
+      "id": "fees-and-paperwork",
+      "title": "Explaining Fees and Paperwork",
+      "block": "Fees & Paperwork",
       "lines": [
         {
           "speaker": "Banker",
-          "spanish": "Antes de recomendarle nada, debe completar el test de idoneidad, como exige la MiFID II.",
-          "english": "Before I recommend anything, you must complete the suitability test, as MiFID II requires.",
-          "blank": "test de idoneidad"
+          "spanish": "Antes de empezar, le explico las condiciones y las comisiones del servicio.",
+          "english": "Before we begin, I'll explain the terms and the fees of the service.",
+          "blank": "condiciones"
         },
         {
           "speaker": "Client",
-          "spanish": "Claro. ¿Y qué comisiones voy a pagar?",
-          "english": "Of course. And what fees will I pay?"
+          "spanish": "Claro. ¿Y cuánto voy a pagar de comisión?",
+          "english": "Of course. And how much will I pay in fees?"
         },
         {
           "speaker": "Banker",
-          "spanish": "La comisión de gestión es del uno por ciento anual y no cobramos comisión sobre resultados.",
-          "english": "The management fee is one percent per year and we do not charge a performance fee.",
-          "blank": "comisión de gestión"
+          "spanish": "El banco cobra una comisión del uno por ciento al año y no hay otros gastos.",
+          "english": "The bank charges a one percent fee per year and there are no other costs.",
+          "blank": "comisión"
         },
         {
           "speaker": "Client",
-          "spanish": "¿Y qué pasa si el fondo pierde dinero? ¿Está garantizado?",
-          "english": "And what happens if the fund loses money? Is it guaranteed?"
+          "spanish": "¿Y qué pasa si pierdo dinero? ¿Está garantizado?",
+          "english": "And what happens if I lose money? Is it guaranteed?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Toda inversión conlleva riesgos, y la rentabilidad pasada no garantiza resultados futuros.",
-          "english": "Every investment carries risks, and past performance does not guarantee future results.",
-          "blank": "rentabilidad pasada"
+          "spanish": "Toda inversión conlleva riesgos, y no podemos garantizar ganancias.",
+          "english": "Every investment carries risks, and we cannot guarantee gains.",
+          "blank": "riesgos"
         },
         {
           "speaker": "Client",
-          "spanish": "Entiendo. ¿Y mis depósitos están protegidos?",
-          "english": "I understand. And are my deposits protected?"
+          "spanish": "Entiendo. ¿Qué documentos necesito?",
+          "english": "I understand. What documents do I need?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Sí, el Fondo de Garantía de Depósitos protege hasta cien mil euros por titular y entidad.",
-          "english": "Yes, the Deposit Guarantee Fund protects up to one hundred thousand euros per account holder and institution.",
-          "blank": "Garantía de Depósitos"
+          "spanish": "Necesitamos un justificante de sus ingresos y una copia de su documento de identidad.",
+          "english": "We need proof of your income and a copy of your ID.",
+          "blank": "justificante"
         },
         {
           "speaker": "Client",
-          "spanish": "Perfecto. ¿Necesitan algún documento mío?",
-          "english": "Perfect. Do you need any documents from me?"
+          "spanish": "Perfecto. Se los traigo mañana.",
+          "english": "Perfect. I'll bring them to you tomorrow."
         },
         {
           "speaker": "Banker",
-          "spanish": "Necesitamos que justifique el origen de los fondos y que firme que ha recibido el documento de datos fundamentales.",
-          "english": "We need you to document the source of the funds and to sign that you have received the key information document.",
-          "blank": "origen"
+          "spanish": "Gracias. Cuando tenga todo, puede firmar el contrato aquí.",
+          "english": "Thank you. When you have everything, you can sign the contract here.",
+          "blank": "contrato"
         },
         {
           "speaker": "Client",
-          "spanish": "Sin problema. Se los traigo mañana.",
-          "english": "No problem. I'll bring them to you tomorrow."
+          "spanish": "Muy bien. ¿Cuándo puedo ingresar el dinero?",
+          "english": "Very good. When can I deposit the money?"
         },
         {
           "speaker": "Banker",
-          "spanish": "Quedo a su entera disposición para cualquier duda.",
-          "english": "I remain entirely at your disposal for any questions.",
+          "spanish": "Mañana mismo. Quedo a su entera disposición para cualquier duda.",
+          "english": "Tomorrow. I remain entirely at your disposal for any questions.",
           "blank": "entera disposición"
         }
       ]
