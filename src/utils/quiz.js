@@ -15,6 +15,7 @@ export function normalizeAnswer(s) {
     .replace(COMBINING_MARKS, '')
     .toLowerCase()
     .replace(/[¿?¡!.,]/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 

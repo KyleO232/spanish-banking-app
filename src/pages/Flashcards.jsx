@@ -153,7 +153,7 @@ export default function Flashcards() {
               <div className="card unlock-card">
                 <Monedita mood="cheer" size={56} />
                 <div>
-                  <h3>¡Quiz unlocked!</h3>
+                  <h3>¡Quiz desbloqueado!</h3>
                   <div className="meta">You've gone through every card.</div>
                 </div>
                 <Link

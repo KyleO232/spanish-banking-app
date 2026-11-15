@@ -114,7 +114,7 @@ export default function Quiz() {
 
   function submitFillBlank(e) {
     e.preventDefault();
-    if (submitted) return;
+    if (submitted || !fillValue.trim()) return;
     setSubmitted(true);
     if (normalizeAnswer(fillValue) === normalizeAnswer(q.answer)) {
       setScore((s) => s + 1);

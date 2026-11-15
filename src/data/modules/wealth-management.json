@@ -100,8 +100,8 @@
       "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "Ha acumulado un ahorro considerable en los últimos años.",
-        "en": "You have built up considerable savings in recent years."
+        "es": "El ahorro constante le permitirá alcanzar sus objetivos.",
+        "en": "Consistent saving will allow you to reach your goals."
       }
     },
     {
@@ -160,7 +160,7 @@
       "note": "",
       "block": "Client Needs & Planning",
       "example": {
-        "es": "Gran parte de su patrimonio está concentrado en un inmueble.",
+        "es": "Gran parte de su patrimonio está concentrada en un inmueble.",
         "en": "A large part of your wealth is concentrated in one property."
       }
     },
@@ -826,7 +826,7 @@
           "speaker": "Banker",
           "spanish": "Hacemos un reequilibrio de la cartera una vez al año, o antes si el mercado se mueve mucho.",
           "english": "We rebalance the portfolio once a year, or sooner if the market moves a lot.",
-          "blank": "reequilibrio de la cartera"
+          "blank": "reequilibrio"
         }
       ]
     },
@@ -865,14 +865,14 @@
         },
         {
           "speaker": "Client",
-          "spanish": "¿Cuántos impuestos pagarían mis hijos?",
+          "spanish": "¿Cuánto pagarían de impuestos mis hijos?",
           "english": "How much tax would my children pay?"
         },
         {
           "speaker": "Banker",
           "spanish": "El Impuesto sobre Sucesiones y Donaciones depende de la comunidad autónoma, así que debe consultar con su asesor fiscal.",
           "english": "The Inheritance and Gift Tax depends on the autonomous region, so you should consult your tax advisor.",
-          "blank": "Impuesto sobre Sucesiones y Donaciones"
+          "blank": "Sucesiones y Donaciones"
         },
         {
           "speaker": "Client",
@@ -929,7 +929,7 @@
           "speaker": "Banker",
           "spanish": "Sí, el Fondo de Garantía de Depósitos protege hasta cien mil euros por titular y entidad.",
           "english": "Yes, the Deposit Guarantee Fund protects up to one hundred thousand euros per account holder and institution.",
-          "blank": "Fondo de Garantía de Depósitos"
+          "blank": "Garantía de Depósitos"
         },
         {
           "speaker": "Client",
@@ -940,7 +940,7 @@
           "speaker": "Banker",
           "spanish": "Necesitamos que justifique el origen de los fondos y que firme que ha recibido el documento de datos fundamentales.",
           "english": "We need you to document the source of the funds and to sign that you have received the key information document.",
-          "blank": "origen de los fondos"
+          "blank": "origen"
         },
         {
           "speaker": "Client",
@@ -951,7 +951,7 @@
           "speaker": "Banker",
           "spanish": "Quedo a su entera disposición para cualquier duda.",
           "english": "I remain entirely at your disposal for any questions.",
-          "blank": "Quedo a su entera disposición"
+          "blank": "entera disposición"
         }
       ]
     }
