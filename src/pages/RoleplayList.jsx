@@ -14,7 +14,7 @@ export default function RoleplayList() {
     return (
       <>
         <TopBar title="Module not found" />
-        <div className="main">
+        <div className="main mode-roleplay">
           <div className="empty-state">We couldn't find that module.</div>
         </div>
       </>
@@ -55,7 +55,7 @@ export default function RoleplayList() {
         title="Roleplay"
         subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title}
       />
-      <div className="main">
+      <div className="main mode-roleplay">
         <div className="page-intro">
           <p>Scripted client/banker dialogues for reading practice.</p>
         </div>

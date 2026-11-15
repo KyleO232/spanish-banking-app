@@ -32,7 +32,7 @@ export default function ModuleHome() {
           {MODES.map((mode) => (
             <Link key={mode.key} to={`/module/${module.id}/${mode.key}`} className="card link-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                <span className="link-card-icon">
+                <span className={`link-card-icon mode-${mode.key}`}>
                   <mode.Icon size={24} strokeWidth={2.4} />
                 </span>
                 <div>

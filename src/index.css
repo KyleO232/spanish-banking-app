@@ -23,10 +23,25 @@
   --gold-shadow: #a67610;
   --gold-contrast: #3a2a02;
 
+  /* a color per activity: flashcards = blue, quiz = purple, roleplay = orange */
+  --blue: #1c8bff;
+  --blue-shadow: #1469c4;
+  --blue-bg: rgba(28, 139, 255, 0.1);
+  --on-blue: #ffffff;
+  --purple: #8b5cf6;
+  --purple-shadow: #6a3fd1;
+  --purple-bg: rgba(139, 92, 246, 0.1);
+  --on-purple: #ffffff;
+  --orange: #ff8a1f;
+  --orange-shadow: #d96a00;
+  --orange-bg: rgba(255, 138, 31, 0.12);
+  --on-orange: #ffffff;
+
   --beach-sand-bottom: #e6c68a;
   --autumn-ground-bottom: #b97b3f;
 
   --sans: 'Nunito Variable', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Fredoka Variable', 'Fredoka', 'Nunito Variable', system-ui, sans-serif;
 
   font: 16px/1.5 var(--sans);
   color-scheme: light dark;
@@ -62,6 +77,19 @@
     --gold-shadow: #8a6008;
     --gold-contrast: #2b1f04;
 
+    --blue: #4aa8ff;
+    --blue-shadow: #2a78c6;
+    --blue-bg: rgba(74, 168, 255, 0.14);
+    --on-blue: #06203a;
+    --purple: #a78bfa;
+    --purple-shadow: #7655d6;
+    --purple-bg: rgba(167, 139, 250, 0.14);
+    --on-purple: #1a1030;
+    --orange: #ffa94d;
+    --orange-shadow: #d9791f;
+    --orange-bg: rgba(255, 169, 77, 0.14);
+    --on-orange: #3a1d00;
+
     --beach-sand-bottom: #3c2e20;
     --autumn-ground-bottom: #2b1c0e;
   }
@@ -85,8 +113,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--sans);
-  font-weight: 800;
+  font-family: var(--display);
+  font-weight: 600;
   color: var(--text-h);
   margin: 0 0 4px;
 }

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, LockOpen } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import Monedita from '../components/Monedita.jsx';
 import LockedStep from '../components/LockedStep.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
 import { getLessonSteps } from '../data/lessons.js';
@@ -46,7 +47,7 @@ export default function Flashcards() {
     return (
       <>
         <TopBar title="Module not found" />
-        <div className="main">
+        <div className="main mode-flashcards">
           <div className="empty-state">We couldn't find that module.</div>
         </div>
       </>
@@ -84,7 +85,7 @@ export default function Flashcards() {
         title="Flashcards"
         subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title}
       />
-      <div className="main">
+      <div className="main mode-flashcards">
         {!lockedBlock && (
           <div className="chip-row">
             <button
@@ -150,9 +151,9 @@ export default function Flashcards() {
             </div>
             {lockedBlock && quizUnlocked && (
               <div className="card unlock-card">
-                <LockOpen size={26} strokeWidth={2.4} />
+                <Monedita mood="cheer" size={56} />
                 <div>
-                  <h3>Quiz unlocked!</h3>
+                  <h3>¡Quiz unlocked!</h3>
                   <div className="meta">You've gone through every card.</div>
                 </div>
                 <Link

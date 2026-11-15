@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ChevronRight, Lock, MapPin, Star } from 'lucide-react';
 import ThemedBackground from './ThemedBackground.jsx';
+import Monedita from './Monedita.jsx';
 
 const POSITION_CYCLE = ['left', 'center', 'right', 'center'];
 
@@ -108,7 +109,7 @@ export default function LessonPath({ lessons }) {
         <div
           key={seg.moduleId}
           className="lesson-theme-layer"
-          style={{ top: seg.top, height: seg.height }}
+          style={{ top: seg.top, height: seg.height, '--seg-h': `${seg.height}px` }}
         >
           <ThemedBackground theme={seg.theme} />
         </div>
@@ -170,6 +171,15 @@ function LessonNode({ lesson, pos, registerRef }) {
         />
       </span>
       <span className="lesson-node-label">{block}</span>
+      {state === 'current' && (
+        <div className="path-mascot" aria-hidden="true">
+          <div className="speech tail-bottom speech-pop">
+            ¡Vamos!
+            <small>Let's go!</small>
+          </div>
+          <Monedita mood="wave" size={62} />
+        </div>
+      )}
     </>
   );
 

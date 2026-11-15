@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Cloud, CloudOff, LogOut, Mail, RefreshCw, ShieldCheck } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import WeekStreak from '../components/WeekStreak.jsx';
 import { useAuth } from '../auth/AuthContext.jsx';
 
 function SignIn() {
@@ -193,6 +194,7 @@ export default function Account() {
     <>
       <TopBar title="Profile" showBack={false} />
       <div className="main">
+        <WeekStreak />
         {!ready ? (
           <div className="empty-state">Loading…</div>
         ) : user ? (

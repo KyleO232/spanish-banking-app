@@ -19,7 +19,7 @@ export default function RoleplayViewer() {
     return (
       <>
         <TopBar title="Module not found" />
-        <div className="main">
+        <div className="main mode-roleplay">
           <div className="empty-state">We couldn't find that module.</div>
         </div>
       </>
@@ -32,7 +32,7 @@ export default function RoleplayViewer() {
     return (
       <>
         <TopBar title="Roleplay not found" subtitle={module.title} />
-        <div className="main">
+        <div className="main mode-roleplay">
           <div className="empty-state">We couldn't find that scenario.</div>
         </div>
       </>
@@ -54,7 +54,7 @@ export default function RoleplayViewer() {
   return (
     <>
       <TopBar title={roleplay.title} subtitle={roleplay.block} />
-      <div className="main">
+      <div className="main mode-roleplay">
         <div className="roleplay-toolbar">
           <div className="segmented" role="tablist" aria-label="Roleplay mode">
             <button

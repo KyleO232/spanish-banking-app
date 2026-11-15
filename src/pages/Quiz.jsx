@@ -1,12 +1,27 @@
 import { lazy, Suspense, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { CheckCircle2, XCircle } from 'lucide-react';
+import { CheckCircle2, Flame, XCircle } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
+import Monedita from '../components/Monedita.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
 import LockedStep from '../components/LockedStep.jsx';
 import { getLessonsWithState, getLessonSteps } from '../data/lessons.js';
 import { generateQuizQuestions, normalizeAnswer } from '../utils/quiz.js';
 import { recordQuizResult } from '../utils/progress.js';
+
+// Spanish cheers (with English glosses) so the encouragement teaches a little too.
+const CHEERS = [
+  ['¡Muy bien!', 'Very good!'],
+  ['¡Excelente!', 'Excellent!'],
+  ['¡Perfecto!', 'Perfect!'],
+  ['¡Así se hace!', "That's how it's done!"],
+];
+const OOPS = [
+  ['¡Casi!', 'Almost!'],
+  ['¡Ánimo!', 'Keep going!'],
+  ['¡Otra vez!', 'Once more!'],
+  ['¡No pasa nada!', 'No worries!'],
+];
 
 const ResultsCelebration = lazy(() => import('../components/ResultsCelebration.jsx'));
 
@@ -33,12 +48,13 @@ export default function Quiz() {
   const [fillValue, setFillValue] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [reward, setReward] = useState(null);
+  const [run, setRun] = useState(0); // correct answers in a row
 
   if (!module) {
     return (
       <>
         <TopBar title="Module not found" />
-        <div className="main">
+        <div className="main mode-quiz">
           <div className="empty-state">We couldn't find that module.</div>
         </div>
       </>
@@ -78,6 +94,7 @@ export default function Quiz() {
     setFillValue('');
     setSubmitted(false);
     setReward(null);
+    setRun(0);
     setPhase('active');
   }
 
@@ -87,7 +104,12 @@ export default function Quiz() {
     if (submitted) return;
     setSelected(option);
     setSubmitted(true);
-    if (option === q.answer) setScore((s) => s + 1);
+    if (option === q.answer) {
+      setScore((s) => s + 1);
+      setRun((r) => r + 1);
+    } else {
+      setRun(0);
+    }
   }
 
   function submitFillBlank(e) {
@@ -96,6 +118,9 @@ export default function Quiz() {
     setSubmitted(true);
     if (normalizeAnswer(fillValue) === normalizeAnswer(q.answer)) {
       setScore((s) => s + 1);
+      setRun((r) => r + 1);
+    } else {
+      setRun(0);
     }
   }
 
@@ -125,7 +150,7 @@ export default function Quiz() {
     return (
       <>
         <TopBar title="Quiz" subtitle={module.title} />
-        <div className="main">
+        <div className="main mode-quiz">
           <div className="page-intro">
             <h2>Choose a topic</h2>
             <p>Pick a block to focus on, or quiz across the whole module.</p>
@@ -159,7 +184,7 @@ export default function Quiz() {
     return (
       <>
         <TopBar title="Quiz Results" subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title} />
-        <div className="main">
+        <div className="main mode-quiz">
           <Suspense fallback={null}>
             <ResultsCelebration
               score={score}
@@ -180,11 +205,12 @@ export default function Quiz() {
     (q.type === 'multiple-choice'
       ? selected === q.answer
       : normalizeAnswer(fillValue) === normalizeAnswer(q.answer));
+  const reaction = (answeredCorrectly ? CHEERS : OOPS)[current % 4];
 
   return (
     <>
       <TopBar title="Quiz" subtitle={lockedBlock ? `${module.title} · ${lockedBlock}` : module.title} />
-      <div className="main">
+      <div className="main mode-quiz">
         <div className="quiz-score">
           <span>
             Question {current + 1} / {questions.length}
@@ -250,18 +276,28 @@ export default function Quiz() {
         )}
 
         {submitted && (
-          <div className={`quiz-feedback ${answeredCorrectly ? 'correct' : 'incorrect'}`}>
-            <div className="quiz-feedback-head">
-              {answeredCorrectly ? (
-                <CheckCircle2 size={24} strokeWidth={2.4} />
-              ) : (
-                <XCircle size={24} strokeWidth={2.4} />
-              )}
-              {answeredCorrectly ? 'Correct!' : 'Not quite'}
-            </div>
-            <div className="answer-line">
-              Answer: <strong>{q.answer}</strong>
-              {q.type === 'fill-blank' && ` — ${q.promptEnglish}`}
+          <div className={`quiz-feedback with-mascot ${answeredCorrectly ? 'correct' : 'incorrect'}`}>
+            {answeredCorrectly && run >= 3 && (
+              <div className="combo" key={run}>
+                <Flame size={16} strokeWidth={2.6} fill="currentColor" /> ¡{run} seguidas!
+                <small>{run} in a row</small>
+              </div>
+            )}
+            <Monedita mood={answeredCorrectly ? 'cheer' : 'oops'} size={58} />
+            <div className="feedback-text">
+              <div className="quiz-feedback-head">
+                {answeredCorrectly ? (
+                  <CheckCircle2 size={22} strokeWidth={2.4} />
+                ) : (
+                  <XCircle size={22} strokeWidth={2.4} />
+                )}
+                {reaction[0]}
+                <small>{reaction[1]}</small>
+              </div>
+              <div className="answer-line">
+                Answer: <strong>{q.answer}</strong>
+                {q.type === 'fill-blank' && ` — ${q.promptEnglish}`}
+              </div>
             </div>
           </div>
         )}

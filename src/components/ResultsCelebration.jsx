@@ -1,7 +1,35 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flame, Target, Trophy, Zap, Star, RotateCcw, Route as RouteIcon, Shuffle } from 'lucide-react';
 import Confetti from './Confetti.jsx';
 import Doodle from './Doodle.jsx';
+import WeekStreak from './WeekStreak.jsx';
+
+// Counts a number up from 0 so rewards feel earned.
+function useCountUp(target, delay = 600, duration = 900) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    let frame;
+    let startedAt;
+    const timer = setTimeout(() => {
+      const step = (now) => {
+        startedAt ??= now;
+        const progress = Math.min((now - startedAt) / duration, 1);
+        setValue(Math.round(target * (1 - Math.pow(1 - progress, 3))));
+        if (progress < 1) frame = requestAnimationFrame(step);
+      };
+      frame = requestAnimationFrame(step);
+    }, delay);
+
+    return () => {
+      clearTimeout(timer);
+      cancelAnimationFrame(frame);
+    };
+  }, [target, delay, duration]);
+
+  return value;
+}
 
 const RADIUS = 56;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
@@ -43,6 +71,8 @@ export default function ResultsCelebration({
   const celebrate = pct >= 70 || reward?.firstCompletion || reward?.moduleJustFinished;
   const gold = reward?.moduleJustFinished;
   const offset = CIRCUMFERENCE * (1 - pct / 100);
+  const xpShown = useCountUp(reward?.xpEarned ?? 0, 700);
+  const pctShown = useCountUp(pct, 800);
 
   return (
     <div className="results">
@@ -76,7 +106,7 @@ export default function ResultsCelebration({
       <div className="results-stats">
         <div className="results-stat xp">
           <Zap size={22} strokeWidth={2.6} fill="currentColor" />
-          <div className="results-stat-value">+{reward?.xpEarned ?? 0}</div>
+          <div className="results-stat-value">+{xpShown}</div>
           <div className="results-stat-label">XP earned</div>
         </div>
         <div className="results-stat streak">
@@ -86,10 +116,12 @@ export default function ResultsCelebration({
         </div>
         <div className="results-stat accuracy">
           <Target size={22} strokeWidth={2.6} />
-          <div className="results-stat-value">{pct}%</div>
+          <div className="results-stat-value">{pctShown}%</div>
           <div className="results-stat-label">Accuracy</div>
         </div>
       </div>
+
+      <WeekStreak />
 
       <div className="results-actions">
         {primary ? (

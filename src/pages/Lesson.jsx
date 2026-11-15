@@ -75,7 +75,7 @@ export default function Lesson() {
             const body = (
               <>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  <span className="link-card-icon">
+                  <span className={`link-card-icon mode-${mode.key}`}>
                     <mode.Icon size={24} strokeWidth={2.4} />
                   </span>
                   <div>
