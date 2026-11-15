@@ -87,13 +87,13 @@
         { "speaker": "Client", "spanish": "Buenos días. Adelante, los escucho.", "english": "Good morning. Go ahead, I'm listening." },
         { "speaker": "Banker", "spanish": "Basado en la capitalización de mercado de empresas comparables, sugerimos un precio de veinte dólares por acción.", "english": "Based on the market capitalization of comparable companies, we suggest a price of twenty dollars per share." },
         { "speaker": "Client", "spanish": "¿Y quién actuaría como suscriptor principal?", "english": "And who would act as lead underwriter?" },
-        { "speaker": "Banker", "spanish": "Nuestro banco, junto con dos coaseguradores adicionales.", "english": "Our bank, along with two additional co-underwriters." },
+        { "speaker": "Banker", "spanish": "Nuestro banco, junto con dos coaseguradores adicionales.", "blank": "coaseguradores", "english": "Our bank, along with two additional co-underwriters." },
         { "speaker": "Client", "spanish": "¿Cómo se determinará el rendimiento esperado para los inversionistas?", "english": "How will the expected return for investors be determined?" },
         { "speaker": "Banker", "spanish": "Eso dependerá del apetito del mercado primario, pero proyectamos una demanda sólida.", "english": "That will depend on primary market appetite, but we project solid demand." },
         { "speaker": "Client", "spanish": "¿Qué pasa una vez que las acciones empiecen a cotizar?", "english": "What happens once the shares start trading?" },
         { "speaker": "Banker", "spanish": "A partir de ese momento, se negociarán en el mercado secundario, sujeto a la volatilidad normal del mercado.", "english": "From that point on, they'll trade on the secondary market, subject to normal market volatility." },
         { "speaker": "Client", "spanish": "Entiendo. ¿Cuándo estará listo el prospecto?", "english": "I understand. When will the prospectus be ready?" },
-        { "speaker": "Banker", "spanish": "Lo tendremos listo en dos semanas, con todos los riesgos detallados.", "english": "We'll have it ready in two weeks, with all risks detailed." },
+        { "speaker": "Banker", "spanish": "Lo tendremos listo en dos semanas, con todos los riesgos detallados.", "blank": "en dos semanas", "english": "We'll have it ready in two weeks, with all risks detailed." },
         { "speaker": "Client", "spanish": "Perfecto. Estamos listos para avanzar.", "english": "Perfect. We're ready to move forward." },
         { "speaker": "Banker", "spanish": "Excelente. Le enviaremos el memorando de la operación esta misma tarde.", "english": "Excellent. We'll send you the deal memorandum this afternoon." }
       ]
@@ -111,11 +111,11 @@
         { "speaker": "Client", "spanish": "¿Y si el adquirente presenta una oferta hostil?", "english": "And what if the acquirer makes a hostile bid?" },
         { "speaker": "Banker", "spanish": "En ese caso, recomendamos evaluar una contraoferta antes de tomar una decisión final.", "english": "In that case, we recommend evaluating a counteroffer before making a final decision." },
         { "speaker": "Client", "spanish": "¿El acuerdo de confidencialidad ya está firmado?", "english": "Is the non-disclosure agreement already signed?" },
-        { "speaker": "Banker", "spanish": "Sí, ambas partes lo firmaron la semana pasada.", "english": "Yes, both parties signed it last week." },
+        { "speaker": "Banker", "spanish": "Sí, ambas partes lo firmaron la semana pasada.", "blank": "ambas partes", "english": "Yes, both parties signed it last week." },
         { "speaker": "Client", "spanish": "¿Cuándo esperan el cierre de la operación?", "english": "When do you expect the deal to close?" },
         { "speaker": "Banker", "spanish": "Si la negociación avanza sin complicaciones, esperamos cerrar en el tercer trimestre.", "english": "If the negotiation proceeds without complications, we expect to close in the third quarter." },
         { "speaker": "Client", "spanish": "Perfecto, manténgannos informados.", "english": "Perfect, keep us informed." },
-        { "speaker": "Banker", "spanish": "Por supuesto. Le enviaremos actualizaciones semanales.", "english": "Of course. We'll send you weekly updates." }
+        { "speaker": "Banker", "spanish": "Por supuesto. Le enviaremos actualizaciones semanales.", "blank": "actualizaciones semanales", "english": "Of course. We'll send you weekly updates." }
       ]
     },
     {
@@ -144,7 +144,7 @@
       "block": "Deal & Client Communication",
       "lines": [
         { "speaker": "Client", "spanish": "Estoy nervioso por el cierre de la operación. ¿Todo sigue en orden?", "english": "I'm nervous about the deal closing. Is everything still on track?" },
-        { "speaker": "Banker", "spanish": "Entendemos su preocupación. Permítame explicarle el estado actual del proceso.", "english": "We understand your concern. Allow me to explain the current status of the process." },
+        { "speaker": "Banker", "spanish": "Entendemos su preocupación. Permítame explicarle el estado actual del proceso.", "blank": "Permítame explicarle", "english": "We understand your concern. Allow me to explain the current status of the process." },
         { "speaker": "Client", "spanish": "Adelante.", "english": "Go ahead." },
         { "speaker": "Banker", "spanish": "La debida diligencia se completó sin hallazgos importantes, y el acuerdo de confidencialidad sigue vigente.", "english": "Due diligence was completed with no major findings, and the non-disclosure agreement remains in effect." },
         { "speaker": "Client", "spanish": "¿Y los números que discutimos la semana pasada?", "english": "And the figures we discussed last week?" },

@@ -21,13 +21,23 @@ function headline(pct, reward) {
   return 'Keep practicing';
 }
 
-function subline(scoped, reward) {
+function subline(scoped, reward, kind) {
   if (reward?.moduleJustFinished) return 'Every lesson in this module is now gold.';
+  if (kind === 'roleplay') return 'Conversation complete.';
   if (!scoped) return 'Quiz finished.';
   return reward?.firstCompletion ? 'Lesson complete — the next one is unlocked.' : 'Lesson practiced again.';
 }
 
-export default function ResultsCelebration({ score, total, reward, scoped, onRetry, onChangeTopic }) {
+export default function ResultsCelebration({
+  kind = 'quiz',
+  score,
+  total,
+  reward,
+  scoped,
+  primary,
+  onRetry,
+  onChangeTopic,
+}) {
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
   const celebrate = pct >= 70 || reward?.firstCompletion || reward?.moduleJustFinished;
   const gold = reward?.moduleJustFinished;
@@ -60,7 +70,7 @@ export default function ResultsCelebration({ score, total, reward, scoped, onRet
       </div>
 
       <h2 className="results-title">{headline(pct, reward)}</h2>
-      <p className="results-sub">{subline(scoped, reward)}</p>
+      <p className="results-sub">{subline(scoped, reward, kind)}</p>
 
       <div className="results-stats">
         <div className="results-stat xp">
@@ -81,7 +91,11 @@ export default function ResultsCelebration({ score, total, reward, scoped, onRet
       </div>
 
       <div className="results-actions">
-        {scoped ? (
+        {primary ? (
+          <button className="btn btn-primary btn-block btn-lg" onClick={primary.onClick}>
+            {primary.Icon && <primary.Icon size={20} strokeWidth={2.6} />} {primary.label}
+          </button>
+        ) : scoped ? (
           <Link className="btn btn-primary btn-block btn-lg" to="/">
             <RouteIcon size={20} strokeWidth={2.6} /> Continue
           </Link>

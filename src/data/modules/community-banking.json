@@ -77,7 +77,7 @@
       "title": "Opening a Checking Account",
       "block": "Account Services",
       "lines": [
-        { "speaker": "Banker", "spanish": "Buenos días, bienvenido a nuestro banco. ¿En qué puedo ayudarle hoy?", "english": "Good morning, welcome to our bank. How can I help you today?" },
+        { "speaker": "Banker", "spanish": "Buenos días, bienvenido a nuestro banco. ¿En qué puedo ayudarle hoy?", "blank": "En qué puedo ayudarle", "english": "Good morning, welcome to our bank. How can I help you today?" },
         { "speaker": "Client", "spanish": "Buenos días. Me gustaría abrir una cuenta corriente, por favor.", "english": "Good morning. I would like to open a checking account, please." },
         { "speaker": "Banker", "spanish": "Con gusto lo ayudo. ¿Tiene una identificación válida y comprobante de domicilio?", "english": "I'd be happy to help you. Do you have a valid ID and proof of address?" },
         { "speaker": "Client", "spanish": "Sí, aquí tiene mi licencia de conducir y una factura de electricidad.", "english": "Yes, here's my driver's license and an electricity bill." },
@@ -91,7 +91,7 @@
         { "speaker": "Client", "spanish": "Perfecto, me gustaría inscribirme. ¿Hay algo más que necesite hacer?", "english": "Perfect, I'd like to sign up. Is there anything else I need to do?" },
         { "speaker": "Banker", "spanish": "Solo necesito su firma autorizada aquí, y listo. ¿Hay algo más en lo que pueda ayudarle?", "english": "I just need your authorized signature here, and that's it. Is there anything else I can help you with?" },
         { "speaker": "Client", "spanish": "No, eso es todo. Muchas gracias.", "english": "No, that's all. Thank you very much." },
-        { "speaker": "Banker", "spanish": "Con mucho gusto. Que tenga un buen día.", "english": "My pleasure. Have a good day." }
+        { "speaker": "Banker", "spanish": "Con mucho gusto. Que tenga un buen día.", "blank": "Que tenga un buen día", "english": "My pleasure. Have a good day." }
       ]
     },
     {
@@ -110,7 +110,7 @@
         { "speaker": "Client", "spanish": "Sí, por favor. Prefiero evitar un sobregiro.", "english": "Yes, please. I'd rather avoid an overdraft." },
         { "speaker": "Banker", "spanish": "Perfecto, lo inscribiré ahora mismo. ¿Hay algo más en lo que pueda ayudarle?", "english": "Perfect, I'll sign you up right now. Is there anything else I can help you with?" },
         { "speaker": "Client", "spanish": "No, eso es todo. Gracias por su ayuda.", "english": "No, that's all. Thanks for your help." },
-        { "speaker": "Banker", "spanish": "Con gusto. Que tenga buena tarde.", "english": "My pleasure. Have a good afternoon." }
+        { "speaker": "Banker", "spanish": "Con gusto. Que tenga buena tarde.", "blank": "Que tenga buena tarde", "english": "My pleasure. Have a good afternoon." }
       ]
     },
     {
@@ -151,7 +151,7 @@
         { "speaker": "Client", "spanish": "Sí, por favor.", "english": "Yes, please." },
         { "speaker": "Banker", "spanish": "Perfecto, ya quedó inscrito. ¿Hay algo más en lo que pueda ayudarle?", "english": "Perfect, you're signed up now. Is there anything else I can help you with?" },
         { "speaker": "Client", "spanish": "No, eso es todo. Gracias por su paciencia.", "english": "No, that's all. Thank you for your patience." },
-        { "speaker": "Banker", "spanish": "Con mucho gusto. Que tenga un buen día.", "english": "My pleasure. Have a good day." }
+        { "speaker": "Banker", "spanish": "Con mucho gusto. Que tenga un buen día.", "blank": "Que tenga un buen día", "english": "My pleasure. Have a good day." }
       ]
     }
   ]
