@@ -202,7 +202,10 @@
       "example": {
         "es": "La renta variable ofrece más potencial a largo plazo, pero con más riesgo.",
         "en": "Equities offer more long-term potential, but with more risk."
-      }
+      },
+      "confusable": [
+        "la acción"
+      ]
     },
     {
       "spanish": "el fondo mutuo / el fondo de inversión",
@@ -272,7 +275,10 @@
       "example": {
         "es": "El rendimiento anual de la cartera fue del cuatro por ciento.",
         "en": "The portfolio's annual return was four percent."
-      }
+      },
+      "confusable": [
+        "la ganancia"
+      ]
     },
     {
       "spanish": "el riesgo",

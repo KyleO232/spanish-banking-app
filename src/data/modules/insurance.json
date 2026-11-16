@@ -32,7 +32,10 @@
       "example": {
         "es": "La prima se paga cada mes.",
         "en": "The premium is paid every month."
-      }
+      },
+      "confusable": [
+        "el pago mensual"
+      ]
     },
     {
       "spanish": "el deducible",

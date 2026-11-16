@@ -176,7 +176,6 @@ function Exercise({ ex, index, onContinue }) {
         <div className="card quiz-question-card practice-prompt-card">
           <div className="quiz-prompt">{ex.prompt}</div>
           {ex.kind === 'sentence' && <div className="practice-sub">{ex.promptEnglish}</div>}
-          {(ex.kind === 'es-en' || ex.kind === 'type') && ex.note && <div className="practice-sub">{ex.note}</div>}
         </div>
       )}
 
