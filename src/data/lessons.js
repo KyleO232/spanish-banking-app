@@ -1,5 +1,5 @@
 import { getModules, getBlocks, getTermsByBlock } from './modules.js';
-import { lessonKey, isCompleted, isFlashcardsDone } from '../utils/progress.js';
+import { lessonKey, isCompleted, isFlashcardsDone, isPracticeDone } from '../utils/progress.js';
 import { isAdminMode } from '../utils/adminMode.js';
 
 export function getLessons() {
@@ -20,13 +20,15 @@ export function getLessons() {
 }
 
 // Which of a lesson's three activities the learner may open:
-//   flashcards -> quiz (after viewing every card) -> roleplay (after finishing the quiz).
+//   flashcards -> practice (after viewing every card) -> quiz (after finishing practice)
+//   -> roleplay (after finishing the quiz).
 // Lessons finished before this rule existed count as having done every step.
 export function getLessonSteps(moduleId, block) {
   const lesson = getLessonsWithState().find((l) => l.moduleId === moduleId && l.block === block);
   const state = lesson?.state ?? 'locked';
   const quizDone = state === 'completed';
   const flashcardsDone = quizDone || isFlashcardsDone(moduleId, block);
+  const practiceDone = quizDone || isPracticeDone(moduleId, block);
   const admin = isAdminMode() && Boolean(lesson); // admins can open every real lesson and step
   const open = state !== 'locked' || admin;
 
@@ -34,10 +36,12 @@ export function getLessonSteps(moduleId, block) {
     lesson,
     state,
     flashcardsDone,
+    practiceDone,
     quizDone,
     unlocked: {
       flashcards: open,
-      quiz: open && (flashcardsDone || admin),
+      practice: open && (flashcardsDone || admin),
+      quiz: open && (practiceDone || admin),
       roleplay: open && (quizDone || admin),
     },
   };

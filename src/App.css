@@ -3229,3 +3229,157 @@ a.stat-chip {
 .shop-tabs .chip small {
   font-size: 10.5px;
 }
+
+/* ---------- practice step ---------- */
+.mode-practice,
+.link-card-icon.mode-practice {
+  --accent: var(--green);
+  --accent-shadow: var(--green-shadow);
+  --accent-bg: var(--green-bg);
+  --accent-contrast: var(--on-green);
+}
+
+.practice-heading {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 4px 0 12px;
+}
+
+.practice-prompt-card {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.practice-sub {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+.practice-note {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.quiz-option.selected {
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent);
+  background: var(--accent-bg);
+}
+
+.answer-sub {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+/* tap-to-match pairs */
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.match-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.match-tile {
+  min-height: 56px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  box-shadow: 0 3px 0 var(--border);
+  background: var(--surface);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.15s ease, opacity 0.3s ease;
+}
+
+.match-tile:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.match-tile.selected {
+  border-color: var(--blue);
+  box-shadow: 0 3px 0 var(--blue);
+  background: var(--blue-bg);
+}
+
+.match-tile.wrong {
+  border-color: var(--danger);
+  box-shadow: 0 3px 0 var(--danger);
+  background: var(--danger-bg);
+  color: var(--danger);
+  animation: answer-shake 0.4s ease-out;
+}
+
+.match-tile.done {
+  border-color: var(--success);
+  box-shadow: none;
+  background: var(--success-bg);
+  color: var(--success);
+  opacity: 0.55;
+}
+
+.practice-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.practice-done h2 {
+  margin: 4px 0 0;
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.practice-done .meta {
+  margin: 0 0 6px;
+}
+
+.practice-done-note {
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* accent keys under answer boxes */
+.accent-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.accent-key {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  box-shadow: 0 2px 0 var(--border);
+  background: var(--surface);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.accent-key:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+}

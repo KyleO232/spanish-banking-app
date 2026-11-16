@@ -5,6 +5,7 @@ import { titleFor } from '../data/titles.js';
 const STORAGE_KEY = 'spanish-banking-progress';
 const STATS_KEY = 'spanish-banking-stats';
 const FLASH_KEY = 'spanish-banking-flashcards';
+const PRACTICE_KEY = 'spanish-banking-practice';
 const WARDROBE_KEY = 'spanish-banking-wardrobe';
 
 // Coins are earned alongside XP and spent in the shop.
@@ -74,6 +75,21 @@ export function markFlashcardsDone(moduleId, block) {
   const set = readSet(FLASH_KEY);
   set.add(lessonKey(moduleId, block));
   writeSet(FLASH_KEY, set);
+  notifyChanged();
+}
+
+// ---------- practice step ----------
+// A lesson's quiz unlocks once its practice round has been finished.
+
+export function isPracticeDone(moduleId, block) {
+  return readSet(PRACTICE_KEY).has(lessonKey(moduleId, block));
+}
+
+export function markPracticeDone(moduleId, block) {
+  if (isAdminMode()) return; // admin preview doesn't change real progress
+  const set = readSet(PRACTICE_KEY);
+  set.add(lessonKey(moduleId, block));
+  writeSet(PRACTICE_KEY, set);
   notifyChanged();
 }
 
@@ -270,6 +286,7 @@ export function getSnapshot() {
   return {
     completed: [...readSet(STORAGE_KEY)],
     flashcardsDone: [...readSet(FLASH_KEY)],
+    practiceDone: [...readSet(PRACTICE_KEY)],
     xp: stats.xp,
     streak: stats.streak,
     lastActive: stats.lastActive,
@@ -281,6 +298,7 @@ export function getSnapshot() {
 export function applySnapshot(snapshot) {
   writeSet(STORAGE_KEY, new Set(snapshot.completed ?? []));
   writeSet(FLASH_KEY, new Set(snapshot.flashcardsDone ?? []));
+  writeSet(PRACTICE_KEY, new Set(snapshot.practiceDone ?? []));
   try {
     localStorage.setItem(
       STATS_KEY,
@@ -307,6 +325,7 @@ export function clearLocalProgress() {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STATS_KEY);
     localStorage.removeItem(FLASH_KEY);
+    localStorage.removeItem(PRACTICE_KEY);
     localStorage.removeItem(WARDROBE_KEY);
   } catch {
     // ignore

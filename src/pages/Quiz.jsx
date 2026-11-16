@@ -1,8 +1,9 @@
-import { lazy, Suspense, useMemo, useState } from 'react';
+import { lazy, Suspense, useMemo, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckCircle2, Flame, XCircle } from 'lucide-react';
 import TopBar from '../components/TopBar.jsx';
 import Monedita from '../components/Monedita.jsx';
+import AccentBar from '../components/AccentBar.jsx';
 import { getModule, getBlocks, getTermsByBlock } from '../data/modules.js';
 import LockedStep from '../components/LockedStep.jsx';
 import { getLessonsWithState, getLessonSteps } from '../data/lessons.js';
@@ -49,6 +50,7 @@ export default function Quiz() {
   const [submitted, setSubmitted] = useState(false);
   const [reward, setReward] = useState(null);
   const [run, setRun] = useState(0); // correct answers in a row
+  const fillRef = useRef(null);
 
   if (!module) {
     return (
@@ -72,14 +74,14 @@ export default function Quiz() {
           message={
             lessonLocked
               ? 'Complete the previous lesson to unlock this one.'
-              : 'Go through every flashcard in this lesson to unlock the quiz.'
+              : 'Finish the practice round in this lesson to unlock the quiz.'
           }
           actionTo={
             lessonLocked
               ? '/'
-              : `/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/flashcards`
+              : `/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/practice`
           }
-          actionLabel={lessonLocked ? 'Back to Path' : 'Go to flashcards'}
+          actionLabel={lessonLocked ? 'Back to Path' : 'Go to practice'}
         />
       );
     }
@@ -256,6 +258,7 @@ export default function Quiz() {
         ) : (
           <form onSubmit={submitFillBlank}>
             <input
+              ref={fillRef}
               className={`quiz-fill-input ${
                 submitted ? (normalizeAnswer(fillValue) === normalizeAnswer(q.answer) ? 'correct' : 'incorrect') : ''
               }`}
@@ -267,6 +270,9 @@ export default function Quiz() {
               autoCorrect="off"
               onChange={(e) => setFillValue(e.target.value)}
             />
+            {!submitted && (
+              <AccentBar inputRef={fillRef} value={fillValue} onChange={setFillValue} />
+            )}
             {!submitted && (
               <button className="btn btn-primary btn-block" style={{ marginTop: 12 }} type="submit">
                 Check

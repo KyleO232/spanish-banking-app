@@ -45,6 +45,7 @@ export function mergeSnapshots(local, remote) {
   return {
     completed: union(local.completed, remote.completed),
     flashcardsDone: union(local.flashcardsDone, remote.flashcardsDone),
+    practiceDone: union(local.practiceDone, remote.practiceDone),
     xp: Math.max(local.xp, remote.xp),
     coins: Math.max(local.coins ?? 0, remote.coins ?? 0),
     wardrobe: mergeWardrobes(local.wardrobe, remote.wardrobe),
@@ -58,6 +59,7 @@ function fromRow(row) {
   return {
     completed: row.completed ?? [],
     flashcardsDone: row.flashcards_done ?? [],
+    practiceDone: row.practice_done ?? [],
     xp,
     // a row that has XP but no coins predates the shop
     coins: row.coins > 0 ? row.coins : legacyCoins(xp),
@@ -67,11 +69,11 @@ function fromRow(row) {
   };
 }
 
-// If the database doesn't have the shop columns yet, keep syncing the rest.
+// If the database doesn't have the newer columns yet (shop, practice), keep syncing the rest.
 const isMissingColumn = (error) =>
   error?.code === '42703' ||
   error?.code === 'PGRST204' ||
-  /column .*(coins|wardrobe)|(coins|wardrobe).* column/i.test(error?.message ?? '');
+  /column .*(coins|wardrobe|practice_done)|(coins|wardrobe|practice_done).* column/i.test(error?.message ?? '');
 
 export async function pushProgress(userId, snapshot = getSnapshot()) {
   const base = {
@@ -84,12 +86,16 @@ export async function pushProgress(userId, snapshot = getSnapshot()) {
     updated_at: new Date().toISOString(),
   };
 
-  let { error } = await supabase
-    .from('user_progress')
-    .upsert({ ...base, coins: snapshot.coins, wardrobe: snapshot.wardrobe }, { onConflict: 'user_id' });
-
-  if (error && isMissingColumn(error)) {
-    ({ error } = await supabase.from('user_progress').upsert(base, { onConflict: 'user_id' }));
+  // newest schema first, falling back to older ones if a column hasn't been added yet
+  const attempts = [
+    { ...base, coins: snapshot.coins, wardrobe: snapshot.wardrobe, practice_done: snapshot.practiceDone ?? [] },
+    { ...base, coins: snapshot.coins, wardrobe: snapshot.wardrobe },
+    base,
+  ];
+  let error = null;
+  for (const row of attempts) {
+    ({ error } = await supabase.from('user_progress').upsert(row, { onConflict: 'user_id' }));
+    if (!error || !isMissingColumn(error)) break;
   }
   if (error) throw error;
 }
@@ -98,18 +104,12 @@ export async function pushProgress(userId, snapshot = getSnapshot()) {
 // result locally and back to the account.
 export async function syncDown(userId) {
   const columns = 'completed, flashcards_done, xp, streak, last_active';
-  let { data, error } = await supabase
-    .from('user_progress')
-    .select(`${columns}, coins, wardrobe`)
-    .eq('user_id', userId)
-    .maybeSingle();
-
-  if (error && isMissingColumn(error)) {
-    ({ data, error } = await supabase
-      .from('user_progress')
-      .select(columns)
-      .eq('user_id', userId)
-      .maybeSingle());
+  const selects = [`${columns}, coins, wardrobe, practice_done`, `${columns}, coins, wardrobe`, columns];
+  let data = null;
+  let error = null;
+  for (const select of selects) {
+    ({ data, error } = await supabase.from('user_progress').select(select).eq('user_id', userId).maybeSingle());
+    if (!error || !isMissingColumn(error)) break;
   }
   if (error) throw error;
 

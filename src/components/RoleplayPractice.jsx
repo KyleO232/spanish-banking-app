@@ -3,6 +3,7 @@ import { ArrowLeft, CheckCircle2, Eye, Lightbulb, XCircle } from 'lucide-react';
 import { buildBlank, hintFor } from '../utils/roleplay.js';
 import { normalizeAnswer } from '../utils/quiz.js';
 import { recordQuizResult } from '../utils/progress.js';
+import AccentBar from './AccentBar.jsx';
 
 const ResultsCelebration = lazy(() => import('./ResultsCelebration.jsx'));
 
@@ -242,6 +243,8 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
               </button>
             )}
           </div>
+
+          {!checked && <AccentBar inputRef={inputRef} value={answer} onChange={setAnswer} />}
 
           {!checked && (
             <div className="compose-tools">

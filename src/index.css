@@ -34,6 +34,10 @@
   --purple-shadow: #6a3fd1;
   --purple-bg: rgba(139, 92, 246, 0.1);
   --on-purple: #ffffff;
+  --green: #16a34a;
+  --green-shadow: #11793a;
+  --green-bg: rgba(22, 163, 74, 0.1);
+  --on-green: #ffffff;
   --orange: #ff8a1f;
   --orange-shadow: #d96a00;
   --orange-bg: rgba(255, 138, 31, 0.12);
@@ -91,6 +95,10 @@
     --purple-shadow: #7655d6;
     --purple-bg: rgba(167, 139, 250, 0.14);
     --on-purple: #1a1030;
+    --green: #4ade80;
+    --green-shadow: #25a355;
+    --green-bg: rgba(74, 222, 128, 0.13);
+    --on-green: #052e16;
     --orange: #ffa94d;
     --orange-shadow: #d9791f;
     --orange-bg: rgba(255, 169, 77, 0.14);

@@ -1,4 +1,4 @@
-import { Layers, PenLine, MessagesSquare } from 'lucide-react';
+import { Layers, Dumbbell, PenLine, MessagesSquare } from 'lucide-react';
 
 export const MODES = [
   {
@@ -6,6 +6,12 @@ export const MODES = [
     Icon: Layers,
     title: 'Flashcards',
     desc: 'Flip through terms with example sentences.',
+  },
+  {
+    key: 'practice',
+    Icon: Dumbbell,
+    title: 'Practice',
+    desc: 'Short exercises to lock in the words you just studied.',
   },
   {
     key: 'quiz',

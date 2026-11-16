@@ -67,7 +67,7 @@ export default function Flashcards() {
   }
 
   const term = terms[index];
-  const quizUnlocked = Boolean(steps?.flashcardsDone) || allViewed;
+  const practiceUnlocked = Boolean(steps?.flashcardsDone) || allViewed;
 
   function goNext() {
     setFlipped(false);
@@ -137,7 +137,7 @@ export default function Flashcards() {
               </div>
             </div>
             <div className="flashcard-hint">
-              {lockedBlock && !quizUnlocked
+              {lockedBlock && !practiceUnlocked
                 ? `Tap the card to flip · viewed ${visited.length} of ${terms.length}`
                 : 'Tap the card to flip'}
             </div>
@@ -149,18 +149,18 @@ export default function Flashcards() {
                 Next <ChevronRight size={20} strokeWidth={2.6} />
               </button>
             </div>
-            {lockedBlock && quizUnlocked && (
+            {lockedBlock && practiceUnlocked && (
               <div className="card unlock-card">
                 <Monedita mood="cheer" size={56} />
                 <div>
-                  <h3>¡Quiz desbloqueado!</h3>
+                  <h3>¡Práctica desbloqueada!</h3>
                   <div className="meta">You've gone through every card.</div>
                 </div>
                 <Link
                   className="btn btn-primary"
-                  to={`/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/quiz`}
+                  to={`/module/${moduleId}/lesson/${encodeURIComponent(lockedBlock)}/practice`}
                 >
-                  Start quiz
+                  Start practice
                 </Link>
               </div>
             )}

@@ -6,7 +6,8 @@ import { getLessonSteps } from '../data/lessons.js';
 import { MODES } from '../data/modes.js';
 
 const LOCKED_HINT = {
-  quiz: 'Go through every flashcard to unlock',
+  practice: 'Go through every flashcard to unlock',
+  quiz: 'Finish the practice round to unlock',
   roleplay: 'Finish the quiz to unlock',
 };
 
@@ -57,7 +58,7 @@ export default function Lesson() {
     );
   }
 
-  const done = { flashcards: steps.flashcardsDone, quiz: steps.quizDone };
+  const done = { flashcards: steps.flashcardsDone, practice: steps.practiceDone, quiz: steps.quizDone };
 
   return (
     <>
