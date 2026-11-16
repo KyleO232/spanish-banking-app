@@ -1,0 +1,1061 @@
+{
+  "id": "insurance",
+  "title": "Insurance",
+  "description": "Everyday Spanish for insurance conversations with US clients: insurance basics, auto and home, health and life, and claims and paperwork.",
+  "theme": "spring",
+  "terms": [
+    {
+      "spanish": "el seguro",
+      "english": "insurance",
+      "note": "also: la aseguranza",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Todos necesitamos un seguro para protegernos de gastos grandes.",
+        "en": "We all need insurance to protect us from big expenses."
+      }
+    },
+    {
+      "spanish": "la póliza",
+      "english": "policy",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Su póliza cubre daños por incendio y robo.",
+        "en": "Your policy covers fire damage and theft."
+      }
+    },
+    {
+      "spanish": "la prima",
+      "english": "premium",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "La prima se paga cada mes.",
+        "en": "The premium is paid every month."
+      }
+    },
+    {
+      "spanish": "el deducible",
+      "english": "deductible",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Usted paga el deducible primero y el seguro paga el resto.",
+        "en": "You pay the deductible first and the insurance pays the rest."
+      }
+    },
+    {
+      "spanish": "la cobertura",
+      "english": "coverage",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "¿Qué tipo de cobertura necesita?",
+        "en": "What kind of coverage do you need?"
+      }
+    },
+    {
+      "spanish": "el asegurado / la asegurada",
+      "english": "policyholder / insured person",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "El asegurado debe firmar en esta línea.",
+        "en": "The policyholder must sign on this line."
+      }
+    },
+    {
+      "spanish": "el beneficiario / la beneficiaria",
+      "english": "beneficiary",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "¿A quién quiere nombrar como beneficiario?",
+        "en": "Who do you want to name as your beneficiary?"
+      }
+    },
+    {
+      "spanish": "el agente de seguros / la agente de seguros",
+      "english": "insurance agent",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Mi agente de seguros me explicó todas las opciones.",
+        "en": "My insurance agent explained all the options to me."
+      }
+    },
+    {
+      "spanish": "la compañía de seguros",
+      "english": "insurance company",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "La compañía de seguros le enviará los documentos por correo.",
+        "en": "The insurance company will mail you the documents."
+      }
+    },
+    {
+      "spanish": "el riesgo",
+      "english": "risk",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Un conductor joven representa más riesgo para la compañía.",
+        "en": "A young driver is more of a risk for the company."
+      }
+    },
+    {
+      "spanish": "la cotización",
+      "english": "quote",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Puedo darle una cotización en cinco minutos.",
+        "en": "I can give you a quote in five minutes."
+      }
+    },
+    {
+      "spanish": "el descuento",
+      "english": "discount",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Usted tiene un descuento por asegurar su auto y su casa con nosotros.",
+        "en": "You get a discount for insuring your car and your home with us."
+      }
+    },
+    {
+      "spanish": "el número de póliza",
+      "english": "policy number",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Necesito su número de póliza para buscar su cuenta.",
+        "en": "I need your policy number to look up your account."
+      }
+    },
+    {
+      "spanish": "el límite de cobertura",
+      "english": "coverage limit",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "El límite de cobertura es de cien mil dólares.",
+        "en": "The coverage limit is one hundred thousand dollars."
+      }
+    },
+    {
+      "spanish": "la exclusión",
+      "english": "exclusion",
+      "note": "something the policy does not cover",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Una exclusión es algo que la póliza no cubre.",
+        "en": "An exclusion is something the policy does not cover."
+      }
+    },
+    {
+      "spanish": "la renovación",
+      "english": "renewal",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "La renovación es automática cada seis meses.",
+        "en": "The renewal is automatic every six months."
+      }
+    },
+    {
+      "spanish": "el período de espera",
+      "english": "waiting period",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Hay un período de espera de treinta días.",
+        "en": "There is a thirty-day waiting period."
+      }
+    },
+    {
+      "spanish": "el pago mensual",
+      "english": "monthly payment",
+      "note": "",
+      "block": "Insurance Basics",
+      "example": {
+        "es": "Su pago mensual es de ochenta y cinco dólares.",
+        "en": "Your monthly payment is eighty-five dollars."
+      }
+    },
+    {
+      "spanish": "el seguro de auto",
+      "english": "auto insurance",
+      "note": "also: el seguro de carro / coche",
+      "block": "Auto & Home",
+      "example": {
+        "es": "En la mayoría de los estados, la ley exige tener seguro de auto.",
+        "en": "In most states, the law requires you to have auto insurance."
+      }
+    },
+    {
+      "spanish": "el seguro de vivienda",
+      "english": "homeowners insurance",
+      "note": "also: el seguro de casa",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El seguro de vivienda cubre su casa y sus pertenencias.",
+        "en": "Homeowners insurance covers your house and your belongings."
+      }
+    },
+    {
+      "spanish": "el seguro de inquilinos",
+      "english": "renters insurance",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El seguro de inquilinos cuesta unos quince dólares al mes.",
+        "en": "Renters insurance costs about fifteen dollars a month."
+      }
+    },
+    {
+      "spanish": "la responsabilidad civil",
+      "english": "liability",
+      "note": "pays for damage you cause to others",
+      "block": "Auto & Home",
+      "example": {
+        "es": "La responsabilidad civil paga los daños que usted cause a otras personas.",
+        "en": "Liability pays for the damage you cause to other people."
+      }
+    },
+    {
+      "spanish": "la cobertura de colisión",
+      "english": "collision coverage",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "La cobertura de colisión paga la reparación de su auto después de un choque.",
+        "en": "Collision coverage pays to repair your car after a crash."
+      }
+    },
+    {
+      "spanish": "la cobertura integral",
+      "english": "comprehensive coverage",
+      "note": "covers theft, fire, hail and other non-crash damage",
+      "block": "Auto & Home",
+      "example": {
+        "es": "La cobertura integral protege su auto contra robo y granizo.",
+        "en": "Comprehensive coverage protects your car against theft and hail."
+      }
+    },
+    {
+      "spanish": "el choque",
+      "english": "crash / collision",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Tuve un choque en la autopista.",
+        "en": "I had a crash on the highway."
+      }
+    },
+    {
+      "spanish": "el robo",
+      "english": "theft",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Reporte el robo a la policía de inmediato.",
+        "en": "Report the theft to the police right away."
+      }
+    },
+    {
+      "spanish": "el daño",
+      "english": "damage",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El daño en la puerta es pequeño.",
+        "en": "The damage to the door is small."
+      }
+    },
+    {
+      "spanish": "el incendio",
+      "english": "fire",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El incendio dañó la cocina.",
+        "en": "The fire damaged the kitchen."
+      }
+    },
+    {
+      "spanish": "la inundación",
+      "english": "flood",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Una inundación normalmente no está cubierta por el seguro de vivienda.",
+        "en": "A flood is normally not covered by homeowners insurance."
+      }
+    },
+    {
+      "spanish": "el reporte policial",
+      "english": "police report",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Necesito una copia del reporte policial.",
+        "en": "I need a copy of the police report."
+      }
+    },
+    {
+      "spanish": "el ajustador de reclamos / la ajustadora de reclamos",
+      "english": "claims adjuster",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El ajustador de reclamos va a revisar su auto mañana.",
+        "en": "The claims adjuster is going to inspect your car tomorrow."
+      }
+    },
+    {
+      "spanish": "el taller de reparación",
+      "english": "repair shop",
+      "note": "also: el taller mecánico",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Puede llevar el auto a cualquier taller de reparación.",
+        "en": "You can take the car to any repair shop."
+      }
+    },
+    {
+      "spanish": "el estimado de reparación",
+      "english": "repair estimate",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Envíenos el estimado de reparación del taller.",
+        "en": "Send us the repair estimate from the shop."
+      }
+    },
+    {
+      "spanish": "la pérdida total",
+      "english": "total loss",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "El auto es una pérdida total porque la reparación cuesta demasiado.",
+        "en": "The car is a total loss because the repair costs too much."
+      }
+    },
+    {
+      "spanish": "el conductor sin seguro / la conductora sin seguro",
+      "english": "uninsured driver",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Esta cobertura lo protege si un conductor sin seguro choca con usted.",
+        "en": "This coverage protects you if an uninsured driver crashes into you."
+      }
+    },
+    {
+      "spanish": "la licencia de conducir",
+      "english": "driver's license",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Necesito una copia de su licencia de conducir.",
+        "en": "I need a copy of your driver's license."
+      }
+    },
+    {
+      "spanish": "el historial de manejo",
+      "english": "driving record",
+      "note": "",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Su historial de manejo está limpio, por eso su prima es baja.",
+        "en": "Your driving record is clean, so your premium is low."
+      }
+    },
+    {
+      "spanish": "la tarjeta de seguro",
+      "english": "proof of insurance card",
+      "note": "also: la prueba de seguro",
+      "block": "Auto & Home",
+      "example": {
+        "es": "Siempre lleve su tarjeta de seguro en el auto.",
+        "en": "Always keep your proof of insurance card in the car."
+      }
+    },
+    {
+      "spanish": "el seguro médico",
+      "english": "health insurance",
+      "note": "also: el seguro de salud",
+      "block": "Health & Life",
+      "example": {
+        "es": "¿Tiene seguro médico a través de su trabajo?",
+        "en": "Do you have health insurance through your job?"
+      }
+    },
+    {
+      "spanish": "el copago",
+      "english": "copay",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "El copago por cada consulta es de veinte dólares.",
+        "en": "The copay for each visit is twenty dollars."
+      }
+    },
+    {
+      "spanish": "el coseguro",
+      "english": "coinsurance",
+      "note": "a percentage of the bill you pay",
+      "block": "Health & Life",
+      "example": {
+        "es": "Con el coseguro, usted paga el veinte por ciento de la factura.",
+        "en": "With coinsurance, you pay twenty percent of the bill."
+      }
+    },
+    {
+      "spanish": "el máximo de gastos de bolsillo",
+      "english": "out-of-pocket maximum",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "Después del máximo de gastos de bolsillo, el seguro paga todo.",
+        "en": "After the out-of-pocket maximum, the insurance pays everything."
+      }
+    },
+    {
+      "spanish": "la red de proveedores",
+      "english": "provider network",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "Revise la red de proveedores antes de hacer una cita.",
+        "en": "Check the provider network before making an appointment."
+      }
+    },
+    {
+      "spanish": "fuera de la red",
+      "english": "out of network",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "Las visitas fuera de la red cuestan más.",
+        "en": "Out-of-network visits cost more."
+      }
+    },
+    {
+      "spanish": "la receta médica",
+      "english": "prescription",
+      "note": "also: la receta",
+      "block": "Health & Life",
+      "example": {
+        "es": "Lleve la receta médica a la farmacia.",
+        "en": "Take the prescription to the pharmacy."
+      }
+    },
+    {
+      "spanish": "la autorización previa",
+      "english": "prior authorization",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "La cirugía necesita una autorización previa.",
+        "en": "The surgery needs prior authorization."
+      }
+    },
+    {
+      "spanish": "el seguro de vida",
+      "english": "life insurance",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "El seguro de vida protege a su familia si usted fallece.",
+        "en": "Life insurance protects your family if you pass away."
+      }
+    },
+    {
+      "spanish": "el seguro de vida a término",
+      "english": "term life insurance",
+      "note": "covers a set number of years",
+      "block": "Health & Life",
+      "example": {
+        "es": "El seguro de vida a término dura veinte años.",
+        "en": "Term life insurance lasts twenty years."
+      }
+    },
+    {
+      "spanish": "el seguro de vida permanente",
+      "english": "permanent life insurance",
+      "note": "also: el seguro de vida entera",
+      "block": "Health & Life",
+      "example": {
+        "es": "El seguro de vida permanente acumula valor en efectivo.",
+        "en": "Permanent life insurance builds cash value."
+      }
+    },
+    {
+      "spanish": "el beneficio por fallecimiento",
+      "english": "death benefit",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "El beneficio por fallecimiento se paga a su beneficiario.",
+        "en": "The death benefit is paid to your beneficiary."
+      }
+    },
+    {
+      "spanish": "el valor en efectivo",
+      "english": "cash value",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "Puede pedir un préstamo contra el valor en efectivo de la póliza.",
+        "en": "You can borrow against the cash value of the policy."
+      }
+    },
+    {
+      "spanish": "el seguro de discapacidad",
+      "english": "disability insurance",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "El seguro de discapacidad paga parte de su sueldo si no puede trabajar.",
+        "en": "Disability insurance pays part of your salary if you cannot work."
+      }
+    },
+    {
+      "spanish": "la condición preexistente",
+      "english": "pre-existing condition",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "La ley no permite negar cobertura por una condición preexistente.",
+        "en": "The law does not allow coverage to be denied because of a pre-existing condition."
+      }
+    },
+    {
+      "spanish": "la inscripción abierta",
+      "english": "open enrollment",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "La inscripción abierta empieza en noviembre.",
+        "en": "Open enrollment begins in November."
+      }
+    },
+    {
+      "spanish": "Medicare",
+      "english": "Medicare",
+      "note": "federal health insurance for people 65 and older",
+      "block": "Health & Life",
+      "example": {
+        "es": "Medicare cubre a la mayoría de las personas de sesenta y cinco años o más.",
+        "en": "Medicare covers most people age sixty-five or older."
+      }
+    },
+    {
+      "spanish": "Medicaid",
+      "english": "Medicaid",
+      "note": "health coverage for people with low income",
+      "block": "Health & Life",
+      "example": {
+        "es": "Medicaid ayuda a las familias con ingresos bajos.",
+        "en": "Medicaid helps families with low income."
+      }
+    },
+    {
+      "spanish": "la sala de emergencias",
+      "english": "emergency room",
+      "note": "",
+      "block": "Health & Life",
+      "example": {
+        "es": "En una emergencia, vaya a la sala de emergencias más cercana.",
+        "en": "In an emergency, go to the nearest emergency room."
+      }
+    },
+    {
+      "spanish": "la cuenta de ahorros para la salud (HSA)",
+      "english": "health savings account",
+      "note": "HSA",
+      "block": "Health & Life",
+      "example": {
+        "es": "Puede usar su cuenta de ahorros para la salud para pagar los copagos.",
+        "en": "You can use your health savings account to pay copays."
+      }
+    },
+    {
+      "spanish": "el reclamo",
+      "english": "claim",
+      "note": "also: la reclamación",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Quiero hacer un reclamo por el choque.",
+        "en": "I want to make a claim for the crash."
+      }
+    },
+    {
+      "spanish": "presentar un reclamo",
+      "english": "to file a claim",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Puede presentar un reclamo por teléfono o en línea.",
+        "en": "You can file a claim by phone or online."
+      }
+    },
+    {
+      "spanish": "el número de reclamo",
+      "english": "claim number",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Anote su número de reclamo para darle seguimiento.",
+        "en": "Write down your claim number to follow up."
+      }
+    },
+    {
+      "spanish": "cubierto / cubierta",
+      "english": "covered",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Este daño sí está cubierto.",
+        "en": "This damage is covered."
+      }
+    },
+    {
+      "spanish": "aprobar el reclamo",
+      "english": "to approve the claim",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Vamos a aprobar el reclamo esta semana.",
+        "en": "We are going to approve the claim this week."
+      }
+    },
+    {
+      "spanish": "negar un reclamo",
+      "english": "to deny a claim",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "La compañía no puede negar un reclamo sin explicar la razón.",
+        "en": "The company cannot deny a claim without explaining the reason."
+      }
+    },
+    {
+      "spanish": "la apelación",
+      "english": "appeal",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Si no está de acuerdo, puede presentar una apelación.",
+        "en": "If you disagree, you can file an appeal."
+      }
+    },
+    {
+      "spanish": "el comprobante",
+      "english": "proof / receipt",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Guarde el comprobante de pago de la reparación.",
+        "en": "Keep the proof of payment for the repair."
+      }
+    },
+    {
+      "spanish": "la factura",
+      "english": "bill / invoice",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Adjunte la factura del taller.",
+        "en": "Attach the repair shop's invoice."
+      }
+    },
+    {
+      "spanish": "el reembolso",
+      "english": "reimbursement / refund",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "El reembolso llegará en diez días hábiles.",
+        "en": "The reimbursement will arrive in ten business days."
+      }
+    },
+    {
+      "spanish": "el pago automático",
+      "english": "automatic payment",
+      "note": "also: el débito automático",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Active el pago automático para no olvidar la prima.",
+        "en": "Turn on automatic payment so you do not forget the premium."
+      }
+    },
+    {
+      "spanish": "la cuenta bancaria",
+      "english": "bank account",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Necesito el número de su cuenta bancaria para el pago automático.",
+        "en": "I need your bank account number for the automatic payment."
+      }
+    },
+    {
+      "spanish": "el período de gracia",
+      "english": "grace period",
+      "note": "extra days to pay before the policy is canceled",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Tiene un período de gracia de quince días para pagar.",
+        "en": "You have a fifteen-day grace period to pay."
+      }
+    },
+    {
+      "spanish": "la prima vencida",
+      "english": "overdue premium",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Si la prima vencida no se paga, la póliza se cancela.",
+        "en": "If the overdue premium is not paid, the policy is canceled."
+      }
+    },
+    {
+      "spanish": "la fecha de vencimiento",
+      "english": "due date",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "La fecha de vencimiento es el día quince de cada mes.",
+        "en": "The due date is the fifteenth of each month."
+      }
+    },
+    {
+      "spanish": "el aviso de renovación",
+      "english": "renewal notice",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Le enviamos el aviso de renovación por correo.",
+        "en": "We mailed you the renewal notice."
+      }
+    },
+    {
+      "spanish": "la firma",
+      "english": "signature",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Falta su firma en la última página.",
+        "en": "Your signature is missing on the last page."
+      }
+    },
+    {
+      "spanish": "el formulario",
+      "english": "form",
+      "note": "also: la forma",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Llene este formulario con sus datos.",
+        "en": "Fill out this form with your information."
+      }
+    },
+    {
+      "spanish": "el fraude",
+      "english": "fraud",
+      "note": "",
+      "block": "Claims & Paperwork",
+      "example": {
+        "es": "Dar información falsa a propósito es fraude.",
+        "en": "Knowingly giving false information is fraud."
+      }
+    }
+  ],
+  "registerNotes": [
+    "With Spanish-speaking clients, use \"usted\" and \"le\"/\"su\" throughout, especially with older clients. Switch to \"tú\" only if the client invites it (\"puede tutearme\").",
+    "US Spanish speakers come from many countries, so everyday words vary: \"seguro\" or \"aseguranza\", \"carro\", \"auto\" or \"coche\", \"reclamo\" or \"reclamación\", \"formulario\" or \"forma\". This module uses the widely understood US terms.",
+    "Insurance rules change from state to state. A safe phrase is \"las reglas cambian según el estado\".",
+    "In the US, amounts are written as in English: $85 and 20%. Say \"ochenta y cinco dólares\" and \"veinte por ciento\".",
+    "Explain the premium and the deductible in plain words before anything else. Then check with \"¿Me explico?\" or \"¿Tiene alguna pregunta?\"",
+    "Never promise that a claim will be approved. Say \"sujeto a aprobación\" (subject to approval) and explain the next steps.",
+    "Many clients are nervous about giving personal information. Say why you need each document: \"Necesito esto para verificar su identidad\"."
+  ],
+  "roleplays": [
+    {
+      "id": "first-policy",
+      "title": "Explaining a First Policy",
+      "block": "Insurance Basics",
+      "lines": [
+        {
+          "speaker": "Banker",
+          "spanish": "Buenos días, señor Ramos. Hoy vamos a hablar de su primer seguro.",
+          "english": "Good morning, Mr. Ramos. Today we are going to talk about your first insurance policy.",
+          "blank": "seguro"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Buenos días. Nunca he tenido un seguro y no entiendo cómo funciona.",
+          "english": "Good morning. I've never had insurance and I don't understand how it works."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Es sencillo. Usted paga una prima cada mes, y la compañía paga los gastos grandes si algo sale mal.",
+          "english": "It is simple. You pay a premium every month, and the company pays the big expenses if something goes wrong.",
+          "blank": "prima"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Y cuánto tengo que pagar si hay un problema?",
+          "english": "And how much do I have to pay if there is a problem?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Primero paga el deducible, que es una cantidad fija. Después, el seguro paga el resto.",
+          "english": "First you pay the deductible, which is a fixed amount. After that, the insurance pays the rest.",
+          "blank": "deducible"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Entiendo. ¿Y qué incluye esta póliza?",
+          "english": "I understand. And what does this policy include?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Depende del plan. Le voy a dar una cotización con dos opciones.",
+          "english": "It depends on the plan. I am going to give you a quote with two options.",
+          "blank": "cotización"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Perfecto. ¿Puedo poner a mi esposa en la póliza?",
+          "english": "Perfect. Can I put my wife on the policy?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Sí. Solo necesito su nombre completo y el de su beneficiario.",
+          "english": "Yes. I only need your full name and your beneficiary.",
+          "blank": "beneficiario"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Claro. Mi hija es mi beneficiaria.",
+          "english": "Of course. My daughter is my beneficiary."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Muy bien. Le explico los pasos para firmar y empezar su cobertura hoy mismo.",
+          "english": "Very good. I will explain the steps to sign and start your coverage today.",
+          "blank": "cobertura"
+        }
+      ]
+    },
+    {
+      "id": "auto-quote",
+      "title": "Getting an Auto Insurance Quote",
+      "block": "Auto & Home",
+      "lines": [
+        {
+          "speaker": "Banker",
+          "spanish": "Buenas tardes. ¿En qué le puedo ayudar con su seguro de auto?",
+          "english": "Good afternoon. How can I help you with your auto insurance?",
+          "blank": "seguro de auto"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Acabo de comprar un carro y quiero saber cuánto cuesta asegurarlo.",
+          "english": "I just bought a car and I want to know how much it costs to insure it."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Con gusto. ¿Me puede mostrar su licencia de conducir?",
+          "english": "Gladly. Can you show me your driver's license?",
+          "blank": "licencia de conducir"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Aquí la tiene. Tengo cinco años manejando y nunca he tenido un choque.",
+          "english": "Here it is. I've been driving for five years and I've never had a crash."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Excelente. Su historial de manejo nos permite darle un descuento.",
+          "english": "Excellent. Your driving record lets us give you a discount.",
+          "blank": "historial de manejo"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Qué tipo de cobertura me recomienda?",
+          "english": "What kind of coverage do you recommend?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "En la mayoría de los estados, la ley exige responsabilidad civil. También le recomiendo la cobertura de colisión.",
+          "english": "In most states, the law requires liability. I also recommend collision coverage.",
+          "blank": "responsabilidad civil"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Y qué pasa si me roban el carro?",
+          "english": "And what happens if my car gets stolen?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Para un robo necesita la cobertura integral. Con ella, el seguro sí lo cubre.",
+          "english": "For a theft you need comprehensive coverage. With it, the insurance does cover it.",
+          "blank": "cobertura integral"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Me parece bien. ¿Cuál sería mi pago mensual?",
+          "english": "That sounds good. What would my monthly payment be?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Su pago mensual sería de ochenta y cinco dólares, con un deducible de quinientos.",
+          "english": "Your monthly payment would be eighty-five dollars, with a five-hundred-dollar deductible.",
+          "blank": "pago mensual"
+        }
+      ]
+    },
+    {
+      "id": "health-and-life",
+      "title": "Health and Life Insurance Questions",
+      "block": "Health & Life",
+      "lines": [
+        {
+          "speaker": "Banker",
+          "spanish": "Buenos días, señora Díaz. ¿Ya revisó su seguro médico para este año?",
+          "english": "Good morning, Mrs. Díaz. Have you reviewed your health insurance for this year?",
+          "blank": "seguro médico"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Todavía no. Mi empleador cambió el plan y no entiendo los costos.",
+          "english": "Not yet. My employer changed the plan and I do not understand the costs."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Vamos a verlo. Cada consulta tiene un copago de veinte dólares.",
+          "english": "Let us look at it. Each visit has a twenty-dollar copay.",
+          "blank": "copago"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Y si voy a un médico que no está en la lista?",
+          "english": "And if I go to a doctor who is not on the list?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Revise la red de proveedores antes de hacer una cita. Si el médico no está en la red, usted paga más.",
+          "english": "Check the provider network before making an appointment. If the doctor is not in the network, you pay more.",
+          "blank": "red de proveedores"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Gracias. También quiero un seguro de vida para mi familia.",
+          "english": "Thank you. I also want life insurance for my family."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Muy buena idea. El seguro de vida a término es más barato, y el permanente acumula valor en efectivo.",
+          "english": "Very good idea. Term life insurance is cheaper, and permanent builds cash value.",
+          "blank": "valor en efectivo"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Qué recibe mi familia si yo fallezco?",
+          "english": "What does my family receive if I pass away?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Su beneficiario recibe el beneficio por fallecimiento después de presentar un reclamo.",
+          "english": "Your beneficiary receives the death benefit after filing a claim.",
+          "blank": "beneficio por fallecimiento"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Entiendo. ¿Necesito un examen médico?",
+          "english": "I understand. Do I need a medical exam?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Para el seguro de vida, sí. Es un examen sencillo y lo pagamos nosotros.",
+          "english": "For life insurance, yes. It is a simple exam and we pay for it.",
+          "blank": "seguro de vida"
+        }
+      ]
+    },
+    {
+      "id": "filing-a-claim",
+      "title": "Filing a Claim",
+      "block": "Claims & Paperwork",
+      "lines": [
+        {
+          "speaker": "Banker",
+          "spanish": "Buenos días. Lamento lo del accidente. ¿Quiere presentar un reclamo hoy?",
+          "english": "Good morning. I am sorry about the accident. Do you want to file a claim today?",
+          "blank": "presentar un reclamo"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Sí, por favor. ¿Qué necesito?",
+          "english": "Yes, please. What do I need?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Primero, necesito su número de póliza y una copia del reporte policial.",
+          "english": "First, I need your policy number and a copy of the police report.",
+          "blank": "reporte policial"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Tengo el reporte aquí. También tengo el estimado del taller.",
+          "english": "I have the report here. I also have the shop estimate."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Perfecto. Envíenos el estimado de reparación y las fotos del daño.",
+          "english": "Perfect. Send us the repair estimate and the photos of the damage.",
+          "blank": "estimado de reparación"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Cuándo me van a pagar?",
+          "english": "When will you pay me?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Un ajustador revisará su caso en dos días. Después le avisamos si aprobamos el pago.",
+          "english": "An adjuster will review your case in two days. Then we will let you know if we approve the payment.",
+          "blank": "ajustador"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "¿Y si la compañía niega mi reclamo?",
+          "english": "And if the company denies my claim?"
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Usted puede presentar una apelación. Le explico cómo hacerlo con el formulario.",
+          "english": "You can file an appeal. I will explain how to do it with the form.",
+          "blank": "apelación"
+        },
+        {
+          "speaker": "Client",
+          "spanish": "Gracias. También quiero pagar mi prima con pago automático.",
+          "english": "Thank you. I also want to pay my premium with automatic payment."
+        },
+        {
+          "speaker": "Banker",
+          "spanish": "Perfecto. Necesito su firma y el número de su cuenta bancaria.",
+          "english": "Perfect. I need your signature and your bank account number.",
+          "blank": "cuenta bancaria"
+        }
+      ]
+    }
+  ]
+}

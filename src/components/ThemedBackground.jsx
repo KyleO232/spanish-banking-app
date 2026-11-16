@@ -2,11 +2,16 @@ import { useMemo } from 'react';
 import beachImg from '../assets/backgrounds/beach.jpg';
 import autumnImg from '../assets/backgrounds/autumn.jpg';
 import alpineImg from '../assets/backgrounds/alpine.jpg';
+import springImg from '../assets/backgrounds/spring.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  spring: {
+    image: springImg,
+    fill: 'var(--spring-fill)',
   },
   beach: {
     image: beachImg,
@@ -57,6 +62,49 @@ function Leaves() {
         >
           <path d="M12 2C19 7 21 15 12 22C3 15 5 7 12 2Z" />
           <path d="M12 6V20" stroke="rgba(0,0,0,0.25)" strokeWidth="1" fill="none" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+const PETAL_COLORS = ['#ffd1dc', '#ffb7c9', '#fff0f4', '#ffc2d1'];
+
+// Blossom petals fluttering down through the spring photo.
+function Petals() {
+  const petals = useMemo(
+    () =>
+      Array.from({ length: 22 }, (_, i) => ({
+        id: i,
+        left: rand(1, 98),
+        size: rand(9, 17),
+        delay: -rand(0, 18),
+        duration: rand(12, 21),
+        sway: rand(18, 50),
+        color: PETAL_COLORS[i % PETAL_COLORS.length],
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {petals.map((p) => (
+        <svg
+          key={p.id}
+          className="petal"
+          viewBox="0 0 24 24"
+          style={{
+            left: `${p.left}%`,
+            width: p.size,
+            height: p.size,
+            animationDelay: `${p.delay}s`,
+            animationDuration: `${p.duration}s`,
+            '--sway': `${p.sway}px`,
+            fill: p.color,
+          }}
+        >
+          <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
+          <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
         </svg>
       ))}
     </div>
@@ -170,7 +218,7 @@ export default function ThemedBackground({ theme }) {
   return (
     <div className="theme-bg" style={{ '--theme-fill': cfg.fill }} aria-hidden="true">
       <div className="theme-bg-hero" style={{ backgroundImage: `url(${cfg.image})` }} />
-      {theme === 'autumn' ? <Leaves /> : theme === 'alpine' ? <Snow /> : <Seaside />}
+      {theme === 'autumn' ? <Leaves /> : theme === 'alpine' ? <Snow /> : theme === 'spring' ? <Petals /> : <Seaside />}
     </div>
   );
 }
