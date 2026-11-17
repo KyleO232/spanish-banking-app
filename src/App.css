@@ -3634,3 +3634,50 @@ a.stat-chip {
     transform: translate(-160px, 100px) rotate(32deg);
   }
 }
+
+/* sunflower-garden bees */
+.bee {
+  position: absolute;
+  left: -12%;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  animation: bee-fly 28s linear infinite;
+}
+
+.bee-wings {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: bee-buzz 0.09s linear infinite alternate;
+}
+
+@keyframes bee-buzz {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.55);
+  }
+}
+
+@keyframes bee-fly {
+  0% {
+    transform: translate(0, 0);
+  }
+  12% {
+    transform: translate(12vw, calc(var(--bob) * -0.8));
+  }
+  26% {
+    transform: translate(27vw, calc(var(--bob) * 0.7));
+  }
+  41% {
+    transform: translate(44vw, calc(var(--bob) * -0.6));
+  }
+  57% {
+    transform: translate(62vw, calc(var(--bob) * 0.9));
+  }
+  74% {
+    transform: translate(84vw, calc(var(--bob) * -0.7));
+  }
+  100% {
+    transform: translate(125vw, 0);
+  }
+}

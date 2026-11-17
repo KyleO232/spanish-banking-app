@@ -1,0 +1,1146 @@
+{
+  "id": "treatment",
+  "title": "Treatment & Medications",
+  "description": "Everyday Spanish for explaining treatment: types of medicine, how to take it, care at home, and pharmacy and safety instructions.",
+  "theme": "sunflower",
+  "track": "medical",
+  "roles": {
+    "you": "Nurse",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "la pastilla",
+      "english": "pill",
+      "note": "also: la tableta, la píldora",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Tome una pastilla con agua.",
+        "en": "Take one pill with water."
+      },
+      "confusable": [
+        "la cápsula"
+      ]
+    },
+    {
+      "spanish": "la cápsula",
+      "english": "capsule",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "La cápsula no se debe masticar.",
+        "en": "The capsule should not be chewed."
+      }
+    },
+    {
+      "spanish": "el jarabe",
+      "english": "syrup / liquid medicine",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El jarabe es para la tos.",
+        "en": "The syrup is for the cough."
+      }
+    },
+    {
+      "spanish": "la crema",
+      "english": "cream",
+      "note": "also: la pomada",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "La crema ayuda con la comezón.",
+        "en": "The cream helps with the itching."
+      }
+    },
+    {
+      "spanish": "las gotas",
+      "english": "drops",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Ponga dos gotas en cada ojo.",
+        "en": "Put two drops in each eye."
+      }
+    },
+    {
+      "spanish": "el inhalador",
+      "english": "inhaler",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Use el inhalador cuando le falte el aire.",
+        "en": "Use the inhaler when you are short of breath."
+      }
+    },
+    {
+      "spanish": "el parche",
+      "english": "patch",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El parche se pone en la piel limpia y seca.",
+        "en": "The patch goes on clean, dry skin."
+      }
+    },
+    {
+      "spanish": "el antibiótico",
+      "english": "antibiotic",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El antibiótico no sirve para los virus.",
+        "en": "Antibiotics do not work on viruses."
+      }
+    },
+    {
+      "spanish": "el analgésico",
+      "english": "pain reliever",
+      "note": "also: el calmante",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Puede tomar un analgésico para el dolor.",
+        "en": "You can take a pain reliever for the pain."
+      },
+      "confusable": [
+        "el ibuprofeno",
+        "el acetaminofén",
+        "el antiinflamatorio"
+      ]
+    },
+    {
+      "spanish": "el antiinflamatorio",
+      "english": "anti-inflammatory",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El antiinflamatorio ayuda con la hinchazón.",
+        "en": "The anti-inflammatory helps with the swelling."
+      }
+    },
+    {
+      "spanish": "el antihistamínico",
+      "english": "antihistamine",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El antihistamínico ayuda con la alergia.",
+        "en": "The antihistamine helps with the allergy."
+      }
+    },
+    {
+      "spanish": "el antiácido",
+      "english": "antacid",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Un antiácido puede calmar la acidez.",
+        "en": "An antacid can calm heartburn."
+      }
+    },
+    {
+      "spanish": "el anticoagulante",
+      "english": "blood thinner",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El anticoagulante evita que se formen coágulos.",
+        "en": "The blood thinner keeps clots from forming."
+      }
+    },
+    {
+      "spanish": "la insulina",
+      "english": "insulin",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Usted se pone la insulina antes de comer.",
+        "en": "You give yourself insulin before you eat."
+      }
+    },
+    {
+      "spanish": "la vitamina",
+      "english": "vitamin",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Tome una vitamina todos los días.",
+        "en": "Take a vitamin every day."
+      }
+    },
+    {
+      "spanish": "el ibuprofeno",
+      "english": "ibuprofen",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El ibuprofeno ayuda con el dolor y la inflamación.",
+        "en": "Ibuprofen helps with pain and swelling."
+      },
+      "confusable": [
+        "el antiinflamatorio",
+        "el acetaminofén"
+      ]
+    },
+    {
+      "spanish": "el acetaminofén",
+      "english": "acetaminophen",
+      "note": "also: el paracetamol",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El acetaminofén baja la fiebre.",
+        "en": "Acetaminophen lowers fever."
+      }
+    },
+    {
+      "spanish": "el medicamento genérico",
+      "english": "generic medication",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "El medicamento genérico cuesta menos.",
+        "en": "The generic medication costs less."
+      }
+    },
+    {
+      "spanish": "el medicamento sin receta",
+      "english": "over-the-counter medication",
+      "note": "also: el medicamento de venta libre",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Puede comprar el medicamento sin receta en la farmacia.",
+        "en": "You can buy the over-the-counter medication at the pharmacy."
+      }
+    },
+    {
+      "spanish": "el medicamento con receta",
+      "english": "prescription medication",
+      "note": "",
+      "block": "Types of Medicine",
+      "example": {
+        "es": "Este es un medicamento con receta.",
+        "en": "This is a prescription medication."
+      }
+    },
+    {
+      "spanish": "tomar",
+      "english": "to take",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Debe tomar una pastilla en la mañana.",
+        "en": "You should take one pill in the morning."
+      }
+    },
+    {
+      "spanish": "aplicar",
+      "english": "to apply",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Puede aplicar la crema dos veces al día.",
+        "en": "You can apply the cream twice a day."
+      }
+    },
+    {
+      "spanish": "tragar",
+      "english": "to swallow",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Trate de tragar la pastilla entera.",
+        "en": "Try to swallow the pill whole."
+      }
+    },
+    {
+      "spanish": "masticar",
+      "english": "to chew",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "No debe masticar la cápsula.",
+        "en": "You should not chew the capsule."
+      }
+    },
+    {
+      "spanish": "agitar",
+      "english": "to shake",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Hay que agitar el jarabe antes de usarlo.",
+        "en": "You have to shake the syrup before using it."
+      }
+    },
+    {
+      "spanish": "una vez al día",
+      "english": "once a day",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome una pastilla una vez al día.",
+        "en": "Take one pill once a day."
+      }
+    },
+    {
+      "spanish": "dos veces al día",
+      "english": "twice a day",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Use la crema dos veces al día.",
+        "en": "Use the cream twice a day."
+      }
+    },
+    {
+      "spanish": "tres veces al día",
+      "english": "three times a day",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome la cápsula tres veces al día.",
+        "en": "Take the capsule three times a day."
+      }
+    },
+    {
+      "spanish": "cada ocho horas",
+      "english": "every eight hours",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome el antibiótico cada ocho horas.",
+        "en": "Take the antibiotic every eight hours."
+      }
+    },
+    {
+      "spanish": "en la mañana / por la mañana",
+      "english": "in the morning",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome la pastilla en la mañana.",
+        "en": "Take the pill in the morning."
+      }
+    },
+    {
+      "spanish": "antes de dormir",
+      "english": "before bed",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome el jarabe antes de dormir.",
+        "en": "Take the syrup before bed."
+      }
+    },
+    {
+      "spanish": "con comida",
+      "english": "with food",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome esta pastilla con comida.",
+        "en": "Take this pill with food."
+      }
+    },
+    {
+      "spanish": "con el estómago vacío",
+      "english": "on an empty stomach",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tómela con el estómago vacío.",
+        "en": "Take it on an empty stomach."
+      }
+    },
+    {
+      "spanish": "antes de comer",
+      "english": "before eating",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Use la insulina antes de comer.",
+        "en": "Use the insulin before eating."
+      }
+    },
+    {
+      "spanish": "después de comer",
+      "english": "after eating",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome el antiácido después de comer.",
+        "en": "Take the antacid after eating."
+      }
+    },
+    {
+      "spanish": "con agua",
+      "english": "with water",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tráguela con agua.",
+        "en": "Swallow it with water."
+      }
+    },
+    {
+      "spanish": "la cucharada",
+      "english": "tablespoon",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome una cucharada de jarabe.",
+        "en": "Take one tablespoon of syrup."
+      }
+    },
+    {
+      "spanish": "la cucharadita",
+      "english": "teaspoon",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome una cucharadita de jarabe.",
+        "en": "Take one teaspoon of syrup."
+      }
+    },
+    {
+      "spanish": "los miligramos",
+      "english": "milligrams (mg)",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "La dosis es de quinientos miligramos.",
+        "en": "The dose is five hundred milligrams."
+      }
+    },
+    {
+      "spanish": "cuando sea necesario",
+      "english": "as needed",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome el analgésico cuando sea necesario.",
+        "en": "Take the pain reliever as needed."
+      }
+    },
+    {
+      "spanish": "no más de",
+      "english": "no more than",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Tome no más de cuatro pastillas al día.",
+        "en": "Take no more than four pills a day."
+      }
+    },
+    {
+      "spanish": "olvidar una dosis",
+      "english": "to forget a dose",
+      "note": "",
+      "block": "Directions & Dosage",
+      "example": {
+        "es": "Si llega a olvidar una dosis, no tome dos juntas.",
+        "en": "If you happen to forget a dose, do not take two together."
+      }
+    },
+    {
+      "spanish": "descansar",
+      "english": "to rest",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Debe descansar en casa por dos días.",
+        "en": "You should rest at home for two days."
+      }
+    },
+    {
+      "spanish": "los líquidos",
+      "english": "fluids",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Tome muchos líquidos.",
+        "en": "Drink a lot of fluids."
+      }
+    },
+    {
+      "spanish": "la compresa fría",
+      "english": "cold pack",
+      "note": "also: la bolsa de hielo",
+      "block": "Care at Home",
+      "example": {
+        "es": "Ponga una compresa fría en la rodilla.",
+        "en": "Put a cold pack on your knee."
+      },
+      "confusable": [
+        "el hielo"
+      ]
+    },
+    {
+      "spanish": "la compresa caliente",
+      "english": "heat pack",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Una compresa caliente ayuda con la rigidez.",
+        "en": "A heat pack helps with the stiffness."
+      }
+    },
+    {
+      "spanish": "el hielo",
+      "english": "ice",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Ponga hielo por quince minutos.",
+        "en": "Put ice on it for fifteen minutes."
+      }
+    },
+    {
+      "spanish": "elevar",
+      "english": "to elevate",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Debe elevar la pierna sobre una almohada.",
+        "en": "You should elevate your leg on a pillow."
+      }
+    },
+    {
+      "spanish": "cambiar el vendaje",
+      "english": "to change the bandage",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Debe cambiar el vendaje todos los días.",
+        "en": "You should change the bandage every day."
+      }
+    },
+    {
+      "spanish": "la dieta blanda",
+      "english": "bland diet",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Necesita una dieta blanda por unos días.",
+        "en": "You need a bland diet for a few days."
+      }
+    },
+    {
+      "spanish": "evitar",
+      "english": "to avoid",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Debe evitar el alcohol y el café.",
+        "en": "You should avoid alcohol and coffee."
+      }
+    },
+    {
+      "spanish": "el yeso",
+      "english": "cast",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Tiene que llevar el yeso por seis semanas.",
+        "en": "You have to wear the cast for six weeks."
+      },
+      "confusable": [
+        "la férula"
+      ]
+    },
+    {
+      "spanish": "la férula",
+      "english": "splint",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "La férula mantiene el dedo quieto.",
+        "en": "The splint keeps the finger still."
+      }
+    },
+    {
+      "spanish": "el cabestrillo",
+      "english": "sling",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Use el cabestrillo para descansar el brazo.",
+        "en": "Use the sling to rest your arm."
+      },
+      "confusable": [
+        "la férula"
+      ]
+    },
+    {
+      "spanish": "las muletas",
+      "english": "crutches",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Use las muletas para caminar.",
+        "en": "Use the crutches to walk."
+      }
+    },
+    {
+      "spanish": "el bastón",
+      "english": "cane",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "El bastón le ayuda a mantener el equilibrio.",
+        "en": "The cane helps you keep your balance."
+      }
+    },
+    {
+      "spanish": "el andador",
+      "english": "walker",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Necesita un andador por ahora.",
+        "en": "You need a walker for now."
+      }
+    },
+    {
+      "spanish": "la terapia física",
+      "english": "physical therapy",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "La terapia física ayuda a recuperar el movimiento.",
+        "en": "Physical therapy helps you get your movement back."
+      }
+    },
+    {
+      "spanish": "estirar",
+      "english": "to stretch",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Debe estirar la pierna todas las mañanas.",
+        "en": "You should stretch your leg every morning."
+      }
+    },
+    {
+      "spanish": "levantar objetos pesados",
+      "english": "to lift heavy objects",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "No debe levantar objetos pesados.",
+        "en": "You should not lift heavy objects."
+      }
+    },
+    {
+      "spanish": "la nota del médico",
+      "english": "doctor's note",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Le doy una nota del médico para su trabajo.",
+        "en": "I'm giving you a doctor's note for your job."
+      }
+    },
+    {
+      "spanish": "las señales de alarma",
+      "english": "warning signs",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Vaya a emergencias si tiene señales de alarma.",
+        "en": "Go to the emergency room if you have warning signs."
+      }
+    },
+    {
+      "spanish": "limpio / limpia",
+      "english": "clean",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Mantenga la herida limpia.",
+        "en": "Keep the wound clean."
+      }
+    },
+    {
+      "spanish": "seco / seca",
+      "english": "dry",
+      "note": "",
+      "block": "Care at Home",
+      "example": {
+        "es": "Mantenga la herida seca.",
+        "en": "Keep the wound dry."
+      }
+    },
+    {
+      "spanish": "la farmacia",
+      "english": "pharmacy",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "La farmacia está abierta hasta las diez.",
+        "en": "The pharmacy is open until ten."
+      }
+    },
+    {
+      "spanish": "el farmacéutico / la farmacéutica",
+      "english": "pharmacist",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "El farmacéutico le explicará cómo tomar el medicamento.",
+        "en": "The pharmacist will explain how to take the medication."
+      }
+    },
+    {
+      "spanish": "la receta",
+      "english": "prescription",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Aquí tiene su receta.",
+        "en": "Here is your prescription."
+      }
+    },
+    {
+      "spanish": "renovar la receta / resurtir la receta",
+      "english": "to refill the prescription",
+      "note": "\"resurtir\" is common in the US",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Puede renovar la receta en la farmacia.",
+        "en": "You can refill the prescription at the pharmacy."
+      }
+    },
+    {
+      "spanish": "el frasco",
+      "english": "bottle",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "El frasco tiene las instrucciones.",
+        "en": "The bottle has the instructions."
+      }
+    },
+    {
+      "spanish": "la etiqueta",
+      "english": "label",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Lea la etiqueta antes de tomar el medicamento.",
+        "en": "Read the label before taking the medication."
+      }
+    },
+    {
+      "spanish": "las instrucciones",
+      "english": "instructions",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Siga las instrucciones del médico.",
+        "en": "Follow the doctor's instructions."
+      }
+    },
+    {
+      "spanish": "la lista de medicamentos",
+      "english": "medication list",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Traiga siempre su lista de medicamentos.",
+        "en": "Always bring your medication list."
+      }
+    },
+    {
+      "spanish": "el pastillero",
+      "english": "pill organizer",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "El pastillero le ayuda a recordar cada dosis.",
+        "en": "The pill organizer helps you remember each dose."
+      }
+    },
+    {
+      "spanish": "la reacción alérgica",
+      "english": "allergic reaction",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Una reacción alérgica puede causar sarpullido.",
+        "en": "An allergic reaction can cause a rash."
+      }
+    },
+    {
+      "spanish": "la somnolencia",
+      "english": "drowsiness",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Este medicamento puede causar somnolencia.",
+        "en": "This medication can cause drowsiness."
+      }
+    },
+    {
+      "spanish": "la interacción",
+      "english": "drug interaction",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Hay una interacción con otro medicamento.",
+        "en": "There is an interaction with another medication."
+      }
+    },
+    {
+      "spanish": "la advertencia",
+      "english": "warning",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Lea la advertencia en la caja.",
+        "en": "Read the warning on the box."
+      }
+    },
+    {
+      "spanish": "vencido / vencida",
+      "english": "expired",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Este medicamento está vencido.",
+        "en": "This medication is expired."
+      }
+    },
+    {
+      "spanish": "el medicamento de marca",
+      "english": "brand-name medication",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "El medicamento de marca cuesta más que el genérico.",
+        "en": "The brand-name medication costs more than the generic."
+      }
+    },
+    {
+      "spanish": "dejar de tomar",
+      "english": "to stop taking",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "No debe dejar de tomar el antibiótico antes de tiempo.",
+        "en": "You should not stop taking the antibiotic early."
+      }
+    },
+    {
+      "spanish": "la sobredosis",
+      "english": "overdose",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Una sobredosis es peligrosa.",
+        "en": "An overdose is dangerous."
+      }
+    },
+    {
+      "spanish": "guardar",
+      "english": "to store",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Debe guardar el medicamento en un lugar fresco y seco.",
+        "en": "You should store the medication in a cool, dry place."
+      }
+    },
+    {
+      "spanish": "fuera del alcance de los niños",
+      "english": "out of reach of children",
+      "note": "",
+      "block": "Pharmacy & Safety",
+      "example": {
+        "es": "Guárdelo fuera del alcance de los niños.",
+        "en": "Keep it out of reach of children."
+      }
+    }
+  ],
+  "registerNotes": [
+    "With patients, use \"usted\": \"Tome\", \"Aplique\", \"No deje de tomar\". Say the instruction and the reason: \"Tómela con comida para no tener molestias\".",
+    "US Spanish speakers come from many countries, so words vary: \"la medicina\" or \"el medicamento\", \"la pastilla\", \"la tableta\" or \"la píldora\", \"el acetaminofén\" or \"el paracetamol\", \"resurtir\" or \"renovar la receta\", \"venta libre\" or \"sin receta\".",
+    "Give times and amounts the way patients will use them: \"en la mañana\" or \"por la mañana\", \"cada ocho horas\", \"una cucharadita\". Use the dosing spoon or syringe from the pharmacy, not a kitchen spoon.",
+    "Check understanding by asking the patient to say it back: \"¿Me puede decir cómo va a tomar el medicamento?\" Many patients nod even when they are unsure.",
+    "Ask about allergies and other medicines before explaining a new one, and remind patients never to take two doses together: \"No tome dos juntas\".",
+    "Follow the provider's orders and do not recommend medicines yourself. For questions about doses or interactions, send the patient to the pharmacist, and use a qualified medical interpreter for anything about risks or consent."
+  ],
+  "roleplays": [
+    {
+      "id": "choosing-the-medicine",
+      "title": "Explaining the Medicine",
+      "block": "Types of Medicine",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "El doctor le recetó un analgésico para el dolor.",
+          "english": "The doctor prescribed a pain reliever for your pain.",
+          "blank": "analgésico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es una pastilla? ¿Es un medicamento fuerte?",
+          "english": "Is it a pill? Is it a strong medication?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Es una cápsula y es un medicamento con receta. Debe tomarla con comida.",
+          "english": "It is a capsule and it is a prescription medication. You should take it with food.",
+          "blank": "medicamento con receta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "También tengo alergia. ¿Puedo tomar algo para eso?",
+          "english": "I also have allergies. Can I take something for that?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, un antihistamínico ayuda con la alergia. Lo venden sin receta.",
+          "english": "Yes, an antihistamine helps with allergies. They sell it without a prescription.",
+          "blank": "antihistamínico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi hijo también está enfermo y no puede tragar pastillas.",
+          "english": "My son is sick too and he cannot swallow pills."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Para los niños es mejor el jarabe. Es más fácil de tomar.",
+          "english": "For children, syrup is better. It is easier to take.",
+          "blank": "jarabe"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Y para el sarpullido de mi hija, ¿qué usamos?",
+          "english": "And for my daughter's rash, what do we use?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Una crema en la piel limpia y seca. Las gotas son solo para los ojos.",
+          "english": "A cream on clean, dry skin. The drops are only for the eyes.",
+          "blank": "crema"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es mejor el medicamento genérico o el de marca?",
+          "english": "Is the generic or the brand-name medication better?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Es igual. El medicamento genérico tiene el mismo ingrediente y cuesta menos.",
+          "english": "It is the same. The generic medication has the same ingredient and costs less.",
+          "blank": "medicamento genérico"
+        }
+      ]
+    },
+    {
+      "id": "how-to-take-it",
+      "title": "How to Take It",
+      "block": "Directions & Dosage",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Le voy a explicar cómo tomar el antibiótico.",
+          "english": "I am going to explain how to take the antibiotic.",
+          "blank": "tomar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cuántas veces al día?",
+          "english": "How many times a day?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Tres veces al día, cada ocho horas. Una cápsula cada vez.",
+          "english": "Three times a day, every eight hours. One capsule each time.",
+          "blank": "cada ocho horas"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Con comida o sin comida?",
+          "english": "With food or without food?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Con comida, para no tener molestias en el estómago.",
+          "english": "With food, so you do not have stomach discomfort.",
+          "blank": "Con comida"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y si me olvido de una dosis?",
+          "english": "And if I forget a dose?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Si llega a olvidar una dosis, tómela cuando se acuerde. No tome dos juntas.",
+          "english": "If you happen to forget a dose, take it when you remember. Do not take two together.",
+          "blank": "olvidar una dosis"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Puedo dejarlo cuando me sienta mejor?",
+          "english": "Can I stop when I feel better?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "No. No debe dejar de tomar el antibiótico antes de tiempo.",
+          "english": "No. You should not stop taking the antibiotic early.",
+          "blank": "dejar de tomar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Y la crema que me dieron, ¿cómo la uso?",
+          "english": "And the cream they gave me, how do I use it?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Debe aplicar la crema dos veces al día: en la mañana y antes de dormir.",
+          "english": "You should apply the cream twice a day: in the morning and before bed.",
+          "blank": "aplicar"
+        }
+      ]
+    },
+    {
+      "id": "caring-for-yourself-at-home",
+      "title": "Caring for Yourself at Home",
+      "block": "Care at Home",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Su tobillo tiene un esguince. Necesita descansar en casa.",
+          "english": "Your ankle has a sprain. You need to rest at home.",
+          "blank": "descansar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué puedo hacer para la hinchazón?",
+          "english": "What can I do for the swelling?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Ponga una compresa fría quince minutos y eleve la pierna.",
+          "english": "Put a cold pack on it for fifteen minutes and elevate your leg.",
+          "blank": "compresa fría"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y puedo caminar?",
+          "english": "And can I walk?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, con las muletas. No apoye el pie todavía.",
+          "english": "Yes, with the crutches. Do not put weight on the foot yet.",
+          "blank": "muletas"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cuándo puedo volver a trabajar? Necesito una nota.",
+          "english": "When can I go back to work? I need a note."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Le doy una nota del médico. No debe levantar objetos pesados por dos semanas.",
+          "english": "I will give you a doctor's note. You should not lift heavy objects for two weeks.",
+          "blank": "levantar objetos pesados"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y la terapia?",
+          "english": "And therapy?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Después empezará la terapia física para recuperar el movimiento.",
+          "english": "After that you will start physical therapy to get your movement back.",
+          "blank": "terapia física"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cuándo debo preocuparme?",
+          "english": "When should I worry?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Si tiene fiebre o mucho dolor, esas son señales de alarma. Llámenos de inmediato.",
+          "english": "If you have a fever or a lot of pain, those are warning signs. Call us right away.",
+          "blank": "señales de alarma"
+        }
+      ]
+    },
+    {
+      "id": "before-you-go-to-the-pharmacy",
+      "title": "Before You Go to the Pharmacy",
+      "block": "Pharmacy & Safety",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Aquí tiene su receta. Puede llevarla a cualquier farmacia.",
+          "english": "Here is your prescription. You can take it to any pharmacy.",
+          "blank": "receta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y si se me acaban las pastillas?",
+          "english": "And if I run out of pills?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede renovar la receta en la farmacia. Le dan varias renovaciones.",
+          "english": "You can refill the prescription at the pharmacy. They give you several refills.",
+          "blank": "renovar la receta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Tomo muchas pastillas. ¿Cómo las recuerdo todas?",
+          "english": "I take a lot of pills. How do I remember them all?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Use un pastillero y traiga siempre su lista de medicamentos.",
+          "english": "Use a pill organizer and always bring your medication list.",
+          "blank": "pastillero"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué debo leer en el frasco?",
+          "english": "What should I read on the bottle?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Lea la etiqueta y siga las instrucciones. Fíjese también en la advertencia.",
+          "english": "Read the label and follow the instructions. Also look at the warning.",
+          "blank": "etiqueta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Hay riesgos con este medicamento?",
+          "english": "Are there risks with this medication?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede causar somnolencia. No maneje hasta ver cómo le afecta.",
+          "english": "It can cause drowsiness. Do not drive until you see how it affects you.",
+          "blank": "somnolencia"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Dónde guardo la medicina? Tengo niños en casa.",
+          "english": "Where do I keep the medicine? I have children at home."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Guárdela fuera del alcance de los niños, en un lugar fresco y seco.",
+          "english": "Keep it out of reach of children, in a cool, dry place.",
+          "blank": "fuera del alcance"
+        }
+      ]
+    }
+  ]
+}

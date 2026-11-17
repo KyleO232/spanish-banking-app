@@ -50,6 +50,7 @@
   --forest-fill: #2d4a33;
   --lavender-fill: #4a3f7a;
   --night-fill: #121a33;
+  --sunflower-fill: #6b4a12;
   --coin: #0f9d8a;
 
   --sans: 'Nunito Variable', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -114,6 +115,7 @@
     --forest-fill: #16261b;
     --lavender-fill: #231d3f;
     --night-fill: #090e1d;
+    --sunflower-fill: #2e2008;
     --coin: #35c9a5;
   }
 }

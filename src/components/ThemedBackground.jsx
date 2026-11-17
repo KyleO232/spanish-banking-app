@@ -6,11 +6,16 @@ import springImg from '../assets/backgrounds/spring.jpg';
 import forestImg from '../assets/backgrounds/forest.jpg';
 import lavenderImg from '../assets/backgrounds/meadow.jpg';
 import nightImg from '../assets/backgrounds/night.jpg';
+import sunflowerImg from '../assets/backgrounds/sunflower.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  sunflower: {
+    image: sunflowerImg,
+    fill: 'var(--sunflower-fill)',
   },
   night: {
     image: nightImg,
@@ -120,6 +125,50 @@ function Petals() {
         >
           <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
           <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+// A few bees buzzing across the sunflower garden.
+function Bees() {
+  const bees = useMemo(
+    () =>
+      Array.from({ length: 6 }, (_, i) => ({
+        id: i,
+        top: rand(6, 92),
+        size: rand(20, 30),
+        duration: rand(20, 34),
+        delay: -rand(0, 28),
+        bob: rand(20, 46),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {bees.map((b) => (
+        <svg
+          key={b.id}
+          className="bee"
+          viewBox="0 0 28 20"
+          style={{
+            top: `${b.top}%`,
+            width: b.size,
+            animationDuration: `${b.duration}s`,
+            animationDelay: `${b.delay}s`,
+            '--bob': `${b.bob}px`,
+          }}
+        >
+          <g className="bee-wings">
+            <ellipse cx="11" cy="5" rx="5" ry="3.4" fill="#fff" opacity="0.8" transform="rotate(-24 11 5)" />
+            <ellipse cx="17" cy="5" rx="5" ry="3.4" fill="#fff" opacity="0.8" transform="rotate(24 17 5)" />
+          </g>
+          <ellipse cx="14" cy="12.5" rx="9" ry="5.6" fill="#ffc933" />
+          <path d="M10 8 V17 M14.5 7.2 V17.8 M19 8.4 V16.6" stroke="#2b2118" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+          <circle cx="23" cy="12" r="3.2" fill="#2b2118" />
+          <circle cx="24" cy="11.2" r="0.8" fill="#fff" />
         </svg>
       ))}
     </div>
@@ -381,6 +430,8 @@ export default function ThemedBackground({ theme }) {
         <Snow />
       ) : theme === 'spring' ? (
         <Petals />
+      ) : theme === 'sunflower' ? (
+        <Bees />
       ) : theme === 'night' ? (
         <Stars />
       ) : theme === 'lavender' ? (
