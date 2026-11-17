@@ -8,8 +8,13 @@ import lavenderImg from '../assets/backgrounds/meadow.jpg';
 import nightImg from '../assets/backgrounds/night.jpg';
 import sunflowerImg from '../assets/backgrounds/sunflower.jpg';
 import lighthouseImg from '../assets/backgrounds/lighthouse.jpg';
+import calmImg from '../assets/backgrounds/calm.jpg';
 
 const THEMES = {
+  calm: {
+    image: calmImg,
+    fill: 'var(--calm-fill)',
+  },
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
@@ -461,6 +466,64 @@ function Seaside() {
   );
 }
 
+// Slow ripples spreading over a misty lake, and soft mist drifting past.
+function Calm() {
+  const ripples = useMemo(
+    () =>
+      Array.from({ length: 7 }, (_, i) => ({
+        id: i,
+        left: rand(10, 90),
+        top: rand(60, 95),
+        size: rand(70, 150),
+        delay: -rand(0, 9),
+        duration: rand(7, 11),
+      })),
+    []
+  );
+  const wisps = useMemo(
+    () =>
+      Array.from({ length: 3 }, (_, i) => ({
+        id: i,
+        top: rand(28, 62),
+        height: rand(70, 120),
+        delay: -rand(0, 50),
+        duration: rand(46, 70),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {wisps.map((w) => (
+        <span
+          key={`wisp-${w.id}`}
+          className="mist-wisp"
+          style={{
+            top: `${w.top}%`,
+            height: w.height,
+            animationDelay: `${w.delay}s`,
+            animationDuration: `${w.duration}s`,
+          }}
+        />
+      ))}
+      {ripples.map((r) => (
+        <span
+          key={r.id}
+          className="ripple"
+          style={{
+            left: `${r.left}%`,
+            top: `${r.top}%`,
+            width: r.size,
+            height: r.size * 0.32,
+            animationDelay: `${r.delay}s`,
+            animationDuration: `${r.duration}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function ThemedBackground({ theme }) {
   const cfg = THEMES[theme] || THEMES.beach;
 
@@ -469,6 +532,8 @@ export default function ThemedBackground({ theme }) {
       <div className="theme-bg-hero" style={{ backgroundImage: `url(${cfg.image})` }} />
       {theme === 'autumn' ? (
         <Leaves />
+      ) : theme === 'calm' ? (
+        <Calm />
       ) : theme === 'alpine' ? (
         <Snow />
       ) : theme === 'spring' ? (

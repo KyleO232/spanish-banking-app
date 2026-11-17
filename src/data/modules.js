@@ -14,6 +14,7 @@ const MODULE_ORDER = [
   'exams',
   'treatment',
   'emergencies',
+  'mental-health',
 ];
 
 const rank = (m) => {

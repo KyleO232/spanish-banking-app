@@ -3883,3 +3883,46 @@ a.stat-chip {
   margin-top: 10px;
   color: var(--text-h);
 }
+
+/* calm lake: ripples and drifting mist */
+.ripple {
+  position: absolute;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.15);
+  animation: ripple-out 8s ease-out infinite;
+}
+
+@keyframes ripple-out {
+  0% {
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.mist-wisp {
+  position: absolute;
+  left: -70%;
+  width: 70%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+  filter: blur(8px);
+  opacity: 0.8;
+  animation: mist-drift 56s linear infinite;
+}
+
+@keyframes mist-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(240%);
+  }
+}

@@ -1,0 +1,1156 @@
+{
+  "id": "mental-health",
+  "title": "Mental Health",
+  "description": "Everyday Spanish for mental health conversations: talking about feelings, stress and sleep, anxiety and depression, and getting support safely.",
+  "theme": "calm",
+  "track": "medical",
+  "roles": {
+    "you": "Counselor",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "los sentimientos",
+      "english": "feelings",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Hablar de los sentimientos puede ayudar.",
+        "en": "Talking about feelings can help."
+      }
+    },
+    {
+      "spanish": "la emoción",
+      "english": "emotion",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Qué emoción siente más hoy?",
+        "en": "Which emotion do you feel most today?"
+      }
+    },
+    {
+      "spanish": "el estado de ánimo",
+      "english": "mood",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Cómo ha estado su estado de ánimo esta semana?",
+        "en": "How has your mood been this week?"
+      }
+    },
+    {
+      "spanish": "sentirse",
+      "english": "to feel (a certain way)",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Es normal sentirse así.",
+        "en": "It is normal to feel this way."
+      }
+    },
+    {
+      "spanish": "triste",
+      "english": "sad",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Se ve triste hoy. ¿Qué pasó?",
+        "en": "You look sad today. What happened?"
+      },
+      "confusable": [
+        "deprimido / deprimida"
+      ]
+    },
+    {
+      "spanish": "feliz",
+      "english": "happy",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Hace mucho que no se siente feliz.",
+        "en": "You have not felt happy for a long time."
+      }
+    },
+    {
+      "spanish": "enojado / enojada",
+      "english": "angry",
+      "note": "in Spain: enfadado",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Se siente enojado por algo en particular?",
+        "en": "Do you feel angry about something in particular?"
+      }
+    },
+    {
+      "spanish": "nervioso / nerviosa",
+      "english": "nervous",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Está muy nerviosa antes de cada cita.",
+        "en": "She is very nervous before every appointment."
+      },
+      "confusable": [
+        "asustado / asustada",
+        "preocupado / preocupada"
+      ]
+    },
+    {
+      "spanish": "asustado / asustada",
+      "english": "scared",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Se siente asustado en su casa?",
+        "en": "Do you feel scared at home?"
+      },
+      "confusable": [
+        "preocupado / preocupada"
+      ]
+    },
+    {
+      "spanish": "preocupado / preocupada",
+      "english": "worried",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Parece preocupada por su familia.",
+        "en": "You seem worried about your family."
+      }
+    },
+    {
+      "spanish": "solo / sola",
+      "english": "lonely, alone",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Se siente sola con frecuencia?",
+        "en": "Do you often feel lonely?"
+      }
+    },
+    {
+      "spanish": "avergonzado / avergonzada",
+      "english": "ashamed, embarrassed",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "No debe sentirse avergonzado por pedir ayuda.",
+        "en": "You should not feel ashamed to ask for help."
+      }
+    },
+    {
+      "spanish": "la culpa",
+      "english": "guilt, blame",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Mucha gente siente culpa después de una pérdida.",
+        "en": "Many people feel guilt after a loss."
+      }
+    },
+    {
+      "spanish": "el miedo",
+      "english": "fear",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "¿Tiene miedo de algo en particular?",
+        "en": "Are you afraid of anything in particular?"
+      }
+    },
+    {
+      "spanish": "abrumado / abrumada",
+      "english": "overwhelmed",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Se siente abrumada con tantos problemas.",
+        "en": "She feels overwhelmed with so many problems."
+      }
+    },
+    {
+      "spanish": "los nervios",
+      "english": "nerves (stress or anxiety)",
+      "note": "an everyday word many patients use for anxiety",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Muchos pacientes dicen que sufren de los nervios.",
+        "en": "Many patients say they suffer from \"los nervios\"."
+      }
+    },
+    {
+      "spanish": "la esperanza",
+      "english": "hope",
+      "note": "",
+      "block": "Feelings & Emotions",
+      "example": {
+        "es": "Hay esperanza, y hay ayuda disponible.",
+        "en": "There is hope, and help is available."
+      }
+    },
+    {
+      "spanish": "¿Cómo se siente hoy?",
+      "english": "How do you feel today?",
+      "note": "formal/register phrase",
+      "block": "Feelings & Emotions",
+      "example": null
+    },
+    {
+      "spanish": "Este es un lugar seguro.",
+      "english": "This is a safe place.",
+      "note": "formal/register phrase",
+      "block": "Feelings & Emotions",
+      "example": null
+    },
+    {
+      "spanish": "Lo/la escucho con atención.",
+      "english": "I am listening carefully.",
+      "note": "formal/register phrase",
+      "block": "Feelings & Emotions",
+      "example": null
+    },
+    {
+      "spanish": "Tómese el tiempo que necesite.",
+      "english": "Take the time you need.",
+      "note": "formal/register phrase",
+      "block": "Feelings & Emotions",
+      "example": null
+    },
+    {
+      "spanish": "No está solo/sola.",
+      "english": "You are not alone.",
+      "note": "formal/register phrase",
+      "block": "Feelings & Emotions",
+      "example": null
+    },
+    {
+      "spanish": "el estrés",
+      "english": "stress",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "El estrés puede afectar el sueño y el apetito.",
+        "en": "Stress can affect sleep and appetite."
+      }
+    },
+    {
+      "spanish": "estresado / estresada",
+      "english": "stressed",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "¿Se siente estresada en el trabajo?",
+        "en": "Do you feel stressed at work?"
+      }
+    },
+    {
+      "spanish": "la preocupación",
+      "english": "worry",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "La preocupación constante cansa mucho.",
+        "en": "Constant worry is very tiring."
+      },
+      "confusable": [
+        "el miedo"
+      ]
+    },
+    {
+      "spanish": "el sueño",
+      "english": "sleep",
+      "note": "also means \"dream\"",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "¿Cómo ha estado su sueño últimamente?",
+        "en": "How has your sleep been lately?"
+      }
+    },
+    {
+      "spanish": "el insomnio",
+      "english": "insomnia",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "El insomnio le impide descansar.",
+        "en": "Insomnia keeps you from resting."
+      },
+      "confusable": [
+        "la pesadilla"
+      ]
+    },
+    {
+      "spanish": "dormir",
+      "english": "to sleep",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "¿Cuántas horas puede dormir por la noche?",
+        "en": "How many hours can you sleep at night?"
+      }
+    },
+    {
+      "spanish": "despertarse",
+      "english": "to wake up",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Es común despertarse de madrugada.",
+        "en": "It is common to wake up in the early morning."
+      }
+    },
+    {
+      "spanish": "la pesadilla",
+      "english": "nightmare",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Tuvo una pesadilla anoche.",
+        "en": "He had a nightmare last night."
+      }
+    },
+    {
+      "spanish": "el cansancio",
+      "english": "tiredness",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Siente mucho cansancio durante el día.",
+        "en": "He feels a lot of tiredness during the day."
+      },
+      "confusable": [
+        "el agotamiento"
+      ]
+    },
+    {
+      "spanish": "el apetito",
+      "english": "appetite",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "¿Ha cambiado su apetito?",
+        "en": "Has your appetite changed?"
+      }
+    },
+    {
+      "spanish": "la energía",
+      "english": "energy",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Dice que no tiene energía para nada.",
+        "en": "He says he has no energy for anything."
+      }
+    },
+    {
+      "spanish": "concentrarse",
+      "english": "to concentrate",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Le cuesta concentrarse en el trabajo.",
+        "en": "He has trouble concentrating at work."
+      }
+    },
+    {
+      "spanish": "el agotamiento",
+      "english": "exhaustion, burnout",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "El agotamiento emocional es común entre los cuidadores.",
+        "en": "Emotional exhaustion is common among caregivers."
+      }
+    },
+    {
+      "spanish": "el cuidador / la cuidadora",
+      "english": "caregiver",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Ser cuidador de un familiar enfermo es muy duro.",
+        "en": "Being the caregiver of a sick relative is very hard."
+      }
+    },
+    {
+      "spanish": "el duelo",
+      "english": "grief, mourning",
+      "note": "the sadness after someone dies",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Está pasando por un duelo difícil.",
+        "en": "She is going through a hard time of grief."
+      }
+    },
+    {
+      "spanish": "la pérdida",
+      "english": "loss",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "La pérdida de un ser querido es muy dura.",
+        "en": "The loss of a loved one is very hard."
+      }
+    },
+    {
+      "spanish": "relajarse",
+      "english": "to relax",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Es importante relajarse un poco cada día.",
+        "en": "It is important to relax a little every day."
+      }
+    },
+    {
+      "spanish": "hacer ejercicio",
+      "english": "to exercise",
+      "note": "",
+      "block": "Stress, Sleep & Daily Life",
+      "example": {
+        "es": "Hacer ejercicio ayuda con el estrés.",
+        "en": "Exercising helps with stress."
+      }
+    },
+    {
+      "spanish": "¿Cómo ha dormido?",
+      "english": "How have you been sleeping?",
+      "note": "formal/register phrase",
+      "block": "Stress, Sleep & Daily Life",
+      "example": null
+    },
+    {
+      "spanish": "¿Ha perdido el apetito?",
+      "english": "Have you lost your appetite?",
+      "note": "formal/register phrase",
+      "block": "Stress, Sleep & Daily Life",
+      "example": null
+    },
+    {
+      "spanish": "¿Qué le preocupa?",
+      "english": "What worries you?",
+      "note": "formal/register phrase",
+      "block": "Stress, Sleep & Daily Life",
+      "example": null
+    },
+    {
+      "spanish": "Respire profundo y despacio.",
+      "english": "Breathe deeply and slowly.",
+      "note": "formal/register phrase",
+      "block": "Stress, Sleep & Daily Life",
+      "example": null
+    },
+    {
+      "spanish": "la salud mental",
+      "english": "mental health",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La salud mental es tan importante como la salud física.",
+        "en": "Mental health is as important as physical health."
+      }
+    },
+    {
+      "spanish": "la ansiedad",
+      "english": "anxiety",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La ansiedad puede causar dolor de estómago.",
+        "en": "Anxiety can cause a stomachache."
+      },
+      "confusable": [
+        "el estrés",
+        "el miedo"
+      ]
+    },
+    {
+      "spanish": "la depresión",
+      "english": "depression",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La depresión es una condición que se puede tratar.",
+        "en": "Depression is a condition that can be treated."
+      }
+    },
+    {
+      "spanish": "deprimido / deprimida",
+      "english": "depressed",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Hace semanas que se siente deprimida.",
+        "en": "She has felt depressed for weeks."
+      }
+    },
+    {
+      "spanish": "el ataque de pánico",
+      "english": "panic attack",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Tuvo un ataque de pánico en el supermercado.",
+        "en": "He had a panic attack at the supermarket."
+      },
+      "confusable": [
+        "el ataque de nervios"
+      ]
+    },
+    {
+      "spanish": "el ataque de nervios",
+      "english": "nervous breakdown (everyday phrase)",
+      "note": "a common phrase for a strong stress reaction",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Después de la noticia tuvo un ataque de nervios.",
+        "en": "After the news she had an \"ataque de nervios\"."
+      }
+    },
+    {
+      "spanish": "el corazón acelerado",
+      "english": "racing heart",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Con la ansiedad puede sentir el corazón acelerado.",
+        "en": "With anxiety you can feel a racing heart."
+      }
+    },
+    {
+      "spanish": "el trauma",
+      "english": "trauma",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Muchas personas viven con un trauma del pasado.",
+        "en": "Many people live with a trauma from the past."
+      }
+    },
+    {
+      "spanish": "el estrés postraumático",
+      "english": "post-traumatic stress",
+      "note": "also: el trastorno de estrés postraumático (PTSD)",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "El estrés postraumático puede causar pesadillas.",
+        "en": "Post-traumatic stress can cause nightmares."
+      }
+    },
+    {
+      "spanish": "los pensamientos",
+      "english": "thoughts",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "Los pensamientos negativos pueden ser muy fuertes.",
+        "en": "Negative thoughts can be very strong."
+      }
+    },
+    {
+      "spanish": "la irritabilidad",
+      "english": "irritability",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La irritabilidad puede ser un signo de depresión.",
+        "en": "Irritability can be a sign of depression."
+      }
+    },
+    {
+      "spanish": "el aislamiento",
+      "english": "isolation",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "El aislamiento empeora la tristeza.",
+        "en": "Isolation makes sadness worse."
+      }
+    },
+    {
+      "spanish": "la adicción",
+      "english": "addiction",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La adicción es una condición que se puede tratar.",
+        "en": "Addiction is a condition that can be treated."
+      }
+    },
+    {
+      "spanish": "el alcohol",
+      "english": "alcohol",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "¿Cuánto alcohol toma por semana?",
+        "en": "How much alcohol do you drink per week?"
+      }
+    },
+    {
+      "spanish": "las drogas",
+      "english": "drugs",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "¿Ha usado drogas alguna vez?",
+        "en": "Have you ever used drugs?"
+      }
+    },
+    {
+      "spanish": "el abuso",
+      "english": "abuse",
+      "note": "",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "El abuso en la infancia puede dejar heridas emocionales.",
+        "en": "Abuse in childhood can leave emotional wounds."
+      }
+    },
+    {
+      "spanish": "la violencia doméstica",
+      "english": "domestic violence",
+      "note": "also: la violencia en el hogar",
+      "block": "Anxiety, Depression & Conditions",
+      "example": {
+        "es": "La violencia doméstica es un delito.",
+        "en": "Domestic violence is a crime."
+      }
+    },
+    {
+      "spanish": "¿Cuánto tiempo hace que se siente así?",
+      "english": "How long have you felt this way?",
+      "note": "formal/register phrase",
+      "block": "Anxiety, Depression & Conditions",
+      "example": null
+    },
+    {
+      "spanish": "¿Con qué frecuencia le pasa?",
+      "english": "How often does it happen to you?",
+      "note": "formal/register phrase",
+      "block": "Anxiety, Depression & Conditions",
+      "example": null
+    },
+    {
+      "spanish": "No es su culpa.",
+      "english": "It is not your fault.",
+      "note": "formal/register phrase",
+      "block": "Anxiety, Depression & Conditions",
+      "example": null
+    },
+    {
+      "spanish": "Esto se puede tratar.",
+      "english": "This can be treated.",
+      "note": "formal/register phrase",
+      "block": "Anxiety, Depression & Conditions",
+      "example": null
+    },
+    {
+      "spanish": "Muchas personas pasan por esto.",
+      "english": "Many people go through this.",
+      "note": "formal/register phrase",
+      "block": "Anxiety, Depression & Conditions",
+      "example": null
+    },
+    {
+      "spanish": "la terapia",
+      "english": "therapy",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La terapia es un espacio para hablar con confianza.",
+        "en": "Therapy is a space to talk with trust."
+      }
+    },
+    {
+      "spanish": "el terapeuta / la terapeuta",
+      "english": "therapist",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La terapeuta habla español.",
+        "en": "The therapist speaks Spanish."
+      },
+      "confusable": [
+        "el consejero / la consejera",
+        "el psicólogo / la psicóloga"
+      ]
+    },
+    {
+      "spanish": "el consejero / la consejera",
+      "english": "counselor",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La consejera de la escuela habla con los estudiantes.",
+        "en": "The school counselor talks with the students."
+      }
+    },
+    {
+      "spanish": "el psicólogo / la psicóloga",
+      "english": "psychologist",
+      "note": "talks with patients; usually does not prescribe medicine",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La psicóloga le hará algunas preguntas.",
+        "en": "The psychologist will ask you a few questions."
+      },
+      "confusable": [
+        "el psiquiatra / la psiquiatra"
+      ]
+    },
+    {
+      "spanish": "el psiquiatra / la psiquiatra",
+      "english": "psychiatrist",
+      "note": "a medical doctor who can prescribe medicine",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "El psiquiatra puede recetar medicina para la ansiedad.",
+        "en": "The psychiatrist can prescribe medicine for anxiety."
+      }
+    },
+    {
+      "spanish": "el trabajador social / la trabajadora social",
+      "english": "social worker",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La trabajadora social puede ayudarle a encontrar recursos.",
+        "en": "The social worker can help you find resources."
+      }
+    },
+    {
+      "spanish": "la sesión",
+      "english": "session",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La primera sesión dura unos cincuenta minutos.",
+        "en": "The first session lasts about fifty minutes."
+      }
+    },
+    {
+      "spanish": "el grupo de apoyo",
+      "english": "support group",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "Hay un grupo de apoyo en español los martes.",
+        "en": "There is a support group in Spanish on Tuesdays."
+      }
+    },
+    {
+      "spanish": "la línea de crisis",
+      "english": "crisis line",
+      "note": "in the US, call or text 988",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La línea de crisis atiende las 24 horas.",
+        "en": "The crisis line is open 24 hours."
+      }
+    },
+    {
+      "spanish": "el antidepresivo",
+      "english": "antidepressant",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "El antidepresivo puede tardar unas semanas en hacer efecto.",
+        "en": "The antidepressant can take a few weeks to work."
+      }
+    },
+    {
+      "spanish": "la confidencialidad",
+      "english": "confidentiality",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La confidencialidad tiene algunas excepciones por seguridad.",
+        "en": "Confidentiality has some exceptions for safety."
+      }
+    },
+    {
+      "spanish": "hacerse daño",
+      "english": "to hurt oneself",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "¿Ha pensado en hacerse daño?",
+        "en": "Have you thought about hurting yourself?"
+      },
+      "confusable": [
+        "quitarse la vida"
+      ]
+    },
+    {
+      "spanish": "quitarse la vida",
+      "english": "to take one's own life",
+      "note": "ask directly and calmly",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "¿Ha pensado en quitarse la vida?",
+        "en": "Have you thought about taking your life?"
+      }
+    },
+    {
+      "spanish": "el plan de seguridad",
+      "english": "safety plan",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "Vamos a escribir un plan de seguridad juntos.",
+        "en": "We are going to write a safety plan together."
+      }
+    },
+    {
+      "spanish": "pedir ayuda",
+      "english": "to ask for help",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "Pedir ayuda es una señal de fortaleza.",
+        "en": "Asking for help is a sign of strength."
+      }
+    },
+    {
+      "spanish": "la recuperación",
+      "english": "recovery",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "La recuperación toma tiempo, pero es posible.",
+        "en": "Recovery takes time, but it is possible."
+      }
+    },
+    {
+      "spanish": "el intérprete / la intérprete",
+      "english": "interpreter",
+      "note": "",
+      "block": "Support & Staying Safe",
+      "example": {
+        "es": "Puede pedir un intérprete en cada sesión.",
+        "en": "You can ask for an interpreter at every session."
+      }
+    },
+    {
+      "spanish": "Gracias por contármelo.",
+      "english": "Thank you for telling me.",
+      "note": "formal/register phrase",
+      "block": "Support & Staying Safe",
+      "example": null
+    },
+    {
+      "spanish": "¿Se siente seguro/segura en este momento?",
+      "english": "Do you feel safe right now?",
+      "note": "formal/register phrase",
+      "block": "Support & Staying Safe",
+      "example": null
+    },
+    {
+      "spanish": "Si está en peligro, llame al 911.",
+      "english": "If you are in danger, call 911.",
+      "note": "formal/register phrase",
+      "block": "Support & Staying Safe",
+      "example": null
+    },
+    {
+      "spanish": "Puede llamar o mandar un mensaje de texto al 988.",
+      "english": "You can call or send a text message to 988.",
+      "note": "formal/register phrase",
+      "block": "Support & Staying Safe",
+      "example": null
+    },
+    {
+      "spanish": "No tiene que pasar por esto solo/sola.",
+      "english": "You do not have to go through this alone.",
+      "note": "formal/register phrase",
+      "block": "Support & Staying Safe",
+      "example": null
+    }
+  ],
+  "registerNotes": [
+    "In the US, the 988 Suicide & Crisis Lifeline is free and open 24 hours a day. People can call or text 988. For Spanish, they press 2 when they call, or text \"AYUDA\" to 988. If someone is in immediate danger, call 911.",
+    "Many Spanish speakers describe emotional pain through the body (headache, stomach pain, chest pressure, \"los nervios\") or through the family. Listen to both. Words like \"depresión\" can feel heavy to some people; \"estar decaído\", \"estar bajo de ánimo\" or \"tener problemas emocionales\" may feel easier.",
+    "Avoid stigma: never use \"loco\", \"enfermo mental\" or \"psicótico\" with a patient. Say \"una condición de salud mental\" or \"un problema emocional\", and let the patient choose the words.",
+    "Ask about thoughts of suicide directly and calmly: \"¿Ha pensado en quitarse la vida?\" Asking does not put the idea in someone's head. Never leave a person alone if they may be in danger, and follow your workplace protocol. This module teaches the words, not how to assess risk.",
+    "Use a qualified medical interpreter for mental health visits, not a child or a family member. Explain confidentiality honestly: what is said stays private, with exceptions when someone may be in danger or when abuse must be reported.",
+    "Speak slowly and warmly, use \"usted\", and allow silences. A short \"Lo/la escucho\" and a patient pace say more than a long explanation.",
+    "Words vary by country: \"enojado\" (Latin America) and \"enfadado\" (Spain), \"el trago\" or \"tomar\" for drinking alcohol, \"mandar un texto\" or \"mandar un mensaje de texto\" in the US. When a patient uses a different word, repeat it back and keep using theirs.",
+    "Diagnoses and treatment decisions belong to licensed professionals. Use this vocabulary to help patients feel heard and connected to care, not to name a condition."
+  ],
+  "roleplays": [
+    {
+      "id": "how-are-you-feeling",
+      "title": "How Are You Feeling?",
+      "block": "Feelings & Emotions",
+      "lines": [
+        {
+          "speaker": "Counselor",
+          "spanish": "Buenos días. Este es un lugar seguro. ¿Cómo se siente hoy?",
+          "english": "Good morning. This is a safe place. How do you feel today?",
+          "blank": "lugar seguro"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No muy bien. Me siento triste y muy cansada.",
+          "english": "Not very well. I feel sad and very tired."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "La escucho con atención. ¿Desde cuándo se siente triste?",
+          "english": "I am listening carefully. Since when have you felt sad?",
+          "blank": "triste"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Desde que murió mi mamá hace tres meses.",
+          "english": "Since my mom died three months ago."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Lo siento mucho. Es normal sentirse así cuando se pierde a alguien.",
+          "english": "I am so sorry. It is normal to feel this way when you lose someone.",
+          "blank": "sentirse"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "A veces siento mucha culpa y estoy enojada con todos.",
+          "english": "Sometimes I feel a lot of guilt and I am angry with everyone."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Mucha gente siente culpa después de perder a alguien. Es normal.",
+          "english": "Many people feel guilt after losing someone. It is normal.",
+          "blank": "culpa"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "A veces me siento muy sola en casa.",
+          "english": "Sometimes I feel very alone at home."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "No está sola. ¿Tiene familia o amigos cerca?",
+          "english": "You are not alone. Do you have family or friends nearby?",
+          "blank": "No está sola"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Tengo una hermana, pero vive lejos.",
+          "english": "I have a sister, but she lives far away."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Tómese el tiempo que necesite. Podemos hablar poco a poco.",
+          "english": "Take the time you need. We can talk little by little.",
+          "blank": "tiempo que necesite"
+        }
+      ]
+    },
+    {
+      "id": "sleep-and-stress",
+      "title": "Sleep and Stress",
+      "block": "Stress, Sleep & Daily Life",
+      "lines": [
+        {
+          "speaker": "Counselor",
+          "spanish": "Buenos días. ¿Cómo ha dormido esta semana?",
+          "english": "Good morning. How have you been sleeping this week?",
+          "blank": "ha dormido"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Muy mal. No puedo dormir y me despierto a las tres de la mañana.",
+          "english": "Very badly. I cannot sleep and I wake up at three in the morning."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Entiendo, tiene insomnio. ¿Ha tenido pesadillas?",
+          "english": "I understand, you have insomnia. Have you had nightmares?",
+          "blank": "insomnio"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, pero estoy muy preocupado por el trabajo y el dinero.",
+          "english": "No, but I am very worried about work and money."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "¿Qué le preocupa más? ¿Se siente estresado en el trabajo?",
+          "english": "What worries you most? Do you feel stressed at work?",
+          "blank": "le preocupa"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, trabajo muchas horas y llego a casa sin energía.",
+          "english": "Yes, I work many hours and I get home with no energy."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "¿Ha perdido el apetito o le cuesta concentrarse?",
+          "english": "Have you lost your appetite or do you have trouble concentrating?",
+          "blank": "concentrarse"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, casi no tengo hambre y se me olvida todo.",
+          "english": "Yes, I am hardly hungry and I forget everything."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Entiendo. Le recomiendo hacer ejercicio y relajarse un poco cada día.",
+          "english": "I understand. I recommend that you exercise and relax a little every day.",
+          "blank": "hacer ejercicio"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Está bien. Voy a intentar caminar todos los días.",
+          "english": "Okay. I am going to try to walk every day."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Muy bien. Cuando sienta mucho estrés, respire profundo y despacio.",
+          "english": "Very good. When you feel a lot of stress, breathe deeply and slowly.",
+          "blank": "respire profundo"
+        }
+      ]
+    },
+    {
+      "id": "talking-about-anxiety",
+      "title": "Talking About Anxiety",
+      "block": "Anxiety, Depression & Conditions",
+      "lines": [
+        {
+          "speaker": "Counselor",
+          "spanish": "Cuénteme qué le pasa. ¿Cuánto tiempo hace que se siente así?",
+          "english": "Tell me what is going on. How long have you felt this way?",
+          "blank": "se siente así"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Hace seis meses. Siento mucha ansiedad y a veces me falta el aire.",
+          "english": "About six months. I feel a lot of anxiety and sometimes I run short of breath."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "¿Ha tenido un ataque de pánico?",
+          "english": "Have you had a panic attack?",
+          "blank": "ataque de pánico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, en el supermercado. Sentí el corazón acelerado y pensé que me moría.",
+          "english": "Yes, at the supermarket. I felt my heart racing and thought I was dying."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Muchas personas pasan por esto, y se puede tratar.",
+          "english": "Many people go through this, and it can be treated.",
+          "blank": "se puede tratar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi esposo dice que es solo estrés, pero no puedo trabajar.",
+          "english": "My husband says it is just stress, but I cannot work."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "¿Ha vivido alguna situación de abuso o violencia doméstica?",
+          "english": "Have you experienced a situation of abuse or domestic violence?",
+          "blank": "violencia doméstica"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, gracias a Dios. Pero perdí mi trabajo y paso mucho tiempo sola.",
+          "english": "No, thank God. But I lost my job and I spend a lot of time alone."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "¿Toma alcohol o usa drogas para calmar los nervios?",
+          "english": "Do you drink alcohol or use drugs to calm your nerves?",
+          "blank": "alcohol"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Solo una copa de vino a veces. Quiero sentirme mejor.",
+          "english": "Only a glass of wine sometimes. I want to feel better."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Hablar de esto es un buen paso. Vamos a cuidar su salud mental.",
+          "english": "Talking about this is a good step. We are going to take care of your mental health.",
+          "blank": "salud mental"
+        }
+      ]
+    },
+    {
+      "id": "support-and-safety",
+      "title": "Support and Safety",
+      "block": "Support & Staying Safe",
+      "lines": [
+        {
+          "speaker": "Counselor",
+          "spanish": "Buenos días, soy la terapeuta. Puede pedir un intérprete en cada sesión.",
+          "english": "Good morning, I am the therapist. You can ask for an interpreter at every session.",
+          "blank": "intérprete"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Gracias. Me da un poco de vergüenza estar aquí.",
+          "english": "Thank you. I am a little embarrassed to be here."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "No hay por qué sentir vergüenza. Pedir ayuda es una señal de fortaleza.",
+          "english": "There is no reason to feel ashamed. Asking for help is a sign of strength.",
+          "blank": "Pedir ayuda"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Últimamente me siento tan mal que a veces pienso que mi familia estaría mejor sin mí.",
+          "english": "Lately I feel so bad that sometimes I think my family would be better off without me."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Gracias por contármelo. ¿Ha pensado en quitarse la vida?",
+          "english": "Thank you for telling me. Have you thought about taking your life?",
+          "blank": "quitarse la vida"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "A veces sí, pero no tengo ningún plan. Pienso en mis hijos.",
+          "english": "Sometimes yes, but I do not have any plan. I think about my children."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Gracias por ser sincera. ¿Se siente segura en este momento?",
+          "english": "Thank you for being honest. Do you feel safe right now?",
+          "blank": "segura"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, estoy segura ahora. Pero tengo miedo de que vuelva a pasar.",
+          "english": "Yes, I am safe now. But I am afraid it will happen again."
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Vamos a hacer un plan de seguridad juntos. Si está en peligro, llame al 911.",
+          "english": "We are going to make a safety plan together. If you are in danger, call 911.",
+          "blank": "plan de seguridad"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Gracias. ¿Hay alguna línea de ayuda en español?",
+          "english": "Thank you. Is there a helpline in Spanish?"
+        },
+        {
+          "speaker": "Counselor",
+          "spanish": "Sí, la línea de crisis es el 988, abierta las 24 horas. Oprima 2 para español.",
+          "english": "Yes, the crisis line is 988, open 24 hours. Press 2 for Spanish.",
+          "blank": "línea de crisis"
+        }
+      ]
+    }
+  ]
+}

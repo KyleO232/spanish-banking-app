@@ -52,6 +52,7 @@
   --night-fill: #121a33;
   --sunflower-fill: #6b4a12;
   --lighthouse-fill: #25304f;
+  --calm-fill: #3b4b4a;
   --coin: #0f9d8a;
 
   --sans: 'Nunito Variable', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -118,6 +119,7 @@
     --night-fill: #090e1d;
     --sunflower-fill: #2e2008;
     --lighthouse-fill: #121a2d;
+    --calm-fill: #1d2827;
     --coin: #35c9a5;
   }
 }
