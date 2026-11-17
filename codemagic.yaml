@@ -1,0 +1,46 @@
+# Cloud build for the iPhone app, so no Mac is needed. NOT RUN YET: it needs three things first
+# (see the notes at the end of this file), and it will probably need small fixes the first time.
+#
+# What it does: builds the web app, copies it into the iOS project, signs it, and sends it to
+# TestFlight so you can install it on your iPhone.
+workflows:
+  ios-testflight:
+    name: iOS to TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 30
+    integrations:
+      app_store_connect: Spanish for Work # the name you give the App Store Connect API key in Codemagic
+    environment:
+      node: 22
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.spanishforwork.app
+      vars:
+        XCODE_PROJECT: ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+    scripts:
+      - name: Install packages
+        script: npm ci
+      - name: Build the web app
+        script: npm run build
+      - name: Copy the web app into the iOS project
+        script: npx cap sync ios
+      - name: Use the signing files Codemagic made
+        script: xcode-project use-profiles
+      - name: Give this build a new build number
+        script: sed -i '' "s/CURRENT_PROJECT_VERSION = [0-9]*;/CURRENT_PROJECT_VERSION = $BUILD_NUMBER;/" "$CM_BUILD_DIR/$XCODE_PROJECT/project.pbxproj"
+      - name: Build the app
+        script: xcode-project build-ipa --project "$CM_BUILD_DIR/$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+
+# Before it can run:
+#  1. An Apple Developer Program membership.
+#  2. The app created in App Store Connect with the bundle ID com.spanishforwork.app.
+#  3. A Codemagic account connected to the GitHub repo, with an App Store Connect API key added
+#     under Teams > Integrations, named exactly as in `app_store_connect` above.

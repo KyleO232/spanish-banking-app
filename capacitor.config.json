@@ -1,0 +1,17 @@
+{
+  "appId": "com.spanishforwork.app",
+  "appName": "Spanish for Work",
+  "webDir": "dist",
+  "backgroundColor": "#151c3d",
+  "ios": {
+    "contentInset": "never"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "launchShowDuration": 1200,
+      "backgroundColor": "#151c3d",
+      "showSpinner": false
+    }
+  }
+}

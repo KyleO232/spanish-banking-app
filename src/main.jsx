@@ -17,6 +17,11 @@ if ('serviceWorker' in navigator && import.meta.env.PROD && location.protocol.st
   })
 }
 
+// Inside the iOS / Android app: status bar, back button and launch screen.
+if (window.Capacitor?.isNativePlatform?.()) {
+  import('./native.js').then((native) => native.initNative()).catch(() => {})
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
