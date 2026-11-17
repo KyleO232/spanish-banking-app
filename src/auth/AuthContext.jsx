@@ -125,11 +125,24 @@ export function AuthProvider({ children }) {
   }, [userId, syncedUserId]);
 
   const signInWithEmail = useCallback(async (email) => {
-    const { error } = await supabase.auth.signInWithOtp({
+    const request = supabase.auth.signInWithOtp({
       email,
       options: { emailRedirectTo: `${window.location.origin}${window.location.pathname}` },
     });
-    if (error) throw error;
+    // If the email service is not answering, say so instead of spinning forever.
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = setTimeout(
+        () => reject(new Error('Sending the email is taking too long. Please wait a minute and try again.')),
+        20000
+      );
+    });
+    try {
+      const { error } = await Promise.race([request, timeout]);
+      if (error) throw error;
+    } finally {
+      clearTimeout(timer);
+    }
   }, []);
 
   const verifyCode = useCallback(async (email, token) => {
