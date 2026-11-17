@@ -623,8 +623,8 @@
       "note": "",
       "block": "First Aid",
       "example": {
-        "es": "Para un desmayo, puede levantar las piernas de la persona.",
-        "en": "For a fainting spell, you can raise the person's legs."
+        "es": "Si no hay lesiones, puede levantar las piernas de la persona.",
+        "en": "If there are no injuries, you can raise the person's legs."
       }
     },
     {
@@ -688,7 +688,7 @@
       }
     },
     {
-      "spanish": "el suero",
+      "spanish": "el suero / los líquidos intravenosos",
       "english": "IV fluids",
       "note": "",
       "block": "Emergency Room Care",
@@ -882,7 +882,8 @@
     "US Spanish speakers come from many countries, so words vary: \"el ataque al corazón\" or \"el infarto\", \"el derrame cerebral\" or \"la embolia\", \"atragantarse\" or \"ahogarse con comida\", \"la curita\" or \"la banda adhesiva\", \"el collarín\" or \"el cuello ortopédico\".",
     "Give first aid only as far as your training and your workplace protocol allow, and when in doubt call 911. This module teaches the words, not the medical steps.",
     "Ask for the patient's ID and a family contact, and ask who can make medical decisions if the patient cannot. Share information only with people the patient or the law allows.",
-    "Warning signs of a stroke are a drooping face, weakness in an arm or trouble speaking. Call 911 right away and note the time the signs started."
+    "Warning signs of a stroke are a drooping face, weakness in an arm or trouble speaking. Call 911 right away and note the time the signs started.",
+    "First aid steps are different for babies, children and adults, and the guidance changes over time. Teach the actual steps only in a certified first aid class."
   ],
   "roleplays": [
     {
@@ -1050,19 +1051,19 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Debe enfriar la quemadura con agua fresca, no con hielo.",
-          "english": "You should cool the burn with cool water, not with ice.",
+          "spanish": "Debe enfriar la quemadura con agua fresca por al menos diez minutos, no con hielo.",
+          "english": "You should cool the burn with cool water for at least ten minutes, not with ice.",
           "blank": "enfriar la quemadura"
         },
         {
           "speaker": "Patient",
-          "spanish": "¿Qué hago si mi hijo se atraganta con comida?",
-          "english": "What do I do if my son chokes on food?"
+          "spanish": "¿Qué hago si mi esposo se atraganta con comida?",
+          "english": "What do I do if my husband chokes on food?"
         },
         {
           "speaker": "Nurse",
-          "spanish": "Haga la maniobra de Heimlich y llame al 911.",
-          "english": "Do the Heimlich maneuver and call 911.",
+          "spanish": "Con un adulto, haga la maniobra de Heimlich y llame al 911. Con un bebé es diferente: pida ayuda y llame al 911.",
+          "english": "With an adult, do the Heimlich maneuver and call 911. With a baby it is different: get help and call 911.",
           "blank": "maniobra de Heimlich"
         },
         {
@@ -1072,8 +1073,8 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Acuéstelo, levante las piernas y manténgalo abrigado con una manta.",
-          "english": "Lay him down, raise his legs and keep him warm with a blanket.",
+          "spanish": "Acuéstelo y, si no tiene ninguna lesión, levante un poco las piernas. Cúbralo con una manta y llame al 911 si no despierta pronto.",
+          "english": "Lay him down and, if he has no injury, raise his legs a little. Cover him with a blanket and call 911 if he does not wake up soon.",
           "blank": "manta"
         },
         {

@@ -988,9 +988,9 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "¿Cuánto fue la fiebre? ¿Se tomó la temperatura en casa?",
-          "english": "How high was the fever? Did you take your temperature at home?",
-          "blank": "fiebre"
+          "spanish": "¿Qué temperatura tuvo? ¿Se la tomó en casa?",
+          "english": "What temperature did you have? Did you take it at home?",
+          "blank": "temperatura"
         },
         {
           "speaker": "Patient",
@@ -1005,8 +1005,8 @@
         },
         {
           "speaker": "Patient",
-          "spanish": "Náuseas sí, y vomité dos veces. También tengo diarrea.",
-          "english": "Nausea yes, and I vomited twice. I also have diarrhea."
+          "spanish": "Sí, tengo náuseas y vomité dos veces. También tengo diarrea.",
+          "english": "Yes, I have nausea and I vomited twice. I also have diarrhea."
         },
         {
           "speaker": "Nurse",
@@ -1067,8 +1067,8 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Puede complicarla. Con diabetes es importante tomar mucho líquido y controlar el azúcar.",
-          "english": "It can. With diabetes it is important to drink a lot of fluids and watch your blood sugar.",
+          "spanish": "Puede hacer que la gripe sea más grave. Con diabetes es importante tomar muchos líquidos y controlar el azúcar.",
+          "english": "It can make the flu worse. With diabetes it is important to drink a lot of fluids and watch your blood sugar.",
           "blank": "diabetes"
         },
         {

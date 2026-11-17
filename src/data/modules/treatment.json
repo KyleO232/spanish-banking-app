@@ -636,8 +636,8 @@
       "note": "",
       "block": "Care at Home",
       "example": {
-        "es": "Le doy una nota del médico para su trabajo.",
-        "en": "I'm giving you a doctor's note for your job."
+        "es": "Le voy a dar una nota del médico para su trabajo.",
+        "en": "I am going to give you a doctor's note for your job."
       }
     },
     {
@@ -701,12 +701,12 @@
       }
     },
     {
-      "spanish": "renovar la receta / resurtir la receta",
+      "spanish": "resurtir la receta / renovar la receta",
       "english": "to refill the prescription",
-      "note": "\"resurtir\" is common in the US",
+      "note": "\"resurtir\" is the common word at US pharmacies; \"renovar\" is understood everywhere",
       "block": "Pharmacy & Safety",
       "example": {
-        "es": "Puede renovar la receta en la farmacia.",
+        "es": "Puede resurtir la receta en la farmacia.",
         "en": "You can refill the prescription at the pharmacy."
       }
     },
@@ -867,7 +867,8 @@
     "Give times and amounts the way patients will use them: \"en la mañana\" or \"por la mañana\", \"cada ocho horas\", \"una cucharadita\". Use the dosing spoon or syringe from the pharmacy, not a kitchen spoon.",
     "Check understanding by asking the patient to say it back: \"¿Me puede decir cómo va a tomar el medicamento?\" Many patients nod even when they are unsure.",
     "Ask about allergies and other medicines before explaining a new one, and remind patients never to take two doses together: \"No tome dos juntas\".",
-    "Follow the provider's orders and do not recommend medicines yourself. For questions about doses or interactions, send the patient to the pharmacist, and use a qualified medical interpreter for anything about risks or consent."
+    "Follow the provider's orders and do not recommend medicines yourself. For questions about doses or interactions, send the patient to the pharmacist, and use a qualified medical interpreter for anything about risks or consent.",
+    "What to do about a missed dose depends on the medicine. Never tell a patient to \"just take it when you remember\": send them to the pharmacist or the prescriber."
   ],
   "roleplays": [
     {
@@ -978,8 +979,8 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Si llega a olvidar una dosis, tómela cuando se acuerde. No tome dos juntas.",
-          "english": "If you happen to forget a dose, take it when you remember. Do not take two together.",
+          "spanish": "Si llega a olvidar una dosis, no tome dos juntas. Pregunte a su farmacéutico o a su médico qué hacer.",
+          "english": "If you happen to forget a dose, do not take two together. Ask your pharmacist or doctor what to do.",
           "blank": "olvidar una dosis"
         },
         {
@@ -1024,7 +1025,7 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Ponga una compresa fría quince minutos y eleve la pierna.",
+          "spanish": "Ponga una compresa fría durante quince minutos y eleve la pierna.",
           "english": "Put a cold pack on it for fifteen minutes and elevate your leg.",
           "blank": "compresa fría"
         },
@@ -1046,8 +1047,8 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Le doy una nota del médico. No debe levantar objetos pesados por dos semanas.",
-          "english": "I will give you a doctor's note. You should not lift heavy objects for two weeks.",
+          "spanish": "Le voy a dar una nota del médico. No debe levantar objetos pesados por dos semanas.",
+          "english": "I am going to give you a doctor's note. You should not lift heavy objects for two weeks.",
           "blank": "levantar objetos pesados"
         },
         {
@@ -1092,9 +1093,9 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Puede renovar la receta en la farmacia. Le dan varias renovaciones.",
-          "english": "You can refill the prescription at the pharmacy. They give you several refills.",
-          "blank": "renovar la receta"
+          "spanish": "Puede resurtir la receta en la farmacia. La receta tiene varios resurtidos.",
+          "english": "You can refill the prescription at the pharmacy. The prescription has several refills.",
+          "blank": "resurtir la receta"
         },
         {
           "speaker": "Patient",

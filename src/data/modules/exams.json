@@ -268,13 +268,13 @@
       }
     },
     {
-      "spanish": "el brazalete",
+      "spanish": "el brazalete de presión",
       "english": "blood pressure cuff",
       "note": "",
       "block": "Vitals & Measurements",
       "example": {
-        "es": "Voy a ponerle el brazalete en el brazo.",
-        "en": "I am going to put the cuff on your arm."
+        "es": "Voy a ponerle el brazalete de presión en el brazo.",
+        "en": "I am going to put the blood pressure cuff on your arm."
       }
     },
     {
@@ -647,8 +647,8 @@
       }
     },
     {
-      "spanish": "el seguimiento",
-      "english": "follow-up",
+      "spanish": "la cita de seguimiento",
+      "english": "follow-up appointment",
       "note": "",
       "block": "Explaining the Visit",
       "example": {
@@ -913,9 +913,9 @@
         },
         {
           "speaker": "Nurse",
-          "spanish": "Ahora le pongo el brazalete en el brazo. Va a sentir presión por un momento.",
-          "english": "Now I will put the cuff on your arm. You will feel pressure for a moment.",
-          "blank": "brazalete"
+          "spanish": "Ahora le pongo el brazalete de presión en el brazo. Va a sentir presión por un momento.",
+          "english": "Now I will put the blood pressure cuff on your arm. You will feel pressure for a moment.",
+          "blank": "brazalete de presión"
         },
         {
           "speaker": "Patient",
@@ -1073,7 +1073,7 @@
           "speaker": "Nurse",
           "spanish": "Sí, necesita una cita de seguimiento con un especialista.",
           "english": "Yes, you need a follow-up appointment with a specialist.",
-          "blank": "seguimiento"
+          "blank": "cita de seguimiento"
         },
         {
           "speaker": "Patient",
