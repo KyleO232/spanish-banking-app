@@ -57,7 +57,7 @@ export default function RoleplayList() {
       />
       <div className="main mode-roleplay">
         <div className="page-intro">
-          <p>Scripted client/banker dialogues for reading practice.</p>
+          <p>Scripted conversations for reading practice.</p>
         </div>
         <div className="card-list">
           {roleplays.map((rp) => (

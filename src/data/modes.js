@@ -23,6 +23,6 @@ export const MODES = [
     key: 'roleplay',
     Icon: MessagesSquare,
     title: 'Roleplay',
-    desc: 'Read scripted client/banker dialogues.',
+    desc: 'Practice real conversations, one reply at a time.',
   },
 ];

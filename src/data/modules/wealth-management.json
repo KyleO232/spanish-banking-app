@@ -3,6 +3,7 @@
   "title": "Wealth Management",
   "description": "Everyday Spanish for wealth management conversations with US clients: client needs, investing basics, retirement and family planning (401(k), IRA, Social Security), and fees and paperwork.",
   "theme": "alpine",
+  "track": "banking",
   "terms": [
     {
       "spanish": "el patrimonio",

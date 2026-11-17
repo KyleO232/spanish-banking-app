@@ -3383,3 +3383,119 @@ a.stat-chip {
   transform: translateY(2px);
   box-shadow: none;
 }
+
+/* ---------- career track picker (Profile) ---------- */
+.track-card h2 {
+  margin: 0 0 4px;
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.track-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  box-shadow: 0 3px 0 var(--border);
+  background: var(--surface);
+  color: var(--text-h);
+  font: inherit;
+  text-align: left;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.15s ease;
+}
+
+.track-option:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.track-option.selected {
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent);
+  background: var(--accent-bg);
+}
+
+.track-option:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.track-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.track-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.track-es {
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.track-tagline {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.track-check {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.track-switched {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* forest pollen */
+.mote {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff6c2;
+  box-shadow: 0 0 8px 2px rgba(255, 238, 150, 0.8);
+  opacity: 0;
+  animation: mote-float 10s ease-in-out infinite;
+}
+
+@keyframes mote-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate3d(var(--drift), -40px, 0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(calc(var(--drift) * -0.6), -90px, 0) scale(0.7);
+    opacity: 0;
+  }
+}

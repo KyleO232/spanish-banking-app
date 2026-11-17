@@ -1,8 +1,66 @@
 import { useState } from 'react';
-import { Cloud, CloudOff, LogOut, Mail, RefreshCw, ShieldCheck } from 'lucide-react';
+import { Check, Cloud, CloudOff, LogOut, Mail, RefreshCw, ShieldCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import TopBar from '../components/TopBar.jsx';
 import WeekStreak from '../components/WeekStreak.jsx';
 import { useAuth } from '../auth/AuthContext.jsx';
+import { TRACKS, getTrackInfo } from '../data/tracks.js';
+import { setTrack, useTrack } from '../utils/track.js';
+
+// Pick the career the learner is studying Spanish for. Progress, XP and coins are shared;
+// each track has its own path of lessons.
+function TrackPicker() {
+  const current = useTrack();
+  const [justChanged, setJustChanged] = useState(false);
+
+  function choose(id) {
+    if (id === current) return;
+    setTrack(id);
+    setJustChanged(true);
+  }
+
+  return (
+    <div className="card track-card">
+      <h2>Your track</h2>
+      <p className="account-lead">Choose the kind of work you want to use Spanish for.</p>
+      <div className="track-list" role="radiogroup" aria-label="Career track">
+        {TRACKS.map((track) => {
+          const selected = track.id === current;
+          return (
+            <button
+              key={track.id}
+              type="button"
+              role="radio"
+              aria-checked={selected}
+              disabled={!track.available}
+              className={`track-option ${selected ? 'selected' : ''}`}
+              onClick={() => choose(track.id)}
+            >
+              <span className="track-icon">
+                <track.Icon size={24} strokeWidth={2.3} />
+              </span>
+              <span className="track-text">
+                <strong>
+                  {track.title} <span className="track-es">· {track.es}</span>
+                </strong>
+                <span className="track-tagline">{track.available ? track.tagline : 'Coming soon'}</span>
+              </span>
+              {selected && <Check className="track-check" size={22} strokeWidth={3} />}
+            </button>
+          );
+        })}
+      </div>
+      {justChanged && (
+        <div className="track-switched">
+          Switched to {getTrackInfo(current).title}.{' '}
+          <Link to="/" className="link-btn">
+            Go to your path
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function SignIn() {
   const { signInWithEmail, verifyCode } = useAuth();
@@ -195,6 +253,8 @@ export default function Account() {
       <TopBar title="Profile" showBack={false} />
       <div className="main">
         <WeekStreak />
+
+        <TrackPicker />
         {!ready ? (
           <div className="empty-state">Loading…</div>
         ) : user ? (

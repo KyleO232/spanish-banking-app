@@ -1,0 +1,1185 @@
+{
+  "id": "anatomy",
+  "title": "Anatomy",
+  "description": "Everyday Spanish for talking about the body with patients: body parts, bones, organs, and body systems like blood, nerves and muscles.",
+  "theme": "forest",
+  "track": "medical",
+  "roles": {
+    "you": "Nurse",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "la cabeza",
+      "english": "head",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me duele la cabeza desde ayer.",
+        "en": "I've had a headache since yesterday."
+      }
+    },
+    {
+      "spanish": "la cara",
+      "english": "face",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Tiene la cara hinchada.",
+        "en": "Your face is swollen."
+      }
+    },
+    {
+      "spanish": "el ojo",
+      "english": "eye",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me entró algo en el ojo.",
+        "en": "Something got in my eye."
+      }
+    },
+    {
+      "spanish": "la oreja",
+      "english": "ear",
+      "note": "the outer ear. El oído is the inner ear and your hearing",
+      "block": "Body Parts",
+      "example": {
+        "es": "Se golpeó la oreja con la puerta.",
+        "en": "You hit your ear on the door."
+      }
+    },
+    {
+      "spanish": "la nariz",
+      "english": "nose",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Le sangra la nariz desde hace una hora.",
+        "en": "Your nose has been bleeding for an hour."
+      }
+    },
+    {
+      "spanish": "la boca",
+      "english": "mouth",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Abra la boca, por favor.",
+        "en": "Open your mouth, please."
+      }
+    },
+    {
+      "spanish": "los dientes",
+      "english": "teeth",
+      "note": "one tooth: el diente",
+      "block": "Body Parts",
+      "example": {
+        "es": "¿Se cepilla los dientes todos los días?",
+        "en": "Do you brush your teeth every day?"
+      }
+    },
+    {
+      "spanish": "la lengua",
+      "english": "tongue",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Saque la lengua, por favor.",
+        "en": "Stick out your tongue, please."
+      }
+    },
+    {
+      "spanish": "la garganta",
+      "english": "throat",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me duele la garganta cuando trago.",
+        "en": "My throat hurts when I swallow."
+      }
+    },
+    {
+      "spanish": "el cuello",
+      "english": "neck",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Mueva el cuello hacia la derecha.",
+        "en": "Move your neck to the right."
+      }
+    },
+    {
+      "spanish": "el hombro",
+      "english": "shoulder",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me duele el hombro cuando levanto el brazo.",
+        "en": "My shoulder hurts when I raise my arm."
+      }
+    },
+    {
+      "spanish": "el brazo",
+      "english": "arm",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Extienda el brazo para tomarle la presión.",
+        "en": "Stretch out your arm so I can take your blood pressure."
+      }
+    },
+    {
+      "spanish": "el codo",
+      "english": "elbow",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "No puedo doblar el codo.",
+        "en": "I can't bend my elbow."
+      }
+    },
+    {
+      "spanish": "la muñeca",
+      "english": "wrist",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Tiene la muñeca hinchada.",
+        "en": "Your wrist is swollen."
+      }
+    },
+    {
+      "spanish": "la mano",
+      "english": "hand",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "¿Le duele la mano derecha?",
+        "en": "Does your right hand hurt?"
+      }
+    },
+    {
+      "spanish": "el dedo",
+      "english": "finger",
+      "note": "also: el dedo del pie (toe)",
+      "block": "Body Parts",
+      "example": {
+        "es": "Se cortó el dedo con un cuchillo.",
+        "en": "You cut your finger with a knife."
+      }
+    },
+    {
+      "spanish": "el pecho",
+      "english": "chest",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "¿Siente presión en el pecho?",
+        "en": "Do you feel pressure in your chest?"
+      }
+    },
+    {
+      "spanish": "la espalda",
+      "english": "back",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me duele la espalda cuando me agacho.",
+        "en": "My back hurts when I bend over."
+      }
+    },
+    {
+      "spanish": "el abdomen / el vientre",
+      "english": "abdomen / belly",
+      "note": "also: la panza (informal)",
+      "block": "Body Parts",
+      "example": {
+        "es": "Voy a presionar el abdomen para ver dónde le duele.",
+        "en": "I'm going to press on your abdomen to see where it hurts."
+      }
+    },
+    {
+      "spanish": "la pierna",
+      "english": "leg",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Tiene la pierna izquierda hinchada.",
+        "en": "Your left leg is swollen."
+      }
+    },
+    {
+      "spanish": "la rodilla",
+      "english": "knee",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Me duele la rodilla cuando subo las escaleras.",
+        "en": "My knee hurts when I climb stairs."
+      }
+    },
+    {
+      "spanish": "el tobillo",
+      "english": "ankle",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Se torció el tobillo jugando fútbol.",
+        "en": "You twisted your ankle playing soccer."
+      }
+    },
+    {
+      "spanish": "el pie",
+      "english": "foot",
+      "note": "",
+      "block": "Body Parts",
+      "example": {
+        "es": "Tiene el pie izquierdo hinchado.",
+        "en": "Your left foot is swollen."
+      }
+    },
+    {
+      "spanish": "el hueso",
+      "english": "bone",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "Creo que me rompí un hueso.",
+        "en": "I think I broke a bone."
+      }
+    },
+    {
+      "spanish": "el esqueleto",
+      "english": "skeleton",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "El esqueleto sostiene el cuerpo y protege los órganos.",
+        "en": "The skeleton supports the body and protects the organs."
+      }
+    },
+    {
+      "spanish": "el cráneo",
+      "english": "skull",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "El cráneo protege el cerebro.",
+        "en": "The skull protects the brain."
+      }
+    },
+    {
+      "spanish": "la mandíbula",
+      "english": "jaw",
+      "note": "also: la quijada",
+      "block": "Bones",
+      "example": {
+        "es": "Me duele la mandíbula cuando mastico.",
+        "en": "My jaw hurts when I chew."
+      }
+    },
+    {
+      "spanish": "la columna vertebral",
+      "english": "spine",
+      "note": "also: la espina dorsal",
+      "block": "Bones",
+      "example": {
+        "es": "Una caída puede lastimar la columna vertebral.",
+        "en": "A fall can hurt your spine."
+      }
+    },
+    {
+      "spanish": "la costilla",
+      "english": "rib",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "Creo que me fracturé una costilla.",
+        "en": "I think I fractured a rib."
+      }
+    },
+    {
+      "spanish": "el esternón",
+      "english": "breastbone / sternum",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "El esternón está en el centro del pecho.",
+        "en": "The breastbone is in the middle of the chest."
+      }
+    },
+    {
+      "spanish": "la clavícula",
+      "english": "collarbone",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "Se rompió la clavícula al caerse de la bicicleta.",
+        "en": "You broke your collarbone falling off your bike."
+      }
+    },
+    {
+      "spanish": "el omóplato",
+      "english": "shoulder blade",
+      "note": "also: la escápula",
+      "block": "Bones",
+      "example": {
+        "es": "Siento un dolor debajo del omóplato.",
+        "en": "I feel a pain under my shoulder blade."
+      }
+    },
+    {
+      "spanish": "el húmero",
+      "english": "humerus",
+      "note": "the bone of the upper arm",
+      "block": "Bones",
+      "example": {
+        "es": "El húmero va del hombro al codo.",
+        "en": "The humerus runs from the shoulder to the elbow."
+      }
+    },
+    {
+      "spanish": "el cúbito",
+      "english": "ulna",
+      "note": "forearm bone on the pinky side",
+      "block": "Bones",
+      "example": {
+        "es": "El cúbito está en el antebrazo, del lado del dedo meñique.",
+        "en": "The ulna is in the forearm, on the pinky side."
+      }
+    },
+    {
+      "spanish": "el radio",
+      "english": "radius",
+      "note": "forearm bone on the thumb side",
+      "block": "Bones",
+      "example": {
+        "es": "El radio está en el antebrazo, del lado del pulgar.",
+        "en": "The radius is in the forearm, on the thumb side."
+      }
+    },
+    {
+      "spanish": "la pelvis",
+      "english": "pelvis",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "La pelvis conecta la columna con las piernas.",
+        "en": "The pelvis connects the spine to the legs."
+      }
+    },
+    {
+      "spanish": "la cadera",
+      "english": "hip",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "Se cayó y le duele la cadera.",
+        "en": "You fell and your hip hurts."
+      }
+    },
+    {
+      "spanish": "el fémur",
+      "english": "femur",
+      "note": "the thigh bone, the longest bone in the body",
+      "block": "Bones",
+      "example": {
+        "es": "El fémur es el hueso más largo del cuerpo.",
+        "en": "The femur is the longest bone in the body."
+      }
+    },
+    {
+      "spanish": "la rótula",
+      "english": "kneecap",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "Se golpeó la rótula contra el suelo.",
+        "en": "You hit your kneecap on the floor."
+      }
+    },
+    {
+      "spanish": "la tibia",
+      "english": "shinbone / tibia",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "La tibia está entre la rodilla y el tobillo.",
+        "en": "The shinbone is between the knee and the ankle."
+      }
+    },
+    {
+      "spanish": "el peroné",
+      "english": "fibula",
+      "note": "the thin bone next to the tibia",
+      "block": "Bones",
+      "example": {
+        "es": "El peroné es un hueso delgado de la pierna.",
+        "en": "The fibula is a thin bone in the leg."
+      }
+    },
+    {
+      "spanish": "la articulación",
+      "english": "joint",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "La rodilla es una articulación muy grande.",
+        "en": "The knee is a very big joint."
+      }
+    },
+    {
+      "spanish": "el cartílago",
+      "english": "cartilage",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "El cartílago protege las articulaciones.",
+        "en": "Cartilage protects the joints."
+      }
+    },
+    {
+      "spanish": "la médula ósea",
+      "english": "bone marrow",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "La médula ósea produce las células de la sangre.",
+        "en": "Bone marrow makes blood cells."
+      }
+    },
+    {
+      "spanish": "la fractura",
+      "english": "fracture / broken bone",
+      "note": "",
+      "block": "Bones",
+      "example": {
+        "es": "La radiografía muestra una fractura.",
+        "en": "The X-ray shows a fracture."
+      }
+    },
+    {
+      "spanish": "el órgano",
+      "english": "organ",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El corazón es un órgano vital.",
+        "en": "The heart is a vital organ."
+      }
+    },
+    {
+      "spanish": "el cerebro",
+      "english": "brain",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El cerebro controla todo el cuerpo.",
+        "en": "The brain controls the whole body."
+      }
+    },
+    {
+      "spanish": "el corazón",
+      "english": "heart",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Voy a escuchar el corazón con el estetoscopio.",
+        "en": "I'm going to listen to your heart with the stethoscope."
+      }
+    },
+    {
+      "spanish": "los pulmones",
+      "english": "lungs",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Respire hondo para escuchar los pulmones.",
+        "en": "Breathe deeply so I can listen to your lungs."
+      }
+    },
+    {
+      "spanish": "el hígado",
+      "english": "liver",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El hígado limpia la sangre.",
+        "en": "The liver cleans the blood."
+      }
+    },
+    {
+      "spanish": "el estómago",
+      "english": "stomach",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Me duele el estómago después de comer.",
+        "en": "My stomach hurts after I eat."
+      }
+    },
+    {
+      "spanish": "los riñones",
+      "english": "kidneys",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Los riñones filtran la sangre y producen orina.",
+        "en": "The kidneys filter the blood and make urine."
+      }
+    },
+    {
+      "spanish": "la vejiga",
+      "english": "bladder",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "La vejiga guarda la orina.",
+        "en": "The bladder stores urine."
+      }
+    },
+    {
+      "spanish": "el intestino delgado",
+      "english": "small intestine",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "La comida pasa al intestino delgado.",
+        "en": "Food moves into the small intestine."
+      }
+    },
+    {
+      "spanish": "el intestino grueso",
+      "english": "large intestine",
+      "note": "also: el colon",
+      "block": "Organs",
+      "example": {
+        "es": "El intestino grueso absorbe el agua.",
+        "en": "The large intestine absorbs water."
+      }
+    },
+    {
+      "spanish": "el páncreas",
+      "english": "pancreas",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El páncreas produce la insulina.",
+        "en": "The pancreas makes insulin."
+      }
+    },
+    {
+      "spanish": "la vesícula biliar",
+      "english": "gallbladder",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Le vamos a quitar la vesícula biliar.",
+        "en": "We are going to remove your gallbladder."
+      }
+    },
+    {
+      "spanish": "el bazo",
+      "english": "spleen",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El bazo ayuda a filtrar la sangre.",
+        "en": "The spleen helps filter the blood."
+      }
+    },
+    {
+      "spanish": "el esófago",
+      "english": "esophagus",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El esófago lleva la comida al estómago.",
+        "en": "The esophagus carries food to the stomach."
+      }
+    },
+    {
+      "spanish": "la tráquea",
+      "english": "windpipe",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El aire pasa por la tráquea hasta los pulmones.",
+        "en": "Air passes through the windpipe to the lungs."
+      }
+    },
+    {
+      "spanish": "el diafragma",
+      "english": "diaphragm",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El diafragma ayuda a respirar.",
+        "en": "The diaphragm helps you breathe."
+      }
+    },
+    {
+      "spanish": "el apéndice",
+      "english": "appendix",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Le van a operar el apéndice.",
+        "en": "They are going to operate on your appendix."
+      }
+    },
+    {
+      "spanish": "la tiroides",
+      "english": "thyroid",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "La tiroides controla el metabolismo.",
+        "en": "The thyroid controls your metabolism."
+      }
+    },
+    {
+      "spanish": "el útero",
+      "english": "uterus",
+      "note": "also: la matriz",
+      "block": "Organs",
+      "example": {
+        "es": "El bebé crece dentro del útero.",
+        "en": "The baby grows inside the uterus."
+      }
+    },
+    {
+      "spanish": "los ovarios",
+      "english": "ovaries",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "Los ovarios producen óvulos y hormonas.",
+        "en": "The ovaries make eggs and hormones."
+      }
+    },
+    {
+      "spanish": "la próstata",
+      "english": "prostate",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "El médico le va a revisar la próstata.",
+        "en": "The doctor is going to check your prostate."
+      }
+    },
+    {
+      "spanish": "la piel",
+      "english": "skin",
+      "note": "",
+      "block": "Organs",
+      "example": {
+        "es": "La piel es el órgano más grande del cuerpo.",
+        "en": "The skin is the largest organ in the body."
+      }
+    },
+    {
+      "spanish": "el sistema circulatorio",
+      "english": "circulatory system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El sistema circulatorio lleva la sangre a todo el cuerpo.",
+        "en": "The circulatory system carries blood to the whole body."
+      }
+    },
+    {
+      "spanish": "el sistema respiratorio",
+      "english": "respiratory system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El asma afecta el sistema respiratorio.",
+        "en": "Asthma affects the respiratory system."
+      }
+    },
+    {
+      "spanish": "el sistema digestivo",
+      "english": "digestive system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El sistema digestivo transforma la comida en energía.",
+        "en": "The digestive system turns food into energy."
+      }
+    },
+    {
+      "spanish": "el sistema nervioso",
+      "english": "nervous system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El sistema nervioso envía mensajes del cerebro al cuerpo.",
+        "en": "The nervous system sends messages from the brain to the body."
+      }
+    },
+    {
+      "spanish": "el sistema inmunológico",
+      "english": "immune system",
+      "note": "also: el sistema inmunitario",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El sistema inmunológico nos defiende de las infecciones.",
+        "en": "The immune system defends us from infections."
+      }
+    },
+    {
+      "spanish": "el sistema urinario",
+      "english": "urinary system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Una infección del sistema urinario causa dolor al orinar.",
+        "en": "An infection of the urinary system causes pain when urinating."
+      }
+    },
+    {
+      "spanish": "el sistema reproductor",
+      "english": "reproductive system",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El médico revisa el sistema reproductor durante el examen.",
+        "en": "The doctor checks the reproductive system during the exam."
+      }
+    },
+    {
+      "spanish": "el músculo",
+      "english": "muscle",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Tiene un músculo desgarrado en la pierna.",
+        "en": "You have a torn muscle in your leg."
+      }
+    },
+    {
+      "spanish": "el tendón",
+      "english": "tendon",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "El tendón une el músculo con el hueso.",
+        "en": "The tendon connects the muscle to the bone."
+      }
+    },
+    {
+      "spanish": "el ligamento",
+      "english": "ligament",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Se rompió un ligamento de la rodilla.",
+        "en": "You tore a ligament in your knee."
+      }
+    },
+    {
+      "spanish": "el nervio",
+      "english": "nerve",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Un nervio pinzado puede causar dolor en la espalda.",
+        "en": "A pinched nerve can cause back pain."
+      }
+    },
+    {
+      "spanish": "la médula espinal",
+      "english": "spinal cord",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "La médula espinal pasa por dentro de la columna vertebral.",
+        "en": "The spinal cord runs inside the spine."
+      }
+    },
+    {
+      "spanish": "la vena",
+      "english": "vein",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Voy a buscar una vena para sacarle sangre.",
+        "en": "I'm going to find a vein to draw your blood."
+      }
+    },
+    {
+      "spanish": "la arteria",
+      "english": "artery",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "La arteria carótida lleva sangre al cerebro.",
+        "en": "The carotid artery carries blood to the brain."
+      }
+    },
+    {
+      "spanish": "la sangre",
+      "english": "blood",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Necesito una muestra de sangre.",
+        "en": "I need a blood sample."
+      }
+    },
+    {
+      "spanish": "los glóbulos rojos",
+      "english": "red blood cells",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Los glóbulos rojos llevan el oxígeno.",
+        "en": "Red blood cells carry oxygen."
+      }
+    },
+    {
+      "spanish": "los glóbulos blancos",
+      "english": "white blood cells",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Los glóbulos blancos combaten las infecciones.",
+        "en": "White blood cells fight infections."
+      }
+    },
+    {
+      "spanish": "el pulso",
+      "english": "pulse",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Voy a tomarle el pulso en la muñeca.",
+        "en": "I'm going to take your pulse at your wrist."
+      }
+    },
+    {
+      "spanish": "la presión arterial",
+      "english": "blood pressure",
+      "note": "also: la presión",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Su presión arterial está un poco alta.",
+        "en": "Your blood pressure is a little high."
+      }
+    },
+    {
+      "spanish": "la hormona",
+      "english": "hormone",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "La insulina es una hormona que regula el azúcar en la sangre.",
+        "en": "Insulin is a hormone that regulates blood sugar."
+      }
+    },
+    {
+      "spanish": "la glándula",
+      "english": "gland",
+      "note": "",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Tiene una glándula inflamada en el cuello.",
+        "en": "You have a swollen gland in your neck."
+      }
+    },
+    {
+      "spanish": "los ganglios linfáticos",
+      "english": "lymph nodes",
+      "note": "also: los ganglios",
+      "block": "Body Systems & More",
+      "example": {
+        "es": "Los ganglios linfáticos se inflaman cuando hay una infección.",
+        "en": "Lymph nodes swell when there is an infection."
+      }
+    }
+  ],
+  "registerNotes": [
+    "With patients, use \"usted\" and \"le\"/\"su\", especially with older adults. Use \"tú\" with young children, and with adults only if they invite it.",
+    "Spanish says \"Me duele la cabeza\" (the head), not \"mi cabeza\". Use the article with body parts: \"¿Le duele el brazo?\" and \"Abra la boca\".",
+    "Use \"le duele\" for one pain and \"le duelen\" for more than one: \"¿Le duele la rodilla?\" and \"¿Le duelen las rodillas?\"",
+    "US Spanish speakers come from many countries, so body words vary: \"la panza\", \"la barriga\" or \"el vientre\" for the belly; \"la oreja\" is the outer ear and \"el oído\" is the inner ear and your hearing.",
+    "Ask before you touch: \"¿Me permite tocarle el abdomen?\" and say what you are doing: \"Voy a escuchar su corazón\".",
+    "This module helps with greetings, exams and simple questions. For diagnoses, consent and treatment decisions, always use a qualified medical interpreter."
+  ],
+  "roleplays": [
+    {
+      "id": "where-does-it-hurt",
+      "title": "Where Does It Hurt?",
+      "block": "Body Parts",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días, señora López. ¿Dónde le duele?",
+          "english": "Good morning, Mrs. López. Where does it hurt?",
+          "blank": "Dónde le duele"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me duele mucho la cabeza y también la garganta.",
+          "english": "My head hurts a lot, and my throat too."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a revisarle la garganta. Abra la boca y saque la lengua, por favor.",
+          "english": "I'm going to check your throat. Open your mouth and stick out your tongue, please.",
+          "blank": "lengua"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Aaah. ¿La tiene roja?",
+          "english": "Ahh. Is it red?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Un poco. ¿Le duele el cuello cuando traga?",
+          "english": "A little. Does your neck hurt when you swallow?",
+          "blank": "cuello"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, un poco. Y me duele el hombro derecho también.",
+          "english": "Yes, a little. And my right shoulder hurts too."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Levante el brazo despacio. ¿Le duele el codo?",
+          "english": "Raise your arm slowly. Does your elbow hurt?",
+          "blank": "codo"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "El codo no, pero tengo la muñeca hinchada desde que me caí.",
+          "english": "Not the elbow, but my wrist has been swollen since I fell."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a examinarle la muñeca y la mano. ¿Puede mover los dedos?",
+          "english": "I'm going to examine your wrist and hand. Can you move your fingers?",
+          "blank": "dedos"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, puedo moverlos. Pero también me duele el tobillo.",
+          "english": "Yes, I can move them. But my ankle hurts too."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Entiendo. Siéntese en la camilla y le reviso el tobillo.",
+          "english": "I understand. Sit on the exam table and I'll check your ankle.",
+          "blank": "tobillo"
+        }
+      ]
+    },
+    {
+      "id": "after-a-fall",
+      "title": "After a Fall: Checking the Bones",
+      "block": "Bones",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenas tardes. Vamos a tomarle una radiografía para ver los huesos.",
+          "english": "Good afternoon. We're going to take an X-ray to look at your bones.",
+          "blank": "huesos"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me caí de la escalera. Creo que me rompí algo.",
+          "english": "I fell off the ladder. I think I broke something."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Dónde le duele más? ¿La cadera, la rodilla o el brazo?",
+          "english": "Where does it hurt the most? Your hip, your knee, or your arm?",
+          "blank": "cadera"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "La cadera y la muñeca. No puedo mover la muñeca.",
+          "english": "My hip and my wrist. I can't move my wrist."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede haber una fractura. La radiografía nos lo va a mostrar.",
+          "english": "There may be a fracture. The X-ray will show us.",
+          "blank": "fractura"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es grave? ¿Se rompió el hueso?",
+          "english": "Is it serious? Is the bone broken?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Todavía no sabemos. Primero vamos a ver el cúbito y el radio, los huesos del antebrazo.",
+          "english": "We don't know yet. First we'll look at the ulna and the radius, the bones of the forearm.",
+          "blank": "cúbito"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y la cadera? Me duele cuando camino.",
+          "english": "And my hip? It hurts when I walk."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "También vamos a revisar la pelvis y el fémur, por la caída.",
+          "english": "We're also going to check your pelvis and femur, because of the fall.",
+          "blank": "fémur"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Gracias. ¿Me van a poner un yeso?",
+          "english": "Thank you. Are you going to put a cast on me?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Si hay una fractura, sí. El doctor le explicará cómo proteger la articulación mientras sana.",
+          "english": "If there is a fracture, yes. The doctor will explain how to protect the joint while it heals.",
+          "blank": "articulación"
+        }
+      ]
+    },
+    {
+      "id": "stomach-pain-and-tests",
+      "title": "Stomach Pain and Tests",
+      "block": "Organs",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. El doctor quiere revisar algunos órganos. ¿Dónde siente el dolor?",
+          "english": "Good morning. The doctor wants to check some organs. Where do you feel the pain?",
+          "blank": "órganos"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me duele el lado derecho del abdomen, abajo, y tengo náuseas.",
+          "english": "The lower right side of my abdomen hurts, and I feel nauseous."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Podría ser el apéndice. Vamos a hacerle una ecografía.",
+          "english": "It could be your appendix. We're going to do an ultrasound.",
+          "blank": "apéndice"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y si no es el apéndice? ¿Qué otra cosa puede ser?",
+          "english": "And if it's not my appendix? What else could it be?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede ser el hígado, la vesícula biliar o los intestinos. Por eso hacemos pruebas.",
+          "english": "It could be the liver, the gallbladder, or the intestines. That's why we do tests.",
+          "blank": "vesícula biliar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "También me dijeron que tengo los riñones un poco débiles.",
+          "english": "They also told me my kidneys are a little weak."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Entonces vamos a revisar los riñones y la vejiga con un análisis de orina.",
+          "english": "Then we'll check the kidneys and the bladder with a urine test.",
+          "blank": "vejiga"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi mamá tuvo problemas del corazón. ¿También me revisan el corazón?",
+          "english": "My mother had heart problems. Will you check my heart too?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, vamos a escuchar el corazón y los pulmones antes de la prueba.",
+          "english": "Yes, we'll listen to your heart and lungs before the test.",
+          "blank": "pulmones"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Entiendo. ¿Tengo que dejar de comer?",
+          "english": "I understand. Do I have to stop eating?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, no coma ni beba nada. El estómago debe estar vacío para la prueba.",
+          "english": "Yes, do not eat or drink anything. Your stomach must be empty for the test.",
+          "blank": "estómago"
+        }
+      ]
+    },
+    {
+      "id": "checkup-and-blood-test",
+      "title": "A Checkup and a Blood Test",
+      "block": "Body Systems & More",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. Voy a tomarle el pulso y la presión arterial.",
+          "english": "Good morning. I'm going to take your pulse and blood pressure.",
+          "blank": "pulso"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi doctor dice que tengo la presión alta. ¿Es del corazón?",
+          "english": "My doctor says I have high blood pressure. Is it from the heart?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede afectar el sistema circulatorio. Las venas y las arterias llevan la sangre por todo el cuerpo.",
+          "english": "It can affect the circulatory system. The veins and arteries carry blood throughout the body.",
+          "blank": "sistema circulatorio"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y por qué me duelen los músculos de las piernas?",
+          "english": "And why do the muscles in my legs hurt?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede ser por la circulación o por un problema en los nervios. Le voy a sacar sangre.",
+          "english": "It could be from circulation or a problem with the nerves. I'm going to draw your blood.",
+          "blank": "nervios"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué van a buscar en la sangre?",
+          "english": "What are you going to look for in the blood?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Vamos a contar los glóbulos rojos y los glóbulos blancos, y a medir las hormonas.",
+          "english": "We're going to count the red and white blood cells, and measure the hormones.",
+          "blank": "glóbulos rojos"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "También tengo los ganglios inflamados en el cuello.",
+          "english": "I also have swollen lymph nodes in my neck."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Eso puede indicar que el sistema inmunológico está combatiendo una infección.",
+          "english": "That can mean your immune system is fighting an infection.",
+          "blank": "sistema inmunológico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Pueden revisar también la tiroides? Mi hermana tiene problemas de glándulas.",
+          "english": "Can you also check my thyroid? My sister has gland problems."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, también vamos a pedir ese análisis. Las hormonas se producen en las glándulas.",
+          "english": "Yes, we will order that test too. Hormones are made in the glands.",
+          "blank": "glándulas"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flame, Zap } from 'lucide-react';
 import CoinIcon from '../components/CoinIcon.jsx';
 import { getLessonsWithState } from '../data/lessons.js';
+import { getTrackInfo } from '../data/tracks.js';
+import { useTrack } from '../utils/track.js';
 import { titleFor } from '../data/titles.js';
 import { getStats, getWallet } from '../utils/progress.js';
 import { useAuth } from '../auth/AuthContext.jsx';
@@ -10,7 +12,10 @@ import LessonPath from '../components/LessonPath.jsx';
 import AdminTools from '../components/AdminTools.jsx';
 
 export default function Home() {
-  const [lessons, setLessons] = useState(() => getLessonsWithState());
+  const trackId = useTrack();
+  const track = getTrackInfo(trackId);
+  const [allLessons, setLessons] = useState(() => getLessonsWithState());
+  const lessons = useMemo(() => allLessons.filter((l) => l.track === trackId), [allLessons, trackId]);
   const [stats, setStats] = useState(() => getStats());
   const [wallet, setWallet] = useState(() => getWallet());
   const { adminOn } = useAuth();
@@ -28,7 +33,7 @@ export default function Home() {
     <>
       <div className="topbar topbar-home">
         <div className="topbar-titles">
-          <h1>Spanish for Banking</h1>
+          <h1>{track.heading}</h1>
           <div className="subtitle">
             {adminOn ? (
               <span className="admin-badge">Admin mode · all unlocked</span>
@@ -59,7 +64,7 @@ export default function Home() {
         {lessons.length > 0 ? (
           <LessonPath lessons={lessons} />
         ) : (
-          <div className="empty-state">No modules found. Add a JSON file to src/data/modules.</div>
+          <div className="empty-state">No {track.title.toLowerCase()} modules yet.</div>
         )}
       </div>
     </>

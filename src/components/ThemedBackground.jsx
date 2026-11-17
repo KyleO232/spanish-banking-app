@@ -3,11 +3,16 @@ import beachImg from '../assets/backgrounds/beach.jpg';
 import autumnImg from '../assets/backgrounds/autumn.jpg';
 import alpineImg from '../assets/backgrounds/alpine.jpg';
 import springImg from '../assets/backgrounds/spring.jpg';
+import forestImg from '../assets/backgrounds/forest.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  forest: {
+    image: forestImg,
+    fill: 'var(--forest-fill)',
   },
   spring: {
     image: springImg,
@@ -106,6 +111,43 @@ function Petals() {
           <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
           <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
         </svg>
+      ))}
+    </div>
+  );
+}
+
+// Golden specks of pollen and light drifting up through the forest photo.
+function Motes() {
+  const motes = useMemo(
+    () =>
+      Array.from({ length: 26 }, (_, i) => ({
+        id: i,
+        left: rand(2, 97),
+        top: rand(6, 94),
+        size: rand(3, 8),
+        delay: -rand(0, 10),
+        duration: rand(7, 14),
+        drift: rand(14, 40),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {motes.map((m) => (
+        <span
+          key={m.id}
+          className="mote"
+          style={{
+            left: `${m.left}%`,
+            top: `${m.top}%`,
+            width: m.size,
+            height: m.size,
+            animationDelay: `${m.delay}s`,
+            animationDuration: `${m.duration}s`,
+            '--drift': `${m.drift}px`,
+          }}
+        />
       ))}
     </div>
   );
@@ -218,7 +260,17 @@ export default function ThemedBackground({ theme }) {
   return (
     <div className="theme-bg" style={{ '--theme-fill': cfg.fill }} aria-hidden="true">
       <div className="theme-bg-hero" style={{ backgroundImage: `url(${cfg.image})` }} />
-      {theme === 'autumn' ? <Leaves /> : theme === 'alpine' ? <Snow /> : theme === 'spring' ? <Petals /> : <Seaside />}
+      {theme === 'autumn' ? (
+        <Leaves />
+      ) : theme === 'alpine' ? (
+        <Snow />
+      ) : theme === 'spring' ? (
+        <Petals />
+      ) : theme === 'forest' ? (
+        <Motes />
+      ) : (
+        <Seaside />
+      )}
     </div>
   );
 }

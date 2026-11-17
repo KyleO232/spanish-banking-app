@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import TopBar from '../components/TopBar.jsx';
 import RoleplayPractice from '../components/RoleplayPractice.jsx';
 import LockedStep from '../components/LockedStep.jsx';
-import { getModule } from '../data/modules.js';
+import { getModule, rolesOf } from '../data/modules.js';
 import { getLessonSteps } from '../data/lessons.js';
 
 export default function RoleplayViewer() {
@@ -26,6 +26,7 @@ export default function RoleplayViewer() {
     );
   }
 
+  const roles = rolesOf(module);
   const roleplay = (module.roleplays ?? []).find((rp) => rp.id === roleplayId);
 
   if (!roleplay) {
@@ -85,6 +86,7 @@ export default function RoleplayViewer() {
             roleplay={roleplay}
             terms={module.terms}
             moduleId={module.id}
+            roles={roles}
             showEnglish={showEnglish}
             onRestart={() => setAttempt((a) => a + 1)}
             onExit={() => navigate(-1)}
@@ -93,7 +95,7 @@ export default function RoleplayViewer() {
           <>
             <div className="roleplay-lines">
               {roleplay.lines.map((line, i) => (
-                <div key={i} className={`roleplay-line ${line.speaker}`}>
+                <div key={i} className={`roleplay-line ${line.speaker === roles.you ? 'Banker' : 'Client'}`}>
                   <div className="roleplay-speaker">{line.speaker}</div>
                   <div className="roleplay-es">{line.spanish}</div>
                   {showEnglish && <div className="roleplay-en">{line.english}</div>}

@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { getModules } from '../data/modules.js';
+import { getTrackInfo } from '../data/tracks.js';
+import { useTrack } from '../utils/track.js';
 
 export default function VocabularyHome() {
-  const modules = getModules();
+  const trackId = useTrack();
+  const modules = getModules(trackId);
 
   return (
     <>
       <div className="topbar">
         <div className="topbar-titles">
           <h1>Vocabulary</h1>
-          <div className="subtitle">Browse full term lists by topic</div>
+          <div className="subtitle">{getTrackInfo(trackId).title} · browse full term lists by topic</div>
         </div>
       </div>
       <div className="main">

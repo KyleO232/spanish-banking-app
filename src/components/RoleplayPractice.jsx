@@ -17,8 +17,8 @@ const LEAD_AFTER_YOU_MS = 700; // client "reads" your message before typing
 const LEAD_FIRST_MS = 400;
 const FIRST_PROMPT_MS = 600; // when the learner speaks first
 
-function Bubble({ entry, line, blank, showEnglish }) {
-  const isYou = line.speaker === 'Banker';
+function Bubble({ entry, line, blank, showEnglish, roles }) {
+  const isYou = line.speaker === roles.you;
 
   let spanish = line.spanish;
   if (isYou && blank) {
@@ -34,7 +34,7 @@ function Bubble({ entry, line, blank, showEnglish }) {
   return (
     <div className={`chat-row ${isYou ? 'you' : 'them'}`}>
       <div className="chat-bubble">
-        <div className="chat-name">{isYou ? 'You · Banker' : 'Client'}</div>
+        <div className="chat-name">{isYou ? `You · ${roles.you}` : roles.other}</div>
         <div className="chat-es">{spanish}</div>
         {showEnglish && <div className="chat-en">{line.english}</div>}
       </div>
@@ -53,11 +53,11 @@ function Bubble({ entry, line, blank, showEnglish }) {
   );
 }
 
-export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglish, onRestart, onExit }) {
+export default function RoleplayPractice({ roleplay, terms, moduleId, roles, showEnglish, onRestart, onExit }) {
   const lines = roleplay.lines;
   const blanks = useMemo(
-    () => lines.map((l) => (l.speaker === 'Banker' ? buildBlank(l, terms) : null)),
-    [lines, terms]
+    () => lines.map((l) => (l.speaker === roles.you ? buildBlank(l, terms) : null)),
+    [lines, terms, roles]
   );
   const total = blanks.filter(Boolean).length;
 
@@ -86,7 +86,7 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   // a short pause, then a typing indicator sized to the message, then the bubble.
   useEffect(() => {
     if (done || blanks[cursor]) return undefined;
-    const lead = cursor > 0 && lines[cursor - 1].speaker === 'Banker' ? LEAD_AFTER_YOU_MS : LEAD_FIRST_MS;
+    const lead = cursor > 0 && lines[cursor - 1].speaker === roles.you ? LEAD_AFTER_YOU_MS : LEAD_FIRST_MS;
     const think = thinkMs(lines[cursor].spanish);
     const showTyping = setTimeout(() => setTyping(true), lead);
     const showMessage = setTimeout(() => {
@@ -98,7 +98,7 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
       clearTimeout(showTyping);
       clearTimeout(showMessage);
     };
-  }, [cursor, done, blanks, lines]);
+  }, [cursor, done, blanks, lines, roles]);
 
   // On the learner's turn, give them time to read the client's message first.
   useEffect(() => {
@@ -159,7 +159,7 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
   return (
     <div className="chat-wrap">
       <div className="chat-intro">
-        You're the <strong>banker</strong>. Read what the client says, then fill in the blank to reply.
+        You're the <strong>{roles.you.toLowerCase()}</strong>. Read what the {roles.other.toLowerCase()} says, then fill in the blank to reply.
       </div>
 
       <div className="chat">
@@ -170,11 +170,12 @@ export default function RoleplayPractice({ roleplay, terms, moduleId, showEnglis
             line={lines[entry.index]}
             blank={blanks[entry.index]}
             showEnglish={showEnglish}
+            roles={roles}
           />
         ))}
         {typing && (
           <div className="chat-row them">
-            <div className="chat-bubble typing" aria-label="Client is typing">
+            <div className="chat-bubble typing" aria-label={`${roles.other} is typing`}>
               <span />
               <span />
               <span />

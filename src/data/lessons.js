@@ -1,4 +1,4 @@
-import { getModules, getBlocks, getTermsByBlock } from './modules.js';
+import { getModules, getBlocks, getTermsByBlock, trackOf } from './modules.js';
 import { lessonKey, isCompleted, isFlashcardsDone, isPracticeDone } from '../utils/progress.js';
 import { isAdminMode } from '../utils/adminMode.js';
 
@@ -9,6 +9,7 @@ export function getLessons() {
       lessons.push({
         key: lessonKey(module.id, block),
         moduleId: module.id,
+        track: trackOf(module),
         moduleTitle: module.title,
         moduleTheme: module.theme || 'beach',
         block,
@@ -48,12 +49,14 @@ export function getLessonSteps(moduleId, block) {
 }
 
 // Returns lessons in order with a `state` of 'locked' | 'current' | 'completed'.
-// A lesson unlocks once every lesson before it in the global sequence is completed.
+// A lesson unlocks once every lesson before it in its own track is completed (each career
+// track runs its own sequence).
 // `moduleComplete` is true on every lesson of a module once that whole module is finished.
 export function getLessonsWithState() {
-  let allPreviousCompleted = true;
+  const trackOpen = new Map(); // track -> every lesson so far in it is completed
   const withState = getLessons().map((lesson) => {
     const completed = isCompleted(lesson.moduleId, lesson.block);
+    const allPreviousCompleted = trackOpen.get(lesson.track) ?? true;
     let state;
     if (completed) {
       state = 'completed';
@@ -62,7 +65,7 @@ export function getLessonsWithState() {
     } else {
       state = 'locked';
     }
-    if (!completed) allPreviousCompleted = false;
+    if (!completed) trackOpen.set(lesson.track, false);
     return { ...lesson, state };
   });
 
