@@ -21,6 +21,7 @@ export function AuthProvider({ children }) {
   const [syncedUserId, setSyncedUserId] = useState(null);
   const [syncVersion, setSyncVersion] = useState(0);
   const [retryToken, setRetryToken] = useState(0);
+  const [linkFailed, setLinkFailed] = useState(false);
   const pushTimer = useRef(null);
 
   const userId = session?.user?.id ?? null;
@@ -33,10 +34,20 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     let active = true;
 
+    // An emailed link brings a one-time ?code=… that only works in the browser where the
+    // email was requested. If one arrives and there is still no session once the app has
+    // tried it, say so and point to the 6-digit code instead of failing silently.
+    const arrivedWithCode = window.location.search.includes('code=');
+
     supabase.auth.getSession().then(({ data }) => {
       if (!active) return;
       setSession(data.session);
       setReady(true);
+      if (arrivedWithCode && !data.session) {
+        setLinkFailed(true);
+        window.history.replaceState(null, '', window.location.pathname);
+        window.location.hash = '#/account';
+      }
     });
 
     const { data } = supabase.auth.onAuthStateChange((event, next) => {
@@ -183,6 +194,7 @@ export function AuthProvider({ children }) {
       verifyCode,
       signOut,
       deleteAccount,
+      linkFailed,
     }),
     [
       session,
@@ -198,6 +210,7 @@ export function AuthProvider({ children }) {
       verifyCode,
       signOut,
       deleteAccount,
+      linkFailed,
     ]
   );
 

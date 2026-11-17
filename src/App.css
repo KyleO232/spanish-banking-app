@@ -3864,3 +3864,22 @@ a.stat-chip {
   color: var(--text-dim);
   text-align: center;
 }
+
+/* sign-in notices */
+.account-warning {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  background: rgba(224, 169, 22, 0.12);
+  color: var(--text-h);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.account-sent-warning {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-h);
+}

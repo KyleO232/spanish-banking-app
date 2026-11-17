@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Check, Cloud, CloudOff, LogOut, Mail, RefreshCw, ShieldCheck } from 'lucide-react';
+import { Check, Cloud, CloudOff, LogOut, RefreshCw, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TopBar from '../components/TopBar.jsx';
 import DeleteAccount from '../components/DeleteAccount.jsx';
+import SignIn from '../components/SignIn.jsx';
 import WeekStreak from '../components/WeekStreak.jsx';
 import { useAuth } from '../auth/AuthContext.jsx';
 import { TRACKS, getTrackInfo } from '../data/tracks.js';
 import { setTrack, useTrack } from '../utils/track.js';
+import { isStandalone } from '../utils/standalone.js';
 
 // Pick the career the learner is studying Spanish for. Progress, XP and coins are shared;
 // each track has its own path of lessons.
@@ -59,115 +61,6 @@ function TrackPicker() {
           </Link>
         </div>
       )}
-    </div>
-  );
-}
-
-function SignIn() {
-  const { signInWithEmail, verifyCode } = useAuth();
-  const [email, setEmail] = useState('');
-  const [code, setCode] = useState('');
-  const [step, setStep] = useState('email'); // 'email' | 'sent'
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState('');
-
-  async function sendLink(e) {
-    e.preventDefault();
-    if (busy || !email.trim()) return;
-    setBusy(true);
-    setError('');
-    try {
-      await signInWithEmail(email.trim());
-      setStep('sent');
-    } catch (err) {
-      setError(err.message || 'Could not send the email. Please try again.');
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  async function submitCode(e) {
-    e.preventDefault();
-    if (busy || !code.trim()) return;
-    setBusy(true);
-    setError('');
-    try {
-      await verifyCode(email.trim(), code.trim());
-    } catch (err) {
-      setError(err.message || 'That code did not work. Please try again.');
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  return (
-    <div className="card account-card">
-      <div className="account-icon">
-        <Mail size={26} strokeWidth={2.4} />
-      </div>
-      <h2>Save your progress</h2>
-      <p className="account-lead">
-        Sign in to keep your lessons, XP, and streak on every device. No password needed.
-      </p>
-
-      {step === 'email' ? (
-        <form onSubmit={sendLink} className="account-form">
-          <input
-            className="quiz-fill-input"
-            type="email"
-            inputMode="email"
-            autoComplete="email"
-            autoCapitalize="none"
-            placeholder="you@example.com"
-            value={email}
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button className="btn btn-primary btn-block btn-lg" type="submit" disabled={busy || !email.trim()}>
-            {busy ? 'Sending…' : 'Email me a sign-in link'}
-          </button>
-        </form>
-      ) : (
-        <form onSubmit={submitCode} className="account-form">
-          <div className="account-sent">
-            We sent a link to <strong>{email}</strong>. Open it on this device to sign in, or enter the
-            code from the email below.
-            <div className="account-sent-note">
-              Don't see it? Check your spam or junk folder. It can take a minute to arrive.
-            </div>
-          </div>
-          <input
-            className="quiz-fill-input"
-            type="text"
-            inputMode="numeric"
-            autoComplete="one-time-code"
-            placeholder="6-digit code"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-          />
-          <button className="btn btn-primary btn-block btn-lg" type="submit" disabled={busy || !code.trim()}>
-            {busy ? 'Checking…' : 'Sign in with code'}
-          </button>
-          <button
-            type="button"
-            className="link-btn account-link"
-            onClick={() => {
-              setStep('email');
-              setCode('');
-              setError('');
-            }}
-          >
-            Use a different email
-          </button>
-        </form>
-      )}
-
-      {error && <div className="account-error">{error}</div>}
-
-      <p className="account-legal-note">
-        By continuing you agree to the <Link to="/terms">Terms of Use</Link> and the{' '}
-        <Link to="/privacy">Privacy Policy</Link>.
-      </p>
     </div>
   );
 }
@@ -254,7 +147,7 @@ function Profile({ onDeleted }) {
 }
 
 export default function Account() {
-  const { user, ready } = useAuth();
+  const { user, ready, signInWithEmail, verifyCode, linkFailed } = useAuth();
   const [deleted, setDeleted] = useState(false);
 
   return (
@@ -279,7 +172,12 @@ export default function Account() {
                 </p>
               </div>
             )}
-            <SignIn />
+            <SignIn
+              signInWithEmail={signInWithEmail}
+              verifyCode={verifyCode}
+              standalone={isStandalone()}
+              linkFailed={linkFailed}
+            />
           </>
         )}
 
