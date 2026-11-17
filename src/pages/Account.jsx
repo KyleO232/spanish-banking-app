@@ -163,6 +163,11 @@ function SignIn() {
       )}
 
       {error && <div className="account-error">{error}</div>}
+
+      <p className="account-legal-note">
+        By continuing you agree to the <Link to="/terms">Terms of Use</Link> and the{' '}
+        <Link to="/privacy">Privacy Policy</Link>.
+      </p>
     </div>
   );
 }
@@ -277,6 +282,12 @@ export default function Account() {
             <SignIn />
           </>
         )}
+
+        <nav className="legal-links" aria-label="Legal">
+          <Link to="/privacy">Privacy Policy</Link>
+          <span aria-hidden="true">·</span>
+          <Link to="/terms">Terms of Use</Link>
+        </nav>
       </div>
     </>
   );
