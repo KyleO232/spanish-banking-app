@@ -87,7 +87,12 @@ const RANK = { match: 0, 'es-en': 1, 'en-es': 2, sentence: 3, type: 4 };
 
 // Picks wrong options from the other terms: none that repeat the right answer, none that
 // are a piece of it (or contain it), and none that `reject` says to skip.
-function pickOthers(terms, term, count, textOf, avoid, reject = () => false) {
+function pickOthers(allTerms, term, count, textOf, avoid, reject = () => false) {
+  // Words are mixed up with other words and phrases with other phrases (a lesson can have
+  // both), so a short noun never has a whole sentence as a wrong option. If a lesson has
+  // too few of one kind, any term will do.
+  const sameKind = allTerms.filter((t) => Boolean(t.example) === Boolean(term.example));
+  const terms = sameKind.length >= count + 1 ? sameKind : allTerms;
   const seen = new Set([avoid]);
   const out = [];
   for (const other of shuffle(terms)) {

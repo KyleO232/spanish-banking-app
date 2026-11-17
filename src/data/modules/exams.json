@@ -1,0 +1,1092 @@
+{
+  "id": "exams",
+  "title": "Exams & Procedures",
+  "description": "Everyday Spanish for the exam room: instructions for patients, vital signs, tests and procedures, and explaining what happens next.",
+  "theme": "night",
+  "track": "medical",
+  "roles": {
+    "you": "Nurse",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "la sala de examen",
+      "english": "exam room",
+      "note": "also: el consultorio",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Pase a la sala de examen, por favor.",
+        "en": "Please come into the exam room."
+      }
+    },
+    {
+      "spanish": "la camilla",
+      "english": "exam table",
+      "note": "also: la mesa de examen",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Acuéstese en la camilla.",
+        "en": "Lie down on the exam table."
+      }
+    },
+    {
+      "spanish": "la bata",
+      "english": "gown",
+      "note": "also: el camisón",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Puede ponerse la bata detrás de la cortina.",
+        "en": "You can put on the gown behind the curtain."
+      }
+    },
+    {
+      "spanish": "el estetoscopio",
+      "english": "stethoscope",
+      "note": "",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Voy a usar el estetoscopio para escuchar su corazón.",
+        "en": "I am going to use the stethoscope to listen to your heart."
+      }
+    },
+    {
+      "spanish": "los guantes",
+      "english": "gloves",
+      "note": "",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Me pongo los guantes para examinarlo.",
+        "en": "I am putting on gloves to examine you."
+      }
+    },
+    {
+      "spanish": "la mascarilla",
+      "english": "mask",
+      "note": "also: el cubrebocas",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "Por favor, póngase la mascarilla.",
+        "en": "Please put on the mask."
+      }
+    },
+    {
+      "spanish": "la silla de ruedas",
+      "english": "wheelchair",
+      "note": "",
+      "block": "In the Exam Room",
+      "example": {
+        "es": "¿Necesita una silla de ruedas?",
+        "en": "Do you need a wheelchair?"
+      }
+    },
+    {
+      "spanish": "Siéntese aquí, por favor.",
+      "english": "Please sit here.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Acuéstese boca arriba.",
+      "english": "Lie on your back.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Acuéstese boca abajo.",
+      "english": "Lie on your stomach.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Quítese la camisa, por favor.",
+      "english": "Please take off your shirt.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Póngase la bata.",
+      "english": "Put on the gown.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Súbase la manga.",
+      "english": "Roll up your sleeve.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Respire hondo.",
+      "english": "Breathe deeply.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Contenga la respiración.",
+      "english": "Hold your breath.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Tosa, por favor.",
+      "english": "Cough, please.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "No se mueva.",
+      "english": "Don't move.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Relájese.",
+      "english": "Relax.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Levante el brazo.",
+      "english": "Raise your arm.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Siga mi dedo con los ojos.",
+      "english": "Follow my finger with your eyes.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Puede vestirse.",
+      "english": "You can get dressed.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "Dígame si le duele.",
+      "english": "Tell me if it hurts.",
+      "note": "formal/register phrase",
+      "block": "In the Exam Room",
+      "example": null
+    },
+    {
+      "spanish": "los signos vitales",
+      "english": "vital signs",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Voy a tomarle los signos vitales.",
+        "en": "I am going to take your vital signs."
+      }
+    },
+    {
+      "spanish": "la frecuencia cardíaca",
+      "english": "heart rate",
+      "note": "also: el ritmo cardíaco",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su frecuencia cardíaca es normal.",
+        "en": "Your heart rate is normal."
+      },
+      "confusable": [
+        "el latido"
+      ]
+    },
+    {
+      "spanish": "el latido",
+      "english": "heartbeat",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Escucho un latido fuerte y regular.",
+        "en": "I hear a strong, regular heartbeat."
+      }
+    },
+    {
+      "spanish": "la respiración",
+      "english": "breathing",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su respiración es normal.",
+        "en": "Your breathing is normal."
+      }
+    },
+    {
+      "spanish": "la frecuencia respiratoria",
+      "english": "breathing rate",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su frecuencia respiratoria es de dieciséis por minuto.",
+        "en": "Your breathing rate is sixteen per minute."
+      }
+    },
+    {
+      "spanish": "el oxígeno",
+      "english": "oxygen",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Necesita más oxígeno.",
+        "en": "You need more oxygen."
+      }
+    },
+    {
+      "spanish": "el nivel de oxígeno",
+      "english": "oxygen level",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su nivel de oxígeno es del noventa y siete por ciento.",
+        "en": "Your oxygen level is ninety-seven percent."
+      }
+    },
+    {
+      "spanish": "el oxímetro",
+      "english": "pulse oximeter",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Le voy a poner el oxímetro en el dedo.",
+        "en": "I am going to put the pulse oximeter on your finger."
+      }
+    },
+    {
+      "spanish": "el brazalete",
+      "english": "blood pressure cuff",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Voy a ponerle el brazalete en el brazo.",
+        "en": "I am going to put the cuff on your arm."
+      }
+    },
+    {
+      "spanish": "el termómetro",
+      "english": "thermometer",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Ponga el termómetro debajo de la lengua.",
+        "en": "Put the thermometer under your tongue."
+      }
+    },
+    {
+      "spanish": "la báscula",
+      "english": "scale",
+      "note": "also: la pesa",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Súbase a la báscula, por favor.",
+        "en": "Step onto the scale, please."
+      }
+    },
+    {
+      "spanish": "el azúcar en la sangre",
+      "english": "blood sugar",
+      "note": "also: la glucosa",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Voy a medir el azúcar en la sangre.",
+        "en": "I am going to check your blood sugar."
+      }
+    },
+    {
+      "spanish": "el índice de masa corporal",
+      "english": "body mass index (BMI)",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su índice de masa corporal es normal.",
+        "en": "Your body mass index is normal."
+      }
+    },
+    {
+      "spanish": "la lectura",
+      "english": "reading",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "La lectura es normal.",
+        "en": "The reading is normal."
+      }
+    },
+    {
+      "spanish": "normal",
+      "english": "normal",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Todo se ve normal.",
+        "en": "Everything looks normal."
+      }
+    },
+    {
+      "spanish": "alto / alta",
+      "english": "high",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "La presión está un poco alta.",
+        "en": "Your blood pressure is a little high."
+      }
+    },
+    {
+      "spanish": "bajo / baja",
+      "english": "low",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "La presión está un poco baja.",
+        "en": "Your blood pressure is a little low."
+      }
+    },
+    {
+      "spanish": "estable",
+      "english": "stable",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su condición está estable.",
+        "en": "Your condition is stable."
+      }
+    },
+    {
+      "spanish": "irregular",
+      "english": "irregular",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su pulso está un poco irregular.",
+        "en": "Your pulse is a little irregular."
+      }
+    },
+    {
+      "spanish": "por minuto",
+      "english": "per minute",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Su pulso es de ochenta latidos por minuto.",
+        "en": "Your pulse is eighty beats per minute."
+      }
+    },
+    {
+      "spanish": "tomar la presión",
+      "english": "to take blood pressure",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Voy a tomar la presión otra vez.",
+        "en": "I am going to take your blood pressure again."
+      }
+    },
+    {
+      "spanish": "medir",
+      "english": "to measure",
+      "note": "",
+      "block": "Vitals & Measurements",
+      "example": {
+        "es": "Voy a medir su estatura.",
+        "en": "I am going to measure your height."
+      }
+    },
+    {
+      "spanish": "el análisis de sangre",
+      "english": "blood test",
+      "note": "also: el examen de sangre",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le voy a hacer un análisis de sangre.",
+        "en": "I am going to do a blood test."
+      }
+    },
+    {
+      "spanish": "la muestra de orina",
+      "english": "urine sample",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Necesito una muestra de orina.",
+        "en": "I need a urine sample."
+      }
+    },
+    {
+      "spanish": "la radiografía",
+      "english": "X-ray",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "La radiografía muestra los huesos.",
+        "en": "The X-ray shows the bones."
+      },
+      "confusable": [
+        "la ecografía"
+      ]
+    },
+    {
+      "spanish": "la ecografía",
+      "english": "ultrasound",
+      "note": "also: el ultrasonido",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Vamos a hacerle una ecografía del abdomen.",
+        "en": "We are going to do an ultrasound of your abdomen."
+      }
+    },
+    {
+      "spanish": "la resonancia magnética",
+      "english": "MRI",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "La resonancia magnética no usa radiación.",
+        "en": "An MRI does not use radiation."
+      },
+      "confusable": [
+        "la tomografía"
+      ]
+    },
+    {
+      "spanish": "la tomografía",
+      "english": "CT scan",
+      "note": "also: el escáner",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Necesita una tomografía de la cabeza.",
+        "en": "You need a CT scan of your head."
+      }
+    },
+    {
+      "spanish": "el electrocardiograma",
+      "english": "EKG (heart tracing)",
+      "note": "also: el EKG",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le vamos a hacer un electrocardiograma.",
+        "en": "We are going to do an EKG."
+      }
+    },
+    {
+      "spanish": "la prueba",
+      "english": "test",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "La prueba tarda diez minutos.",
+        "en": "The test takes ten minutes."
+      }
+    },
+    {
+      "spanish": "el resultado",
+      "english": "result",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "El resultado estará listo mañana.",
+        "en": "The result will be ready tomorrow."
+      }
+    },
+    {
+      "spanish": "en ayunas",
+      "english": "fasting",
+      "note": "on an empty stomach",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Debe venir en ayunas.",
+        "en": "You must come fasting."
+      }
+    },
+    {
+      "spanish": "la inyección",
+      "english": "injection / shot",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le voy a poner una inyección en el brazo.",
+        "en": "I am going to give you a shot in the arm."
+      }
+    },
+    {
+      "spanish": "el pinchazo",
+      "english": "prick",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Va a sentir un pinchazo pequeño.",
+        "en": "You will feel a small prick."
+      }
+    },
+    {
+      "spanish": "la aguja",
+      "english": "needle",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Voy a usar una aguja nueva.",
+        "en": "I am going to use a new needle."
+      }
+    },
+    {
+      "spanish": "los puntos",
+      "english": "stitches",
+      "note": "also: las suturas",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le voy a dar tres puntos.",
+        "en": "I am going to give you three stitches."
+      }
+    },
+    {
+      "spanish": "la anestesia",
+      "english": "anesthesia",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le voy a poner anestesia local para que no sienta dolor.",
+        "en": "I am going to give you local anesthesia so you do not feel pain."
+      },
+      "confusable": [
+        "la inyección"
+      ]
+    },
+    {
+      "spanish": "la biopsia",
+      "english": "biopsy",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "La biopsia es una muestra pequeña de tejido.",
+        "en": "A biopsy is a small sample of tissue."
+      }
+    },
+    {
+      "spanish": "la vía intravenosa",
+      "english": "IV line",
+      "note": "also: el suero (IV fluids)",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le vamos a poner una vía intravenosa en el brazo.",
+        "en": "We are going to put an IV line in your arm."
+      }
+    },
+    {
+      "spanish": "el vendaje",
+      "english": "bandage / dressing",
+      "note": "also: la curita (adhesive bandage)",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Le voy a poner un vendaje en la herida.",
+        "en": "I am going to put a dressing on the wound."
+      }
+    },
+    {
+      "spanish": "el consentimiento",
+      "english": "consent",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Necesito su consentimiento antes del procedimiento.",
+        "en": "I need your consent before the procedure."
+      }
+    },
+    {
+      "spanish": "el procedimiento",
+      "english": "procedure",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "El procedimiento dura veinte minutos.",
+        "en": "The procedure takes twenty minutes."
+      }
+    },
+    {
+      "spanish": "estéril",
+      "english": "sterile",
+      "note": "",
+      "block": "Tests & Procedures",
+      "example": {
+        "es": "Todo el equipo está estéril.",
+        "en": "All of the equipment is sterile."
+      }
+    },
+    {
+      "spanish": "la cita",
+      "english": "appointment",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Su cita es el martes a las diez de la mañana.",
+        "en": "Your appointment is Tuesday at ten in the morning."
+      }
+    },
+    {
+      "spanish": "la sala de espera",
+      "english": "waiting room",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Puede esperar en la sala de espera.",
+        "en": "You can wait in the waiting room."
+      }
+    },
+    {
+      "spanish": "el seguimiento",
+      "english": "follow-up",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Necesita una cita de seguimiento en una semana.",
+        "en": "You need a follow-up appointment in a week."
+      }
+    },
+    {
+      "spanish": "el especialista",
+      "english": "specialist",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Lo voy a referir a un especialista.",
+        "en": "I am going to refer you to a specialist."
+      }
+    },
+    {
+      "spanish": "la referencia / la remisión",
+      "english": "referral",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Aquí tiene su referencia para el cardiólogo.",
+        "en": "Here is your referral to the cardiologist."
+      }
+    },
+    {
+      "spanish": "el diagnóstico",
+      "english": "diagnosis",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "El doctor le explicará el diagnóstico.",
+        "en": "The doctor will explain the diagnosis to you."
+      }
+    },
+    {
+      "spanish": "el tratamiento",
+      "english": "treatment",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "El tratamiento dura dos semanas.",
+        "en": "The treatment lasts two weeks."
+      }
+    },
+    {
+      "spanish": "el alta",
+      "english": "discharge",
+      "note": "dar el alta = to discharge",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Hoy le dan el alta del hospital.",
+        "en": "You are being discharged from the hospital today."
+      }
+    },
+    {
+      "spanish": "la recuperación",
+      "english": "recovery",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "La recuperación toma una semana.",
+        "en": "Recovery takes a week."
+      }
+    },
+    {
+      "spanish": "el reposo",
+      "english": "rest",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Necesita reposo por dos días.",
+        "en": "You need rest for two days."
+      }
+    },
+    {
+      "spanish": "el intérprete",
+      "english": "interpreter",
+      "note": "",
+      "block": "Explaining the Visit",
+      "example": {
+        "es": "Le vamos a conseguir un intérprete.",
+        "en": "We are going to get you an interpreter."
+      }
+    },
+    {
+      "spanish": "Voy a explicarle lo que vamos a hacer.",
+      "english": "I am going to explain what we are going to do.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Esto no le va a doler.",
+      "english": "This will not hurt you.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Puede sentir un poco de presión.",
+      "english": "You may feel a little pressure.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Si siente dolor, avíseme.",
+      "english": "If you feel pain, let me know.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Necesito su permiso para continuar.",
+      "english": "I need your permission to continue.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "¿Entiende lo que le expliqué?",
+      "english": "Do you understand what I explained?",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "¿Tiene alguna pregunta?",
+      "english": "Do you have any questions?",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Espere aquí, por favor.",
+      "english": "Please wait here.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Ya casi terminamos.",
+      "english": "We are almost done.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    },
+    {
+      "spanish": "Le avisamos cuando estén listos los resultados.",
+      "english": "We will let you know when the results are ready.",
+      "note": "formal/register phrase",
+      "block": "Explaining the Visit",
+      "example": null
+    }
+  ],
+  "registerNotes": [
+    "Use \"usted\" commands with patients: \"Respire\", \"Abra\", \"Siéntese\", \"Acuéstese\". With a pronoun attached the accent stays on the same beat: \"Siéntese\", \"Quítese\", \"Póngase\".",
+    "Say what you are about to do before you do it (\"Voy a tocarle el abdomen\") and ask first (\"¿Me permite…?\"). Showing the thing while you say it helps too.",
+    "Say numbers the way patients hear them: blood pressure is \"ciento veinte sobre ochenta\" (120/80), and a fever is \"ciento dos grados\" (102 °F). The US uses Fahrenheit, pounds and inches.",
+    "US Spanish speakers come from many countries, so words vary: \"la bata\" or \"el camisón\", \"la camilla\" or \"la mesa de examen\", \"la ecografía\" or \"el ultrasonido\", \"la mascarilla\" or \"el cubrebocas\".",
+    "Check understanding by asking the patient to say it back: \"¿Me puede decir lo que va a hacer?\" A nod does not always mean \"yes, I understand\".",
+    "Consent needs a qualified medical interpreter and a form in Spanish. Never use a child or relative to interpret for a procedure."
+  ],
+  "roleplays": [
+    {
+      "id": "getting-ready-for-the-exam",
+      "title": "Getting Ready for the Exam",
+      "block": "In the Exam Room",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días, señor Ramírez. Siéntese aquí, por favor.",
+          "english": "Good morning, Mr. Ramírez. Please sit here.",
+          "blank": "Siéntese aquí"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Buenos días. ¿Tengo que ponerme la bata?",
+          "english": "Good morning. Do I have to put on the gown?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí. Póngase la bata y acuéstese en la camilla. Vuelvo en cinco minutos.",
+          "english": "Yes. Put on the gown and lie down on the exam table. I will be back in five minutes.",
+          "blank": "Póngase la bata"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Me quito también la camisa?",
+          "english": "Do I take off my shirt too?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, quítese la camisa. Ahora voy a escuchar su corazón con el estetoscopio.",
+          "english": "Yes, take off your shirt. Now I am going to listen to your heart with the stethoscope.",
+          "blank": "estetoscopio"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Aquí estoy. ¿Qué hago?",
+          "english": "Here I am. What do I do?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Respire hondo y contenga la respiración un momento.",
+          "english": "Breathe deeply and hold your breath for a moment.",
+          "blank": "Respire hondo"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Ya. ¿Así está bien?",
+          "english": "Okay. Is this fine?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Perfecto. Ahora tosa, por favor, y no se mueva.",
+          "english": "Perfect. Now cough, please, and do not move.",
+          "blank": "no se mueva"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Está bien. ¿Ya terminamos?",
+          "english": "Okay. Are we done?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, ya terminamos. Puede vestirse.",
+          "english": "Yes, we are done. You can get dressed.",
+          "blank": "Puede vestirse"
+        }
+      ]
+    },
+    {
+      "id": "taking-vital-signs",
+      "title": "Taking Vital Signs",
+      "block": "Vitals & Measurements",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. Voy a tomarle los signos vitales.",
+          "english": "Good morning. I am going to take your vital signs.",
+          "blank": "signos vitales"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué me van a medir?",
+          "english": "What are you going to measure?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Primero su estatura, y luego su peso en la báscula.",
+          "english": "First your height, and then your weight on the scale.",
+          "blank": "báscula"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Está bien. Subí unas libras este año.",
+          "english": "Okay. I gained a few pounds this year."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Ahora le pongo el brazalete en el brazo. Va a sentir presión por un momento.",
+          "english": "Now I will put the cuff on your arm. You will feel pressure for a moment.",
+          "blank": "brazalete"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cómo está la presión?",
+          "english": "How is my blood pressure?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Está un poco alta: ciento cuarenta sobre noventa. La voy a tomar de nuevo.",
+          "english": "It is a little high: one forty over ninety. I will take it again.",
+          "blank": "alta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Estoy nervioso. Eso puede subirla, ¿verdad?",
+          "english": "I am nervous. That can raise it, right?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, puede. Ahora el termómetro debajo de la lengua y el oxímetro en el dedo.",
+          "english": "Yes, it can. Now the thermometer under your tongue and the pulse oximeter on your finger.",
+          "blank": "oxímetro"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y eso qué mide?",
+          "english": "And what does that measure?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Mide su nivel de oxígeno y su pulso. Todo está normal.",
+          "english": "It measures your oxygen level and your pulse. Everything is normal.",
+          "blank": "nivel de oxígeno"
+        }
+      ]
+    },
+    {
+      "id": "getting-a-blood-test",
+      "title": "Getting a Blood Test and an X-ray",
+      "block": "Tests & Procedures",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. El doctor pidió un análisis de sangre y una radiografía.",
+          "english": "Good morning. The doctor ordered a blood test and an X-ray.",
+          "blank": "análisis de sangre"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Tengo que estar en ayunas?",
+          "english": "Do I have to be fasting?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Para el análisis de sangre, sí. Por eso le pedimos que viniera en ayunas.",
+          "english": "For the blood test, yes. That is why we asked you to come fasting.",
+          "blank": "en ayunas"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, no he comido nada desde anoche. ¿Me va a doler?",
+          "english": "Yes, I have not eaten anything since last night. Will it hurt?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Solo va a sentir un pinchazo pequeño. La aguja es nueva y estéril.",
+          "english": "You will only feel a small prick. The needle is new and sterile.",
+          "blank": "pinchazo"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Está bien. ¿Y la radiografía?",
+          "english": "Okay. And the X-ray?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Es una radiografía del pecho. Solo tarda unos minutos.",
+          "english": "It is a chest X-ray. It only takes a few minutes.",
+          "blank": "radiografía"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi doctor también habló de una resonancia magnética.",
+          "english": "My doctor also mentioned an MRI."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Eso es otra cita. La resonancia magnética es un estudio más largo.",
+          "english": "That is another appointment. An MRI is a longer test.",
+          "blank": "resonancia magnética"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cuándo tendré los resultados?",
+          "english": "When will I have the results?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "El resultado estará listo en dos días. Le avisamos por teléfono.",
+          "english": "The result will be ready in two days. We will call you.",
+          "blank": "resultado"
+        }
+      ]
+    },
+    {
+      "id": "what-happens-next",
+      "title": "What Happens Next",
+      "block": "Explaining the Visit",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a explicarle lo que vamos a hacer hoy.",
+          "english": "I am going to explain what we are going to do today.",
+          "blank": "Voy a explicarle"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Gracias. ¿Pueden darme un intérprete? Mi inglés es limitado.",
+          "english": "Thank you. Can you give me an interpreter? My English is limited."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Claro. Le vamos a conseguir un intérprete ahora mismo.",
+          "english": "Of course. We are going to get you an interpreter right now.",
+          "blank": "intérprete"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es grave? ¿Cuál es el diagnóstico?",
+          "english": "Is it serious? What is the diagnosis?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "El doctor le va a explicar el diagnóstico y el tratamiento.",
+          "english": "The doctor is going to explain the diagnosis and the treatment to you.",
+          "blank": "diagnóstico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Tengo que quedarme en el hospital?",
+          "english": "Do I have to stay in the hospital?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "No, hoy le damos el alta. Necesita reposo en casa por dos días.",
+          "english": "No, we are discharging you today. You need rest at home for two days.",
+          "blank": "reposo"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y después? ¿Tengo que volver?",
+          "english": "And after that? Do I have to come back?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, necesita una cita de seguimiento con un especialista.",
+          "english": "Yes, you need a follow-up appointment with a specialist.",
+          "blank": "seguimiento"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Entendido. ¿Dónde espero?",
+          "english": "Understood. Where do I wait?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Espere aquí, por favor. ¿Tiene alguna pregunta?",
+          "english": "Please wait here. Do you have any questions?",
+          "blank": "alguna pregunta"
+        }
+      ]
+    }
+  ]
+}

@@ -5,11 +5,16 @@ import alpineImg from '../assets/backgrounds/alpine.jpg';
 import springImg from '../assets/backgrounds/spring.jpg';
 import forestImg from '../assets/backgrounds/forest.jpg';
 import lavenderImg from '../assets/backgrounds/meadow.jpg';
+import nightImg from '../assets/backgrounds/night.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  night: {
+    image: nightImg,
+    fill: 'var(--night-fill)',
   },
   lavender: {
     image: lavenderImg,
@@ -116,6 +121,64 @@ function Petals() {
           <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
           <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
         </svg>
+      ))}
+    </div>
+  );
+}
+
+// Stars twinkling over the night sky, with a shooting star now and then.
+function Stars() {
+  const stars = useMemo(
+    () =>
+      Array.from({ length: 34 }, (_, i) => ({
+        id: i,
+        left: rand(2, 97),
+        top: rand(2, 97),
+        size: rand(1.6, 3.8),
+        delay: -rand(0, 6),
+        duration: rand(2.2, 5),
+      })),
+    []
+  );
+  const shooters = useMemo(
+    () =>
+      Array.from({ length: 2 }, (_, i) => ({
+        id: i,
+        left: rand(35, 85),
+        top: rand(4, 40),
+        delay: -rand(0, 18) - i * 9,
+        duration: rand(16, 24),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {stars.map((s) => (
+        <span
+          key={s.id}
+          className="star"
+          style={{
+            left: `${s.left}%`,
+            top: `${s.top}%`,
+            width: s.size,
+            height: s.size,
+            animationDelay: `${s.delay}s`,
+            animationDuration: `${s.duration}s`,
+          }}
+        />
+      ))}
+      {shooters.map((s) => (
+        <span
+          key={`shoot-${s.id}`}
+          className="shooting-star"
+          style={{
+            left: `${s.left}%`,
+            top: `${s.top}%`,
+            animationDelay: `${s.delay}s`,
+            animationDuration: `${s.duration}s`,
+          }}
+        />
       ))}
     </div>
   );
@@ -318,6 +381,8 @@ export default function ThemedBackground({ theme }) {
         <Snow />
       ) : theme === 'spring' ? (
         <Petals />
+      ) : theme === 'night' ? (
+        <Stars />
       ) : theme === 'lavender' ? (
         <Butterflies />
       ) : theme === 'forest' ? (

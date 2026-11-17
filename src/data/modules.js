@@ -11,6 +11,7 @@ const MODULE_ORDER = [
   'insurance',
   'anatomy',
   'symptoms',
+  'exams',
 ];
 
 const rank = (m) => {

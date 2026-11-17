@@ -3582,3 +3582,55 @@ a.stat-chip {
     transform: translate(125vw, 0);
   }
 }
+
+/* night sky */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px 1px rgba(200, 220, 255, 0.8);
+  opacity: 0.2;
+  animation: star-twinkle 3.4s ease-in-out infinite;
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 90px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff);
+  opacity: 0;
+  transform: rotate(32deg);
+  animation: shooting-star 18s linear infinite;
+}
+
+@keyframes shooting-star {
+  0%,
+  86% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(32deg);
+  }
+  88% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+    transform: translate(-160px, 100px) rotate(32deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-160px, 100px) rotate(32deg);
+  }
+}
