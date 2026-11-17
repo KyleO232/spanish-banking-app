@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# review documents for outside reviewers (not part of the app)
+review/
