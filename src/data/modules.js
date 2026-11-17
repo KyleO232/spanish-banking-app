@@ -10,6 +10,7 @@ const MODULE_ORDER = [
   'investment-banking',
   'insurance',
   'anatomy',
+  'symptoms',
 ];
 
 const rank = (m) => {

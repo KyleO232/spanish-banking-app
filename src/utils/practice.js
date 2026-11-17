@@ -33,8 +33,25 @@ function slashVariants(form) {
 // Everything a learner may type for a term and still be right: either side of a " / ",
 // with or without the article or a gloss like "(SSN)", and either word of a paired
 // "open/close".
+// Other ways to say it from a term's "also: ..." note (a different word people use in the
+// US, like "la picazón" for "la comezón"). Notes that give a different meaning in
+// parentheses, like "(toe)" or "(to faint)", are not synonyms and are skipped.
+function noteAlternates(term) {
+  const match = term.note?.match(/^also:\s*(.+)$/i);
+  if (!match) return [];
+  return match[1]
+    .split(/\s*;\s*/)
+    .filter((alt) => !alt.includes('(') || /\(informal\)/.test(alt))
+    .map((alt) => alt.replace(/\s*\(informal\)/, '').split(ALTERNATE)[0].trim())
+    .filter(Boolean);
+}
+
 export function acceptedAnswers(term) {
   const accepted = new Set([canon(term.spanish)]);
+  noteAlternates(term).forEach((alt) => {
+    accepted.add(canon(alt));
+    accepted.add(canon(stripArticle(alt)));
+  });
   [term.spanish, stripGloss(term.spanish)].forEach((form) => {
     form.split(ALTERNATE).forEach((alt) => {
       slashVariants(alt.trim()).forEach((text) => {

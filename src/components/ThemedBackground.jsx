@@ -4,11 +4,16 @@ import autumnImg from '../assets/backgrounds/autumn.jpg';
 import alpineImg from '../assets/backgrounds/alpine.jpg';
 import springImg from '../assets/backgrounds/spring.jpg';
 import forestImg from '../assets/backgrounds/forest.jpg';
+import lavenderImg from '../assets/backgrounds/meadow.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  lavender: {
+    image: lavenderImg,
+    fill: 'var(--lavender-fill)',
   },
   forest: {
     image: forestImg,
@@ -110,6 +115,53 @@ function Petals() {
         >
           <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
           <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+const BUTTERFLY_COLORS = ['#ffd84d', '#fff4c2', '#ff9ec7', '#ffffff'];
+
+// A few butterflies fluttering across the lavender field.
+function Butterflies() {
+  const flies = useMemo(
+    () =>
+      Array.from({ length: 7 }, (_, i) => ({
+        id: i,
+        top: rand(6, 92),
+        size: rand(18, 28),
+        duration: rand(26, 42),
+        delay: -rand(0, 30),
+        bob: rand(14, 36),
+        color: BUTTERFLY_COLORS[i % BUTTERFLY_COLORS.length],
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      {flies.map((f) => (
+        <svg
+          key={f.id}
+          className="butterfly"
+          viewBox="0 0 24 20"
+          style={{
+            top: `${f.top}%`,
+            width: f.size,
+            animationDuration: `${f.duration}s`,
+            animationDelay: `${f.delay}s`,
+            '--bob': `${f.bob}px`,
+            fill: f.color,
+          }}
+        >
+          <g className="butterfly-wings">
+            <path d="M12 10 C4 -1 -1 6 4 11 C7 14 10 12 12 10 Z" />
+            <path d="M12 10 C20 -1 25 6 20 11 C17 14 14 12 12 10 Z" />
+            <path d="M12 10 C6 12 4 19 8 18 C11 17 12 13 12 10 Z" />
+            <path d="M12 10 C18 12 20 19 16 18 C13 17 12 13 12 10 Z" />
+          </g>
+          <path d="M12 6 V15" stroke="#5a3b2a" strokeWidth="1.4" strokeLinecap="round" fill="none" />
         </svg>
       ))}
     </div>
@@ -266,6 +318,8 @@ export default function ThemedBackground({ theme }) {
         <Snow />
       ) : theme === 'spring' ? (
         <Petals />
+      ) : theme === 'lavender' ? (
+        <Butterflies />
       ) : theme === 'forest' ? (
         <Motes />
       ) : (

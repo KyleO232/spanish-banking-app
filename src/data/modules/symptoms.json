@@ -1,0 +1,1178 @@
+{
+  "id": "symptoms",
+  "title": "Symptoms & Illness",
+  "description": "Everyday Spanish for what patients feel and have: describing pain, common symptoms, common conditions, and medical history at check-in.",
+  "theme": "lavender",
+  "track": "medical",
+  "roles": {
+    "you": "Nurse",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "el dolor",
+      "english": "pain",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "¿Dónde siente el dolor?",
+        "en": "Where do you feel the pain?"
+      }
+    },
+    {
+      "spanish": "me duele / me duelen",
+      "english": "it hurts / they hurt",
+      "note": "use the article: me duele la cabeza",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Me duele el costado derecho.",
+        "en": "My right side hurts."
+      }
+    },
+    {
+      "spanish": "el dolor agudo",
+      "english": "sharp pain",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Siento un dolor agudo en el costado.",
+        "en": "I feel a sharp pain in my side."
+      },
+      "confusable": [
+        "el dolor punzante"
+      ]
+    },
+    {
+      "spanish": "el dolor sordo",
+      "english": "dull pain",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Tengo un dolor sordo en la espalda.",
+        "en": "I have a dull ache in my back."
+      }
+    },
+    {
+      "spanish": "el dolor punzante",
+      "english": "stabbing pain",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Es un dolor punzante cuando respiro.",
+        "en": "It is a stabbing pain when I breathe."
+      }
+    },
+    {
+      "spanish": "el ardor",
+      "english": "burning",
+      "note": "also: me arde",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Siento ardor al orinar.",
+        "en": "I feel burning when I urinate."
+      }
+    },
+    {
+      "spanish": "el cólico",
+      "english": "stomach cramp",
+      "note": "also: el retortijón",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Siento un cólico fuerte en el abdomen.",
+        "en": "I feel a bad cramp in my abdomen."
+      },
+      "confusable": [
+        "el calambre"
+      ]
+    },
+    {
+      "spanish": "el calambre",
+      "english": "muscle cramp",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Me dio un calambre en la pierna.",
+        "en": "I got a cramp in my leg."
+      }
+    },
+    {
+      "spanish": "el hormigueo",
+      "english": "tingling",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Siento un hormigueo en la mano.",
+        "en": "I feel tingling in my hand."
+      }
+    },
+    {
+      "spanish": "el entumecimiento",
+      "english": "numbness",
+      "note": "also: el adormecimiento",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Tengo entumecimiento en el pie.",
+        "en": "I have numbness in my foot."
+      }
+    },
+    {
+      "spanish": "la rigidez",
+      "english": "stiffness",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Siento rigidez en el cuello por las mañanas.",
+        "en": "I feel stiffness in my neck in the mornings."
+      }
+    },
+    {
+      "spanish": "la hinchazón",
+      "english": "swelling",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "La hinchazón empezó ayer.",
+        "en": "The swelling started yesterday."
+      }
+    },
+    {
+      "spanish": "el moretón",
+      "english": "bruise",
+      "note": "also: el cardenal",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Tiene un moretón grande en la pierna.",
+        "en": "You have a big bruise on your leg."
+      }
+    },
+    {
+      "spanish": "leve",
+      "english": "mild",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "El dolor es leve.",
+        "en": "The pain is mild."
+      }
+    },
+    {
+      "spanish": "moderado",
+      "english": "moderate",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "El dolor es moderado.",
+        "en": "The pain is moderate."
+      }
+    },
+    {
+      "spanish": "fuerte",
+      "english": "strong / severe",
+      "note": "also: intenso",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Es un dolor muy fuerte.",
+        "en": "It is a very strong pain."
+      }
+    },
+    {
+      "spanish": "constante",
+      "english": "constant",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "El dolor es constante.",
+        "en": "The pain is constant."
+      }
+    },
+    {
+      "spanish": "intermitente",
+      "english": "on and off",
+      "note": "the pain comes and goes",
+      "block": "Describing Pain",
+      "example": {
+        "es": "El dolor es intermitente.",
+        "en": "The pain comes and goes."
+      }
+    },
+    {
+      "spanish": "empeorar",
+      "english": "to get worse",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Si el dolor empieza a empeorar, llámenos.",
+        "en": "If the pain starts to get worse, call us."
+      }
+    },
+    {
+      "spanish": "mejorar",
+      "english": "to get better",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "Descansar puede ayudar a mejorar el dolor.",
+        "en": "Resting can help the pain get better."
+      }
+    },
+    {
+      "spanish": "la escala del uno al diez",
+      "english": "scale of one to ten",
+      "note": "",
+      "block": "Describing Pain",
+      "example": {
+        "es": "En una escala del uno al diez, ¿cuánto le duele?",
+        "en": "On a scale of one to ten, how much does it hurt?"
+      }
+    },
+    {
+      "spanish": "el síntoma",
+      "english": "symptom",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "¿Cuándo empezó el primer síntoma?",
+        "en": "When did the first symptom start?"
+      }
+    },
+    {
+      "spanish": "la fiebre",
+      "english": "fever",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tiene fiebre desde anoche.",
+        "en": "You have had a fever since last night."
+      }
+    },
+    {
+      "spanish": "los escalofríos",
+      "english": "chills",
+      "note": "one chill: el escalofrío",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tuve escalofríos toda la noche.",
+        "en": "I had chills all night."
+      }
+    },
+    {
+      "spanish": "la tos",
+      "english": "cough",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo tos desde hace tres días.",
+        "en": "I have had a cough for three days."
+      }
+    },
+    {
+      "spanish": "el dolor de cabeza",
+      "english": "headache",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo dolor de cabeza desde la mañana.",
+        "en": "I have had a headache since this morning."
+      }
+    },
+    {
+      "spanish": "el mareo",
+      "english": "dizziness",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Siento un mareo cuando me levanto.",
+        "en": "I feel dizzy when I stand up."
+      },
+      "confusable": [
+        "el desmayo"
+      ]
+    },
+    {
+      "spanish": "las náuseas",
+      "english": "nausea",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo náuseas por las mañanas.",
+        "en": "I feel nauseous in the mornings."
+      }
+    },
+    {
+      "spanish": "el vómito",
+      "english": "vomiting",
+      "note": "also: vomitar (to vomit)",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tuve vómito dos veces esta mañana.",
+        "en": "I vomited twice this morning."
+      }
+    },
+    {
+      "spanish": "la diarrea",
+      "english": "diarrhea",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo diarrea desde ayer.",
+        "en": "I have had diarrhea since yesterday."
+      }
+    },
+    {
+      "spanish": "el estreñimiento",
+      "english": "constipation",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tiene estreñimiento desde hace una semana.",
+        "en": "You have been constipated for a week."
+      }
+    },
+    {
+      "spanish": "la fatiga",
+      "english": "fatigue",
+      "note": "also: el cansancio",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Siento mucha fatiga todos los días.",
+        "en": "I feel a lot of fatigue every day."
+      }
+    },
+    {
+      "spanish": "la falta de aire",
+      "english": "shortness of breath",
+      "note": "also: la dificultad para respirar",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo falta de aire cuando subo las escaleras.",
+        "en": "I get short of breath when I climb stairs."
+      }
+    },
+    {
+      "spanish": "la congestión nasal",
+      "english": "nasal congestion",
+      "note": "also: la nariz tapada",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo congestión nasal y no puedo respirar bien.",
+        "en": "I have nasal congestion and I can't breathe well."
+      }
+    },
+    {
+      "spanish": "el sarpullido",
+      "english": "rash",
+      "note": "also: la erupción; las ronchas (hives)",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Le salió un sarpullido en los brazos.",
+        "en": "A rash came out on your arms."
+      }
+    },
+    {
+      "spanish": "la comezón",
+      "english": "itching",
+      "note": "also: la picazón",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo comezón en la espalda.",
+        "en": "My back is itchy."
+      }
+    },
+    {
+      "spanish": "el sudor",
+      "english": "sweating",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Me despierto con mucho sudor por la noche.",
+        "en": "I wake up with a lot of sweat at night."
+      }
+    },
+    {
+      "spanish": "la pérdida de apetito",
+      "english": "loss of appetite",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tiene pérdida de apetito desde hace días.",
+        "en": "You have had a loss of appetite for days."
+      }
+    },
+    {
+      "spanish": "la pérdida de peso",
+      "english": "weight loss",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Notó una pérdida de peso sin hacer dieta.",
+        "en": "You noticed weight loss without dieting."
+      }
+    },
+    {
+      "spanish": "el desmayo",
+      "english": "fainting spell",
+      "note": "also: desmayarse (to faint)",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tuvo un desmayo ayer en el trabajo.",
+        "en": "You fainted yesterday at work."
+      }
+    },
+    {
+      "spanish": "el sangrado",
+      "english": "bleeding",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "El sangrado no se detiene.",
+        "en": "The bleeding won't stop."
+      }
+    },
+    {
+      "spanish": "el insomnio",
+      "english": "trouble sleeping",
+      "note": "also: no poder dormir",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo insomnio desde hace un mes.",
+        "en": "I have had trouble sleeping for a month."
+      }
+    },
+    {
+      "spanish": "la acidez",
+      "english": "heartburn",
+      "note": "",
+      "block": "Common Symptoms",
+      "example": {
+        "es": "Tengo acidez después de comer.",
+        "en": "I get heartburn after eating."
+      }
+    },
+    {
+      "spanish": "el resfriado",
+      "english": "cold",
+      "note": "also: el catarro",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene un resfriado y mucha congestión.",
+        "en": "You have a cold and a lot of congestion."
+      },
+      "confusable": [
+        "la gripe"
+      ]
+    },
+    {
+      "spanish": "la gripe",
+      "english": "flu",
+      "note": "also: la gripa",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La gripe causa fiebre y dolor de cuerpo.",
+        "en": "The flu causes fever and body aches."
+      }
+    },
+    {
+      "spanish": "el COVID-19",
+      "english": "COVID-19",
+      "note": "also: el covid",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Le hicimos una prueba de COVID-19.",
+        "en": "We gave you a COVID-19 test."
+      }
+    },
+    {
+      "spanish": "la infección",
+      "english": "infection",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene una infección en la garganta.",
+        "en": "You have an infection in your throat."
+      }
+    },
+    {
+      "spanish": "la infección de oído",
+      "english": "ear infection",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "El niño tiene una infección de oído.",
+        "en": "The boy has an ear infection."
+      }
+    },
+    {
+      "spanish": "la infección urinaria",
+      "english": "urinary tract infection",
+      "note": "also: la infección de la vejiga",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Una infección urinaria causa ardor al orinar.",
+        "en": "A urinary infection causes burning when you urinate."
+      }
+    },
+    {
+      "spanish": "la alergia",
+      "english": "allergy",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tengo alergia al polen en primavera.",
+        "en": "I have a pollen allergy in spring."
+      }
+    },
+    {
+      "spanish": "el asma",
+      "english": "asthma",
+      "note": "\"asma\" is feminine but takes \"el\"",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Mi hijo tiene asma desde niño.",
+        "en": "My son has had asthma since he was a child."
+      }
+    },
+    {
+      "spanish": "la diabetes",
+      "english": "diabetes",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Mi padre tiene diabetes.",
+        "en": "My father has diabetes."
+      }
+    },
+    {
+      "spanish": "la presión alta",
+      "english": "high blood pressure",
+      "note": "also: la hipertensión",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene la presión alta y necesita medicina.",
+        "en": "You have high blood pressure and need medicine."
+      }
+    },
+    {
+      "spanish": "el colesterol alto",
+      "english": "high cholesterol",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "El colesterol alto puede afectar el corazón.",
+        "en": "High cholesterol can affect the heart."
+      }
+    },
+    {
+      "spanish": "la neumonía",
+      "english": "pneumonia",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La neumonía es una infección de los pulmones.",
+        "en": "Pneumonia is an infection of the lungs."
+      }
+    },
+    {
+      "spanish": "la bronquitis",
+      "english": "bronchitis",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene bronquitis y mucha tos.",
+        "en": "You have bronchitis and a lot of coughing."
+      }
+    },
+    {
+      "spanish": "la migraña",
+      "english": "migraine",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tengo migraña con náuseas y mareo.",
+        "en": "I have a migraine with nausea and dizziness."
+      }
+    },
+    {
+      "spanish": "la artritis",
+      "english": "arthritis",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La artritis causa dolor en las articulaciones.",
+        "en": "Arthritis causes pain in the joints."
+      }
+    },
+    {
+      "spanish": "la anemia",
+      "english": "anemia",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene anemia por falta de hierro.",
+        "en": "You have anemia from a lack of iron."
+      }
+    },
+    {
+      "spanish": "la deshidratación",
+      "english": "dehydration",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La diarrea puede causar deshidratación.",
+        "en": "Diarrhea can cause dehydration."
+      }
+    },
+    {
+      "spanish": "la intoxicación alimentaria",
+      "english": "food poisoning",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Fue una intoxicación alimentaria.",
+        "en": "It was food poisoning."
+      }
+    },
+    {
+      "spanish": "el esguince",
+      "english": "sprain",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene un esguince en el tobillo.",
+        "en": "You have a sprained ankle."
+      }
+    },
+    {
+      "spanish": "la quemadura",
+      "english": "burn",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Tiene una quemadura en la mano.",
+        "en": "You have a burn on your hand."
+      }
+    },
+    {
+      "spanish": "la herida",
+      "english": "wound / cut",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La herida necesita puntos.",
+        "en": "The wound needs stitches."
+      }
+    },
+    {
+      "spanish": "la depresión",
+      "english": "depression",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "La depresión es una condición que se puede tratar.",
+        "en": "Depression is a condition that can be treated."
+      }
+    },
+    {
+      "spanish": "la ansiedad",
+      "english": "anxiety",
+      "note": "",
+      "block": "Common Conditions",
+      "example": {
+        "es": "Siento ansiedad y no puedo dormir.",
+        "en": "I feel anxiety and can't sleep."
+      }
+    },
+    {
+      "spanish": "el historial médico",
+      "english": "medical history",
+      "note": "also: los antecedentes médicos",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "Necesito revisar su historial médico.",
+        "en": "I need to review your medical history."
+      }
+    },
+    {
+      "spanish": "alérgico / alérgica",
+      "english": "allergic",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Es alérgico a algún medicamento?",
+        "en": "Are you allergic to any medication?"
+      }
+    },
+    {
+      "spanish": "el medicamento",
+      "english": "medication",
+      "note": "also: la medicina",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Qué medicamento toma todos los días?",
+        "en": "What medication do you take every day?"
+      }
+    },
+    {
+      "spanish": "la dosis",
+      "english": "dose",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Sabe cuál es la dosis de su pastilla?",
+        "en": "Do you know the dose of your pill?"
+      }
+    },
+    {
+      "spanish": "el efecto secundario",
+      "english": "side effect",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "Este medicamento puede tener un efecto secundario.",
+        "en": "This medication can have a side effect."
+      }
+    },
+    {
+      "spanish": "la cirugía",
+      "english": "surgery",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Ha tenido alguna cirugía?",
+        "en": "Have you had any surgery?"
+      }
+    },
+    {
+      "spanish": "la hospitalización",
+      "english": "hospital stay",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Ha tenido alguna hospitalización reciente?",
+        "en": "Have you had a recent hospital stay?"
+      }
+    },
+    {
+      "spanish": "los antecedentes familiares",
+      "english": "family medical history",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Hay antecedentes familiares de diabetes?",
+        "en": "Is there a family history of diabetes?"
+      }
+    },
+    {
+      "spanish": "la vacuna",
+      "english": "vaccine / shot",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Ya se puso la vacuna contra la gripe?",
+        "en": "Did you already get the flu shot?"
+      }
+    },
+    {
+      "spanish": "embarazada",
+      "english": "pregnant",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Está embarazada?",
+        "en": "Are you pregnant?"
+      }
+    },
+    {
+      "spanish": "fumar",
+      "english": "to smoke",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "Es importante dejar de fumar.",
+        "en": "It is important to quit smoking."
+      }
+    },
+    {
+      "spanish": "el alcohol",
+      "english": "alcohol",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Cuánto alcohol toma por semana?",
+        "en": "How much alcohol do you drink per week?"
+      }
+    },
+    {
+      "spanish": "el ejercicio",
+      "english": "exercise",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Hace ejercicio con regularidad?",
+        "en": "Do you exercise regularly?"
+      }
+    },
+    {
+      "spanish": "desde cuándo",
+      "english": "since when",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Desde cuándo tiene estos síntomas?",
+        "en": "Since when have you had these symptoms?"
+      }
+    },
+    {
+      "spanish": "con qué frecuencia",
+      "english": "how often",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Con qué frecuencia le pasa esto?",
+        "en": "How often does this happen to you?"
+      }
+    },
+    {
+      "spanish": "el tipo de sangre",
+      "english": "blood type",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Sabe cuál es su tipo de sangre?",
+        "en": "Do you know your blood type?"
+      }
+    },
+    {
+      "spanish": "la fecha de nacimiento",
+      "english": "date of birth",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "Necesito su fecha de nacimiento.",
+        "en": "I need your date of birth."
+      }
+    },
+    {
+      "spanish": "el contacto de emergencia",
+      "english": "emergency contact",
+      "note": "",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Quién es su contacto de emergencia?",
+        "en": "Who is your emergency contact?"
+      }
+    },
+    {
+      "spanish": "el peso",
+      "english": "weight",
+      "note": "in the US, in pounds (libras)",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Cuál es su peso actual?",
+        "en": "What is your current weight?"
+      }
+    },
+    {
+      "spanish": "la estatura",
+      "english": "height",
+      "note": "in the US, in feet and inches (pies y pulgadas)",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "¿Cuál es su estatura?",
+        "en": "What is your height?"
+      }
+    },
+    {
+      "spanish": "la temperatura",
+      "english": "temperature",
+      "note": "in the US, in degrees Fahrenheit",
+      "block": "Medical History & Intake",
+      "example": {
+        "es": "Voy a tomarle la temperatura.",
+        "en": "I'm going to take your temperature."
+      }
+    }
+  ],
+  "registerNotes": [
+    "With patients, use \"usted\" and \"le\"/\"su\". Use \"tú\" with young children, and with adults only if they invite it.",
+    "Symptoms use \"tener\" plus the noun: \"Tengo fiebre\", \"Tiene tos\", \"Tengo náuseas\". For feelings, use \"sentir\" or \"estar\": \"Siento mareo\" and \"Estoy mareado\".",
+    "Pain uses \"doler\" with the article: \"Me duele la cabeza\" and \"Me duelen los pies\". One pain is \"duele\", more than one is \"duelen\".",
+    "US Spanish speakers come from many countries, so words vary: \"la gripe\" or \"la gripa\", \"la comezón\" or \"la picazón\", \"el cólico\" or \"el retortijón\", \"el moretón\" or \"el cardenal\", \"la medicina\" or \"el medicamento\".",
+    "In the US, temperature is in degrees Fahrenheit, weight in pounds (\"libras\") and height in feet and inches (\"pies y pulgadas\"). Check which one the patient is using.",
+    "Do not name a diagnosis yourself. Say \"El doctor le va a explicar\" and use a qualified medical interpreter for diagnoses, consent and treatment choices.",
+    "Words like \"depresión\" and \"ansiedad\" can be hard to hear. Use a calm tone and ask simply: \"¿Se ha sentido muy triste o preocupado últimamente?\""
+  ],
+  "roleplays": [
+    {
+      "id": "describing-the-pain",
+      "title": "Describing the Pain",
+      "block": "Describing Pain",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. Dígame, ¿dónde siente el dolor?",
+          "english": "Good morning. Tell me, where do you feel the pain?",
+          "blank": "dolor"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me duele el costado derecho. Es un dolor muy fuerte.",
+          "english": "My right side hurts. It is a very strong pain."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Es un dolor agudo o punzante, como una puñalada?",
+          "english": "Is it a sharp or stabbing pain, like being stabbed?",
+          "blank": "punzante"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Es punzante, y empeora cuando respiro hondo.",
+          "english": "It is stabbing, and it gets worse when I breathe deeply."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿El dolor es constante o intermitente?",
+          "english": "Is the pain constant or on and off?",
+          "blank": "intermitente"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Es constante desde anoche. Y tengo un hormigueo en el brazo.",
+          "english": "It has been constant since last night. And I have tingling in my arm."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Entiendo. ¿Siente también entumecimiento en la mano?",
+          "english": "I see. Do you also feel numbness in your hand?",
+          "blank": "entumecimiento"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Un poco, sí. Y mucha rigidez en la espalda.",
+          "english": "A little, yes. And a lot of stiffness in my back."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "En una escala del uno al diez, ¿cuánto le duele?",
+          "english": "On a scale of one to ten, how much does it hurt?",
+          "blank": "escala"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Un ocho. Es un dolor fuerte.",
+          "english": "An eight. It is a strong pain."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a avisar al doctor ahora mismo. Si el dolor empieza a empeorar, avíseme de inmediato.",
+          "english": "I'm going to let the doctor know right now. If the pain starts to get worse, tell me right away.",
+          "blank": "empeorar"
+        }
+      ]
+    },
+    {
+      "id": "telling-your-symptoms",
+      "title": "Telling the Nurse Your Symptoms",
+      "block": "Common Symptoms",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. ¿Qué síntomas tiene hoy?",
+          "english": "Good morning. What symptoms do you have today?",
+          "blank": "síntomas"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Tengo fiebre y escalofríos desde anoche, y mucha tos.",
+          "english": "I have had a fever and chills since last night, and a lot of coughing."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Cuánto fue la fiebre? ¿Se tomó la temperatura en casa?",
+          "english": "How high was the fever? Did you take your temperature at home?",
+          "blank": "fiebre"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Ciento dos grados Fahrenheit.",
+          "english": "One hundred two degrees Fahrenheit."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Tiene náuseas o vómito?",
+          "english": "Do you have nausea or vomiting?",
+          "blank": "náuseas"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Náuseas sí, y vomité dos veces. También tengo diarrea.",
+          "english": "Nausea yes, and I vomited twice. I also have diarrhea."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Entiendo. ¿Siente mareo al levantarse? ¿Tiene falta de aire?",
+          "english": "I see. Do you feel dizzy when you stand up? Are you short of breath?",
+          "blank": "falta de aire"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me mareo un poco y siento mucha fatiga.",
+          "english": "I get a little dizzy and I feel very tired."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Le ha salido algún sarpullido o comezón en la piel?",
+          "english": "Have you gotten any rash or itching on your skin?",
+          "blank": "sarpullido"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, la piel está normal. Pero no tengo apetito.",
+          "english": "No, my skin is normal. But I have no appetite."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "La pérdida de apetito es común con la fiebre. Vamos a revisarlo.",
+          "english": "Loss of appetite is common with a fever. We are going to check it.",
+          "blank": "pérdida de apetito"
+        }
+      ]
+    },
+    {
+      "id": "explaining-the-diagnosis",
+      "title": "Explaining the Diagnosis",
+      "block": "Common Conditions",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "El doctor dice que no es un resfriado común. Es la gripe.",
+          "english": "The doctor says it's not a common cold. It's the flu.",
+          "blank": "gripe"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es grave? Mi hijo tiene asma.",
+          "english": "Is it serious? My son has asthma."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Con asma hay que tener más cuidado. Vamos a vigilar su respiración.",
+          "english": "With asthma we need to be more careful. We will watch his breathing.",
+          "blank": "asma"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Yo también tengo diabetes. ¿Eso complica la gripe?",
+          "english": "I have diabetes too. Does that make the flu worse?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Puede complicarla. Con diabetes es importante tomar mucho líquido y controlar el azúcar.",
+          "english": "It can. With diabetes it is important to drink a lot of fluids and watch your blood sugar.",
+          "blank": "diabetes"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Me da miedo la neumonía. ¿Puede pasar eso?",
+          "english": "I'm afraid of pneumonia. Can that happen?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Es posible, pero la neumonía se puede tratar. Si tiene falta de aire, vaya a la sala de emergencias.",
+          "english": "It is possible, but pneumonia can be treated. If you are short of breath, go to the emergency room.",
+          "blank": "neumonía"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Entiendo. También tengo la presión alta y el colesterol alto.",
+          "english": "I understand. I also have high blood pressure and high cholesterol."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Gracias por decírmelo. El doctor va a revisar el colesterol alto y la presión alta.",
+          "english": "Thank you for telling me. The doctor will check the high cholesterol and the high blood pressure.",
+          "blank": "colesterol alto"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Necesito un antibiótico?",
+          "english": "Do I need an antibiotic?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "La gripe no es una infección bacteriana, así que el antibiótico no ayuda.",
+          "english": "The flu is not a bacterial infection, so the antibiotic does not help.",
+          "blank": "infección"
+        }
+      ]
+    },
+    {
+      "id": "medical-history-at-check-in",
+      "title": "Medical History at Check-In",
+      "block": "Medical History & Intake",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. Necesito su fecha de nacimiento y su historial médico.",
+          "english": "Good morning. I need your date of birth and your medical history.",
+          "blank": "fecha de nacimiento"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Nací el quince de marzo de mil novecientos ochenta.",
+          "english": "I was born on March fifteenth, nineteen eighty."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Gracias. ¿Es alérgico a algún medicamento?",
+          "english": "Thank you. Are you allergic to any medication?",
+          "blank": "alérgico"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, soy alérgico a la penicilina.",
+          "english": "Yes, I am allergic to penicillin."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Anotado. ¿Qué medicamento toma todos los días?",
+          "english": "Noted. What medication do you take every day?",
+          "blank": "medicamento"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Tomo una pastilla para la presión y otra para el colesterol.",
+          "english": "I take one pill for blood pressure and another for cholesterol."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Sabe cuál es la dosis de cada una?",
+          "english": "Do you know the dose of each one?",
+          "blank": "dosis"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, tengo la lista aquí. También tuve una cirugía de rodilla el año pasado.",
+          "english": "Yes, I have the list here. I also had knee surgery last year."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Muy bien. ¿Hay antecedentes familiares de diabetes o de problemas del corazón?",
+          "english": "Very good. Is there a family history of diabetes or heart problems?",
+          "blank": "antecedentes familiares"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi mamá tuvo diabetes. Yo no fumo y casi no tomo alcohol.",
+          "english": "My mother had diabetes. I don't smoke and I hardly drink alcohol."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Perfecto. Ahora voy a medir su estatura y su peso, y a tomarle la temperatura.",
+          "english": "Perfect. Now I'm going to measure your height and weight, and take your temperature.",
+          "blank": "estatura"
+        }
+      ]
+    }
+  ]
+}
