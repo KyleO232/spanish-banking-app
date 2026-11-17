@@ -209,7 +209,7 @@ const CAPE_CLASP = (
 // Costumes: complete head-to-toe looks. While one is worn it replaces everything else.
 // "hides" says which of her own parts the costume covers, and the costume then draws
 // its own face / arms / feet (limbs go in 'back' so they sit behind the coin).
-// The pop-culture ones are look-alikes (hair, hat, mustache, colors) rather than copies.
+// Every costume is an original, generic character: no look-alikes of films, games or comics.
 // ---------------------------------------------------------------------------
 
 const DISC_CLIP = (
@@ -228,6 +228,14 @@ const limbs = (arm, foot, extra = null) => (
     {extra}
   </g>
 );
+
+// the path of a star with `n` points around (cx, cy)
+const star = (cx, cy, outer, inner, n = 5) =>
+  Array.from({ length: n * 2 }, (_, i) => {
+    const angle = (Math.PI / n) * i - Math.PI / 2;
+    const r = i % 2 ? inner : outer;
+    return `${i ? 'L' : 'M'}${(cx + r * Math.cos(angle)).toFixed(1)} ${(cy + r * Math.sin(angle)).toFixed(1)}`;
+  }).join(' ') + ' Z';
 
 const COSTUMES = {
   'cos-skier': {
@@ -406,32 +414,6 @@ const COSTUMES = {
     ),
   },
 
-  'cos-monster': {
-    back: limbs('#6fb645', '#3d6e24'),
-    front: (
-      <g strokeLinejoin="round">
-        <rect x="-1" y="58" width="6" height="14" rx="2" fill="#7c8599" />
-        <rect x="4" y="61" width="12" height="8" rx="2" fill="#aab2c4" />
-        <rect x="115" y="58" width="6" height="14" rx="2" fill="#7c8599" />
-        <rect x="104" y="61" width="12" height="8" rx="2" fill="#aab2c4" />
-        <circle cx="60" cy="64" r="46" fill="#4e8a2e" />
-        <circle cx="60" cy="58" r="46" fill="#7ac74f" />
-        <circle cx="60" cy="58" r="37" fill="none" stroke="#a6dd7e" strokeWidth="2.5" opacity="0.7" />
-        <path d="M15 36 L17 6 Q60 -4 103 6 L105 36 Q100 27 94 25 L60 21 L26 25 Q20 27 15 36 Z" fill="#1b1b26" stroke="#3b3b52" strokeWidth="1.6" />
-        <path d="M40 31 H80 M46 27 V35 M54 27 V35 M62 27 V35 M70 27 V35 M78 27 V35" fill="none" stroke="#2b3a1a" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M33 43 L56 48 M87 43 L64 48" fill="none" stroke="#1b1b26" strokeWidth="4.4" strokeLinecap="round" />
-        <ellipse cx="46" cy="55" rx="8.4" ry="7.6" fill="#fff" />
-        <ellipse cx="74" cy="55" rx="8.4" ry="7.6" fill="#fff" />
-        <circle cx="46" cy="56" r="3.8" fill="#2b1a00" />
-        <circle cx="74" cy="56" r="3.8" fill="#2b1a00" />
-        <path d="M37.6 55 A8.4 7.6 0 0 1 54.4 55 Z" fill="#6fb645" />
-        <path d="M65.6 55 A8.4 7.6 0 0 1 82.4 55 Z" fill="#6fb645" />
-        <path d="M60 60 L56.5 68 H63" fill="none" stroke="#3d6e24" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M42 79 Q60 75 78 79 M47 75 V83 M55 75 V83 M65 75 V83 M73 75 V83" fill="none" stroke="#1b1b26" strokeWidth="3" strokeLinecap="round" />
-      </g>
-    ),
-  },
-
   'cos-tycoon': {
     front: (
       <g strokeLinejoin="round">
@@ -446,92 +428,296 @@ const COSTUMES = {
         <rect x="56.5" y="90" width="7" height="8" rx="2" fill="#8f2a20" />
         <path d="M110 66 L114 118" stroke="#6b3f12" strokeWidth="3.2" strokeLinecap="round" />
         <circle cx="110" cy="64" r="4.6" fill="#ffd23f" stroke="#a9690a" strokeWidth="1.6" />
-        <path
-          d="M60 71 C54 66 44 66 40 72 C38 76 42 79 46 76 C50 74 54 74 60 76 C66 74 70 74 74 76 C78 79 82 76 80 72 C76 66 66 66 60 71 Z"
-          fill="#fff"
-          stroke="#cdd3e0"
-          strokeWidth="1.6"
-        />
         {HATS['hat-top']}
-        {EYEWEAR['eye-monocle']}
       </g>
     ),
   },
 
-  'cos-wizard': {
+
+  'cos-monster': {
+    back: limbs('#5fb34a', '#3f8a30'),
     front: (
-      <g strokeLinejoin="round">
-        {DISC_CLIP}
-        <clipPath id="monScarfStripes">
-          <path d="M26 82 Q60 108 94 82 L98 93 Q60 124 22 93 Z" />
-        </clipPath>
-        <g clipPath="url(#monCostumeClip)">
-          <path d="M6 82 Q60 74 114 82 L114 124 L6 124 Z" fill="#2a2438" />
+      <g strokeLinejoin="round" strokeLinecap="round">
+        <path d="M30 22 L24 2 L44 14 Z" fill="#f5e6a8" stroke="#c7b36b" strokeWidth="1.6" />
+        <path d="M90 22 L96 2 L76 14 Z" fill="#f5e6a8" stroke="#c7b36b" strokeWidth="1.6" />
+        <circle cx="60" cy="64" r="46" fill="#3e8c33" />
+        <circle cx="60" cy="58" r="46" fill="#66c24f" />
+        <circle cx="60" cy="58" r="37" fill="none" stroke="#9ae07a" strokeWidth="2.5" opacity="0.7" />
+        <g fill="#8b5cf6" opacity="0.85">
+          <circle cx="29" cy="36" r="5" />
+          <circle cx="93" cy="40" r="4" />
+          <circle cx="86" cy="88" r="6" />
+          <circle cx="33" cy="90" r="4.4" />
         </g>
-        <path d="M26 82 Q60 108 94 82 L98 93 Q60 124 22 93 Z" fill="#b3162a" />
-        <g clipPath="url(#monScarfStripes)" stroke="#ffd23f" strokeWidth="3" strokeLinecap="round">
-          <path d="M18 84 L30 126 M38 84 L50 126 M58 84 L70 126 M78 84 L90 126" />
-        </g>
-        <path d="M76 101 L90 97 L94 121 L80 125 Z" fill="#b3162a" stroke="#7a0f1d" strokeWidth="1.8" />
-        <path d="M80 108 L92 104 M81 115 L93 111" stroke="#ffd23f" strokeWidth="3" strokeLinecap="round" />
-        <path d="M104 75 L119 49" stroke="#7a5126" strokeWidth="3.2" strokeLinecap="round" />
-        <path d="M119 43 L120.4 47.6 L125 49 L120.4 50.4 L119 55 L117.6 50.4 L113 49 L117.6 47.6 Z" fill="#fff3b0" />
-        <path
-          d="M16 40 Q13 8 60 5 Q107 8 104 40 Q98 24 88 27 L84 15 L74 27 L68 13 L58 27 L48 14 L42 27 L34 16 L28 28 Q20 25 16 40 Z"
-          fill="#1b1b26"
-          stroke="#3b3b52"
-          strokeWidth="1.6"
-        />
-        <path d="M63 26 L57 33 L61 33 L55 41" fill="none" stroke="#d62839" strokeWidth="2.6" strokeLinecap="round" />
-        {EYEWEAR['eye-round']}
+        <ellipse cx="44" cy="50" rx="11" ry="12.5" fill="#fff" />
+        <ellipse cx="76" cy="50" rx="11" ry="12.5" fill="#fff" />
+        <circle cx="46" cy="53" r="5.6" fill="#2b1a00" />
+        <circle cx="74" cy="53" r="5.6" fill="#2b1a00" />
+        <circle cx="48" cy="50.5" r="1.8" fill="#fff" />
+        <circle cx="76" cy="50.5" r="1.8" fill="#fff" />
+        <path d="M34 74 Q60 102 86 74 Z" fill="#3a1030" />
+        <path d="M40 75 L47 75 L43.5 85 Z M52 77 L59 77 L55.5 88 Z M62 77 L69 77 L65.5 88 Z M73 75 L80 75 L76.5 85 Z" fill="#fff" />
+        <path d="M34 74 Q60 102 86 74" fill="none" stroke="#2a0b22" strokeWidth="3" />
       </g>
     ),
   },
 
-  'cos-plumber': {
+  'cos-doctor': {
     front: (
       <g strokeLinejoin="round">
         {DISC_CLIP}
         <g clipPath="url(#monCostumeClip)">
-          <path d="M6 82 Q60 74 114 82 L114 124 L6 124 Z" fill="#e5322d" />
-          <path d="M8 93 Q60 86 112 93 L112 124 L8 124 Z" fill="#2f6df0" />
-          <path d="M32 77 L42 77 L45 97 L34 97 Z" fill="#2f6df0" />
-          <path d="M78 77 L88 77 L86 97 L75 97 Z" fill="#2f6df0" />
+          <path d="M6 84 Q60 74 114 84 L114 124 L6 124 Z" fill="#f4f7fb" />
+          <path d="M46 80 L60 106 L74 80 Z" fill="#8cc9f0" />
+          <path d="M46 80 L58 124 M74 80 L62 124" fill="none" stroke="#cfd8e6" strokeWidth="2.4" />
+          <path d="M38 84 L52 104 L46 80 Z M82 84 L68 104 L74 80 Z" fill="#e6ecf5" stroke="#cfd8e6" strokeWidth="1.6" />
+          <rect x="78" y="102" width="17" height="13" rx="2.4" fill="#f4f7fb" stroke="#cfd8e6" strokeWidth="1.8" />
+          <path d="M84 102 V95 M89 102 V97" stroke="#2f6df0" strokeWidth="2.6" strokeLinecap="round" />
         </g>
-        <circle cx="38" cy="94" r="2.6" fill="#ffd23f" />
-        <circle cx="82" cy="94" r="2.6" fill="#ffd23f" />
-        <circle cx="11" cy="76" r="6.8" fill="#fff" stroke="#cfd5e3" strokeWidth="2" />
-        <circle cx="109" cy="76" r="6.8" fill="#fff" stroke="#cfd5e3" strokeWidth="2" />
-        <ellipse cx="60" cy="63" rx="7.8" ry="6.6" fill="#f0a64a" stroke="#c98306" strokeWidth="1.6" />
-        <path
-          d="M60 71 C54 66 44 67 41 73 C40 78 46 78 50 75 C54 73 57 73 60 75 C63 73 66 73 70 75 C74 78 80 78 79 73 C76 67 66 66 60 71 Z"
-          fill="#1b1b26"
-        />
-        <path d="M24 33 Q24 3 60 3 Q96 3 96 33 Z" fill="#e5322d" />
-        <path d="M58 30 Q98 24 108 35 Q90 41 58 37 Z" fill="#b8211d" />
-        <circle cx="58" cy="18" r="8.4" fill="#fff" stroke="#e8ebf3" strokeWidth="1.6" />
+        <path d="M37 80 Q34 102 60 106 Q86 102 83 80" fill="none" stroke="#374151" strokeWidth="3.2" strokeLinecap="round" />
+        <circle cx="60" cy="106" r="5.4" fill="#cbd5e1" stroke="#374151" strokeWidth="2.4" />
+        <path d="M20 31 Q60 17 100 31" fill="none" stroke="#9aa5b6" strokeWidth="5.5" strokeLinecap="round" />
+        <circle cx="60" cy="24" r="10.5" fill="#e5ecf5" stroke="#8892a6" strokeWidth="2.6" />
+        <circle cx="60" cy="24" r="3.4" fill="#8892a6" />
       </g>
     ),
   },
 
-  'cos-spider': {
-    back: limbs('#d62839', '#1d4fc4'),
+  'cos-nurse': {
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 84 Q60 74 114 84 L114 124 L6 124 Z" fill="#2fb7a5" />
+          <path d="M43 80 L60 106 L77 80 Z" fill="#f4f7fb" />
+          <path d="M43 80 L60 106 L77 80" fill="none" stroke="#1f8f80" strokeWidth="3" />
+          <rect x="20" y="100" width="19" height="14" rx="3" fill="#2fb7a5" stroke="#1f8f80" strokeWidth="2" />
+        </g>
+        <rect x="76" y="90" width="15" height="19" rx="2.4" fill="#fff" stroke="#cfd8e6" strokeWidth="1.8" />
+        <circle cx="83.5" cy="97" r="3.2" fill="#8cc9f0" />
+        <path d="M79 104 H88" stroke="#9aa5b6" strokeWidth="2" strokeLinecap="round" />
+        <path d="M27 31 Q27 7 60 7 Q93 7 93 31 L93 35 Q60 28 27 35 Z" fill="#ffffff" stroke="#cfd8e6" strokeWidth="2" />
+        <path d="M60 13 V28 M52.5 20.5 H67.5" fill="none" stroke="#e5484d" strokeWidth="5.4" strokeLinecap="round" />
+      </g>
+    ),
+  },
+
+  'cos-santa': {
+    front: (
+      <g strokeLinejoin="round" strokeLinecap="round">
+        <path
+          d="M16 64 Q8 96 38 112 Q60 122 82 112 Q112 96 104 64 Q96 82 84 84 Q74 96 60 96 Q46 96 36 84 Q24 82 16 64 Z"
+          fill="#f8fafc"
+          stroke="#d3d9e6"
+          strokeWidth="2"
+        />
+        <path d="M28 100 Q35 93 42 100 M78 100 Q85 93 92 100 M52 110 Q60 104 68 110" fill="none" stroke="#d3d9e6" strokeWidth="2" />
+        <path d="M30 41 Q44 30 58 39 M62 39 Q76 30 90 41" fill="none" stroke="#f8fafc" strokeWidth="6.5" />
+        <path d="M22 34 Q18 6 56 2 Q88 -2 104 22 Q110 34 106 46 Q96 38 92 30 Q60 24 22 34 Z" fill="#d62839" stroke="#9c1626" strokeWidth="1.8" />
+        <path d="M16 34 Q60 22 104 34 Q108 44 102 48 Q60 36 18 48 Q10 42 16 34 Z" fill="#ffffff" stroke="#d3d9e6" strokeWidth="1.8" />
+        <circle cx="108" cy="53" r="8.5" fill="#ffffff" stroke="#d3d9e6" strokeWidth="1.8" />
+      </g>
+    ),
+  },
+
+  'cos-elf': {
+    front: (
+      <g strokeLinejoin="round">
+        <path d="M15 48 L-7 36 L10 66 Z" fill="#ffd966" stroke="#c99a1d" strokeWidth="1.8" />
+        <path d="M105 48 L127 36 L110 66 Z" fill="#ffd966" stroke="#c99a1d" strokeWidth="1.8" />
+        <path d="M11 51 L0 44 L9 60 Z M109 51 L120 44 L111 60 Z" fill="#ff9bb0" opacity="0.7" />
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 84 Q60 74 114 84 L114 124 L6 124 Z" fill="#2f9e44" />
+          <path d="M34 82 L40 94 L47 84 L53 94 L60 84 L67 94 L73 84 L80 94 L86 82 L86 98 L34 98 Z" fill="#ffffff" />
+          <rect x="6" y="104" width="108" height="8" fill="#1b1b26" />
+          <rect x="52" y="102" width="16" height="12" rx="2" fill="#ffc933" stroke="#b78300" strokeWidth="1.6" />
+        </g>
+        <path d="M24 34 Q30 6 80 -12 Q70 10 96 34 Q60 26 24 34 Z" fill="#2f9e44" stroke="#1f7a31" strokeWidth="1.8" />
+        <path d="M22 33 Q60 24 98 33 L96 41 Q60 32 24 41 Z" fill="#d62839" />
+        <circle cx="80" cy="-12" r="5.5" fill="#ffd23f" stroke="#b78300" strokeWidth="1.6" />
+      </g>
+    ),
+  },
+
+  'cos-snowman': {
+    back: (
+      <g fill="none" stroke="#6b3f12" strokeWidth="3.6" strokeLinecap="round">
+        <path d="M18 72 L-6 56 M2 63 L-6 70 M5 61 L0 50" />
+        <path d="M102 72 L126 56 M118 63 L126 70 M115 61 L120 50" />
+      </g>
+    ),
+    front: (
+      <g strokeLinejoin="round" strokeLinecap="round">
+        <circle cx="60" cy="64" r="46" fill="#b9c6dc" />
+        <circle cx="60" cy="58" r="46" fill="#f8fbff" stroke="#cbd7ea" strokeWidth="2.4" />
+        <path d="M22 80 Q60 114 98 80" fill="none" stroke="#dbe6f5" strokeWidth="5" />
+        <circle cx="45" cy="46" r="5" fill="#1b1b26" />
+        <circle cx="75" cy="46" r="5" fill="#1b1b26" />
+        <path d="M58 56 L88 63 L58 68 Z" fill="#ff8a1f" stroke="#d96a00" strokeWidth="1.6" />
+        <g fill="#1b1b26">
+          <circle cx="38" cy="75" r="2.6" />
+          <circle cx="44" cy="81" r="2.6" />
+          <circle cx="52" cy="84" r="2.6" />
+          <circle cx="60" cy="85" r="2.6" />
+          <circle cx="68" cy="84" r="2.6" />
+          <circle cx="76" cy="81" r="2.6" />
+          <circle cx="82" cy="75" r="2.6" />
+        </g>
+        <path d="M18 91 Q60 105 102 91 L104 101 Q60 116 16 101 Z" fill="#d62839" stroke="#9c1626" strokeWidth="1.6" />
+        <path d="M82 103 L88 122 L98 118 L92 99 Z" fill="#d62839" stroke="#9c1626" strokeWidth="1.6" />
+        {HATS['hat-top']}
+      </g>
+    ),
+  },
+
+  'cos-firefighter': {
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 84 Q60 74 114 84 L114 124 L6 124 Z" fill="#ffc933" />
+          <path d="M6 99 Q60 91 114 99 L114 105 Q60 97 6 105 Z" fill="#e8edf5" />
+          <path d="M6 111 Q60 104 114 111 L114 116 Q60 109 6 116 Z" fill="#e8edf5" />
+          <path d="M60 82 V124" stroke="#d99a00" strokeWidth="2.4" />
+          <circle cx="54" cy="91" r="1.8" fill="#1b1b26" />
+          <circle cx="66" cy="91" r="1.8" fill="#1b1b26" />
+        </g>
+        <ellipse cx="87" cy="72" rx="9" ry="5" fill="#1b1b26" opacity="0.22" transform="rotate(-20 87 72)" />
+        <path d="M14 40 Q60 30 106 40 L106 46 Q60 36 14 46 Z" fill="#b8211d" stroke="#8f1a17" strokeWidth="1.6" />
+        <path d="M26 38 Q26 4 60 4 Q94 4 94 38 Z" fill="#d62839" stroke="#9c1626" strokeWidth="1.6" />
+        <path d="M60 4 V38" stroke="#9c1626" strokeWidth="5" opacity="0.75" />
+        <path d="M51 12 H69 V25 Q60 34 51 25 Z" fill="#ffc933" stroke="#b78300" strokeWidth="1.8" />
+        <path d="M60 15 V26 M55 20 H65" fill="none" stroke="#d62839" strokeWidth="2.6" strokeLinecap="round" />
+      </g>
+    ),
+  },
+
+  'cos-builder': {
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 83 Q60 73 114 83 L114 124 L6 124 Z" fill="#ff7a1a" />
+          <path d="M60 82 V124" stroke="#d65a00" strokeWidth="2.4" />
+          <path d="M33 80 L38 124 M87 80 L82 124" stroke="#e8edf5" strokeWidth="7" />
+          <path d="M6 108 Q60 101 114 108" fill="none" stroke="#e8edf5" strokeWidth="5" />
+        </g>
+        <circle cx="11" cy="76" r="6.8" fill="#c8a15a" stroke="#8f6e2a" strokeWidth="2" />
+        <circle cx="109" cy="76" r="6.8" fill="#c8a15a" stroke="#8f6e2a" strokeWidth="2" />
+        <path d="M117 71 L117 102" stroke="#8a5a2b" strokeWidth="4" strokeLinecap="round" />
+        <rect x="108" y="62" width="19" height="9" rx="2" fill="#9aa5b6" stroke="#6b7385" strokeWidth="1.6" />
+        <path d="M26 36 Q26 5 60 5 Q94 5 94 36 Z" fill="#ffc933" stroke="#d99a00" strokeWidth="1.6" />
+        <path d="M60 5 V36 M45 9 V36 M75 9 V36" stroke="#d99a00" strokeWidth="2.4" opacity="0.7" />
+        <path d="M14 37 Q60 29 106 37 L106 44 Q60 36 14 44 Z" fill="#e0a400" stroke="#b78300" strokeWidth="1.6" />
+      </g>
+    ),
+  },
+
+  'cos-pirate': {
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 83 Q60 73 114 83 L114 124 L6 124 Z" fill="#ffffff" />
+          <path
+            d="M6 90 Q60 82 114 90 L114 96 Q60 88 6 96 Z M6 102 Q60 94 114 102 L114 108 Q60 100 6 108 Z M6 114 Q60 106 114 114 L114 120 Q60 112 6 120 Z"
+            fill="#d62839"
+          />
+        </g>
+        <circle cx="15" cy="66" r="5" fill="none" stroke="#ffc933" strokeWidth="2.6" />
+        <path d="M64 44 L16 31 M84 46 L106 40" fill="none" stroke="#1b1b26" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="74" cy="52" rx="11.5" ry="12.5" fill="#1b1b26" />
+        <path d="M6 36 Q28 18 60 8 Q92 18 114 36 Q88 30 60 33 Q32 30 6 36 Z" fill="#1b1b26" stroke="#3b3b52" strokeWidth="1.6" />
+        <path d="M10 35 Q60 26 110 35" fill="none" stroke="#ffc933" strokeWidth="2.2" opacity="0.9" />
+        <path d="M51 28 L69 14 M51 14 L69 28" stroke="#f6f8fc" strokeWidth="2.4" strokeLinecap="round" />
+        <circle cx="60" cy="21" r="6" fill="#f6f8fc" />
+        <circle cx="57.6" cy="20.4" r="1.4" fill="#1b1b26" />
+        <circle cx="62.4" cy="20.4" r="1.4" fill="#1b1b26" />
+      </g>
+    ),
+  },
+
+  'cos-astronaut': {
+    back: (
+      <g strokeLinejoin="round">
+        <rect x="-2" y="50" width="16" height="40" rx="6" fill="#b8c0cf" stroke="#8892a6" strokeWidth="2" />
+        <rect x="106" y="50" width="16" height="40" rx="6" fill="#b8c0cf" stroke="#8892a6" strokeWidth="2" />
+      </g>
+    ),
     front: (
       <g strokeLinejoin="round" strokeLinecap="round">
         {DISC_CLIP}
-        <circle cx="60" cy="64" r="46" fill="#8f1624" />
-        <circle cx="60" cy="58" r="46" fill="#d62839" />
         <g clipPath="url(#monCostumeClip)">
-          <g fill="none" stroke="#1b1b26" strokeWidth="1.8">
-            <path d="M60 58 L60 4 M60 58 L98 20 M60 58 L114 58 M60 58 L98 96 M60 58 L22 96 M60 58 L6 58 M60 58 L22 20" />
-            <circle cx="60" cy="58" r="13" />
-            <circle cx="60" cy="58" r="27" />
-            <circle cx="60" cy="58" r="42" />
-          </g>
-          <path d="M6 90 Q60 102 114 90 L114 124 L6 124 Z" fill="#1d4fc4" />
+          <path d="M6 88 Q60 78 114 88 L114 124 L6 124 Z" fill="#f4f7fb" />
+          <path d="M6 99 Q60 91 114 99 L114 104 Q60 96 6 104 Z" fill="#ff8a3d" />
+          <rect x="46" y="106" width="28" height="12" rx="3" fill="#cfd8e6" />
+          <circle cx="52" cy="112" r="2.4" fill="#e5484d" />
+          <circle cx="60" cy="112" r="2.4" fill="#2fb7a5" />
+          <circle cx="68" cy="112" r="2.4" fill="#2f6df0" />
         </g>
-        <path d="M31 51 Q44 35 58 53 Q45 61 31 51 Z" fill="#fff" stroke="#1b1b26" strokeWidth="3.2" />
-        <path d="M89 51 Q76 35 62 53 Q75 61 89 51 Z" fill="#fff" stroke="#1b1b26" strokeWidth="3.2" />
+        <circle cx="11" cy="76" r="6.8" fill="#f4f7fb" stroke="#cfd8e6" strokeWidth="2" />
+        <circle cx="109" cy="76" r="6.8" fill="#f4f7fb" stroke="#cfd8e6" strokeWidth="2" />
+        <circle cx="60" cy="56" r="53" fill="#bfe6ff" fillOpacity="0.2" />
+        <circle cx="60" cy="56" r="53" fill="none" stroke="#eef2f8" strokeWidth="7" />
+        <circle cx="60" cy="56" r="49.2" fill="none" stroke="#9fb3c8" strokeWidth="1.4" />
+        <path d="M24 34 Q32 14 54 8" fill="none" stroke="#ffffff" strokeWidth="5.5" opacity="0.85" />
+        <path d="M97 76 Q93 90 84 97" fill="none" stroke="#ffffff" strokeWidth="4" opacity="0.5" />
+        <path d="M26 100 Q60 116 94 100 L94 108 Q60 124 26 108 Z" fill="#d9dfe9" stroke="#8892a6" strokeWidth="2" />
+      </g>
+    ),
+  },
+
+  'cos-mage': {
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 82 Q60 74 114 82 L114 124 L6 124 Z" fill="#3b2a8c" />
+          <path d="M6 90 Q60 82 114 90 L114 96 Q60 88 6 96 Z" fill="#ffc933" />
+          <g fill="#fff3b0">
+            <circle cx="24" cy="108" r="2" />
+            <circle cx="44" cy="116" r="1.6" />
+            <circle cx="86" cy="110" r="2" />
+            <circle cx="100" cy="102" r="1.6" />
+          </g>
+        </g>
+        <path d="M44 88 Q60 94 76 88 Q72 106 60 118 Q48 106 44 88 Z" fill="#f4f6fb" stroke="#cfd5e3" strokeWidth="1.8" />
+        <path d="M52 97 Q60 101 68 97" fill="none" stroke="#cfd5e3" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M104 75 L119 49" stroke="#7a5126" strokeWidth="3.2" strokeLinecap="round" />
+        <path d={star(119, 47, 7.5, 3)} fill="#fff3b0" />
+        <path d="M20 38 Q30 12 52 -10 Q58 -24 78 -28 Q70 -18 74 -8 Q92 14 100 38 Q60 28 20 38 Z" fill="#5b3fd1" stroke="#3a24a0" strokeWidth="1.6" />
+        <path d="M22 35 Q60 26 98 35 L97 42 Q60 33 23 42 Z" fill="#ffc933" />
+        <path d={star(64, 12, 5, 2)} fill="#fff3b0" />
+        <path d={star(52, 2, 3.4, 1.4)} fill="#fff3b0" />
+        <path d="M44 20 A7 7 0 1 0 44 34 A5.5 5.5 0 1 1 44 20 Z" fill="#fff3b0" />
+      </g>
+    ),
+  },
+
+  'cos-hero': {
+    back: (
+      <g strokeLinejoin="round">
+        <path d="M22 50 Q-8 88 -4 124 Q16 114 36 126 Q60 114 84 126 Q104 114 124 124 Q128 88 98 50 Z" fill="#6d28d9" stroke="#4c1d95" strokeWidth="2.4" />
+        <path d="M12 74 Q4 98 6 116 M108 74 Q116 98 114 116" fill="none" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" opacity="0.75" />
+      </g>
+    ),
+    front: (
+      <g strokeLinejoin="round">
+        {DISC_CLIP}
+        <g clipPath="url(#monCostumeClip)">
+          <path d="M6 83 Q60 73 114 83 L114 124 L6 124 Z" fill="#14b8a6" />
+          <path d="M6 101 Q60 93 114 101 L114 107 Q60 99 6 107 Z" fill="#ffc933" />
+        </g>
+        <path d={star(60, 91, 9.5, 4)} fill="#ffc933" stroke="#b78300" strokeWidth="1.4" />
+        {CAPE_CLASP}
+        <path
+          fillRule="evenodd"
+          d="M24 47 Q40 36 60 42 Q80 36 96 47 L93 63 Q80 70 66 61 Q60 58 54 61 Q40 70 27 63 Z M36 52 a10 12 0 1 0 20 0 a10 12 0 1 0 -20 0 Z M64 52 a10 12 0 1 0 20 0 a10 12 0 1 0 -20 0 Z"
+          fill="#6d28d9"
+          stroke="#4c1d95"
+          strokeWidth="1.6"
+        />
       </g>
     ),
   },

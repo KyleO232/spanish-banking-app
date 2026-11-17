@@ -1,5 +1,5 @@
 import { isAdminMode } from './adminMode.js';
-import { SLOTS, getItem } from '../data/wardrobe.js';
+import { SLOTS, canonicalId, getItem } from '../data/wardrobe.js';
 import { titleFor } from '../data/titles.js';
 
 const STORAGE_KEY = 'spanish-banking-progress';
@@ -128,11 +128,15 @@ export function getWardrobe() {
     const raw = localStorage.getItem(WARDROBE_KEY);
     if (!raw) return { ...EMPTY_WARDROBE, owned: [], equipped: {} };
     const parsed = JSON.parse(raw);
-    return {
-      owned: Array.isArray(parsed.owned) ? parsed.owned : [],
-      equipped: parsed.equipped && typeof parsed.equipped === 'object' ? parsed.equipped : {},
-      equippedAt: Number(parsed.equippedAt) || 0,
-    };
+    // ids from before a costume was redrawn are mapped to the new id
+    const owned = Array.isArray(parsed.owned) ? [...new Set(parsed.owned.map(canonicalId))] : [];
+    const equipped = {};
+    if (parsed.equipped && typeof parsed.equipped === 'object') {
+      Object.entries(parsed.equipped).forEach(([slot, id]) => {
+        equipped[slot] = canonicalId(id);
+      });
+    }
+    return { owned, equipped, equippedAt: Number(parsed.equippedAt) || 0 };
   } catch {
     return { ...EMPTY_WARDROBE, owned: [], equipped: {} };
   }
