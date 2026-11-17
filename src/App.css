@@ -3681,3 +3681,54 @@ a.stat-chip {
     transform: translate(125vw, 0);
   }
 }
+
+/* storm spray and a lighthouse beam */
+.spray {
+  position: absolute;
+  left: -4%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  animation: spray-blow 6s linear infinite;
+}
+
+@keyframes spray-blow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(calc(100vw + var(--drift)), var(--rise));
+    opacity: 0;
+  }
+}
+
+.beacon-beam {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 38%, rgba(255, 240, 190, 0.2) 50%, transparent 62%);
+  mix-blend-mode: screen;
+  animation: beacon-sweep 9s ease-in-out infinite;
+}
+
+@keyframes beacon-sweep {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}

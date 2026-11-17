@@ -1,0 +1,1161 @@
+{
+  "id": "emergencies",
+  "title": "Emergencies & First Aid",
+  "description": "Everyday Spanish for emergencies: calling for help, urgent symptoms, first aid, and what happens in the emergency room.",
+  "theme": "lighthouse",
+  "track": "medical",
+  "roles": {
+    "you": "Nurse",
+    "other": "Patient"
+  },
+  "terms": [
+    {
+      "spanish": "la emergencia",
+      "english": "emergency",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Esto es una emergencia.",
+        "en": "This is an emergency."
+      }
+    },
+    {
+      "spanish": "llamar al 911",
+      "english": "to call 911",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Debe llamar al 911 si no respira.",
+        "en": "You should call 911 if he or she is not breathing."
+      }
+    },
+    {
+      "spanish": "la ambulancia",
+      "english": "ambulance",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "La ambulancia llega en cinco minutos.",
+        "en": "The ambulance arrives in five minutes."
+      }
+    },
+    {
+      "spanish": "los paramédicos",
+      "english": "paramedics",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Los paramédicos ya están en camino.",
+        "en": "The paramedics are already on their way."
+      }
+    },
+    {
+      "spanish": "los bomberos",
+      "english": "firefighters",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Los bomberos también atienden emergencias médicas.",
+        "en": "Firefighters also respond to medical emergencies."
+      }
+    },
+    {
+      "spanish": "la clínica de urgencias",
+      "english": "urgent care clinic",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Para un corte pequeño, vaya a la clínica de urgencias.",
+        "en": "For a small cut, go to the urgent care clinic."
+      }
+    },
+    {
+      "spanish": "el triaje",
+      "english": "triage",
+      "note": "the nurse decides who is seen first",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "En el triaje decidimos quién pasa primero.",
+        "en": "In triage we decide who goes first."
+      }
+    },
+    {
+      "spanish": "grave",
+      "english": "serious",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "La herida es grave.",
+        "en": "The wound is serious."
+      },
+      "confusable": [
+        "crítico",
+        "urgente"
+      ]
+    },
+    {
+      "spanish": "crítico",
+      "english": "critical",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "El paciente está en estado crítico.",
+        "en": "The patient is in critical condition."
+      },
+      "confusable": [
+        "urgente"
+      ]
+    },
+    {
+      "spanish": "urgente",
+      "english": "urgent",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Es urgente. Necesita atención ya.",
+        "en": "It is urgent. He or she needs care now."
+      }
+    },
+    {
+      "spanish": "el paciente / la paciente",
+      "english": "patient",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "El paciente necesita atención ahora.",
+        "en": "The patient needs care now."
+      }
+    },
+    {
+      "spanish": "el acompañante / la acompañante",
+      "english": "companion",
+      "note": "the family member or friend with the patient",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "¿Es usted el acompañante del paciente?",
+        "en": "Are you the patient's companion?"
+      }
+    },
+    {
+      "spanish": "la dirección",
+      "english": "address",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "¿Cuál es la dirección de la emergencia?",
+        "en": "What is the address of the emergency?"
+      }
+    },
+    {
+      "spanish": "respirar",
+      "english": "to breathe",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "El paciente no puede respirar.",
+        "en": "The patient cannot breathe."
+      }
+    },
+    {
+      "spanish": "consciente",
+      "english": "conscious",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "¿Está consciente?",
+        "en": "Is he or she conscious?"
+      }
+    },
+    {
+      "spanish": "inconsciente",
+      "english": "unconscious",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Está inconsciente y no responde.",
+        "en": "He or she is unconscious and does not respond."
+      }
+    },
+    {
+      "spanish": "la reanimación cardiopulmonar",
+      "english": "CPR",
+      "note": "also: la RCP",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Empiece la reanimación cardiopulmonar de inmediato.",
+        "en": "Start CPR right away."
+      }
+    },
+    {
+      "spanish": "el desfibrilador",
+      "english": "defibrillator",
+      "note": "",
+      "block": "Emergency Basics",
+      "example": {
+        "es": "Traigan el desfibrilador, rápido.",
+        "en": "Bring the defibrillator, quickly."
+      }
+    },
+    {
+      "spanish": "Mantenga la calma.",
+      "english": "Stay calm.",
+      "note": "formal/register phrase",
+      "block": "Emergency Basics",
+      "example": null
+    },
+    {
+      "spanish": "La ayuda viene en camino.",
+      "english": "Help is on the way.",
+      "note": "formal/register phrase",
+      "block": "Emergency Basics",
+      "example": null
+    },
+    {
+      "spanish": "No lo/la mueva.",
+      "english": "Don't move him/her.",
+      "note": "formal/register phrase",
+      "block": "Emergency Basics",
+      "example": null
+    },
+    {
+      "spanish": "¿Qué pasó?",
+      "english": "What happened?",
+      "note": "formal/register phrase",
+      "block": "Emergency Basics",
+      "example": null
+    },
+    {
+      "spanish": "el dolor de pecho",
+      "english": "chest pain",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Tiene dolor de pecho y sudor frío.",
+        "en": "He or she has chest pain and a cold sweat."
+      }
+    },
+    {
+      "spanish": "el ataque al corazón",
+      "english": "heart attack",
+      "note": "also: el infarto",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Un ataque al corazón necesita atención inmediata.",
+        "en": "A heart attack needs immediate care."
+      },
+      "confusable": [
+        "el dolor de pecho"
+      ]
+    },
+    {
+      "spanish": "el derrame cerebral",
+      "english": "stroke",
+      "note": "also: el accidente cerebrovascular",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Un derrame cerebral puede causar debilidad en un lado del cuerpo.",
+        "en": "A stroke can cause weakness on one side of the body."
+      }
+    },
+    {
+      "spanish": "atragantarse",
+      "english": "to choke",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Un niño puede atragantarse con un caramelo.",
+        "en": "A child can choke on a piece of candy."
+      }
+    },
+    {
+      "spanish": "la convulsión",
+      "english": "seizure",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Tuvo una convulsión y no responde.",
+        "en": "He or she had a seizure and is not responding."
+      }
+    },
+    {
+      "spanish": "la pérdida del conocimiento",
+      "english": "loss of consciousness",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La pérdida del conocimiento duró un minuto.",
+        "en": "The loss of consciousness lasted a minute."
+      },
+      "confusable": [
+        "la convulsión"
+      ]
+    },
+    {
+      "spanish": "la hemorragia",
+      "english": "severe bleeding",
+      "note": "also: el sangrado fuerte",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La hemorragia no se detiene.",
+        "en": "The bleeding will not stop."
+      }
+    },
+    {
+      "spanish": "la anafilaxia",
+      "english": "anaphylaxis",
+      "note": "also: la reacción alérgica grave",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La anafilaxia es una reacción alérgica muy peligrosa.",
+        "en": "Anaphylaxis is a very dangerous allergic reaction."
+      }
+    },
+    {
+      "spanish": "el envenenamiento",
+      "english": "poisoning",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Sospechamos un envenenamiento.",
+        "en": "We suspect poisoning."
+      }
+    },
+    {
+      "spanish": "el golpe en la cabeza",
+      "english": "blow to the head",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Se dio un golpe en la cabeza al caer.",
+        "en": "He or she hit their head when falling."
+      }
+    },
+    {
+      "spanish": "la conmoción cerebral",
+      "english": "concussion",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Una conmoción cerebral puede causar mareo y confusión.",
+        "en": "A concussion can cause dizziness and confusion."
+      }
+    },
+    {
+      "spanish": "la lesión",
+      "english": "injury",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La lesión es en la pierna derecha.",
+        "en": "The injury is in the right leg."
+      }
+    },
+    {
+      "spanish": "la caída",
+      "english": "fall",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La caída fue de seis pies.",
+        "en": "The fall was six feet."
+      }
+    },
+    {
+      "spanish": "el accidente de carro",
+      "english": "car accident",
+      "note": "also: el accidente de auto",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Tuvo un accidente de carro esta mañana.",
+        "en": "He or she had a car accident this morning."
+      }
+    },
+    {
+      "spanish": "el ahogamiento",
+      "english": "drowning",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "El ahogamiento es una emergencia.",
+        "en": "Drowning is an emergency."
+      }
+    },
+    {
+      "spanish": "el golpe de calor",
+      "english": "heat stroke",
+      "note": "also: la insolación",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Un golpe de calor es muy peligroso.",
+        "en": "Heat stroke is very dangerous."
+      }
+    },
+    {
+      "spanish": "la hipotermia",
+      "english": "hypothermia",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "La hipotermia ocurre cuando el cuerpo pierde mucho calor.",
+        "en": "Hypothermia happens when the body loses a lot of heat."
+      }
+    },
+    {
+      "spanish": "la dificultad para hablar",
+      "english": "trouble speaking",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Tiene dificultad para hablar desde hace una hora.",
+        "en": "He or she has had trouble speaking for an hour."
+      }
+    },
+    {
+      "spanish": "la debilidad",
+      "english": "weakness",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Siente debilidad en el brazo derecho.",
+        "en": "He or she feels weakness in the right arm."
+      }
+    },
+    {
+      "spanish": "la cara caída",
+      "english": "drooping face",
+      "note": "a sign of a stroke",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Fíjese si tiene la cara caída de un lado.",
+        "en": "Check whether the face droops on one side."
+      }
+    },
+    {
+      "spanish": "la visión borrosa",
+      "english": "blurry vision",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Tiene visión borrosa desde hace una hora.",
+        "en": "He or she has had blurry vision for an hour."
+      }
+    },
+    {
+      "spanish": "la confusión",
+      "english": "confusion",
+      "note": "",
+      "block": "Urgent Symptoms",
+      "example": {
+        "es": "Está en estado de confusión y no sabe dónde está.",
+        "en": "He or she is confused and does not know where they are."
+      }
+    },
+    {
+      "spanish": "los primeros auxilios",
+      "english": "first aid",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Sé dar los primeros auxilios.",
+        "en": "I know how to give first aid."
+      }
+    },
+    {
+      "spanish": "el botiquín",
+      "english": "first aid kit",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Tenga un botiquín en la casa y en el carro.",
+        "en": "Keep a first aid kit at home and in the car."
+      }
+    },
+    {
+      "spanish": "la gasa",
+      "english": "gauze",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Cubra la herida con una gasa limpia.",
+        "en": "Cover the wound with clean gauze."
+      }
+    },
+    {
+      "spanish": "la curita",
+      "english": "adhesive bandage",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Póngale una curita en el dedo.",
+        "en": "Put an adhesive bandage on the finger."
+      }
+    },
+    {
+      "spanish": "la venda",
+      "english": "bandage (roll)",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Envuelva la muñeca con una venda.",
+        "en": "Wrap the wrist with a bandage."
+      },
+      "confusable": [
+        "la curita",
+        "la gasa"
+      ]
+    },
+    {
+      "spanish": "el torniquete",
+      "english": "tourniquet",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Use un torniquete solo si el sangrado es muy fuerte.",
+        "en": "Use a tourniquet only if the bleeding is very severe."
+      },
+      "confusable": [
+        "presionar la herida"
+      ]
+    },
+    {
+      "spanish": "presionar la herida",
+      "english": "to press on the wound",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Debe presionar la herida con una gasa.",
+        "en": "You should press on the wound with gauze."
+      }
+    },
+    {
+      "spanish": "detener el sangrado",
+      "english": "to stop the bleeding",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Hay que detener el sangrado rápido.",
+        "en": "You have to stop the bleeding quickly."
+      }
+    },
+    {
+      "spanish": "lavar la herida",
+      "english": "to wash the wound",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Debe lavar la herida con agua y jabón.",
+        "en": "You should wash the wound with soap and water."
+      }
+    },
+    {
+      "spanish": "el antiséptico",
+      "english": "antiseptic",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Después, aplique un antiséptico.",
+        "en": "Afterward, apply an antiseptic."
+      }
+    },
+    {
+      "spanish": "enfriar la quemadura",
+      "english": "to cool the burn",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Debe enfriar la quemadura con agua fresca.",
+        "en": "You should cool the burn with cool water."
+      }
+    },
+    {
+      "spanish": "la maniobra de Heimlich",
+      "english": "Heimlich maneuver",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Haga la maniobra de Heimlich si se está atragantando.",
+        "en": "Do the Heimlich maneuver if he or she is choking."
+      }
+    },
+    {
+      "spanish": "las compresiones en el pecho",
+      "english": "chest compressions",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Haga las compresiones en el pecho con fuerza.",
+        "en": "Do the chest compressions with force."
+      }
+    },
+    {
+      "spanish": "la respiración boca a boca",
+      "english": "mouth-to-mouth breathing",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "La respiración boca a boca es parte de la RCP.",
+        "en": "Mouth-to-mouth breathing is part of CPR."
+      }
+    },
+    {
+      "spanish": "la posición de recuperación",
+      "english": "recovery position",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Ponga a la persona en la posición de recuperación.",
+        "en": "Put the person in the recovery position."
+      }
+    },
+    {
+      "spanish": "acostar",
+      "english": "to lay down",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Debe acostar al paciente de lado.",
+        "en": "You should lay the patient on his or her side."
+      }
+    },
+    {
+      "spanish": "levantar las piernas",
+      "english": "to raise the legs",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Para un desmayo, puede levantar las piernas de la persona.",
+        "en": "For a fainting spell, you can raise the person's legs."
+      }
+    },
+    {
+      "spanish": "mantener abrigado",
+      "english": "to keep warm",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Hay que mantener abrigado al paciente.",
+        "en": "You have to keep the patient warm."
+      }
+    },
+    {
+      "spanish": "la manta",
+      "english": "blanket",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Cubra al paciente con una manta.",
+        "en": "Cover the patient with a blanket."
+      }
+    },
+    {
+      "spanish": "inmovilizar",
+      "english": "to immobilize",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "No mueva el cuello; hay que inmovilizar la cabeza.",
+        "en": "Do not move the neck; you have to immobilize the head."
+      }
+    },
+    {
+      "spanish": "la mascarilla de oxígeno",
+      "english": "oxygen mask",
+      "note": "",
+      "block": "First Aid",
+      "example": {
+        "es": "Le ponemos una mascarilla de oxígeno.",
+        "en": "We are putting an oxygen mask on you."
+      }
+    },
+    {
+      "spanish": "el cuello ortopédico",
+      "english": "cervical collar",
+      "note": "also: el collarín",
+      "block": "First Aid",
+      "example": {
+        "es": "Le ponemos un cuello ortopédico por la lesión.",
+        "en": "We are putting a cervical collar on you because of the injury."
+      }
+    },
+    {
+      "spanish": "el monitor cardíaco",
+      "english": "heart monitor",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "El monitor cardíaco muestra su ritmo.",
+        "en": "The heart monitor shows your rhythm."
+      }
+    },
+    {
+      "spanish": "el suero",
+      "english": "IV fluids",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Le ponemos suero para la deshidratación.",
+        "en": "We are giving you IV fluids for the dehydration."
+      }
+    },
+    {
+      "spanish": "la transfusión",
+      "english": "blood transfusion",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Necesita una transfusión de sangre.",
+        "en": "He or she needs a blood transfusion."
+      }
+    },
+    {
+      "spanish": "el respirador",
+      "english": "ventilator",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Está conectado a un respirador.",
+        "en": "He or she is connected to a ventilator."
+      }
+    },
+    {
+      "spanish": "los cuidados intensivos",
+      "english": "intensive care",
+      "note": "also: la UCI",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Lo van a pasar a cuidados intensivos.",
+        "en": "They are going to move him to intensive care."
+      }
+    },
+    {
+      "spanish": "el quirófano",
+      "english": "operating room",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Lo llevan al quirófano ahora.",
+        "en": "They are taking him to the operating room now."
+      }
+    },
+    {
+      "spanish": "el cirujano / la cirujana",
+      "english": "surgeon",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "El cirujano le explicará la operación.",
+        "en": "The surgeon will explain the operation to you."
+      }
+    },
+    {
+      "spanish": "el médico de guardia",
+      "english": "doctor on call",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "El médico de guardia viene enseguida.",
+        "en": "The doctor on call is coming right away."
+      }
+    },
+    {
+      "spanish": "el enfermero / la enfermera",
+      "english": "nurse",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "La enfermera le toma los signos vitales.",
+        "en": "The nurse is taking your vital signs."
+      }
+    },
+    {
+      "spanish": "el trabajador social / la trabajadora social",
+      "english": "social worker",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "La trabajadora social puede ayudarle con los papeles.",
+        "en": "The social worker can help you with the paperwork."
+      }
+    },
+    {
+      "spanish": "el familiar",
+      "english": "family member",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Un familiar puede esperar afuera.",
+        "en": "A family member can wait outside."
+      }
+    },
+    {
+      "spanish": "la identificación",
+      "english": "ID",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Necesito su identificación, por favor.",
+        "en": "I need your ID, please."
+      }
+    },
+    {
+      "spanish": "el estado de salud",
+      "english": "medical condition",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Su estado de salud es estable.",
+        "en": "Your condition is stable."
+      }
+    },
+    {
+      "spanish": "la gravedad",
+      "english": "severity",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Atendemos según la gravedad.",
+        "en": "We see patients according to severity."
+      }
+    },
+    {
+      "spanish": "atender",
+      "english": "to treat / see",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Vamos a atender primero los casos más graves.",
+        "en": "We are going to see the most serious cases first."
+      }
+    },
+    {
+      "spanish": "ingresar",
+      "english": "to admit",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Lo vamos a ingresar al hospital.",
+        "en": "We are going to admit you to the hospital."
+      }
+    },
+    {
+      "spanish": "la observación",
+      "english": "observation",
+      "note": "",
+      "block": "Emergency Room Care",
+      "example": {
+        "es": "Se queda en observación esta noche.",
+        "en": "He or she is staying under observation tonight."
+      }
+    },
+    {
+      "spanish": "Lo vamos a atender enseguida.",
+      "english": "We will see you right away.",
+      "note": "formal/register phrase",
+      "block": "Emergency Room Care",
+      "example": null
+    },
+    {
+      "spanish": "Los casos más graves pasan primero.",
+      "english": "The most serious cases go first.",
+      "note": "formal/register phrase",
+      "block": "Emergency Room Care",
+      "example": null
+    },
+    {
+      "spanish": "Necesito que se quede aquí.",
+      "english": "I need you to stay here.",
+      "note": "formal/register phrase",
+      "block": "Emergency Room Care",
+      "example": null
+    },
+    {
+      "spanish": "Vamos a hacerle varias pruebas.",
+      "english": "We are going to run several tests.",
+      "note": "formal/register phrase",
+      "block": "Emergency Room Care",
+      "example": null
+    }
+  ],
+  "registerNotes": [
+    "In the US, dial 911 for any emergency, and say \"Necesito un intérprete en español\" or \"Spanish, please\". Dispatchers can bring in an interpreter by phone.",
+    "In an emergency use short, clear sentences and simple words: \"¿Respira?\", \"¿Está consciente?\", \"No lo mueva\". Stay calm and speak slowly. Your tone helps the patient and the family stay calm.",
+    "US Spanish speakers come from many countries, so words vary: \"el ataque al corazón\" or \"el infarto\", \"el derrame cerebral\" or \"la embolia\", \"atragantarse\" or \"ahogarse con comida\", \"la curita\" or \"la banda adhesiva\", \"el collarín\" or \"el cuello ortopédico\".",
+    "Give first aid only as far as your training and your workplace protocol allow, and when in doubt call 911. This module teaches the words, not the medical steps.",
+    "Ask for the patient's ID and a family contact, and ask who can make medical decisions if the patient cannot. Share information only with people the patient or the law allows.",
+    "Warning signs of a stroke are a drooping face, weakness in an arm or trouble speaking. Call 911 right away and note the time the signs started."
+  ],
+  "roleplays": [
+    {
+      "id": "calling-for-help",
+      "title": "A Call for Help",
+      "block": "Emergency Basics",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Clínica, buenos días. ¿Qué pasó?",
+          "english": "Clinic, good morning. What happened?",
+          "blank": "Qué pasó"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Mi esposo se cayó y no responde. Creo que está inconsciente.",
+          "english": "My husband fell and he is not responding. I think he is unconscious."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Mantenga la calma. ¿Respira? ¿Está consciente?",
+          "english": "Stay calm. Is he breathing? Is he conscious?",
+          "blank": "Mantenga la calma"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Respira, pero muy despacio. No abre los ojos.",
+          "english": "He is breathing, but very slowly. He does not open his eyes."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a llamar al 911 ahora mismo. ¿Cuál es la dirección?",
+          "english": "I am going to call 911 right now. What is the address?",
+          "blank": "llamar al 911"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Es el número doce de la calle Olmo, apartamento tres.",
+          "english": "It is number twelve Elm Street, apartment three."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "La ambulancia ya viene. La ayuda viene en camino.",
+          "english": "The ambulance is coming. Help is on the way.",
+          "blank": "ambulancia"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué hago mientras llegan?",
+          "english": "What do I do while they get here?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "No lo mueva. Quédese con él y dígame si deja de respirar.",
+          "english": "Do not move him. Stay with him and tell me if he stops breathing.",
+          "blank": "No lo mueva"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sigue respirando. Ya veo a los paramédicos.",
+          "english": "He is still breathing. I can see the paramedics now."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Perfecto. Los paramédicos le van a hacer unas preguntas.",
+          "english": "Perfect. The paramedics are going to ask you some questions.",
+          "blank": "paramédicos"
+        }
+      ]
+    },
+    {
+      "id": "urgent-warning-signs",
+      "title": "Urgent Warning Signs",
+      "block": "Urgent Symptoms",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Dígame qué siente. ¿Tiene dolor de pecho?",
+          "english": "Tell me what you feel. Do you have chest pain?",
+          "blank": "dolor de pecho"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Sí, siento presión en el pecho y me sudan las manos.",
+          "english": "Yes, I feel pressure in my chest and my hands are sweating."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "¿Ha tenido antes un ataque al corazón?",
+          "english": "Have you ever had a heart attack before?",
+          "blank": "ataque al corazón"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, nunca. Pero mi padre murió de un infarto.",
+          "english": "No, never. But my father died of a heart attack."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Gracias. ¿Tiene dificultad para hablar o debilidad en un brazo?",
+          "english": "Thank you. Do you have trouble speaking or weakness in an arm?",
+          "blank": "dificultad para hablar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, solo me siento mareado y con la visión borrosa.",
+          "english": "No, I only feel dizzy and my vision is blurry."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Entiendo. ¿Se golpeó la cabeza o tuvo una caída hoy?",
+          "english": "I see. Did you hit your head or have a fall today?",
+          "blank": "caída"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "No, nada de eso.",
+          "english": "No, nothing like that."
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Voy a avisar al doctor. Su caso es urgente.",
+          "english": "I am going to tell the doctor. Your case is urgent.",
+          "blank": "urgente"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Es grave?",
+          "english": "Is it serious?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "No lo sabemos todavía. Lo vamos a atender enseguida.",
+          "english": "We do not know yet. We are going to see you right away.",
+          "blank": "atender"
+        }
+      ]
+    },
+    {
+      "id": "first-aid-basics",
+      "title": "First Aid Basics",
+      "block": "First Aid",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Para una herida con sangrado, primero debe presionar la herida con una gasa.",
+          "english": "For a bleeding wound, you should first press on the wound with gauze.",
+          "blank": "presionar la herida"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Cuánto tiempo la presiono?",
+          "english": "How long do I press on it?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Unos diez minutos, hasta detener el sangrado. No quite la gasa.",
+          "english": "About ten minutes, until the bleeding stops. Do not remove the gauze.",
+          "blank": "detener el sangrado"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y si es una quemadura?",
+          "english": "And if it is a burn?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Debe enfriar la quemadura con agua fresca, no con hielo.",
+          "english": "You should cool the burn with cool water, not with ice.",
+          "blank": "enfriar la quemadura"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué hago si mi hijo se atraganta con comida?",
+          "english": "What do I do if my son chokes on food?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Haga la maniobra de Heimlich y llame al 911.",
+          "english": "Do the Heimlich maneuver and call 911.",
+          "blank": "maniobra de Heimlich"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Y si se desmaya?",
+          "english": "And if he faints?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Acuéstelo, levante las piernas y manténgalo abrigado con una manta.",
+          "english": "Lay him down, raise his legs and keep him warm with a blanket.",
+          "blank": "manta"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Debo tener algo en casa?",
+          "english": "Should I keep something at home?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, tenga un botiquín con gasa, curitas y antiséptico.",
+          "english": "Yes, keep a first aid kit with gauze, adhesive bandages and antiseptic.",
+          "blank": "botiquín"
+        }
+      ]
+    },
+    {
+      "id": "in-the-emergency-room",
+      "title": "In the Emergency Room",
+      "block": "Emergency Room Care",
+      "lines": [
+        {
+          "speaker": "Nurse",
+          "spanish": "Buenos días. Necesito su identificación, por favor.",
+          "english": "Good morning. I need your ID, please.",
+          "blank": "identificación"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Aquí la tiene. ¿Cuánto tengo que esperar?",
+          "english": "Here it is. How long do I have to wait?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Atendemos según la gravedad. Los casos más graves pasan primero.",
+          "english": "We see patients according to severity. The most serious cases go first.",
+          "blank": "gravedad"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "Entiendo. Mi hija viene conmigo. ¿Puede entrar?",
+          "english": "I understand. My daughter is with me. Can she come in?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Sí, un familiar puede acompañarlo. Solo uno por paciente.",
+          "english": "Yes, a family member can go with you. Only one per patient.",
+          "blank": "familiar"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Qué me van a hacer?",
+          "english": "What are they going to do to me?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Vamos a hacerle varias pruebas y le ponemos suero en el brazo.",
+          "english": "We are going to run several tests and give you IV fluids in your arm.",
+          "blank": "suero"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Me van a operar?",
+          "english": "Are they going to operate on me?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Todavía no. Primero lo ve el médico de guardia.",
+          "english": "Not yet. First the doctor on call will see you.",
+          "blank": "médico de guardia"
+        },
+        {
+          "speaker": "Patient",
+          "spanish": "¿Me tengo que quedar en el hospital?",
+          "english": "Do I have to stay in the hospital?"
+        },
+        {
+          "speaker": "Nurse",
+          "spanish": "Quizás. Lo dejamos en observación y, si hace falta, lo vamos a ingresar.",
+          "english": "Maybe. We will keep you under observation and, if needed, we will admit you.",
+          "blank": "observación"
+        }
+      ]
+    }
+  ]
+}

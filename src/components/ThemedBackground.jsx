@@ -7,11 +7,16 @@ import forestImg from '../assets/backgrounds/forest.jpg';
 import lavenderImg from '../assets/backgrounds/meadow.jpg';
 import nightImg from '../assets/backgrounds/night.jpg';
 import sunflowerImg from '../assets/backgrounds/sunflower.jpg';
+import lighthouseImg from '../assets/backgrounds/lighthouse.jpg';
 
 const THEMES = {
   alpine: {
     image: alpineImg,
     fill: 'var(--alpine-fill)',
+  },
+  lighthouse: {
+    image: lighthouseImg,
+    fill: 'var(--lighthouse-fill)',
   },
   sunflower: {
     image: sunflowerImg,
@@ -126,6 +131,44 @@ function Petals() {
           <path d="M12 2C17 5 21 11 17 17C15 20 12 22 12 22C12 22 9 20 7 17C3 11 7 5 12 2Z" />
           <path d="M12 3L12 10" stroke="rgba(190,70,110,0.35)" strokeWidth="1.2" fill="none" />
         </svg>
+      ))}
+    </div>
+  );
+}
+
+// Sea spray blowing across the storm photo, and a lighthouse beam sweeping over it.
+function Beacon() {
+  const spray = useMemo(
+    () =>
+      Array.from({ length: 22 }, (_, i) => ({
+        id: i,
+        top: rand(4, 96),
+        size: rand(2, 5),
+        delay: -rand(0, 9),
+        duration: rand(3.5, 8),
+        drift: rand(40, 110),
+        rise: rand(-30, 40),
+      })),
+    []
+  );
+
+  return (
+    <div className="particles" aria-hidden="true">
+      <div className="beacon-beam" />
+      {spray.map((s) => (
+        <span
+          key={s.id}
+          className="spray"
+          style={{
+            top: `${s.top}%`,
+            width: s.size,
+            height: s.size,
+            animationDelay: `${s.delay}s`,
+            animationDuration: `${s.duration}s`,
+            '--drift': `${s.drift}px`,
+            '--rise': `${s.rise}px`,
+          }}
+        />
       ))}
     </div>
   );
@@ -430,6 +473,8 @@ export default function ThemedBackground({ theme }) {
         <Snow />
       ) : theme === 'spring' ? (
         <Petals />
+      ) : theme === 'lighthouse' ? (
+        <Beacon />
       ) : theme === 'sunflower' ? (
         <Bees />
       ) : theme === 'night' ? (
