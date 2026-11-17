@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { supabase } from '../lib/supabase.js';
-import { checkIsAdmin, pushProgress, syncDown } from '../utils/cloud.js';
+import { checkIsAdmin, deleteAccountRemote, pushProgress, syncDown } from '../utils/cloud.js';
 import { clearLocalProgress, setChangeListener } from '../utils/progress.js';
 import { getAdminPreference, saveAdminPreference, setAdminEffective } from '../utils/adminMode.js';
 
@@ -141,6 +141,25 @@ export function AuthProvider({ children }) {
     setSyncVersion((v) => v + 1);
   }, [userId, syncedUserId]);
 
+  // Deletes the account for good, then leaves this device clean like a sign-out does.
+  const deleteAccount = useCallback(async () => {
+    clearTimeout(pushTimer.current);
+    setChangeListener(null); // nothing more may upload for a user that no longer exists
+    try {
+      await deleteAccountRemote();
+    } catch (error) {
+      // it failed, so the account still exists: turn syncing back on for this session
+      setSyncedUserId(null);
+      setRetryToken((t) => t + 1);
+      throw error;
+    }
+    clearLocalProgress();
+    saveAdminPreference(true);
+    setAdminPrefState(true);
+    await supabase.auth.signOut({ scope: 'local' }); // the server session is already gone
+    setSyncVersion((v) => v + 1);
+  }, []);
+
   const setAdminPref = useCallback((on) => {
     saveAdminPreference(on);
     setAdminPrefState(on);
@@ -163,6 +182,7 @@ export function AuthProvider({ children }) {
       signInWithEmail,
       verifyCode,
       signOut,
+      deleteAccount,
     }),
     [
       session,
@@ -177,6 +197,7 @@ export function AuthProvider({ children }) {
       signInWithEmail,
       verifyCode,
       signOut,
+      deleteAccount,
     ]
   );
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Check, Cloud, CloudOff, LogOut, Mail, RefreshCw, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TopBar from '../components/TopBar.jsx';
+import DeleteAccount from '../components/DeleteAccount.jsx';
 import WeekStreak from '../components/WeekStreak.jsx';
 import { useAuth } from '../auth/AuthContext.jsx';
 import { TRACKS, getTrackInfo } from '../data/tracks.js';
@@ -191,8 +192,8 @@ function SyncStatus({ status, onRetry }) {
   );
 }
 
-function Profile() {
-  const { user, isAdmin, adminPref, setAdminPref, syncStatus, retrySync, signOut } = useAuth();
+function Profile({ onDeleted }) {
+  const { user, isAdmin, adminPref, setAdminPref, syncStatus, retrySync, signOut, deleteAccount } = useAuth();
   const [signingOut, setSigningOut] = useState(false);
   const initial = (user.email ?? '?')[0].toUpperCase();
 
@@ -241,12 +242,15 @@ function Profile() {
       >
         <LogOut size={20} strokeWidth={2.6} /> {signingOut ? 'Signing out…' : 'Sign out'}
       </button>
+
+      <DeleteAccount onDelete={deleteAccount} onDeleted={onDeleted} />
     </>
   );
 }
 
 export default function Account() {
   const { user, ready } = useAuth();
+  const [deleted, setDeleted] = useState(false);
 
   return (
     <>
@@ -258,9 +262,20 @@ export default function Account() {
         {!ready ? (
           <div className="empty-state">Loading…</div>
         ) : user ? (
-          <Profile />
+          <Profile onDeleted={() => setDeleted(true)} />
         ) : (
-          <SignIn />
+          <>
+            {deleted && (
+              <div className="card deleted-card">
+                <h3>Your account was deleted</h3>
+                <p>
+                  Your email, progress, XP, coins and outfits were removed. You can keep learning without an
+                  account, or sign up again any time.
+                </p>
+              </div>
+            )}
+            <SignIn />
+          </>
         )}
       </div>
     </>

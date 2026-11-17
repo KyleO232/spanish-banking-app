@@ -118,6 +118,13 @@ export async function syncDown(userId) {
   await pushProgress(userId, merged);
 }
 
+// Permanently deletes the signed-in user's account and all of their data (the database
+// function removes the auth user, and their progress and admin rows go with it).
+export async function deleteAccountRemote() {
+  const { error } = await supabase.rpc('delete_my_account');
+  if (error) throw error;
+}
+
 export async function checkIsAdmin(userId) {
   const { data, error } = await supabase
     .from('admins')

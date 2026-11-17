@@ -3732,3 +3732,66 @@ a.stat-chip {
     opacity: 0;
   }
 }
+
+/* ---------- delete account ---------- */
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.btn-danger:active:not(:disabled) {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.delete-account-open {
+  margin-top: 10px;
+  color: var(--danger);
+}
+
+.delete-card {
+  margin-top: 12px;
+  border-color: var(--danger);
+  box-shadow: 0 3px 0 var(--danger);
+}
+
+.delete-card h3 {
+  margin: 0 0 6px;
+  color: var(--danger);
+}
+
+.delete-card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.delete-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.delete-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.delete-actions .btn {
+  flex: 1;
+}
+
+.deleted-card {
+  margin-bottom: 12px;
+}
+
+.deleted-card h3 {
+  margin: 0 0 4px;
+}
+
+.deleted-card p {
+  margin: 0;
+  font-size: 14px;
+}
