@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 import { WardrobeBack, WardrobeFront } from './WardrobeArt.jsx';
 import { COSTUME_HIDES, resolveLook } from '../data/wardrobe.js';
 import { getEquipped } from '../utils/progress.js';
+import { getTrackInfo } from '../data/tracks.js';
+import { useTrack } from '../utils/track.js';
 
-// "Monedita" (little coin): the app's original mascot, drawn as layered SVG so each
-// part (eyes, arms, body) can move on its own.
+// The app's mascots, drawn as layered SVG so each part (eyes, arms, body) can move on its
+// own: "Monedita" (little coin) for banking and "Pastillita" (little pill) for medicine.
+// Which one shows follows the learner's track (or the `kind` prop). Both wear the same
+// shop items, which are drawn for a body that fits inside a 92-wide circle.
 //
 // mood: 'idle'  – bobs and blinks, and every few seconds does a random little
 //                 behavior (see IDLE_ACTS) so she never feels like a loop
@@ -16,7 +20,8 @@ import { getEquipped } from '../utils/progress.js';
 const IDLE_ACTS = {
   look: 2400, // glances left and right
   hop: 1500, // two little hops
-  flip: 1250, // flips like a coin
+  flip: 1250, // flips like a coin (Monedita only)
+  rattle: 1100, // shakes like a pill bottle (Pastillita only)
   wave: 1900, // waves hello
   shimmy: 1600, // happy wiggle
   wink: 900, // winks
@@ -24,7 +29,14 @@ const IDLE_ACTS = {
   whistle: 2900, // whistles, music notes float up
   kiss: 1700, // blows a heart
 };
-const ACT_NAMES = Object.keys(IDLE_ACTS);
+const SHARED_ACTS = Object.keys(IDLE_ACTS).filter((name) => name !== 'flip' && name !== 'rattle');
+const ACTS = { coin: [...SHARED_ACTS, 'flip'], pill: [...SHARED_ACTS, 'rattle'] };
+
+// Pastillita's body: a chubby capsule, red on top and white below, that fits inside the
+// coin's footprint (the face sits 6 higher than the rim, which gives it some thickness).
+const PILL_FACE = 'M20 52 A40 40 0 0 1 100 52 L100 64 A40 40 0 0 1 20 64 Z';
+const PILL_RIM = 'M20 58 A40 40 0 0 1 100 58 L100 70 A40 40 0 0 1 20 70 Z';
+const PILL_SEAM = 65; // where the red half meets the white half
 
 function prefersReducedMotion() {
   return typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -33,6 +45,7 @@ function prefersReducedMotion() {
 // `forceAct` pins one behavior (for demos/tests) instead of picking randomly.
 // `outfit` ({ hat, eyewear, outfit } item ids) overrides what she wears; by default she
 // wears whatever the learner has equipped. `still` freezes her (used for shop thumbnails).
+// `kind` ('coin' | 'pill') forces a mascot instead of following the track.
 export default function Monedita({
   mood = 'idle',
   size = 96,
@@ -40,7 +53,12 @@ export default function Monedita({
   forceAct = null,
   outfit,
   still = false,
+  kind,
 }) {
+  const trackId = useTrack();
+  const character = kind ?? getTrackInfo(trackId).mascot.kind;
+  const pill = character === 'pill';
+  const acts = ACTS[character];
   const [randomAct, setAct] = useState(null);
   const [equipped] = useState(() => getEquipped());
   const worn = resolveLook(outfit ?? equipped); // a costume replaces everything else
@@ -62,7 +80,7 @@ export default function Monedita({
     };
 
     function perform() {
-      const pool = ACT_NAMES.filter((name) => name !== last);
+      const pool = acts.filter((name) => name !== last);
       const next = pool[Math.floor(Math.random() * pool.length)];
       last = next;
       setAct(next);
@@ -74,7 +92,7 @@ export default function Monedita({
 
     timer = setTimeout(perform, 1200 + Math.random() * 2000);
     return () => clearTimeout(timer);
-  }, [mood, forceAct, still]);
+  }, [mood, forceAct, still, acts]);
 
   const open = mood === 'cheer';
   const worried = mood === 'oops';
@@ -90,7 +108,7 @@ export default function Monedita({
 
   return (
     <div
-      className={`monedita mood-${mood} ${act ? `act-${act}` : ''} ${still ? 'still' : ''} ${hides.face ? 'cos-hide-face' : ''} ${hides.limbs ? 'cos-hide-limbs' : ''} ${className}`}
+      className={`monedita kind-${character} mood-${mood} ${act ? `act-${act}` : ''} ${still ? 'still' : ''} ${hides.face ? 'cos-hide-face' : ''} ${hides.limbs ? 'cos-hide-limbs' : ''} ${className}`}
       style={{ width: size, height: size * 1.04 }}
       aria-hidden="true"
     >
@@ -105,6 +123,18 @@ export default function Monedita({
             <stop offset="0" stopColor="#ffe27a" />
             <stop offset="1" stopColor="#f5b50a" />
           </linearGradient>
+          {/* Pastillita: the red half (the eyelids reuse it so they blend in), the white half, and the capsule outline */}
+          <linearGradient id="monPillFace" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2={PILL_SEAM}>
+            <stop offset="0" stopColor="#ff8a8c" />
+            <stop offset="1" stopColor="#e5484d" />
+          </linearGradient>
+          <linearGradient id="monPillWhite" gradientUnits="userSpaceOnUse" x1="0" y1={PILL_SEAM} x2="0" y2="104">
+            <stop offset="0" stopColor="#ffffff" />
+            <stop offset="1" stopColor="#dbe4ee" />
+          </linearGradient>
+          <clipPath id="monPillClip">
+            <path d={PILL_FACE} />
+          </clipPath>
         </defs>
 
         <ellipse className="mon-shadow" cx="60" cy="117" rx="30" ry="5" />
@@ -117,17 +147,37 @@ export default function Monedita({
           </g>
 
           <g className="mon-arm mon-arm-l">
-            <ellipse cx="13" cy="72" rx="8" ry="12" transform="rotate(18 13 72)" />
+            <ellipse cx={pill ? 15 : 13} cy="72" rx="8" ry="12" transform={`rotate(18 ${pill ? 15 : 13} 72)`} />
           </g>
           <g className="mon-arm mon-arm-r">
-            <ellipse cx="107" cy="72" rx="8" ry="12" transform="rotate(-18 107 72)" />
+            <ellipse cx={pill ? 105 : 107} cy="72" rx="8" ry="12" transform={`rotate(-18 ${pill ? 105 : 107} 72)`} />
           </g>
 
-          {/* coin edge, then face */}
-          <circle cx="60" cy="64" r="46" fill="#d48f08" />
-          <circle cx="60" cy="58" r="46" fill="url(#monGold)" />
-          <circle cx="60" cy="58" r="37" fill="none" stroke="#fff0a8" strokeWidth="2.5" opacity="0.7" />
-          <path d="M30 40 Q36 26 52 22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity="0.55" />
+          {pill ? (
+            <>
+              {/* capsule rim, then the red and white halves with a seam between them */}
+              <path d={PILL_RIM} fill="#a9b5c3" />
+              <g clipPath="url(#monPillClip)">
+                <rect x="0" y="0" width="120" height={PILL_SEAM} fill="url(#monPillFace)" />
+                <rect x="0" y={PILL_SEAM} width="120" height="60" fill="url(#monPillWhite)" />
+                <rect x="0" y={PILL_SEAM - 1.4} width="120" height="2.4" fill="rgba(90, 20, 30, 0.2)" />
+              </g>
+              <path d="M30 40 Q36 26 52 22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity="0.55" />
+              <path d="M28 82 Q30 94 42 98" fill="none" stroke="#c5d0dc" strokeWidth="3.4" strokeLinecap="round" opacity="0.8" />
+              {/* a little medical cross, tucked away when a hat or costume is on */}
+              {!worn.hat && !worn.costume && (
+                <path d="M82 28 H92 M87 23 V33" fill="none" stroke="#fff" strokeWidth="3.4" strokeLinecap="round" opacity="0.85" />
+              )}
+            </>
+          ) : (
+            <>
+              {/* coin edge, then face */}
+              <circle cx="60" cy="64" r="46" fill="#d48f08" />
+              <circle cx="60" cy="58" r="46" fill="url(#monGold)" />
+              <circle cx="60" cy="58" r="37" fill="none" stroke="#fff0a8" strokeWidth="2.5" opacity="0.7" />
+              <path d="M30 40 Q36 26 52 22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity="0.55" />
+            </>
+          )}
 
           <g className="mon-face">
           <g className="mon-eyes">
@@ -142,13 +192,13 @@ export default function Monedita({
           </g>
 
           {/* eyelids: face-colored covers that close the eyes for winks and yawns */}
-          <ellipse className="mon-lid mon-lid-l" cx="46" cy="52" rx="10.5" ry="12.5" fill="url(#monGoldFace)" />
-          <ellipse className="mon-lid mon-lid-r" cx="74" cy="52" rx="10.5" ry="12.5" fill="url(#monGoldFace)" />
+          <ellipse className="mon-lid mon-lid-l" cx="46" cy="52" rx="10.5" ry="12.5" fill={pill ? 'url(#monPillFace)' : 'url(#monGoldFace)'} />
+          <ellipse className="mon-lid mon-lid-r" cx="74" cy="52" rx="10.5" ry="12.5" fill={pill ? 'url(#monPillFace)' : 'url(#monGoldFace)'} />
           <path className="mon-line mon-line-l" d="M37 53 Q46 59 55 53" fill="none" stroke="#7a4a00" strokeWidth="3.2" strokeLinecap="round" />
           <path className="mon-line mon-line-r" d="M65 53 Q74 59 83 53" fill="none" stroke="#7a4a00" strokeWidth="3.2" strokeLinecap="round" />
 
-          <circle cx="36" cy="68" r="5.5" fill="#ff8fa3" opacity="0.55" />
-          <circle cx="84" cy="68" r="5.5" fill="#ff8fa3" opacity="0.55" />
+          <circle cx={pill ? 35 : 36} cy={pill ? 72 : 68} r="5.5" fill="#ff8fa3" opacity={pill ? 0.7 : 0.55} />
+          <circle cx={pill ? 85 : 84} cy={pill ? 72 : 68} r="5.5" fill="#ff8fa3" opacity={pill ? 0.7 : 0.55} />
 
           {mouth === 'open' && (
             <>

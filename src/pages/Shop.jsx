@@ -7,6 +7,8 @@ import { SLOTS, SLOT_LABELS, getItem, itemsForSlot, previewLook } from '../data/
 import { titleFor } from '../data/titles.js';
 import { buyItem, equipItem, getEquipped, getStats, getWallet, getWardrobe } from '../utils/progress.js';
 import { useAuth } from '../auth/AuthContext.jsx';
+import { getTrackInfo } from '../data/tracks.js';
+import { useTrack } from '../utils/track.js';
 
 function readState() {
   return { wardrobe: getWardrobe(), wallet: getWallet(), equipped: getEquipped(), xp: getStats().xp };
@@ -14,6 +16,7 @@ function readState() {
 
 export default function Shop() {
   const { adminOn } = useAuth();
+  const mascotName = getTrackInfo(useTrack()).mascot.name;
   const [state, setState] = useState(readState);
   const [slot, setSlot] = useState('hat');
   const [preview, setPreview] = useState({}); // items being tried on (not owned/saved)
@@ -68,7 +71,7 @@ export default function Shop() {
       <div className="topbar topbar-home">
         <div className="topbar-titles">
           <h1>Tienda</h1>
-          <div className="subtitle">Dress up Monedita</div>
+          <div className="subtitle">Dress up {mascotName}</div>
         </div>
         <div className="stat-chips">
           <span className="stat-chip coins" title="Coins to spend">
