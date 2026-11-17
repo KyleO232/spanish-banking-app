@@ -20,7 +20,7 @@ export default function Home() {
   const [wallet, setWallet] = useState(() => getWallet());
   const { adminOn } = useAuth();
   const completedCount = lessons.filter((l) => l.state === 'completed').length;
-  const title = titleFor(stats.xp);
+  const title = titleFor(stats.xp, trackId);
 
   // after an admin edits or resets progress, re-read everything shown on this screen
   function refresh() {

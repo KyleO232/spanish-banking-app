@@ -16,7 +16,8 @@ function readState() {
 
 export default function Shop() {
   const { adminOn } = useAuth();
-  const mascotName = getTrackInfo(useTrack()).mascot.name;
+  const trackId = useTrack();
+  const mascotName = getTrackInfo(trackId).mascot.name;
   const [state, setState] = useState(readState);
   const [slot, setSlot] = useState('hat');
   const [preview, setPreview] = useState({}); // items being tried on (not owned/saved)
@@ -27,7 +28,7 @@ export default function Shop() {
   useEffect(() => () => clearTimeout(cheerTimer.current), []);
 
   const { wardrobe, wallet, equipped, xp } = state;
-  const title = titleFor(xp);
+  const title = titleFor(xp, trackId);
   const worn = previewLook(equipped, preview);
   const trying = Object.values(preview).map((id) => getItem(id)?.es);
 
